@@ -96,7 +96,7 @@ const filteredProducts = products.filter((product) => {
                         <img
                           src={
                             product.Images?.length
-                              ? `https://ahmedbm99.github.io/CourroieFront${product.Images[0].image_url}`
+                              ? `https://ahmedbm99.github.io/Kortibelt${product.Images[0].image_url}`
                               : "/fallback-image.png"
                           }
                           alt={product.nom}

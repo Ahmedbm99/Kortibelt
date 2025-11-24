@@ -98,7 +98,7 @@ const handleNextMaterial = () =>
                 {/* Material Badge */}
                 {currentMaterial && (
                   <img
-                    src={`https://ahmedbm99.github.io/CourroieFront/badges/${
+                    src={`https://ahmedbm99.github.io/Kortibelt/badges/${
                       currentMaterial === 'CR'
                         ? 'power.png'
                         : currentMaterial === 'CR+NR' || currentMaterial === 'NR+CR'
@@ -115,7 +115,7 @@ const handleNextMaterial = () =>
                 )}
 
                 <img
-                  src={`https://ahmedbm99.github.io/CourroieFront${currentImage}`}
+                  src={`https://ahmedbm99.github.io/Kortibelt${currentImage}`}
                   alt={product.nom}
                   className="w-full h-auto transition-transform duration-200"
                   style={{
@@ -172,7 +172,7 @@ const handleNextMaterial = () =>
               <Button
                 variant="outline"
                 onClick={() =>
-                  window.open(`https://ahmedbm99.github.io/CourroieFront${currentFiche}`, '_blank')
+                  window.open(`https://ahmedbm99.github.io/Kortibelt${currentFiche}`, '_blank')
                 }
                 className="w-full py-6 text-[#F97421] border-[#F97421] text-lg cursor-pointer font-semibold rounded-xl hover:bg-[#FFF5EF]"
               >

@@ -56,7 +56,7 @@ const Cart = () => {
                         <img
                           src={
                             item.Images?.length
-                              ? `https://ahmedbm99.github.io/CourroieFront${item.Images[0].image_url}`
+                              ? `https://ahmedbm99.github.io/Kortibelt${item.Images[0].image_url}`
                               : "/fallback-image.png"
                           }
                           alt={item.nom}
