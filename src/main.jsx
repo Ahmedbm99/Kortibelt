@@ -16,7 +16,7 @@ createRoot(document.getElementById('root')).render(
 <CartProvider>
          <LanguageProvider>
 
-      <BrowserRouter>
+      <BrowserRouter basename="/Kortibelt/">
 
     <Theme >
     <App />
