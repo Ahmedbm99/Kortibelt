@@ -9,17 +9,17 @@ export default function ClassificationCards() {
     {
       title: "Surface Classification",
       image: Surface,
-      link: "/classement?1",
+      link: "/classement?id=1",
     },
     {
       title: "Fiber Classification",
       image: fibre,
-      link: "/classement?2",
+      link: "/classement?id=2",
     },
     {
       title: "Raw Material Classification",
       image: raw,
-      link: "/classement?3",
+      link: "/classement?id=3",
     },
   ];
 

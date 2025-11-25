@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; URL=./index.html" />
+    <script>
+      // Redirection via JavaScript (pour conserver la route)
+      var path = window.location.pathname + window.location.search + window.location.hash;
+      window.location.replace("./index.html" + path);
+    </script>
+    <title>Redirection...</title>
+  </head>
+  <body>
+    <p>Redirection vers la page principale...</p>
+  </body>
+</html>

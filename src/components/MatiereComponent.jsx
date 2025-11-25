@@ -7,9 +7,8 @@ import { motion } from "framer-motion";
 
 export default function MatiereComponent() {
   const { language } = useLanguage(); // "fr" ou "en"
-  const [searchParams] = useSearchParams();
-  const id = parseInt(searchParams.keys().next().value, 10);
-
+    const [searchParams] = useSearchParams();
+    const id = parseInt(searchParams.get('id'), 10);
   const surfaceData = Object.values(classificationData).find(c => c.id === id);
   if (!surfaceData) return <p className="text-center py-10">Aucune donnée disponible.</p>;
 
