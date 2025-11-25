@@ -7,7 +7,11 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useEffect, useState } from 'react';
 import BeltsServices from '@/services/BeltsServices';
 import toast from 'react-hot-toast';
-
+import Power from "@/assets/badges/power.png";
+import Premium from "@/assets/badges/premium.png";
+import Standard from "@/assets/badges/standard.png";
+import Titan from "@/assets/badges/titan.png";
+import Ultra from "@/assets/badges/ultra.png"
 const ProductDetail = () => {
   const navigate = useNavigate();
   const { id } = useParams();
@@ -20,7 +24,14 @@ const ProductDetail = () => {
   const [loading, setLoading] = useState(true);
   const [zoomPosition, setZoomPosition] = useState(null);
   const [currentMaterialIndex, setCurrentMaterialIndex] = useState(0);
-
+const materialImages = {
+  "CR": Power,
+  "CR+NR": Standard,
+  "NR+CR": Standard,
+  "EPDM": Ultra,
+  "HNBR": Titan,
+  "PU": Premium,
+};
   useEffect(() => {
     (async () => {
       try {
@@ -96,23 +107,13 @@ const handleNextMaterial = () =>
                 onMouseLeave={() => setZoomPosition(null)}
               >
                 {/* Material Badge */}
-                {currentMaterial && (
-                  <img
-                    src={`https://ahmedbm99.github.io/Kortibelt/badges/${
-                      currentMaterial === 'CR'
-                        ? 'power.png'
-                        : currentMaterial === 'CR+NR' || currentMaterial === 'NR+CR'
-                        ? 'standard.png'
-                        : currentMaterial === 'EPDM'
-                        ? 'ultra.png'
-                        : currentMaterial === 'HNBR'
-                        ? 'titan.png'
-                        : null
-                    }`}
-                    alt={currentMaterial}
-                    className="absolute top-4 left-4 w-[120px] z-20 rounded-lg p-1 shadow-md bg-white/70 backdrop-blur"
-                  />
-                )}
+                        {currentMaterial && (
+                <img
+                  src={materialImages[currentMaterial] || null}
+                  alt={currentMaterial}
+                  className="absolute top-4 left-4 w-[120px] z-20 rounded-lg p-1 shadow-md bg-white/70 backdrop-blur"
+                />
+              )}
 
                 <img
                   src={`https://ahmedbm99.github.io/Kortibelt${currentImage}`}
