@@ -17,7 +17,7 @@ export default function ContactPage() {
   return (
     <>
     <Navbar/>
-    <section id="contact" className="py-24 bg-gradient-to-b from-white to-slate-50">
+    <section id="contact" className="py-24 from-white to-slate-50">
       <div className="container max-w-6xl mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

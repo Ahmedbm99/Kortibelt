@@ -16,7 +16,7 @@ export default function AboutPage() {
     <>
       <Navbar/>
       <Hero/>
-      <section className="pt-32 pb-20 bg-gradient-to-b from-white to-slate-50">
+      <section className="pt-32 pb-20 from-white to-slate-50">
         <div className="container max-w-5xl mx-auto px-4">
           <div className="space-y-6 text-center">
             <h2 className="text-4xl font-bold text-slate-900 tracking-tight">

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Surface from "@/assets/surface.jpeg";
 import fibre from "@/assets/fibre.jpg";
 import raw from "@/assets/raw.jpg";
+import { NavLink } from "react-router-dom";
 export default function ClassificationCards() {
   const items = [
     {
@@ -25,7 +26,7 @@ export default function ClassificationCards() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
       {items.map((item, index) => (
-        <a key={index} href={item.link} className="block">
+        <a key={index}  className="block">
           <Card className="rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer">
             <div className="w-full h-48 relative">
               <img
@@ -39,7 +40,9 @@ export default function ClassificationCards() {
             </CardContent>
             <CardFooter className="flex justify-center pb-6">
               <Button className="bg-orange-600 hover:bg-orange-700 cursor-pointer text-white px-6 py-2 rounded-xl">
-                Read More
+                <NavLink to={item.link}>
+                  Read More
+                </NavLink>
               </Button>
             </CardFooter>
           </Card>

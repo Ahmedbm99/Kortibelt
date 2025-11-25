@@ -27,7 +27,7 @@ const Cart = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
               {t('titleCart')}
             </h1>
-            <div className="w-24 h-1 bg-accent mx-auto bg-orange-600" />
+            <div className="w-24 h-1  mx-auto bg-orange-600" />
           </div>
 
           {items.length === 0 ? (

@@ -71,7 +71,7 @@ const slides = [
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${slide.image})` }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60" />
+            <div className="absolute inset-0  from-primary/90 to-primary/60" />
           </div>
           
           <div className="relative h-full flex items-center">
