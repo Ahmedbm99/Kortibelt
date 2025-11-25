@@ -8,17 +8,17 @@ export default function ClassificationCards() {
     {
       title: "Surface Classification",
       image: Surface,
-      link: "/Kortibelt/classement?1",
+      link: "/classement?1",
     },
     {
       title: "Fiber Classification",
       image: fibre,
-      link: "/Kortibelt/classement?2",
+      link: "/classement?2",
     },
     {
       title: "Raw Material Classification",
       image: raw,
-      link: "/Kortibelt/classement?3",
+      link: "/classement?3",
     },
   ];
 
