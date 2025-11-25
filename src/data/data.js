@@ -181,7 +181,7 @@ const classificationData = {
            images: [
           "./chloroprene/1.jpg",
           "./chloroprene/2.jpg",
-          "./chloroprene/3.jpg",
+          "./chloroprene/3.png",
           "./chloroprene/4.png",
           
         ]
@@ -223,10 +223,10 @@ const classificationData = {
           }
         ],
            images: [
-          "/images/cloth1.jpg",
-          "/images/cloth2.jpg",
-          "/images/cloth3.jpg",
-          "/images/cloth4.jpg"
+          "/HNBR/1.jpg",
+          "/HNBR/2.jpg",
+          "/HNBR/3.jpg",
+          "/HNBR/4.png"
         ]
       },
       {
