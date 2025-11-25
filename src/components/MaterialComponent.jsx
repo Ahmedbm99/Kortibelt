@@ -8,17 +8,17 @@ export default function ClassificationCards() {
     {
       title: "Surface Classification",
       image: Surface,
-      link: "/surface",
+      link: "/Kortibelt/classement?1",
     },
     {
       title: "Fiber Classification",
       image: fibre,
-      link: "/fiber",
+      link: "/Kortibelt/classement?2",
     },
     {
       title: "Raw Material Classification",
       image: raw,
-      link: "/raw",
+      link: "/Kortibelt/classement?3",
     },
   ];
 
@@ -38,7 +38,7 @@ export default function ClassificationCards() {
               <h2 className="text-xl font-semibold mb-4">{item.title}</h2>
             </CardContent>
             <CardFooter className="flex justify-center pb-6">
-              <Button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-xl">
+              <Button className="bg-orange-600 hover:bg-orange-700 cursor-pointer text-white px-6 py-2 rounded-xl">
                 Read More
               </Button>
             </CardFooter>
