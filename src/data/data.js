@@ -223,10 +223,10 @@ const classificationData = {
           }
         ],
            images: [
-          "/HNBR/1.jpg",
-          "/HNBR/2.jpg",
-          "/HNBR/3.jpg",
-          "/HNBR/4.png"
+          "/hnbr/1.jpg",
+          "/hnbr/2.jpg",
+          "/hnbr/3.jpg",
+          "/hnbr/4.png"
         ]
       },
       {
