@@ -182,6 +182,7 @@ const classificationData = {
           "./chloroprene/1.jpg",
           "./chloroprene/2.jpg",
           "./chloroprene/3.jpg",
+          "./chloroprene/4.jpg",
           
         ]
       },
