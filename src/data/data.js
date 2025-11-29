@@ -262,10 +262,10 @@ const classificationData = {
           }
         ],
            images: [
-          "/images/cloth1.jpg",
-          "/images/cloth2.jpg",
-          "/images/cloth3.jpg",
-          "/images/cloth4.jpg"
+          "./epdm/1.jpg",
+          "./epdm/2.jpg",
+          "./epdm/3.jpg",
+          "./epdm/4.png"
         ]
       }
     ],

@@ -1,9 +1,8 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Download, ShoppingCart, ArrowLeft } from 'lucide-react';
+import { Download, ShoppingCart, ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-
 import { useEffect, useState } from 'react';
 import BeltsServices from '@/services/BeltsServices';
 import toast from 'react-hot-toast';
@@ -12,6 +11,7 @@ import Premium from "@/assets/badges/premium.png";
 import Standard from "@/assets/badges/standard.png";
 import Titan from "@/assets/badges/titan.png";
 import Ultra from "@/assets/badges/ultra.png"
+
 const ProductDetail = () => {
   const navigate = useNavigate();
   const { id } = useParams();
@@ -24,14 +24,17 @@ const ProductDetail = () => {
   const [loading, setLoading] = useState(true);
   const [zoomPosition, setZoomPosition] = useState(null);
   const [currentMaterialIndex, setCurrentMaterialIndex] = useState(0);
-const materialImages = {
-  "CR": Power,
-  "CR+NR": Standard,
-  "NR+CR": Standard,
-  "EPDM": Ultra,
-  "HNBR": Titan,
-  "PU": Premium,
-};
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const materialImages = {
+    "CR": Power,
+    "CR+NR": Standard,
+    "NR+CR": Standard,
+    "EPDM": Ultra,
+    "HNBR": Titan,
+    "PU": Premium,
+  };
+
   useEffect(() => {
     (async () => {
       try {
@@ -41,7 +44,7 @@ const materialImages = {
         setImages(res.data.Images || []);
         setMatieres(res.data.Matieres || []);
       } catch (err) {
-        toast.error("Erreur lors du chargement du produit",err);
+        toast.error("Erreur lors du chargement du produit", err);
       } finally {
         setLoading(false);
       }
@@ -52,14 +55,26 @@ const materialImages = {
   if (!product) return <p className="pt-40 text-center">{t('productNotFound')}</p>;
 
   const currentMaterial = Matieres[currentMaterialIndex]?.matiere || "-";
-  const currentImage = Images[currentMaterialIndex]?.image_url || Images[0]?.image_url || null;
+  const currentImage = Images[currentImageIndex]?.image_url || null;
   const currentFiche =
     Fiche[currentMaterialIndex]?.fiche_technique_url ||
     Fiche[0]?.fiche_technique_url ||
     null;
-const handleNextMaterial = () =>
+
+  // Changer de matériau
+  const handleNextMaterial = () =>
     Matieres.length > 1 &&
     setCurrentMaterialIndex(i => (i + 1) % Matieres.length);
+
+  // Navigation des images (indépendante du matériau)
+  const handlePrevImage = () => {
+    if (Images.length > 1) setCurrentImageIndex(i => (i - 1 + Images.length) % Images.length);
+  };
+
+  const handleNextImage = () => {
+    if (Images.length > 1) setCurrentImageIndex(i => (i + 1) % Images.length);
+  };
+
   const specifications = [
     { key: 'profil', label: t('Profile') },
     { key: 'nom', label: t('Reference') },
@@ -92,10 +107,11 @@ const handleNextMaterial = () =>
       {/* HEADER + IMAGE */}
       <div className="container mx-auto px-4 mt-10 grid md:grid-cols-2 gap-12">
 
-     <div className="relative animate-fade-in-up space-y-6">
+        <div className="relative animate-fade-in-up space-y-6">
 
-            {/* Main Image */}
-            {currentImage ? (
+          {/* Main Image */}
+          {currentImage ? (
+            <div className="relative group">
               <div
                 className="relative overflow-hidden rounded-xl shadow-2xl bg-white"
                 onMouseMove={(e) => {
@@ -107,13 +123,13 @@ const handleNextMaterial = () =>
                 onMouseLeave={() => setZoomPosition(null)}
               >
                 {/* Material Badge */}
-                        {currentMaterial && (
-                <img
-                  src={materialImages[currentMaterial] || null}
-                  alt={currentMaterial}
-                  className="absolute top-4 left-4 w-[120px] z-20 rounded-lg p-1 shadow-md bg-white/70 backdrop-blur"
-                />
-              )}
+                {currentMaterial && (
+                  <img
+                    src={materialImages[currentMaterial] || null}
+                    alt={currentMaterial}
+                    className="absolute top-4 left-4 w-[120px] z-20 rounded-lg p-1 shadow-md bg-white/70 backdrop-blur"
+                  />
+                )}
 
                 <img
                   src={`https://ahmedbm99.github.io/Kortibelt${currentImage}`}
@@ -126,45 +142,65 @@ const handleNextMaterial = () =>
                   }}
                 />
               </div>
-            ) : (
-              <p>{t('imageUnavailable')}</p>
-            )}
+
+              {/* Navigation Arrows */}
+              {Images.length > 1 && (
+                <>
+                  <button
+                    onClick={handlePrevImage}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#0A1A2F] p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"
+                  >
+                    <ChevronLeft size={24} />
+                  </button>
+                  <button
+                    onClick={handleNextImage}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#0A1A2F] p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"
+                  >
+                    <ChevronRight size={24} />
+                  </button>
+                </>
+              )}
+
+              {/* Image Counter */}
+              {Images.length > 1 && (
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-[#0A1A2F]/80 text-white px-4 py-2 rounded-full text-sm font-medium z-30">
+                  {currentImageIndex + 1} / {Images.length}
+                </div>
+              )}
+            </div>
+          ) : (
+            <p>{t('imageUnavailable')}</p>
+          )}
+        </div>
+
+        {/* DETAILS */}
+        <div className="flex flex-col justify-center space-y-6">
+          <h1 className="text-4xl font-extrabold text-[#0A1A2F]">{product.nom}</h1>
+          <div className="flex flex-col space-y-3">
+            <div className="flex items-center justify-between">
+              <p className="font-semibold text-lg">{t('Materials')}:</p>
+
+              {Matieres.length > 1 && (
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={handleNextMaterial}
+                  className="border-[#F97421] text-[#F97421] cursor-pointer hover:bg-[#FFF3E9]"
+                >
+                  {t('changeMaterial')}
+                </Button>
+              )}
             </div>
 
-        <div className="flex flex-col justify-center space-y-6">
-          <h1 className="text-4xl font-extrabold text-[#0A1A2F]">
-            { product.nom}
-             </h1>
-                <div className="flex flex-col space-y-3">
-                <div className="flex items-center justify-between">
-                    <p className="font-semibold text-lg">{t('Materials')}:</p>
-
-                    {Matieres.length > 1 && (
-                    <Button 
-                        size="sm"
-                        variant="outline"
-                        onClick={handleNextMaterial}
-                        className="border-[#F97421] text-[#F97421] cursor-pointer hover:bg-[#FFF3E9]"
-                    >
-                        {t('changeMaterial')}
-                    </Button>
-                    )}
-                </div>
-
-                <p className="text-[#1F2A44] text-base font-medium">
-                    {currentMaterial}
-                </p>
-                </div>
+            <p className="text-[#1F2A44] text-base font-medium">{currentMaterial}</p>
+          </div>
           <p className="text-lg leading-relaxed text-[#1F2A44] opacity-80">
-            {product.description ||
-              "Courroie synchrone haute performance pour applications exigeantes."}
+            {product.description || "Courroie synchrone haute performance pour applications exigeantes."}
           </p>
 
           {/* BUTTONS */}
           <div className="space-y-4">
-            <Button
-              className="w-full py-6 bg-[#F97421] text-white text-lg cursor-pointer font-semibold rounded-xl hover:bg-[#ff7f2d]"
-            >
+            <Button className="w-full py-6 bg-[#F97421] text-white text-lg cursor-pointer font-semibold rounded-xl hover:bg-[#ff7f2d]">
               <ShoppingCart className="mr-3" size={20} />
               {t('addToCart')}
             </Button>
@@ -182,24 +218,17 @@ const handleNextMaterial = () =>
               </Button>
             )}
 
-            <Button
-              className="w-full py-6 bg-[#0A1A2F] text-white text-lg cursor-pointer font-semibold rounded-xl hover:bg-[#102542]"
-            >
+            <Button className="w-full py-6 bg-[#0A1A2F] text-white text-lg cursor-pointer font-semibold rounded-xl hover:bg-[#102542]">
               {t('requestQuote') || "Demander un devis"}
             </Button>
           </div>
-
         </div>
       </div>
 
-      {/* BOTTOM SECTIONS */}
+      {/* SPECIFICATIONS */}
       <div className="container mx-auto px-4 mt-20 grid md:grid-cols-2 gap-10 pb-24">
-
-        {/* SPECIFICATIONS */}
         <Card className="shadow-xl rounded-2xl border-none">
           <CardContent className="p-10">
-               
-    
             <h2 className="text-2xl font-bold mb-6 text-[#0A1A2F]">{t('specifications')}</h2>
             <ul className="space-y-4">
               {specifications.map((spec, index) => (
@@ -211,10 +240,7 @@ const handleNextMaterial = () =>
             </ul>
           </CardContent>
         </Card>
-
-
       </div>
-
     </div>
   );
 };

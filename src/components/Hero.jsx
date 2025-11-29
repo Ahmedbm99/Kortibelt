@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import heroFactory from '@/assets/heroFactory.jpg';
+import heroFactory from '@/assets/heroFactory.png';
 import heroFactory1 from '@/assets/heroFactory1.jpg';
-import heroFactory2 from '@/assets/heroFactory2.jpg';
+import heroFactory2 from '@/assets/heroFactory2.png';
 import { NavLink } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 
