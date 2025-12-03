@@ -120,18 +120,6 @@ const types =[
     materiauxAnglais: "Natural rubber (NR) with polyester or cotton cords / Chloroprene rubber (CR) with polyester tensile cords"
   },
   {
-    id: 11,
-    famille_id: 4,
-    nomFrancais: "Courroie trapézoïdale biseautée",
-    nomAnglais: "Bended V Belt",
-    descriptionFrancais: "Courroie trapézoïdale courbée conçue pour des configurations spécifiques de poulies.",
-    descriptionAnglais: "Bent trapezoidal belt designed for specific pulley configurations.",
-    usageFrancais: "Applications avec chemins de transmission courbes.",
-    usageAnglais: "Applications with curved transmission paths.",
-    materiauxFrancais: "Caoutchouc naturel (NR) avec cordons en polyester ou coton / Caoutchouc chloroprène (CR) avec cordons polyester",
-    materiauxAnglais: "Natural rubber (NR) with polyester or cotton cords / Chloroprene rubber (CR) with polyester tensile cords"
-  },
-  {
     id: 12,
     famille_id: 4,
     nomFrancais: "Courroie trapézoïdale étroite bandée",
@@ -152,18 +140,6 @@ const types =[
     descriptionAnglais: "Variable speed belt used in agricultural equipment.",
     usageFrancais: "Machines agricoles à vitesse variable.",
     usageAnglais: "Variable speed agricultural machinery.",
-    materiauxFrancais: "Caoutchouc EPDM avec cordons en Kevlar (aramide)",
-    materiauxAnglais: "EPDM rubber with aramid (Kevlar) tensile cords"
-  },
-  {
-    id: 14,
-    famille_id: 4,
-    nomFrancais: "Courroie trapézoïdale marché du riz",
-    nomAnglais: "Rice Market V Belt",
-    descriptionFrancais: "Courroie spécifique pour des applications dans les marchés agricoles spécialisés.",
-    descriptionAnglais: "Belt specific for specialized agricultural market applications.",
-    usageFrancais: "Applications agricoles spécialisées.",
-    usageAnglais: "Specialized agricultural applications.",
     materiauxFrancais: "Caoutchouc EPDM avec cordons en Kevlar (aramide)",
     materiauxAnglais: "EPDM rubber with aramid (Kevlar) tensile cords"
   },
@@ -192,18 +168,6 @@ const types =[
     materiauxAnglais: "Natural rubber (NR) with polyester or cotton cords / Chloroprene rubber (CR) with polyester tensile cords"
   },
   {
-    id: 17,
-    famille_id: 4,
-    nomFrancais: "Courroie textile multi-couches",
-    nomAnglais: "Multi-ply Textile Conveyor Belts",
-    descriptionFrancais: "Courroies textiles multi-couches pour convoyage industriel.",
-    descriptionAnglais: "Multi-ply textile belts for industrial conveyor applications.",
-    usageFrancais: "Systèmes de convoyage industriels.",
-    usageAnglais: "Industrial conveyor systems.",
-    materiauxFrancais: "Tissus textiles haute résistance avec revêtement en caoutchouc",
-    materiauxAnglais: "High-strength textile fabrics with rubber coating"
-  },
-  {
     id: 18,
     famille_id: 4,
     nomFrancais: "Courroie Trapézoidale dentée",
@@ -227,18 +191,7 @@ const types =[
     materiauxFrancais: "Caoutchouc naturel (NR) avec cordons en polyester ou coton / Caoutchouc chloroprène (CR) avec cordons polyester",
     materiauxAnglais: "Natural rubber (NR) with polyester or cotton cords / Chloroprene rubber (CR) with polyester tensile cords"
   },
-  {
-    id: 20,
-    famille_id: 4,
-    nomFrancais: "Courroie Poly V",
-    nomAnglais: "Poly V Belt",
-    descriptionFrancais: "Courroie poly-V à multiples nervures offrant haute performance.",
-    descriptionAnglais: "Multi-ribbed poly V-belt offering high performance.",
-    usageFrancais: "Applications automobiles et industrielles.",
-    usageAnglais: "Automotive and industrial applications.",
-    materiauxFrancais: "Caoutchouc naturel (NR) avec cordons en polyester ou coton / Caoutchouc chloroprène (CR) avec cordons polyester",
-    materiauxAnglais: "Natural rubber (NR) with polyester or cotton cords / Chloroprene rubber (CR) with polyester tensile cords"
-  },
+
   {
     id: 21,
     famille_id: 4,
@@ -276,6 +229,7 @@ const types =[
     materiauxAnglais: "Polyurethane, chloroprene rubber (CR), reinforced with steel or aramid."
   },
 
+
   {
     id: 89,
     famille_id: 5,
@@ -291,8 +245,8 @@ const types =[
   {
     id: 90,
     famille_id: 5,
-    nomFrancais: "Courroies polyuréthane dentées",
-    nomAnglais: "Polyurethane Timing Belts",
+    nomFrancais: "Courroies synchrones en polyuréthane à denture fermée",
+    nomAnglais: "Closed-Loop Polyurethane Timing Belts",
     descriptionFrancais: "Les courroies dentées en PU, souvent renforcées par des câbles acier ou Kevlar, assurent une transmission précise, sans glissement et durable.",
     descriptionAnglais: "PU timing belts, often reinforced with steel or Kevlar cords, provide precise, slip-free, and long-lasting power transmission.",
     usageFrancais: "Machines CNC, robotique, imprimantes 3D, machines d'emballage.",
@@ -347,6 +301,79 @@ const types =[
     usageAnglais: "Special machinery, heavy industrial equipment, applications requiring reliable performance under extreme conditions.",
     materiauxFrancais: "Polyuréthane extrudé ou moulé selon besoins",
     materiauxAnglais: "Extruded or molded polyurethane depending on requirements"
-  }
+  },
+  {
+  id: 95,
+  famille_id: 5,
+  nomFrancais: 'Courroies plates polyuréthane avec revêtement PVC',
+  nomAnglais: 'PVC Coated Polyurethane Flat Belts',
+  descriptionFrancais: 'Les courroies plates en PU avec revêtement PVC offrent une excellente adhérence, une bonne résistance à l’abrasion et une longue durée de vie en convoyage.',
+  descriptionAnglais: 'PU flat belts with PVC coating provide excellent grip, good abrasion resistance, and long service life in conveying applications.',
+  usageFrancais: 'Industrie agroalimentaire, logistique, convoyeurs d’emballage, transport de cartons.',
+  usageAnglais: 'Food industry, logistics, packaging conveyors, carton handling.',
+  materiauxFrancais: 'PU thermoplastique + revêtement PVC',
+  materiauxAnglais: 'Thermoplastic PU + PVC coating'
+},
+{
+  id: 96,
+  famille_id: 5,
+  nomFrancais: 'Courroies polyuréthane avec revêtement silicone',
+  nomAnglais: 'Silicone Coated Polyurethane Belts',
+  descriptionFrancais: 'Les courroies PU avec revêtement silicone sont idéales pour les applications à haute température et nécessitant des surfaces anti-adhésives.',
+  descriptionAnglais: 'PU belts with silicone coating are ideal for high-temperature applications and where non-stick surfaces are required.',
+  usageFrancais: 'Industrie agroalimentaire, boulangeries industrielles, thermoformage, emballage.',
+  usageAnglais: 'Food processing, industrial bakeries, thermoforming, packaging.',
+  materiauxFrancais: 'PU thermoplastique + revêtement silicone',
+  materiauxAnglais: 'Thermoplastic PU + silicone coating'
+},
+{
+  id: 97,
+  famille_id: 5,
+  nomFrancais: 'Courroies dentées polyuréthane avec revêtement',
+  nomAnglais: 'Coated Polyurethane Timing Belts',
+  descriptionFrancais: 'Les courroies dentées en PU avec revêtement sur le dos combinent transmission précise et fonction de convoyage avec forte adhérence.',
+  descriptionAnglais: 'PU timing belts with back-side coating combine precise power transmission and conveying with high grip.',
+  usageFrancais: 'Robotique, automatisme, pick & place, lignes d’assemblage.',
+  usageAnglais: 'Robotics, automation, pick & place, assembly lines.',
+  materiauxFrancais: 'PU moulé renforcé + revêtement PVC / caoutchouc',
+  materiauxAnglais: 'Reinforced molded PU + PVC / rubber coating'
+},
+{
+  id: 98,
+  famille_id: 5,
+  nomFrancais: 'Courroies polyuréthane avec revêtement caoutchouc',
+  nomAnglais: 'Rubber Coated Polyurethane Belts',
+  descriptionFrancais: 'Les courroies PU avec revêtement caoutchouc assurent une très forte adhérence et une excellente absorption des chocs.',
+  descriptionAnglais: 'PU belts with rubber coating ensure very high grip and excellent shock absorption.',
+  usageFrancais: 'Manutention lourde, transport de sacs, palettes, industrie du recyclage.',
+  usageAnglais: 'Heavy handling, bag transport, pallets, recycling industry.',
+  materiauxFrancais: 'PU thermoplastique + revêtement caoutchouc',
+  materiauxAnglais: 'Thermoplastic PU + rubber coating'
+},
+{
+  id: 99,
+  famille_id: 5,
+  nomFrancais: "Courroie spéciale",
+  nomAnglais: "Special Belt",
+  descriptionFrancais: "Courroie conçue pour des applications spécifiques nécessitant des caractéristiques particulières telles que flexibilité, résistance chimique ou forme adaptée.",
+  descriptionAnglais: "Belt designed for specific applications requiring special features such as flexibility, chemical resistance, or custom shape.",
+  usageFrancais: "Applications industrielles ou techniques nécessitant des solutions sur mesure.",
+  usageAnglais: "Industrial or technical applications requiring custom solutions.",
+  materiauxFrancais: "Polyuréthane, caoutchouc, ou autres matériaux selon l'application",
+  materiauxAnglais: "Polyurethane, rubber, or other materials depending on the application"
+},
+{
+  id: 100,
+  famille_id: 5,
+  nomFrancais: "Courroies synchrones en polyuréthane à denture ouverte",
+  nomAnglais: "Open-Ended Polyurethane Timing Belts",
+  descriptionFrancais: "Les courroies synchrones ouvertes en PU, renforcées par des câbles en acier ou Kevlar, permettent une transmission précise sur de grandes longueurs avec une excellente résistance à l’usure.",
+  descriptionAnglais: "Open-ended PU timing belts reinforced with steel or Kevlar cords provide precise transmission over long lengths with excellent wear resistance.",
+  usageFrancais: "Convoyeurs, systèmes de positionnement linéaire, automatisation industrielle, lignes d’assemblage.",
+  usageAnglais: "Conveyors, linear positioning systems, industrial automation, assembly lines.",
+  materiauxFrancais: "PU extrudé renforcé par câbles acier ou Kevlar",
+  materiauxAnglais: "Extruded PU reinforced with steel or Kevlar cords"
+}
+
 ];
 export default types;

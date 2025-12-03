@@ -2929,7 +2929,7 @@ const courroies =[
     id: 42,
     nom: "Banded V Belt",
     famille_courroie_id: 4,
-    type_courroie_id: 11,
+    type_courroie_id: 1,
     profil: "HA",
     description: "La courroie Banded V Belt HA est une courroie trapézoïdale multiple (ou “banded”) conçue pour la transmission de puissance élevée dans des applications industrielles lourdes. Le profil HA permet d’assembler plusieurs courroies en une seule bande, offrant ainsi une capacité de transmission de couple très élevée, une réduction du glissement et un fonctionnement silencieux et stable.  Cette conception en courroie multiple assure une longue durée de vie, une meilleure répartition de la charge et est particulièrement adaptée aux applications exigeantes nécessitant une puissance et une fiabilité maximales.",
     fabricant: "AIS Group",
@@ -3005,7 +3005,7 @@ const courroies =[
     id: 43,
     nom: "Banded V Belt",
     famille_courroie_id: 4,
-    type_courroie_id: 11,
+    type_courroie_id: 1,
     profil: "HB",
     description: "La courroie Banded V Belt HB est une courroie trapézoïdale multiple conçue pour la transmission de puissance élevée dans des applications industrielles moyennes à lourdes. Le profil HB permet d’assembler plusieurs courroies en une seule bande, offrant une capacité de transmission de couple supérieure, un fonctionnement silencieux et une réduction du glissement, tout en maintenant une grande fiabilité.  Cette courroie est adaptée aux systèmes nécessitant robustesse, durabilité et performance stable, notamment dans les industries où la puissance est moyenne à élevée.",
     fabricant: "AIS Group",
@@ -3081,7 +3081,7 @@ const courroies =[
     id: 44,
     nom: "Banded V Belt",
     famille_courroie_id: 4,
-    type_courroie_id: 11,
+    type_courroie_id: 1,
     profil: "HC",
     description: "La courroie Banded V Belt HC est une courroie trapézoïdale multiple conçue pour la transmission de puissance très élevée dans des applications industrielles lourdes à très lourdes. Le profil HC permet d’assembler plusieurs courroies en une seule bande, offrant une capacité de transmission de couple maximale, réduction du glissement et fonctionnement stable et silencieux même sous forte charge.  Cette courroie est idéale pour les systèmes nécessitant robustesse, durabilité et fiabilité extrême, adaptés aux environnements industriels très exigeants.",
     fabricant: "AIS Group",
@@ -3157,7 +3157,7 @@ const courroies =[
     id: 45,
     nom: "Banded V Belt",
     famille_courroie_id: 4,
-    type_courroie_id: 11,
+    type_courroie_id: 1,
     profil: "HD",
     description: "La courroie Banded V Belt HD est une courroie trapézoïdale multiple conçue pour la transmission de puissance extrêmement élevée dans des applications industrielles très lourdes. Le profil HD permet d’assembler plusieurs courroies en une seule bande, offrant ainsi une capacité maximale de transmission de couple, une réduction du glissement et un fonctionnement stable et silencieux même sous des charges très importantes.  Cette courroie est idéale pour les systèmes nécessitant robustesse extrême, durabilité et fiabilité maximale, adaptée aux environnements industriels les plus exigeants.",
     fabricant: "AIS Group",
@@ -7631,7 +7631,7 @@ const courroies =[
     tol_hauteur_mm: "",
     remarques: "",
     source_catalogue: "",
-    application: "convoyeurs",
+    application: "conveyors",
     images: [
       {
         id: 283,
@@ -7707,7 +7707,7 @@ const courroies =[
     tol_hauteur_mm: "",
     remarques: "",
     source_catalogue: "",
-    application: "convoyeurs",
+    application: "conveyors",
     images: [
       {
         id: 286,
@@ -7859,7 +7859,7 @@ const courroies =[
     tol_hauteur_mm: "",
     remarques: "",
     source_catalogue: "",
-    application: "convoyeurs",
+    application: "conveyors",
     images: [
       {
         id: 292,
@@ -7935,7 +7935,7 @@ const courroies =[
     tol_hauteur_mm: "",
     remarques: "",
     source_catalogue: "",
-    application: "convoyeurs",
+    application: "conveyors",
     images: [
       {
         id: 295,
@@ -8239,7 +8239,7 @@ const courroies =[
     tol_hauteur_mm: "",
     remarques: "",
     source_catalogue: "",
-    application: "convoyeurs",
+    application: "conveyors",
     images: [
       {
         id: 307,
@@ -8315,7 +8315,7 @@ const courroies =[
     tol_hauteur_mm: "",
     remarques: "",
     source_catalogue: "",
-    application: "convoyeurs",
+    application: "conveyors",
     images: [
       {
         id: 310,
@@ -8506,7 +8506,7 @@ const courroies =[
     famille_courroie_id: 16,
     type_courroie_id: 92,
     profil: "TRond",
-    description: "Courroie ronde en polyuréthane extrudé, très flexible et soudable, adaptée aux convoyeurs très légers.",
+    description: "Courroie ronde en polyuréthane extrudé, très flexible et soudable, adaptée aux conveyors très légers.",
     fabricant: "",
     reference_fabricant: "",
     largeur_mm: "2",
@@ -8575,6 +8575,663 @@ const courroies =[
         matiere: "PU"
       }
     ]
-  }
+  },
+{
+      id: 116,
+  nom: "Courroie plate revêtue",
+  famille_courroie_id: 5,
+  type_courroie_id: 95,
+  profil: "Plat avec revêtement",
+  description: "Courroie plate en polyuréthane avec revêtement offrant une excellente adhérence, une haute résistance à l’usure et la protection des produits transportés.",
+  fabricant: "Générique",
+  reference_fabricant: "PU-PLAT-REV-STD",
+  largeur_mm: 50,
+  hauteur_mm: 3,
+  pas_mm: null,
+  longueur_int_mm: 1000,
+  longueur_prim_mm: 1010,
+  longueur_ext_mm: 1020,
+  angle_trapeze_deg: null,
+  epaisseur_mm: 3,
+  nombre_dents: null,
+  nombre_nervures: null,
+  temperature_min: -30,
+  temperature_max: 80,
+  vitesse_max_m_s: 3.5,
+  resistance_traction_n: 2500,
+  durete_shore: 85,
+  resistance_usure: "Élevée",
+  resistance_huile: "Bonne",
+  resistance_chaleur: "Bonne",
+  resistance_ozone: "Bonne",
+  allongement_max_pct: 2.5,
+  flexibilite: "Élevée",
+  renforcement: "Câbles polyester",
+  revetement: ["PVC", "Silicone", "Caoutchouc", "Feutre", "PTFE"],
+  revetement_dents: "Aucun",
+  forme_dent: "Aucune",
+  type_denture: "Non dentée",
+  charge_max_n: 1800,
+  poids_g_m: 420,
+  tol_largeur_mm: 0.5,
+  tol_hauteur_mm: 0.3,
+  remarques: "Profil le plus utilisé en convoyage revêtu",
+  source_catalogue: "Catalogue fabricant PU",
+  application: "automatisation",
+  images: [
+    { image_url: "/public/PUplatRevetement/1.jpg" },
+    { image_url: "/public/PUplatRevetement/1.jpg" }
+  ],
+  fiches:[ {
+    fiche_technique_url: "/public/PUplatRevetement/1.pdf"
+  }],
+  matieres: [
+    { matiere: "PU" }
+  ]
+},
+  {
+        id: 118,
+
+    nom: "Courroie dentée revêtue T",
+    famille_courroie_id: 5,
+    type_courroie_id: 96,
+    profil: "Dentée avec revêtement",
+    description: "Courroie dentée en polyuréthane avec revêtement sur le dos, denture T classique pour transmission standard.",
+    fabricant: "Générique",
+    reference_fabricant: "PU-DENT-T-REV",
+    largeur_mm: 20,
+    hauteur_mm: 5,
+    pas_mm: 5,
+    longueur_int_mm: 1000,
+    longueur_prim_mm: 1010,
+    longueur_ext_mm: 1020,
+    epaisseur_mm: 5,
+    nombre_dents: 200,
+    revetement: [
+      "PVC",
+      "Silicone",
+      "Caoutchouc",
+      "PTFE"
+    ],
+    revetement_dents: "Aucun",
+    forme_dent: "T",
+    type_denture: "Denture synchronisée",
+    images: [
+      {
+        image_url: "/public/PUDenteeRevetement/T/1.jpg"
+      }
+    ],
+    fiches: [{
+      fiche_technique_url: "/public/PUDenteeRevetement/T/1.pdf"
+    }],
+    matieres: [
+      {
+        matiere: "PU"
+      }
+    ],
+    application: "automatisation"
+  },
+  {
+        id: 119,
+
+    nom: "Courroie dentée revêtue AT",
+    famille_courroie_id: 5,
+    type_courroie_id: 96,
+    profil: "Dentée avec revêtement",
+    description: "Courroie dentée en polyuréthane avec revêtement sur le dos, denture AT pour précision et engagement doux.",
+    fabricant: "Générique",
+    reference_fabricant: "PU-DENT-AT-REV",
+    largeur_mm: 20,
+    hauteur_mm: 5,
+    pas_mm: 5,
+    longueur_int_mm: 1000,
+    longueur_prim_mm: 1010,
+    longueur_ext_mm: 1020,
+    epaisseur_mm: 5,
+    nombre_dents: 200,
+    revetement: [
+      "PVC",
+      "Silicone",
+      "Caoutchouc",
+      "PTFE"
+    ],
+    revetement_dents: "Aucun",
+    forme_dent: "AT",
+    type_denture: "Denture synchronisée",
+    images: [
+      {
+        image_url: "/public/PUDenteeRevetement/AT/1.jpg"
+      }
+    ],
+    fiches:[ {
+      fiche_technique_url: "/public/PUDenteeRevetement/AT/1.pdf"
+    }],
+    matieres: [
+      {
+        matiere: "PU"
+      }
+    ],
+    application: "automatisation"
+  },
+  {
+        id: 120,
+
+    nom: "Courroie dentée revêtue HTD",
+    famille_courroie_id: 5,
+    type_courroie_id: 96,
+    profil: "Dentée avec revêtement",
+    description: "Courroie dentée en polyuréthane avec revêtement sur le dos, denture HTD pour haute précision et couple élevé.",
+    fabricant: "Générique",
+    reference_fabricant: "PU-DENT-HTD-REV",
+    largeur_mm: 20,
+    hauteur_mm: 5,
+    pas_mm: 5,
+    longueur_int_mm: 1000,
+    longueur_prim_mm: 1010,
+    longueur_ext_mm: 1020,
+    epaisseur_mm: 5,
+    nombre_dents: 200,
+    revetement: [
+      "PVC",
+      "Silicone",
+      "Caoutchouc",
+      "PTFE"
+    ],
+    revetement_dents: "Aucun",
+    forme_dent: "HTD",
+    type_denture: "Denture synchronisée",
+    images: [
+      {
+        image_url: "/public/PUDenteeRevetement/HTD/1.jpg"
+      }
+    ],
+    fiches:[ {
+      fiche_technique_url: "/public/PUDenteeRevetement/HTD/1.pdf"
+    }],
+    matieres: [
+      {
+        matiere: "PU"
+      }
+    ],
+    application: "automatisation"
+  },
+  {
+        id: 121,
+
+    nom: "Courroie dentée revêtue RPP",
+    famille_courroie_id: 5,
+    type_courroie_id: 96,
+    profil: "Dentée avec revêtement",
+    description: "Courroie dentée en polyuréthane avec revêtement sur le dos, denture RPP pour faible bruit et convoyage léger.",
+    fabricant: "Générique",
+    reference_fabricant: "PU-DENT-RPP-REV",
+    largeur_mm: 20,
+    hauteur_mm: 5,
+    pas_mm: 5,
+    longueur_int_mm: 1000,
+    longueur_prim_mm: 1010,
+    longueur_ext_mm: 1020,
+    epaisseur_mm: 5,
+    nombre_dents: 200,
+    revetement: [
+      "PVC",
+      "Silicone",
+      "Caoutchouc",
+      "PTFE"
+    ],
+    revetement_dents: "Aucun",
+    forme_dent: "RPP",
+    type_denture: "Denture synchronisée",
+    images: [
+      {
+        image_url: "/public/PUDenteeRevetement/RPP/1.jpg"
+      }
+    ],
+    fiches: [{
+      fiche_technique_url: "/public/PUDenteeRevetement/RPP/1.pdf"
+    }],
+    matieres: [
+      {
+        matiere: "PU"
+      }
+    ],
+    application: "automatisation"
+  },
+
+  {
+    id:122,
+    nom: "Courroie ronde revêtue PVC",
+    famille_courroie_id: 5,
+    type_courroie_id: 97,
+    profil: "Rond avec revêtement",
+    description: "Courroie ronde en polyuréthane avec revêtement PVC, idéale pour convoyage léger et soudable facilement.",
+    fabricant: "Générique",
+    reference_fabricant: "PU-ROND-PVC-REV",
+    largeur_mm: 10,
+    hauteur_mm: 10,
+    pas_mm: null,
+    longueur_int_mm: 1000,
+    longueur_prim_mm: 1010,
+    longueur_ext_mm: 1020,
+    angle_trapeze_deg: null,
+    epaisseur_mm: 10,
+    nombre_dents: null,
+    nombre_nervures: null,
+    temperature_min: -30,
+    temperature_max: 80,
+    vitesse_max_m_s: 2,
+    resistance_traction_n: 1500,
+    durete_shore: 85,
+    resistance_usure: "Moyenne",
+    resistance_huile: "Bonne",
+    resistance_chaleur: "Bonne",
+    resistance_ozone: "Bonne",
+    allongement_max_pct: 2.5,
+    flexibilite: "Élevée",
+    renforcement: "Câbles polyester",
+    revetement: [
+      "PVC"
+    ],
+    revetement_dents: "Non applicable",
+    forme_dent: "Ronde",
+    type_denture: "Non dentée",
+    charge_max_n: 800,
+    poids_g_m: 200,
+    tol_largeur_mm: 0.2,
+    tol_hauteur_mm: 0.2,
+    remarques: "Idéale pour convoyage léger, soudable facilement, bonne accroche.",
+    source_catalogue: "Catalogue fabricant PU",
+    application: "Tri, textile, petites charges",
+    images: [
+      {
+        image_url: "/public/PURondeRevetement/PVC/1.jpg"
+      }
+    ],
+    fiches:[ {
+      fiche_technique_url: "/public/PURondeRevetement/PVC/1.pdf"
+    }],
+    matieres: [
+      {
+        matiere: "PU"
+      }
+    ]
+  },
+  {
+    id:123,
+    nom: "Courroie ronde revêtue Silicone",
+    famille_courroie_id: 5,
+    type_courroie_id: 97,
+    profil: "Rond avec revêtement",
+    description: "Courroie ronde en polyuréthane avec revêtement Silicone, idéale pour convoyage léger et soudable facilement.",
+    fabricant: "Générique",
+    reference_fabricant: "PU-ROND-SIL-REV",
+    largeur_mm: 10,
+    hauteur_mm: 10,
+    pas_mm: null,
+    longueur_int_mm: 1000,
+    longueur_prim_mm: 1010,
+    longueur_ext_mm: 1020,
+    angle_trapeze_deg: null,
+    epaisseur_mm: 10,
+    nombre_dents: null,
+    nombre_nervures: null,
+    temperature_min: -30,
+    temperature_max: 100,
+    vitesse_max_m_s: 2,
+    resistance_traction_n: 1500,
+    durete_shore: 85,
+    resistance_usure: "Moyenne",
+    resistance_huile: "Bonne",
+    resistance_chaleur: "Très bonne",
+    resistance_ozone: "Bonne",
+    allongement_max_pct: 2.5,
+    flexibilite: "Élevée",
+    renforcement: "Câbles polyester",
+    revetement: [
+      "Silicone"
+    ],
+    revetement_dents: "Non applicable",
+    forme_dent: "Ronde",
+    type_denture: "Non dentée",
+    charge_max_n: 800,
+    poids_g_m: 200,
+    tol_largeur_mm: 0.2,
+    tol_hauteur_mm: 0.2,
+    remarques: "Idéale pour convoyage léger, soudable facilement, bonne accroche.",
+    source_catalogue: "Catalogue fabricant PU",
+    application: "Tri, textile, petites charges",
+    images: [
+      {
+        image_url: "/public/PURondeRevetement/Silicone/1.jpg"
+      }
+    ],
+    fiches: [{
+      fiche_technique_url: "/public/PURondeRevetement/Silicone/1.pdf"
+    }],
+    matieres: [
+      {
+        matiere: "PU"
+      }
+    ]
+  },
+{
+  id: 124,
+  nom: "Courroie synchrone spéciale à taquets",
+  famille_courroie_id: 5,
+  type_courroie_id: 99,
+  profil: "Dentée avec taquets",
+  description: "Courroie dentée spéciale en polyuréthane équipée de taquets moulés pour le transport précis et le positionnement de produits.",
+  fabricant: "Générique",
+  reference_fabricant: "PU-SPEC-TAQUET",
+  largeur_mm: 30,
+  hauteur_mm: 8,
+  pas_mm: 5,
+  longueur_int_mm: 1200,
+  longueur_prim_mm: 1210,
+  longueur_ext_mm: 1220,
+  angle_trapeze_deg: null,
+  epaisseur_mm: 8,
+  nombre_dents: 240,
+  nombre_nervures: null,
+  temperature_min: -25,
+  temperature_max: 90,
+  vitesse_max_m_s: 4,
+  resistance_traction_n: 3200,
+  durete_shore: 90,
+  resistance_usure: "Très élevée",
+  resistance_huile: "Bonne",
+  resistance_chaleur: "Bonne",
+  resistance_ozone: "Bonne",
+  allongement_max_pct: 1.8,
+  flexibilite: "Moyenne",
+  renforcement: "Câbles acier",
+  revetement: [
+    "Sans revêtement",
+    "Revêtement spécial anti-dérapant"
+  ],
+  revetement_dents: "Aucun",
+  forme_dent: "Trapézoïdale",
+  type_denture: "T / AT / HTD / RPP",
+  charge_max_n: 2500,
+  poids_g_m: 650,
+  tol_largeur_mm: 0.3,
+  tol_hauteur_mm: 0.3,
+  remarques: "Taquets moulés pour transport cadencé et positionnement précis.",
+  source_catalogue: "Catalogue courroies spéciales PU",
+  application: "Convoyage industriel, robotique, pick & place, conditionnement, agroalimentaire",
+
+  images: [
+    { image_url: "/public/Speciale/1.jpeg" },
+  ],
+
+  fiches:[ {
+    fiche_technique_url: "/public/Speciale/1.pdf"
+  }],
+
+  matieres: [
+    { matiere: "PU" },
+   
+  ]
+},
+{
+  id: 125,
+  nom: "Courroie synchrone PU revêtement lisse",
+  famille_courroie_id: 5,
+  type_courroie_id: 99,
+  profil: "Dentée intérieure",
+  description:
+    "Courroie synchrone en polyuréthane avec denture intérieure et dos lisse coloré, idéale pour le convoyage précis et silencieux.",
+  fabricant: "Générique",
+  reference_fabricant: "PU-SPEC-LISSE",
+  largeur_mm: 20,
+  hauteur_mm: 8,
+  pas_mm: 5,
+  longueur_int_mm: 1200,
+  longueur_prim_mm: 1210,
+  longueur_ext_mm: 1220,
+  angle_trapeze_deg: null,
+  epaisseur_mm: 8,
+  nombre_dents: 240,
+  nombre_nervures: null,
+  temperature_min: -25,
+  temperature_max: 90,
+  vitesse_max_m_s: 4,
+  resistance_traction_n: 3000,
+  durete_shore: 90,
+  resistance_usure: "Élevée",
+  resistance_huile: "Bonne",
+  resistance_chaleur: "Bonne",
+  resistance_ozone: "Bonne",
+  allongement_max_pct: 1.6,
+  flexibilite: "Bonne",
+  renforcement: "Câbles acier",
+  revetement: ["Dos lisse PU"],
+  revetement_dents: "Tissu polyamide",
+  forme_dent: "Trapézoïdale",
+  type_denture: "T / AT / HTD",
+  charge_max_n: 2400,
+  poids_g_m: 600,
+  tol_largeur_mm: 0.3,
+  tol_hauteur_mm: 0.3,
+  remarques:
+    "Modèles visibles en plusieurs couleurs (rouge, jaune, orange, vert).",
+  source_catalogue: "Catalogue courroies PU",
+  application:
+    "automatisation",
+
+  images: [
+    { image_url: "/public/Speciale/2.jpeg" }
+  ],
+
+  fiches: [{
+    fiche_technique_url: "/public/Speciale/2.pdf"
+  }],
+
+  matieres: [
+    { matiere: "PU" },
+  
+  ]
+},
+ {
+  id: 126,
+  nom: "Courroie synchrone PU dos lisse",
+  famille_courroie_id: 5,
+  type_courroie_id: 99,
+  profil: "Dentée intérieure",
+  description:
+    "Courroie synchrone en polyuréthane avec denture intérieure et dos lisse. Plusieurs couleurs disponibles (bleu, rouge, vert, jaune, orange).",
+  fabricant: "Générique",
+  reference_fabricant: "PU-LISSE",
+  revetement: ["Dos lisse PU"],
+  revetement_dents: "Tissu polyamide",
+  forme_dent: "Trapézoïdale / HTD",
+  type_denture: "T / AT / HTD",
+  applications: "conveyors",
+  images: [
+    { image_url: "/public/Speciale/3.jpeg" }
+  ],
+  
+  fiches: [{
+    fiche_technique_url: "/public/Speciale/3.pdf"
+  }],
+
+  matieres: [
+    { matiere: "PU" },
+  
+  ]
+},
+{
+  id: 127,
+  nom: "Courroie synchrone PU à picots",
+  famille_courroie_id: 5,
+  type_courroie_id: 99,
+  profil: "Dentée intérieure + picots",
+  description:
+    "Courroie PU avec denture intérieure et revêtement supérieur à picots pour transport cadencé, friction élevée ou maintien des pièces.",
+  fabricant: "Générique",
+  reference_fabricant: "PU-PICOTS",
+  revetement: ["Picots moulés PU"],
+  revetement_dents: "Tissu polyamide",
+  forme_dent: "Trapézoïdale / HTD",
+  type_denture: "T / AT / HTD",
+  applications: "conveyors",
+  images: [
+    { image_url: "/public/Speciale/3.jpeg" }
+  ],
+    fiches: [{
+    fiche_technique_url: "/public/Speciale/3.pdf"
+  }],
+
+  matieres: [
+    { matiere: "PU" },
+  
+  ]
+},
+{
+  id: 128,
+  nom: "Courroie synchrone PU à revêtement structuré",
+  famille_courroie_id: 5,
+  type_courroie_id: 99,
+  profil: "Dentée intérieure + revêtement structuré",
+  description:
+    "Courroie PU dentée avec revêtement supérieur texturé (quadrillé, relief croisé) pour améliorer l'adhérence et le guidage des produits.",
+  fabricant: "Générique",
+  reference_fabricant: "PU-TEXTURE",
+  revetement: ["Revêtement structuré PU"],
+  revetement_dents: "Tissu polyamide",
+  forme_dent: "Trapézoïdale / HTD",
+  type_denture: "T / AT / HTD",
+  applications: "conveyors",
+  images: [
+    { image_url: "/public/Speciale/3.jpeg" }
+  ],
+      fiches: [{
+    fiche_technique_url: "/public/Speciale/3.pdf"
+  }],
+
+  matieres: [
+    { matiere: "PU" },
+  
+  ]
+},
+{
+  id: 301,
+  nom: "Courroie Thermosoudable Trapézoïdale Armée",
+  famille_courroie_id: 16,
+  type_courroie_id: 93,
+  profil: "Trapézoïdal armé",
+  description: "Courroie trapézoïdale thermosoudable renforcée par des câbles textiles ou acier, offrant une excellente stabilité dimensionnelle et un allongement très faible.",
+  fabricant: "Générique",
+  reference_fabricant: "PU-TRAP-ARME",
+  largeur_mm: 10,
+  hauteur_mm: 6,
+  pas_mm: null,
+  longueur_int_mm: null,
+  longueur_prim_mm: null,
+  longueur_ext_mm: null,
+  angle_trapeze_deg: 60,
+  epaisseur_mm: null,
+  nombre_dents: null,
+  nombre_nervures: null,
+  temperature_min: -30,
+  temperature_max: 80,
+  vitesse_max_m_s: 3,
+  resistance_traction_n: 3000,
+  durete_shore: 92,
+  resistance_usure: "Élevée",
+  resistance_huile: "Bonne",
+  resistance_chaleur: "Bonne",
+  resistance_ozone: "Excellente",
+  allongement_max_pct: 1.2,
+  flexibilite: "Moyenne",
+  renforcement: "Armature textile ou métallique",
+  revetement: [],
+  revetement_dents: "Non applicable",
+  forme_dent: "Non dentée",
+  type_denture: "Sans denture",
+  charge_max_n: 1800,
+  poids_g_m: 260,
+  tol_largeur_mm: 0.3,
+  tol_hauteur_mm: 0.3,
+  remarques: "Courroie idéale pour applications nécessitant précision, faible allongement et forte traction.",
+  source_catalogue: "Catalogue courroies PU armées",
+  application: "conveyors",
+  images: [
+    {
+      image_url: "/public/thermosodableTrapez/2.jpg"
+    }
+  ],
+  fiches: [
+    {
+      fiche_technique_url: "/public/thermosodableTrapez/1.pdf"
+    }
+  ],
+  matieres: [
+    {
+      matiere: "PU"
+    }
+  ]
+},
+{
+  id: 302,
+  nom: "Courroie Thermosoudable Trapézoïdale à Crête",
+  famille_courroie_id: 16,
+  type_courroie_id: 93,
+  profil: "Trapézoïdal à crête",
+  description: "Courroie trapézoïdale thermosoudable avec crête supérieure offrant une meilleure adhérence, une réduction du glissement et un guidage amélioré.",
+  fabricant: "Générique",
+  reference_fabricant: "PU-TRAP-CRETE",
+  largeur_mm: 10,
+  hauteur_mm: 8,
+  pas_mm: null,
+  longueur_int_mm: null,
+  longueur_prim_mm: null,
+  longueur_ext_mm: null,
+  angle_trapeze_deg: 60,
+  epaisseur_mm: null,
+  nombre_dents: null,
+  nombre_nervures: 1,         // Crête supérieure
+  temperature_min: -30,
+  temperature_max: 80,
+  vitesse_max_m_s: 2.5,
+  resistance_traction_n: 2200,
+  durete_shore: 90,
+  resistance_usure: "Élevée",
+  resistance_huile: "Moyenne",
+  resistance_chaleur: "Bonne",
+  resistance_ozone: "Bonne",
+  allongement_max_pct: 2,
+  flexibilite: "Bonne",
+  renforcement: "Sans armature ou armature légère",
+  revetement: [],
+  revetement_dents: "Non applicable",
+  forme_dent: "Non dentée",
+  type_denture: "Sans denture",
+  charge_max_n: 1200,
+  poids_g_m: 230,
+  tol_largeur_mm: 0.3,
+  tol_hauteur_mm: 0.3,
+  remarques: "La crête apporte du grip et un guidage supérieur, idéale pour convoyeurs inclinés.",
+  source_catalogue: "Catalogue PU spécial",
+  application: "Convoyeurs inclinés, produits légers, lignes de guidage, transport industriel",
+  images: [
+    {
+      image_url: "/public/thermosodableTrapez/1.jpg"
+    }
+  ],
+  fiches: [
+    {
+      fiche_technique_url: "/public/thermosodableTrapez/1.pdf"
+    }
+  ],
+  matieres: [
+    {
+      matiere: "PU"
+    }
+  ]
+}
+
+
+
 ];
 export default courroies;
