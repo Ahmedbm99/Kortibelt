@@ -8,13 +8,14 @@ import { setTypes } from "@/store/typeSlice";
 import toast from "react-hot-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useNavigate } from "react-router-dom";
-
+import family from "@/data/family.js";
+import types from "@/data/types.js";
 export default function SidebarClassification({ selectedCategory, onCategorySelect, selectedFamilly, onFamilySelect }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { language } = useLanguage(); // 'fr' or 'en'
   const [families, setFamilies] = useState([]);
-  const [types, setTypesState] = useState([]);
+  const [typesState, setTypesState] = useState([]);
   const [loading, setLoading] = useState(true);
 
   // Fetch families and types
@@ -22,14 +23,14 @@ export default function SidebarClassification({ selectedCategory, onCategorySele
     const fetchData = async () => {
       try {
         setLoading(true);
-        const familyData = await FamilleServices.getAllFamilies();
-        const typesData = await TypesServices.getAllTypes();
+       // const familyData = await FamilleServices.getAllFamilies();
+       // const typesData = await TypesServices.getAllTypes();
 
-        setFamilies(familyData.data);
-        setTypesState(typesData.data);
+        setFamilies(family);
+        setTypesState(types);
 
-        dispatch(setFamily(familyData.data));
-        dispatch(setTypes(typesData.data));
+        dispatch(setFamily(family));
+        dispatch(setTypes(types));
       } catch (err) {
         console.error(err);
         toast.error(
@@ -48,7 +49,7 @@ export default function SidebarClassification({ selectedCategory, onCategorySele
   const categories = families.map((f) => ({
     name: language === "en" ? f.nomAnglais : f.nomFrancais,
     family_id: f.id,
-    sub: types
+    sub: typesState
       .filter((t) => t.famille_id === f.id)
       .map((t) => ({
         name: language === "en" ? t.nomAnglais : t.nomFrancais,

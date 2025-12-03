@@ -8,8 +8,11 @@ import LanguageSelector from './LanguageSelector';
 import { useLanguage } from '@/contexts/LanguageContext';
 import SearchBar from './SearchBar';
 import {useCart} from '@/contexts/CartContext';
-import FamilleServices from "@/services/FamilyServices";
-import TypesServices from "@/services/TypesServices";
+//import FamilleServices from "@/services/FamilyServices";
+//import TypesServices from "@/services/TypesServices";
+import family from "@/data/family.js";
+import types from "@/data/types.js";
+
 const Navbar = ({ onSearch, showSearch = true, onFamilySelect , onCategorySelect}) => {
   const navigate = useNavigate();
 
@@ -18,15 +21,13 @@ const Navbar = ({ onSearch, showSearch = true, onFamilySelect , onCategorySelect
   const { t, language } = useLanguage();
   const { totalItems } = useCart();
 const [families, setFamilies] = useState([]);
-const [types, setTypes] = useState([]);
 
 useEffect(() => {
   const loadData = async () => {
     try {
-      const fam = await FamilleServices.getAllFamilies();
-      const typ = await TypesServices.getAllTypes();
-      setFamilies(fam.data);
-      setTypes(typ.data);
+     // const fam = await FamilleServices.getAllFamilies();
+     // const typ = await TypesServices.getAllTypes();
+      setFamilies(family);
     } catch (err) {
       console.log(err);
     }

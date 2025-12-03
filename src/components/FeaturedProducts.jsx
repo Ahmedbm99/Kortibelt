@@ -1,12 +1,14 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import React, { useEffect, useRef, useState } from 'react';
-import BeltsServices from '@/services/BeltsServices';
+//import BeltsServices from '@/services/BeltsServices';
 import toast from 'react-hot-toast';
 import {setBelt} from '@/store/beltSlice'
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
+import courroies from "@/data/courroies.js";
+
 const FeaturedProducts = () => {
   const [products, setProducts] = useState([]);
   const carouselRef = useRef(null);
@@ -15,9 +17,9 @@ const FeaturedProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await BeltsServices.getAllBelts();
-        setProducts(res.data);
-        dispatch(setBelt(res.data))
+     //   const res = await BeltsServices.getAllBelts();
+        setProducts(courroies);
+        dispatch(setBelt(courroies))
       } catch (err) {
         toast.error("Impossible de charger les produits");
         console.log(err);
@@ -70,12 +72,12 @@ const FeaturedProducts = () => {
                 "
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                
+                {console.log(product.images[0].image_url)}
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={
-                      product.Images?.length
-                        ? `https://ahmedbm99.github.io/Kortibelt${product.Images[0].image_url}`
+                      product.images?.length
+                        ? `https://ahmedbm99.github.io/Kortibelt${product.images[0].image_url}`
                         : "/fallback-image.png"
                     }
                     alt={product.nom}

@@ -1,12 +1,13 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
-import FamilleServices from '@/services/FamilyServices';
+//import FamilleServices from '@/services/FamilyServices';
 import { Cog, Zap, Settings } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setFamily } from "@/store/familySlice";
 import toast from "react-hot-toast";
 import { Link } from 'react-router-dom';
+import family from "@/data/family";
 
 const ProductFamilies = () => {
   const dispatch = useDispatch();
@@ -17,9 +18,9 @@ const ProductFamilies = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const familyData = await FamilleServices.getAllFamilies();
-        setFamilies(familyData.data);
-        dispatch(setFamily(familyData.data));
+      //  const familyData = await FamilleServices.getAllFamilies();
+        setFamilies(family);
+        dispatch(setFamily(family));
       } catch (err) {
         console.error(err);
         toast.error(language === "en" ? "Error loading categories" : "Erreur lors du chargement des catégories");

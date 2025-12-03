@@ -95,8 +95,8 @@ const filteredProducts = products.filter((product) => {
                       <div className="aspect-video overflow-hidden">
                         <img
                           src={
-                            product.Images?.length
-                              ? `https://ahmedbm99.github.io/Kortibelt${product.Images[0].image_url}`
+                            product.images?.length
+                              ? `https://ahmedbm99.github.io/Kortibelt${product.images[0].image_url}`
                               : "/fallback-image.png"
                           }
                           alt={product.nom}

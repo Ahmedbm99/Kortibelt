@@ -11,7 +11,7 @@ import Premium from "@/assets/badges/premium.png";
 import Standard from "@/assets/badges/standard.png";
 import Titan from "@/assets/badges/titan.png";
 import Ultra from "@/assets/badges/ultra.png"
-
+import courroies from "@/data/courroies.js";
 const ProductDetail = () => {
   const navigate = useNavigate();
   const { id } = useParams();
@@ -25,6 +25,7 @@ const ProductDetail = () => {
   const [zoomPosition, setZoomPosition] = useState(null);
   const [currentMaterialIndex, setCurrentMaterialIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+const [touchStartX, setTouchStartX] = useState(null);
 
   const materialImages = {
     "CR": Power,
@@ -38,11 +39,13 @@ const ProductDetail = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await BeltsServices.getBeltById(id);
-        setProduct(res.data);
-        setFiche(res.data.Fiches || []);
-        setImages(res.data.Images || []);
-        setMatieres(res.data.Matieres || []);
+       // const res = await BeltsServices.getBeltById(id);
+        const res = courroies.find(c => c.id === Number(id));
+        
+       setProduct(res);
+        setFiche(res.fiches || []);
+        setImages(res.images || []);
+        setMatieres(res.matieres || []);
       } catch (err) {
         toast.error("Erreur lors du chargement du produit", err);
       } finally {
@@ -93,7 +96,7 @@ const ProductDetail = () => {
     <div className="min-h-screen bg-[#F7F9FC] text-[#0A1A2F]">
 
       {/* BACK BUTTON */}
-      <div className="container mx-auto px-4 pt-32">
+      <div className="container mx-auto px-4 pt-32 ">
         <Button
           variant="outline"
           onClick={() => navigate(-1)}
@@ -112,16 +115,27 @@ const ProductDetail = () => {
           {/* Main Image */}
           {currentImage ? (
             <div className="relative group">
-              <div
-                className="relative overflow-hidden rounded-xl shadow-2xl bg-white"
-                onMouseMove={(e) => {
-                  const rect = e.currentTarget.getBoundingClientRect();
-                  const x = ((e.clientX - rect.left) / rect.width) * 100;
-                  const y = ((e.clientY - rect.top) / rect.height) * 100;
-                  setZoomPosition({ x, y });
-                }}
-                onMouseLeave={() => setZoomPosition(null)}
-              >
+             <div
+  className="relative overflow-hidden rounded-xl shadow-2xl bg-white touch-pan-x select-none"
+  onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
+  onTouchEnd={(e) => {
+    if (!touchStartX) return;
+    const diff = touchStartX - e.changedTouches[0].clientX;
+
+    if (diff > 50) handleNextImage();
+    else if (diff < -50) handlePrevImage();
+
+    setTouchStartX(null);
+  }}
+  onMouseMove={(e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    setZoomPosition({ x, y });
+  }}
+  onMouseLeave={() => setZoomPosition(null)}
+>
+
                 {/* Material Badge */}
                 {currentMaterial && (
                   <img
