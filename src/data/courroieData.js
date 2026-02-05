@@ -1607,9 +1607,9 @@ const courroieData = [
     poids_g_m: "2,3",
     application: "industry",
     images: [
-      { id: 200, courroie_id: 59, image_url: "/public/Csynchrone/fermee/std/s2m/1.jpg" },
-      { id: 201, courroie_id: 59, image_url: "/public/Csynchrone/fermee/std/s2m/2.jpg" },
-      { id: 202, courroie_id: 59, image_url: "/public/Csynchrone/fermee/std/s2m/3.jpg" }
+      { id: 200, courroie_id: 59, image_url: "/public/Csynchrone/fermee/std/2m/1.jpg" },
+      { id: 201, courroie_id: 59, image_url: "/public/Csynchrone/fermee/std/2m/2.jpg" },
+      { id: 202, courroie_id: 59, image_url: "/public/Csynchrone/fermee/std/2m/3.jpg" }
     ],
     fiches: [
       { id: 203, courroie_id: 59, fiche_technique_url: "/public/Csynchrone/fermee/std/fich_std.pdf" }
@@ -1632,9 +1632,9 @@ const courroieData = [
     poids_g_m: "2,9",
     application: "industry",
     images: [
-      { id: 204, courroie_id: 60, image_url: "/public/Csynchrone/fermee/std/s3m/1.jpg" },
-      { id: 205, courroie_id: 60, image_url: "/public/Csynchrone/fermee/std/s3m/2.jpg" },
-      { id: 206, courroie_id: 60, image_url: "/public/Csynchrone/fermee/std/s3m/3.jpg" }
+      { id: 204, courroie_id: 60, image_url: "/public/Csynchrone/fermee/std/3m/1.jpg" },
+      { id: 205, courroie_id: 60, image_url: "/public/Csynchrone/fermee/std/3m/2.jpg" },
+      { id: 206, courroie_id: 60, image_url: "/public/Csynchrone/fermee/std/3m/3.jpg" }
     ],
     fiches: [
       { id: 207, courroie_id: 60, fiche_technique_url: "/public/Csynchrone/fermee/std/fich_std.pdf" }
@@ -1657,9 +1657,9 @@ const courroieData = [
     poids_g_m: "3,3",
     application: "industry",
     images: [
-      { id: 210, courroie_id: 61, image_url: "/public/Csynchrone/fermee/std/s4.5m/1.jpg" },
-      { id: 211, courroie_id: 61, image_url: "/public/Csynchrone/fermee/std/s4.5m/2.jpg" },
-      { id: 212, courroie_id: 61, image_url: "/public/Csynchrone/fermee/std/s4.5m/3.jpg" }
+      { id: 210, courroie_id: 61, image_url: "/public/Csynchrone/fermee/std/4.5m/1.jpg" },
+      { id: 211, courroie_id: 61, image_url: "/public/Csynchrone/fermee/std/4.5m/2.jpg" },
+      { id: 212, courroie_id: 61, image_url: "/public/Csynchrone/fermee/std/4.5m/3.jpg" }
     ],
     fiches: [
       { id: 213, courroie_id: 61, fiche_technique_url: "/public/Csynchrone/fermee/std/fich_std.pdf" }
@@ -1674,7 +1674,7 @@ const courroieData = [
     subcategory_id: 8,
     nom: "STD S5M",
     profil: "S5M",
-    description: "Courroie synchrone STD S5M ouverte pour applications industrielles légères.",
+    description: "Courroie synchrone STD S5M fermée pour applications industrielles légères.",
     fabricant: "AIS Group",
     largeur_mm: "3,4",
     hauteur_mm: "1,91",
@@ -1682,12 +1682,12 @@ const courroieData = [
     poids_g_m: "3,7",
     application: "industry",
     images: [
-      { id: 216, courroie_id: 62, image_url: "/public/Csynchrone/ouverte/std/s5m/1.jpg" },
-      { id: 217, courroie_id: 62, image_url: "/public/Csynchrone/ouverte/std/s5m/2.jpg" },
-      { id: 218, courroie_id: 62, image_url: "/public/Csynchrone/ouverte/std/s5m/3.jpg" }
+      { id: 216, courroie_id: 62, image_url: "/public/Csynchrone/fermee/std/5m/1.jpg" },
+      { id: 217, courroie_id: 62, image_url: "/public/Csynchrone/fermee/std/5m/2.jpg" },
+      { id: 218, courroie_id: 62, image_url: "/public/Csynchrone/fermee/std/5m/3.jpg" }
     ],
     fiches: [
-      { id: 219, courroie_id: 62, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
+      { id: 219, courroie_id: 62, fiche_technique_url: "/public/Csynchrone/fermee/std/fich_std.pdf" }
     ],
     matieres: [
       { id: 220, courroie_id: 62, matiere: "CR+NR" },
@@ -1699,7 +1699,7 @@ const courroieData = [
     subcategory_id: 8,
     nom: "STD S8M",
     profil: "S8M",
-    description: "Courroie synchrone STD S8M ouverte pour couple élevé.",
+    description: "Courroie synchrone STD S8M fermée pour couple élevé.",
     fabricant: "AIS Group",
     largeur_mm: "5,3",
     hauteur_mm: "3,05",
@@ -1707,12 +1707,12 @@ const courroieData = [
     poids_g_m: "5,3",
     application: "industry",
     images: [
-      { id: 222, courroie_id: 63, image_url: "/public/Csynchrone/ouverte/std/s8m/1.jpg" },
-      { id: 223, courroie_id: 63, image_url: "/public/Csynchrone/ouverte/std/s8m/2.jpg" },
-      { id: 224, courroie_id: 63, image_url: "/public/Csynchrone/ouverte/std/s8m/3.jpg" }
+      { id: 222, courroie_id: 63, image_url: "/public/Csynchrone/fermee/std/8m/1.jpg" },
+      { id: 223, courroie_id: 63, image_url: "/public/Csynchrone/fermee/std/8m/2.jpg" },
+      { id: 224, courroie_id: 63, image_url: "/public/Csynchrone/fermee/std/8m/3.jpg" }
     ],
     fiches: [
-      { id: 225, courroie_id: 63, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
+      { id: 225, courroie_id: 63, fiche_technique_url: "/public/Csynchrone/fermee/std/fich_std.pdf" }
     ],
     matieres: [
       { id: 226, courroie_id: 63, matiere: "CR+NR" },
@@ -1732,12 +1732,12 @@ const courroieData = [
     poids_g_m: "10,6",
     application: "industry",
     images: [
-      { id: 228, courroie_id: 64, image_url: "/public/Csynchrone/ouverte/std/s14m/1.jpg" },
-      { id: 229, courroie_id: 64, image_url: "/public/Csynchrone/ouverte/std/s14m/2.jpg" },
-      { id: 230, courroie_id: 64, image_url: "/public/Csynchrone/ouverte/std/s14m/3.jpg" }
+      { id: 228, courroie_id: 64, image_url: "/public/Csynchrone/fermee/std/14m/1.jpg" },
+      { id: 229, courroie_id: 64, image_url: "/public/Csynchrone/fermee/std/14m/2.jpg" },
+      { id: 230, courroie_id: 64, image_url: "/public/Csynchrone/fermee/std/14m/3.jpg" }
     ],
     fiches: [
-      { id: 231, courroie_id: 64, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
+      { id: 231, courroie_id: 64, fiche_technique_url: "/public/Csynchrone/fermee/std/fich_std.pdf" }
     ],
     matieres: [
       { id: 232, courroie_id: 64, matiere: "CR+NR" },
@@ -1876,7 +1876,7 @@ const courroieData = [
     subcategory_id: 8,
     nom: "RPP 2M",
     profil: "RP2M",
-    description: "Courroie synchrone RPP 2M fermee pour systèmes compacts nécessitant une transmission précise et silencieuse.",
+    description: "Courroie synchrone RPP 2M fermée pour systèmes compacts nécessitant une transmission précise et silencieuse.",
     fabricant: "AIS Group",
     largeur_mm: "1,36",
     hauteur_mm: "0,76",
@@ -1884,9 +1884,9 @@ const courroieData = [
     poids_g_m: "2,3",
     application: "industry",
     images: [
-      { id: 7001, courroie_id: 70, image_url: "/public/Csynchrone/fermee/rpp/2m/rpp.jpeg" },
-      { id: 7002, courroie_id: 70, image_url: "/public/Csynchrone/fermee/rpp/2m/rpp.jpg" },
-      { id: 7003, courroie_id: 70, image_url: "/public/Csynchrone/fermee/rpp/2m/rpp.png" }
+      { id: 7001, courroie_id: 70, image_url: "/public/Csynchrone/fermee/rpp/2m/1.jpg" },
+      { id: 7002, courroie_id: 70, image_url: "/public/Csynchrone/fermee/rpp/2m/2.jpg" },
+      { id: 7003, courroie_id: 70, image_url: "/public/Csynchrone/fermee/rpp/2m/3.jpg" }
     ],
     fiches: [
       { id: 7001, courroie_id: 70, fiche_technique_url: "/public/Csynchrone/fermee/rpp/fich_rpp.pdf" }
@@ -1896,6 +1896,207 @@ const courroieData = [
       { id: 7002, courroie_id: 70, matiere: "CR" }
     ]
   },
+  {
+    id: 271,
+    subcategory_id: 7,
+    nom: "L",
+    profil: "L",
+    description: "Courroie synchrone profil L ouverte pour transmissions industrielles standard nécessitant précision et fiabilité.",
+    fabricant: "AIS Group",
+  largeur_mm: "9,5",
+  hauteur_mm: "3,6",
+  pas_mm: "9,525",
+  poids_g_m: "8",
+  application: "industry",
+  images: [
+    { id: 10101, courroie_id: 271, image_url: "/public/Csynchrone/ouverte/l/1.jpg" },
+    { id: 10102, courroie_id: 271, image_url: "/public/Csynchrone/ouverte/l/2.jpg" },
+    { id: 10103, courroie_id: 271, image_url: "/public/Csynchrone/ouverte/l/3.jpg" }
+  ],
+   fiches: [
+      { id: 207101, courroie_id: 271, fiche_technique_url: "/public/Csynchrone/ouverte/l/fich_l.pdf" }
+    ],
+    matieres: [
+      { id: 207101, courroie_id: 271, matiere: "CR+NR" },
+      { id: 207102, courroie_id: 271, matiere: "CR" }
+    ]
+},
+{
+    id: 272,
+  subcategory_id: 8,
+  nom: "L",
+  profil: "L",
+  description: "Courroie synchrone profil L fermée adaptée aux transmissions nécessitant stabilité et synchronisation précise.",
+  fabricant: "AIS Group",
+  largeur_mm: "9,5",
+  hauteur_mm: "3,6",
+  pas_mm: "9,525",
+  poids_g_m: "8",
+  application: "industry",
+  images: [
+    { id: 117201, courroie_id: 272, image_url: "/public/Csynchrone/fermee/l/1.jpg" },
+    { id: 117202, courroie_id: 272, image_url: "/public/Csynchrone/fermee/l/2.jpg" },
+    { id: 117203, courroie_id: 272, image_url: "/public/Csynchrone/fermee/l/3.jpg" }
+  ],
+     fiches: [
+      { id: 217201, courroie_id: 272, fiche_technique_url: "/public/Csynchrone/fermee/l/fich_l.pdf" }
+    ],
+    matieres: [
+      { id: 217201, courroie_id: 272, matiere: "CR+NR" },
+      { id: 217202, courroie_id: 272, matiere: "CR" }
+    ]
+},
+{
+  id: 273,
+  subcategory_id: 7,
+  nom: "H",
+  profil: "H",
+  description: "Courroie synchrone profil H ouverte pour fortes puissances et charges industrielles élevées.",
+  fabricant: "AIS Group",
+  largeur_mm: "12,7",
+  hauteur_mm: "4,3",
+  pas_mm: "12,7",
+  poids_g_m: "12",
+  application: "industry",
+  images: [
+    { id: 127301, courroie_id: 273, image_url: "/public/Csynchrone/ouverte/h/1.jpg" },
+    { id: 127302, courroie_id: 273, image_url: "/public/Csynchrone/ouverte/h/2.jpg" },
+    { id: 127303, courroie_id: 273, image_url: "/public/Csynchrone/ouverte/h/3.jpg" }
+  ],
+   fiches: [
+      { id: 207301, courroie_id: 273, fiche_technique_url: "/public/Csynchrone/ouverte/h/fich_h.pdf" }
+    ],
+    matieres: [
+      { id: 207301, courroie_id: 273, matiere: "CR+NR" },
+      { id: 207302, courroie_id: 273, matiere: "CR" }
+    ]
+},
+{
+  id: 274,
+  subcategory_id: 8,
+  nom: "H",
+  profil: "H",
+  description: "Courroie synchrone profil H fermée pour transmissions puissantes nécessitant robustesse et précision.",
+  fabricant: "AIS Group",
+  largeur_mm: "12,7",
+  hauteur_mm: "4,3",
+  pas_mm: "12,7",
+  poids_g_m: "12",
+  application: "industry",
+  images: [
+    { id: 127401, courroie_id: 274, image_url: "/public/Csynchrone/fermee/h/1.jpg" },
+    { id: 127402, courroie_id: 274, image_url: "/public/Csynchrone/fermee/h/2.jpg" },
+    { id: 127403, courroie_id: 274, image_url: "/public/Csynchrone/fermee/h/3.jpg" }
+  ],
+   fiches: [
+      { id: 207401, courroie_id: 274, fiche_technique_url: "/public/Csynchrone/fermee/h/fich_h.pdf" }
+    ],
+    matieres: [
+      { id: 207401, courroie_id: 274, matiere: "CR+NR" },
+      { id: 207402, courroie_id: 274, matiere: "CR" }
+    ]
+},
+{
+  id: 275,
+  subcategory_id: 7,
+  nom: "MXL",
+  profil: "MXL",
+  description: "Courroie synchrone MXL ouverte pour petits mécanismes de précision et applications compactes.",
+  fabricant: "AIS Group",
+  largeur_mm: "6,4",
+  hauteur_mm: "2",
+  pas_mm: "2,032",
+  poids_g_m: "4",
+  application: "industry",
+  images: [
+    { id: 127501, courroie_id: 275, image_url: "/public/Csynchrone/ouverte/mxl/1.jpg" },
+    { id: 127502, courroie_id: 275, image_url: "/public/Csynchrone/ouverte/mxl/2.jpg" },
+    { id: 127503, courroie_id: 275, image_url: "/public/Csynchrone/ouverte/mxl/3.jpg" }
+  ],
+   fiches: [
+      { id: 207501, courroie_id: 275, fiche_technique_url: "/public/Csynchrone/ouverte/mxl/fich_mxl.pdf" }
+    ],
+    matieres: [
+      { id: 207501, courroie_id: 275, matiere: "CR+NR" },
+      { id: 207502, courroie_id: 275, matiere: "CR" }
+    ]
+},
+{
+  id: 276,
+  subcategory_id: 8,
+  nom: "MXL",
+  profil: "MXL",
+  description: "Courroie synchrone MXL fermée pour systèmes compacts nécessitant synchronisation précise.",
+  fabricant: "AIS Group",
+  largeur_mm: "6,4",
+  hauteur_mm: "2",
+  pas_mm: "2,032",
+  poids_g_m: "4",
+  application: "industry",
+  images: [
+    { id: 127601, courroie_id: 276, image_url: "/public/Csynchrone/fermee/mxl/1.jpg" },
+    { id: 127602, courroie_id: 276, image_url: "/public/Csynchrone/fermee/mxl/2.jpg" },
+    { id: 127603, courroie_id: 276, image_url: "/public/Csynchrone/fermee/mxl/3.jpg" }
+  ],
+   fiches: [
+      { id: 207601, courroie_id: 276, fiche_technique_url: "/public/Csynchrone/fermee/mxl/fich_mxl.pdf" }
+    ],
+    matieres: [
+      { id: 207601, courroie_id: 276, matiere: "CR+NR" },
+      { id: 207602, courroie_id: 276, matiere: "CR" }
+    ]
+},
+{
+  id: 277,
+  subcategory_id: 7,
+  nom: "XL",
+  profil: "XL",
+  description: "Courroie synchrone XL ouverte adaptée aux transmissions industrielles standards avec précision élevée.",
+  fabricant: "AIS Group",
+  largeur_mm: "9,5",
+  hauteur_mm: "2,3",
+  pas_mm: "5,08",
+  poids_g_m: "6",
+  application: "industry",
+  images: [
+    { id: 127701, courroie_id: 277, image_url: "/public/Csynchrone/ouverte/xl/1.jpg" },
+    { id: 127702, courroie_id: 277, image_url: "/public/Csynchrone/ouverte/xl/2.jpg" },
+    { id: 127703, courroie_id: 277, image_url: "/public/Csynchrone/ouverte/xl/3.jpg" }
+  ],
+   fiches: [
+      { id: 207701, courroie_id: 277, fiche_technique_url: "/public/Csynchrone/ouverte/xl/fich_xl.pdf" }
+    ],
+    matieres: [
+      { id: 207701, courroie_id: 277, matiere: "CR+NR" },
+      { id: 207702, courroie_id: 277, matiere: "CR" }
+    ]
+},
+{
+  id: 278,
+  subcategory_id: 8,
+  nom: "XL",
+  profil: "XL",
+  description: "Courroie synchrone XL fermée pour transmissions synchronisées nécessitant fiabilité et faible bruit.",
+  fabricant: "AIS Group",
+  largeur_mm: "9,5",
+  hauteur_mm: "2,3",
+  pas_mm: "5,08",
+  poids_g_m: "6",
+  application: "industry",
+  images: [
+    { id: 127801, courroie_id: 278, image_url: "/public/Csynchrone/fermee/xl/1.jpg" },
+    { id: 127802, courroie_id: 278, image_url: "/public/Csynchrone/fermee/xl/2.jpg" },
+    { id: 127803, courroie_id: 278, image_url: "/public/Csynchrone/fermee/xl/3.jpg" }
+  ],
+   fiches: [
+      { id: 207801, courroie_id: 278, fiche_technique_url: "/public/Csynchrone/fermee/xl/fich_xl.pdf" }
+    ],
+    matieres: [
+      { id: 207801, courroie_id: 278, matiere: "CR+NR" },
+      { id: 207802, courroie_id: 278, matiere: "CR" }
+    ]
+},
+
   {
     id: 71,
     subcategory_id: 8,
@@ -1909,9 +2110,9 @@ const courroieData = [
     poids_g_m: "2,9",
     application: "industry",
     images: [
-      { id: 7101, courroie_id: 71, image_url: "/public/Csynchrone/fermee/rpp/3m/rpp.jpeg" },
-      { id: 7102, courroie_id: 71, image_url: "/public/Csynchrone/fermee/rpp/3m/rpp.jpg" },
-      { id: 7103, courroie_id: 71, image_url: "/public/Csynchrone/fermee/rpp/3m/rpp.png" }
+      { id: 7101, courroie_id: 71, image_url: "/public/Csynchrone/fermee/rpp/3m/1.jpg" },
+      { id: 7102, courroie_id: 71, image_url: "/public/Csynchrone/fermee/rpp/3m/2.jpg" },
+      { id: 7103, courroie_id: 71, image_url: "/public/Csynchrone/fermee/rpp/3m/3.jpg" }
     ],
     fiches: [
       { id: 7101, courroie_id: 71, fiche_technique_url: "/public/Csynchrone/fermee/rpp/fich_rpp.pdf" }
@@ -1934,9 +2135,9 @@ const courroieData = [
     poids_g_m: "3,7",
     application: "industry",
     images: [
-      { id: 6711, courroie_id: 72, image_url: "/public/Csynchrone/fermee/rpp/5m/rpp.jpeg" },
-      { id: 6712, courroie_id: 72, image_url: "/public/Csynchrone/fermee/rpp/5m/rpp.jpg" },
-      { id: 6713, courroie_id: 72, image_url: "/public/Csynchrone/fermee/rpp/5m/rpp.png" }
+      { id: 6711, courroie_id: 72, image_url: "/public/Csynchrone/fermee/rpp/5m/1.jpg" },
+      { id: 6712, courroie_id: 72, image_url: "/public/Csynchrone/fermee/rpp/5m/2.jpg" },
+      { id: 6713, courroie_id: 72, image_url: "/public/Csynchrone/fermee/rpp/5m/3.jpg" }
     ],
     fiches: [
       { id: 6711, courroie_id: 72, fiche_technique_url: "/public/Csynchrone/fermee/rpp/fich_rpp.pdf" }
@@ -1959,9 +2160,9 @@ const courroieData = [
     poids_g_m: "5,7",
     application: "industry",
     images: [
-      { id: 6811, courroie_id: 73, image_url: "/public/Csynchrone/fermee/rpp/8m/rpp.jpeg" },
-      { id: 6812, courroie_id: 73, image_url: "/public/Csynchrone/fermee/rpp/8m/rpp.jpg" },
-      { id: 6813, courroie_id: 73, image_url: "/public/Csynchrone/fermee/rpp/8m/rpp.png" }
+      { id: 6811, courroie_id: 73, image_url: "/public/Csynchrone/fermee/rpp/8m/1.jpg" },
+      { id: 6812, courroie_id: 73, image_url: "/public/Csynchrone/fermee/rpp/8m/2.jpg" },
+      { id: 6813, courroie_id: 73, image_url: "/public/Csynchrone/fermee/rpp/8m/3.jpg" }
     ],
     fiches: [
       { id: 6811, courroie_id: 73, fiche_technique_url: "/public/Csynchrone/fermee/rpp/fich_rpp.pdf" }
@@ -1976,7 +2177,7 @@ const courroieData = [
     subcategory_id: 8,
     nom: "RPP 14M",
     profil: "RP14M",
-    description: "Courroie synchrone RPP 14M ouverte pour charges industrielles lourdes et forte puissance.",
+    description: "Courroie synchrone RPP 14M fermée pour charges industrielles lourdes et forte puissance.",
     fabricant: "AIS Group",
     largeur_mm: "10",
     hauteur_mm: "6",
@@ -1984,9 +2185,9 @@ const courroieData = [
     poids_g_m: "10,6",
     application: "industry",
     images: [
-      { id: 6911, courroie_id: 74, image_url: "/public/Csynchrone/fermee/rpp/14m/rpp.jpeg" },
-      { id: 6912, courroie_id: 74, image_url: "/public/Csynchrone/fermee/rpp/14m/rpp.jpg" },
-      { id: 6913, courroie_id: 74, image_url: "/public/Csynchrone/fermee/rpp/14m/rpp.png" }
+      { id: 6911, courroie_id: 74, image_url: "/public/Csynchrone/fermee/rpp/14m/1.jpg" },
+      { id: 6912, courroie_id: 74, image_url: "/public/Csynchrone/fermee/rpp/14m/2.jpg" },
+      { id: 6913, courroie_id: 74, image_url: "/public/Csynchrone/fermee/rpp/14m/3.jpg" }
     ],
     fiches: [
       { id: 6911, courroie_id: 74, fiche_technique_url: "/public/Csynchrone/fermee/rpp/fich_rpp.pdf" }
