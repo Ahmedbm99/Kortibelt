@@ -92,9 +92,9 @@ const courroieData = [
     source_catalogue: "Classic V Belt Catalogue",
     application: "industry",
     images: [
-         { id: 1, courroie_id: 5, image_url: "/public/Ctrapez/classic/b/1.png" },
-      { id: 2, courroie_id: 5, image_url: "/public/Ctrapez/classic/b/2.png" },
-    { id: 3, courroie_id: 5, image_url: "/public/Ctrapez/classic/b/3.png" }
+         { id: 1, courroie_id: 5, image_url: "/public/Ctrapez/classic/b/1.jpeg" },
+      { id: 2, courroie_id: 5, image_url: "/public/Ctrapez/classic/b/2.jpeg" },
+    { id: 3, courroie_id: 5, image_url: "/public/Ctrapez/classic/b/3.jpeg" }
     ],
     fiches: [
       { id: 2, courroie_id: 5, fiche_technique_url: "/public/Ctrapez/classic/classic.pdf" }
