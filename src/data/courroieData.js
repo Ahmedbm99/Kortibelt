@@ -336,12 +336,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 97, courroie_id: 13, image_url: "/public/etroite/1.jpeg" },
-      { id: 98, courroie_id: 13, image_url: "/public/etroite/2.jpeg" },
-      { id: 99, courroie_id: 13, image_url: "/public/etroite/etroite.jpg" }
+      { id: 97, courroie_id: 13, image_url: "/public/Ctrapez/etroite/3vx/1.jpeg" },
+      { id: 98, courroie_id: 13, image_url: "/public/Ctrapez/etroite/3vx/2.jpeg" },
+      { id: 99, courroie_id: 13, image_url: "/public/Ctrapez/etroite/3vx/3.jpeg" }
     ],
     fiches: [
-      { id: 33, courroie_id: 13, fiche_technique_url: "/public/etroite/narrow.png" }
+      { id: 33, courroie_id: 13, fiche_technique_url: "/public/Ctrapez/etroite/narrow.png" }
     ],
     matieres: [
       { id: 70, courroie_id: 13, matiere: "CR" },
@@ -363,12 +363,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 103, courroie_id: 15, image_url: "/public/etroite/1.jpeg" },
-      { id: 104, courroie_id: 15, image_url: "/public/etroite/2.jpeg" },
-      { id: 105, courroie_id: 15, image_url: "/public/etroite/etroite.jpg" }
+      { id: 103, courroie_id: 15, image_url: "/public/Ctrapez/etroite/8vx/1.jpeg" },
+      { id: 104, courroie_id: 15, image_url: "/public/Ctrapez/etroite/8vx/2.jpeg" },
+      { id: 105, courroie_id: 15, image_url: "/public/Ctrapez/etroite/8vx/3.jpeg" }
     ],
     fiches: [
-      { id: 35, courroie_id: 15, fiche_technique_url: "/public/etroite/narrow.png" }
+      { id: 35, courroie_id: 15, fiche_technique_url: "/public/Ctrapez/etroite/narrow.png" }
     ],
     matieres: [
       { id: 74, courroie_id: 15, matiere: "CR" },
@@ -390,12 +390,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Multiple Catalogue",
     application: "industry",
     images: [
-      { id: 115, courroie_id: 19, image_url: "/public/etroite_multiple/1.jpeg" },
-      { id: 116, courroie_id: 19, image_url: "/public/etroite_multiple/2.jpeg" },
-      { id: 117, courroie_id: 19, image_url: "/public/etroite_multiple/multiple.jpg" }
+      { id: 115, courroie_id: 19, image_url: "/public/Ctrapez/etroiteMultiple/1.jpg" },
+      { id: 116, courroie_id: 19, image_url: "/public/Ctrapez/etroiteMultiple/2.jpg" },
+      { id: 117, courroie_id: 19, image_url: "/public/Ctrapez/etroiteMultiple/3.jpg" }
     ],
     fiches: [
-      { id: 39, courroie_id: 19, fiche_technique_url: "/public/etroite_multiple/narrow_multiple.png" }
+      { id: 39, courroie_id: 19, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.png" }
     ],
     matieres: [
       { id: 82, courroie_id: 19, matiere: "CR" },
@@ -962,9 +962,9 @@ const courroieData = [
   poids_g_m: "150",
   application: "industry",
   images: [
-    { id: 100, courroie_id: 39, image_url: "/public/hexagonal/hexagonal.png" },
-    { id: 101, courroie_id: 39, image_url: "/public/hexagonal/1.jpeg" },
-    { id: 102, courroie_id: 39, image_url: "/public/hexagonal/hexagonal.png" }
+    { id: 100, courroie_id: 39, image_url: "/public/hexagonal/1.jpg" },
+    { id: 101, courroie_id: 39, image_url: "/public/hexagonal/hexagonal.png" },
+    
   ],
   fiches: [
     { id: 34, courroie_id: 39, fiche_technique_url: "/public/hexagonal/hexagonal.pdf" }
@@ -988,9 +988,9 @@ const courroieData = [
   poids_g_m: "250",
   application: "industry",
   images: [
-    { id: 103, courroie_id: 40, image_url: "/public/hexagonal/hexagonal.png" },
-    { id: 104, courroie_id: 40, image_url: "/public/hexagonal/hexagonal.png" },
-    { id: 105, courroie_id: 40, image_url: "/public/hexagonal/hexagonal.png" }
+    { id: 103, courroie_id: 40, image_url: "/public/hexagonal/2.jpg" },
+    { id: 104, courroie_id: 40, image_url: "/public/hexagonal/hexagonal.png" }
+    
   ],
   fiches: [
     { id: 35, courroie_id: 40, fiche_technique_url: "/public/hexagonal/hexagonal.pdf" }
@@ -1014,9 +1014,9 @@ const courroieData = [
   poids_g_m: "440",
   application: "industry",
   images: [
-    { id: 106, courroie_id: 41, image_url: "/public/hexagonal/hexagonal.png" },
-    { id: 107, courroie_id: 41, image_url: "/public/hexagonal/hexagonal.png" },
-    { id: 108, courroie_id: 41, image_url: "/public/hexagonal/hexagonal.png" }
+    { id: 106, courroie_id: 41, image_url: "/public/hexagonal/3.jpg" },
+    { id: 107, courroie_id: 41, image_url: "/public/hexagonal/hexagonal.png" }
+    
   ],
   fiches: [
     { id: 36, courroie_id: 41, fiche_technique_url: "/public/hexagonal/hexagonal.pdf" }
@@ -1039,9 +1039,9 @@ const courroieData = [
   poids_g_m: "8",
   application: "industry",
   images: [
-    { id: 22, courroie_id: 42, image_url: "/public/polyv/polyv1.jpeg" },
-    { id: 23, courroie_id: 42, image_url: "/public/polyv/2.jpeg" },
-    { id: 24, courroie_id: 42, image_url: "/public/polyv/4.jpeg" }
+    { id: 22, courroie_id: 42, image_url: "/public/polyv/ph/1.jpg" },
+    { id: 23, courroie_id: 42, image_url: "/public/polyv/ph/2.jpg" },
+    { id: 24, courroie_id: 42, image_url: "/public/polyv/ph/3.jpg" }
   ],
   fiches: [
     { id: 8, courroie_id: 42, fiche_technique_url: "/public/polyv/polyv.pdf" }
@@ -1064,9 +1064,9 @@ const courroieData = [
   poids_g_m: "10",
   application: "industry",
   images: [
-    { id: 25, courroie_id: 43, image_url: "/public/polyv/4.jpeg" },
-    { id: 26, courroie_id: 43, image_url: "/public/polyv/1.png" },
-    { id: 27, courroie_id: 43, image_url: "/public/polyv/2.jpeg" }
+    { id: 25, courroie_id: 43, image_url: "/public/polyv/pj/1.jpg" },
+    { id: 26, courroie_id: 43, image_url: "/public/polyv/pj/2.png" },
+    { id: 27, courroie_id: 43, image_url: "/public/polyv/pj/3.jpeg" }
   ],
   fiches: [
     { id: 9, courroie_id: 43, fiche_technique_url: "/public/polyv/polyv.pdf" }
@@ -1089,9 +1089,9 @@ const courroieData = [
   poids_g_m: "20",
   application: "automotive",
   images: [
-    { id: 28, courroie_id: 44, image_url: "/public/polyv/polyv1.jpeg" },
-    { id: 29, courroie_id: 44, image_url: "/public/polyv/1.png" },
-    { id: 329, courroie_id: 44, image_url: "/public/polyv/2.jpeg" }
+    { id: 28, courroie_id: 44, image_url: "/public/polyv/pk/1.jpg" },
+    { id: 29, courroie_id: 44, image_url: "/public/polyv/pk/2.jpg" },
+    { id: 329, courroie_id: 44, image_url: "/public/polyv/pk/3.jpeg" }
   ],
   fiches: [
     { id: 10, courroie_id: 44, fiche_technique_url: "/public/polyv/polyv.pdf" }
@@ -1114,9 +1114,9 @@ const courroieData = [
   poids_g_m: "36",
   application: "industry",
   images: [
-    { id: 31, courroie_id: 45, image_url: "/public/polyv/polyv1.jpeg" },
-    { id: 32, courroie_id: 45, image_url: "/public/polyv/1.png" },
-    { id: 532, courroie_id: 45, image_url: "/public/polyv/2.jpeg" }
+    { id: 31, courroie_id: 45, image_url: "/public/polyv/pl/1.jpg" },
+    { id: 32, courroie_id: 45, image_url: "/public/polyv/pl/2.jpg" },
+    { id: 532, courroie_id: 45, image_url: "/public/polyv/pl/3.jpg" }
   ],
   fiches: [
     { id: 11, courroie_id: 45, fiche_technique_url: "/public/polyv/polyv.pdf" }
@@ -1139,9 +1139,9 @@ const courroieData = [
   poids_g_m: "124",
   application: "industry",
   images: [
-    { id: 34, courroie_id: 46, image_url: "/public/polyv/polyv1.jpeg" },
-    { id: 35, courroie_id: 46, image_url: "/public/polyv/1.png" },
-    { id: 535, courroie_id: 46, image_url: "/public/polyv/4.jpeg" }
+    { id: 34, courroie_id: 46, image_url: "/public/polyv/pm/1.jpg" },
+    { id: 35, courroie_id: 46, image_url: "/public/polyv/pm/2.jpg" },
+    { id: 535, courroie_id: 46, image_url: "/public/polyv/pm/3.jpg" }
   ],
   fiches: [
     { id: 12, courroie_id: 46, fiche_technique_url: "/public/polyv/polyv.pdf" }
@@ -1165,12 +1165,12 @@ const courroieData = [
     poids_g_m: "2,3",
     application: "industry",
     images: [
-      { id: 4701, courroie_id: 47, image_url: "/public/htd_std_rpp/htd.jpeg" },
-      { id: 4702, courroie_id: 47, image_url: "/public/htd_std_rpp/2.jpeg" },
-      { id: 4703, courroie_id: 47, image_url: "/public/htd_std_rpp/3.jpeg" }
+      { id: 4701, courroie_id: 47, image_url: "/public/Csynchrone/ouverte/htd/2m/1.jpg" },
+      { id: 4702, courroie_id: 47, image_url: "/public/Csynchrone/ouverte/htd/2m/2.jpg" },
+      { id: 4703, courroie_id: 47, image_url: "/public/Csynchrone/ouverte/htd/2m/3.jpg" }
     ],
     fiches: [
-      { id: 4701, courroie_id: 47, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 4701, courroie_id: 47, fiche_technique_url: "/public/Csynchrone/ouverte/htd/fich_htd.pdf" }
     ],
     matieres: [
       { id: 4701, courroie_id: 47, matiere: "CR+NR" },
@@ -1190,12 +1190,12 @@ const courroieData = [
     poids_g_m: "2,9",
     application: "industry",
     images: [
-      { id: 4801, courroie_id: 48, image_url: "/public/htd_std_rpp/htd.jpeg" },
-      { id: 4802, courroie_id: 48, image_url: "/public/htd_std_rpp/2.jpeg" },
-      { id: 4803, courroie_id: 48, image_url: "/public/htd_std_rpp/3.jpeg" }
+      { id: 4801, courroie_id: 48, image_url: "/public/Csynchrone/ouverte/htd/3m/1.jpg" },
+      { id: 4802, courroie_id: 48, image_url: "/public/Csynchrone/ouverte/htd/3m/2.jpg" },
+      { id: 4803, courroie_id: 48, image_url: "/public/Csynchrone/ouverte/htd/3m/3.jpg" }
     ],
     fiches: [
-      { id: 4801, courroie_id: 48, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 4801, courroie_id: 48, fiche_technique_url: "/public/Csynchrone/ouverte/htd/fich_htd.pdf" }
     ],
     matieres: [
       { id: 4801, courroie_id: 48, matiere: "CR+NR" },
@@ -1215,11 +1215,11 @@ const courroieData = [
     poids_g_m: "3,8",
     application: "industry",
     images: [
-      { id: 4901, courroie_id: 49, image_url: "/public/htd_std_rpp/htd.jpeg" },
-      { id: 4902, courroie_id: 49, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 4901, courroie_id: 49, image_url: "/public/Csynchrone/ouverte/htd/5m/1.jpg" },
+      { id: 4902, courroie_id: 49, image_url: "/public/Csynchrone/ouverte/htd/5m/2.jpg" }
     ],
     fiches: [
-      { id: 4901, courroie_id: 49, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 4901, courroie_id: 49, fiche_technique_url: "/public/Csynchrone/ouverte/htd/fich_htd.pdf" }
     ],
     matieres: [
       { id: 4901, courroie_id: 49, matiere: "CR+NR" },
@@ -1239,11 +1239,11 @@ const courroieData = [
     poids_g_m: "6,6",
     application: "industry",
     images: [
-      { id: 5001, courroie_id: 50, image_url: "/public/htd_std_rpp/htd.jpeg" },
-      { id: 5002, courroie_id: 50, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 5001, courroie_id: 50, image_url: "/public/Csynchrone/ouverte/htd/8m/1.jpg" },
+      { id: 5002, courroie_id: 50, image_url: "/public/Csynchrone/ouverte/htd/8m/2.jpg" }
     ],
     fiches: [
-      { id: 5001, courroie_id: 50, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 5001, courroie_id: 50, fiche_technique_url: "/public/Csynchrone/ouverte/htd/fich_htd.pdf" }
     ],
     matieres: [
       { id: 5001, courroie_id: 50, matiere: "CR+NR" },
@@ -1263,11 +1263,11 @@ const courroieData = [
     poids_g_m: "11,1",
     application: "industry",
     images: [
-      { id: 5101, courroie_id: 51, image_url: "/public/htd_std_rpp/htd.jpeg" },
-      { id: 5102, courroie_id: 51, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 5101, courroie_id: 51, image_url: "/public/Csynchrone/ouverte/htd/14m/1.jpg" },
+      { id: 5102, courroie_id: 51, image_url: "/public/Csynchrone/ouverte/htd/14m/2.jpg" }
     ],
     fiches: [
-      { id: 5101, courroie_id: 51, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 5101, courroie_id: 51, fiche_technique_url: "/public/Csynchrone/ouverte/htd/fich_htd.pdf" }
     ],
     matieres: [
       { id: 5101, courroie_id: 51, matiere: "CR+NR" },
@@ -1287,10 +1287,10 @@ const courroieData = [
     poids_g_m: "17,7",
     application: "industry",
     images: [
-      { id: 5201, courroie_id: 52, image_url: "/public/htd_std_rpp/htd.jpeg" }
+      { id: 5201, courroie_id: 52, image_url: "/public/Csynchrone/ouverte/htd/20m/1.jpg" }
     ],
     fiches: [
-      { id: 5201, courroie_id: 52, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 5201, courroie_id: 52, fiche_technique_url: "/public/Csynchrone/ouverte/htd/fich_htd.pdf" }
     ],
     matieres: [
       { id: 5201, courroie_id: 52, matiere: "CR+NR" },
@@ -1302,7 +1302,7 @@ const courroieData = [
     subcategory_id: 8,
     nom: "HTD 2M",
     profil: "2M",
-    description: "Courroie synchrone HTD 2M ouverte pour transmissions compactes et précises.",
+    description: "Courroie synchrone HTD 2M fermee pour transmissions compactes et précises.",
     fabricant: "AIS Group",
     largeur_mm: "1,36",
     hauteur_mm: "0,75",
@@ -1310,12 +1310,12 @@ const courroieData = [
     poids_g_m: "2,3",
     application: "industry",
     images: [
-      { id: 5301, courroie_id: 53, image_url: "/public/htd_std_rpp/htd.jpeg" },
-      { id: 5302, courroie_id: 53, image_url: "/public/htd_std_rpp/2.jpeg" },
-      { id: 5303, courroie_id: 53, image_url: "/public/htd_std_rpp/3.jpeg" }
+      { id: 5301, courroie_id: 53, image_url: "/public/Csynchrone/fermee/htd/2m/1.jpg" },
+            { id: 5302, courroie_id: 53, image_url: "/public/Csynchrone/fermee/htd/2m/2.jpg" },
+      { id: 5303, courroie_id: 53, image_url: "/public/Csynchrone/fermee/htd/2m/3.jpg" }
     ],
     fiches: [
-      { id: 5301, courroie_id: 53, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 5301, courroie_id: 53, fiche_technique_url: "/public/Csynchrone/fermee/htd/fich_htd.pdf" }
     ],
     matieres: [
       { id: 5301, courroie_id: 53, matiere: "CR+NR" },
@@ -1327,7 +1327,7 @@ const courroieData = [
     subcategory_id:8,
     nom: "HTD 3M",
     profil: "3M",
-    description: "Courroie synchrone HTD 3M ouverte pour synchronisation fluide.",
+    description: "Courroie synchrone HTD 3M fermee pour synchronisation fluide.",
     fabricant: "AIS Group",
     largeur_mm: "2,4",
     hauteur_mm: "1,17",
@@ -1335,12 +1335,12 @@ const courroieData = [
     poids_g_m: "2,9",
     application: "industry",
     images: [
-      { id: 51, courroie_id: 54, image_url: "/public/htd_std_rpp/htd.jpeg" },
-      { id: 52, courroie_id: 54, image_url: "/public/htd_std_rpp/2.jpeg" },
-      { id: 53, courroie_id: 54, image_url: "/public/htd_std_rpp/3.jpeg" }
+      { id: 5401, courroie_id: 54, image_url: "/public/Csynchrone/fermee/htd/3m/1.jpg" },
+      { id: 5402, courroie_id: 54, image_url: "/public/Csynchrone/fermee/htd/3m/2.jpg" },
+      { id: 5403, courroie_id: 54, image_url: "/public/Csynchrone/fermee/htd/3m/3.jpg" }
     ],
     fiches: [
-      { id: 51, courroie_id: 54 , fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 5401, courroie_id: 54 , fiche_technique_url: "/public/Csynchrone/fermee/htd/fich_htd.pdf" }
     ],
     matieres: [
       { id: 5401, courroie_id: 54, matiere: "CR+NR" },
@@ -1360,15 +1360,15 @@ const courroieData = [
     poids_g_m: "3,8",
     application: "industry",
     images: [
-      { id: 4901, courroie_id: 55, image_url: "/public/htd_std_rpp/htd.jpeg" },
-      { id: 4902, courroie_id: 55, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 5501, courroie_id: 55, image_url: "/public/Csynchrone/fermee/htd/5m/1.jpg" },
+      { id: 5502, courroie_id: 55, image_url: "/public/Csynchrone/fermee/htd/5m/2.jpg" }
     ],
     fiches: [
-      { id: 4901, courroie_id: 55, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 5501, courroie_id: 55, fiche_technique_url: "/public/Csynchrone/fermee/htd/fich_htd.pdf" }
     ],
     matieres: [
-      { id: 4901, courroie_id: 55, matiere: "CR+NR" },
-      { id: 4902, courroie_id: 55, matiere: "CR" }
+      { id: 5501, courroie_id: 55, matiere: "CR+NR" },
+      { id: 5502, courroie_id: 55, matiere: "CR" }
     ]
   },
   {
@@ -1376,7 +1376,7 @@ const courroieData = [
     subcategory_id: 8,
     nom: "HTD 8M",
     profil: "8M",
-    description: "Courroie synchrone HTD 8M ouverte pour fortes charges.",
+    description: "Courroie synchrone HTD 8M fermee pour fortes charges.",
     fabricant: "AIS Group",
     largeur_mm: "6",
     hauteur_mm: "3,36",
@@ -1384,11 +1384,11 @@ const courroieData = [
     poids_g_m: "6,6",
     application: "industry",
     images: [
-      { id: 61, courroie_id: 50, image_url: "/public/htd_std_rpp/htd.jpeg" },
-      { id: 62, courroie_id: 50, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 61, courroie_id: 50, image_url: "/public/Csynchrone/fermee/htd/8m/1.jpg" },
+      { id: 62, courroie_id: 50, image_url: "/public/Csynchrone/fermee/htd/8m/2.jpg" }
     ],
     fiches: [
-      { id: 61, courroie_id: 50, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 61, courroie_id: 50, fiche_technique_url: "/public/Csynchrone/fermee/htd/fich_htd.pdf" }
     ],
     matieres: [
       { id: 61, courroie_id: 50, matiere: "CR+NR" },
@@ -1400,7 +1400,7 @@ const courroieData = [
     subcategory_id: 8,
     nom: "HTD 14M",
     profil: "14M",
-    description: "Courroie synchrone HTD 14M ouverte pour très fortes puissances.",
+    description: "Courroie synchrone HTD 14M fermee pour très fortes puissances.",
     fabricant: "AIS Group",
     largeur_mm: "10",
     hauteur_mm: "6,02",
@@ -1408,11 +1408,11 @@ const courroieData = [
     poids_g_m: "11,1",
     application: "industry",
     images: [
-      { id: 71, courroie_id: 51, image_url: "/public/htd_std_rpp/htd.jpeg" },
-      { id: 72, courroie_id: 51, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 71, courroie_id: 51, image_url: "/public/Csynchrone/fermee/htd/14m/1.jpg" },
+      { id: 72, courroie_id: 51, image_url: "/public/Csynchrone/fermee/htd/14m/2.jpg" }
     ],
     fiches: [
-      { id: 71, courroie_id: 51, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 71, courroie_id: 51, fiche_technique_url: "/public/Csynchrone/fermee/htd/fich_htd.pdf" }
     ],
     matieres: [
       { id: 71, courroie_id: 51, matiere: "CR+NR" },
@@ -1424,7 +1424,7 @@ const courroieData = [
     subcategory_id: 8,
     nom: "HTD 20M",
     profil: "20M",
-    description: "Courroie synchrone HTD 20M ouverte pour applications lourdes.",
+    description: "Courroie synchrone HTD 20M fermee pour applications lourdes.",
     fabricant: "AIS Group",
     largeur_mm: "13,2",
     hauteur_mm: "8,4",
@@ -1432,10 +1432,10 @@ const courroieData = [
     poids_g_m: "17,7",
     application: "industry",
     images: [
-      { id: 81, courroie_id: 52, image_url: "/public/htd_std_rpp/htd.jpeg" }
+      { id: 81, courroie_id: 52, image_url: "/public/Csynchrone/fermee/htd/20m/1.jpg" }
     ],
     fiches: [
-      { id: 81, courroie_id: 52, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 81, courroie_id: 52, fiche_technique_url: "/public/Csynchrone/fermee/htd/fich_htd.pdf" }
     ],
     matieres: [
       { id: 81, courroie_id: 52, matiere: "CR+NR" },
@@ -1456,12 +1456,12 @@ const courroieData = [
     poids_g_m: "2,3",
     application: "industry",
     images: [
-      { id: 5901, courroie_id: 53, image_url: "/public/htd_std_rpp/std.jpg" },
-      { id: 5902, courroie_id: 53, image_url: "/public/htd_std_rpp/3.jpeg" },
-      { id: 5903, courroie_id: 53, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 5901, courroie_id: 53, image_url: "/public/Csynchrone/ouverte/std/s2m/1.jpg" },
+      { id: 5902, courroie_id: 53, image_url: "/public/Csynchrone/ouverte/std/s2m/2.jpg" },
+      { id: 5903, courroie_id: 53, image_url: "/public/Csynchrone/ouverte/std/s2m/3.jpg" }
     ],
     fiches: [
-      { id: 5901, courroie_id: 53, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 5901, courroie_id: 53, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
     ],
     matieres: [
       { id: 5901, courroie_id: 53, matiere: "CR+NR" },
@@ -1481,12 +1481,12 @@ const courroieData = [
     poids_g_m: "2,9",
     application: "industry",
     images: [
-      { id: 6001, courroie_id: 54, image_url: "/public/htd_std_rpp/std.jpg" },
-      { id: 6002, courroie_id: 54, image_url: "/public/htd_std_rpp/htd.jpg" },
-      { id: 6003, courroie_id: 54, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 6001, courroie_id: 54, image_url: "/public/Csynchrone/ouverte/std/s3m/1.jpg" },
+      { id: 6002, courroie_id: 54, image_url: "/public/Csynchrone/ouverte/std/s3m/2.jpg" },
+      { id: 6003, courroie_id: 54, image_url: "/public/Csynchrone/ouverte/std/s3m/3.jpg" }
     ],
     fiches: [
-      { id: 6001, courroie_id: 54, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 6001, courroie_id: 54, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
     ],
     matieres: [
       { id: 6001, courroie_id: 54, matiere: "CR+NR" },
@@ -1506,12 +1506,12 @@ const courroieData = [
     poids_g_m: "3,3",
     application: "industry",
     images: [
-      { id: 6101, courroie_id: 55, image_url: "/public/htd_std_rpp/std.jpg" },
-      { id: 6102, courroie_id: 55, image_url: "/public/htd_std_rpp/htd.jpg" },
-      { id: 6103, courroie_id: 55, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 6101, courroie_id: 55, image_url: "/public/Csynchrone/ouverte/std/s4.5m/1.jpg" },
+      { id: 6102, courroie_id: 55, image_url: "/public/Csynchrone/ouverte/std/s4.5m/2.jpg" },
+      { id: 6103, courroie_id: 55, image_url: "/public/Csynchrone/ouverte/std/s4.5m/3.jpg" }
     ],
     fiches: [
-      { id: 6101, courroie_id: 55, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 6101, courroie_id: 55, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
     ],
     matieres: [
       { id: 6101, courroie_id: 55, matiere: "CR+NR" },
@@ -1531,12 +1531,12 @@ const courroieData = [
     poids_g_m: "3,7",
     application: "industry",
     images: [
-      { id: 6201, courroie_id: 56, image_url: "/public/htd_std_rpp/std.jpg" },
-      { id: 6202, courroie_id: 56, image_url: "/public/htd_std_rpp/htd.jpg" },
-      { id: 6203, courroie_id: 56, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 6201, courroie_id: 56, image_url: "/public/Csynchrone/ouverte/std/s5m/1.jpg" },
+      { id: 6202, courroie_id: 56, image_url: "/public/Csynchrone/ouverte/std/s5m/2.jpg" },
+      { id: 6203, courroie_id: 56, image_url: "/public/Csynchrone/ouverte/std/s5m/3.jpg" }
     ],
     fiches: [
-      { id: 6201, courroie_id: 56, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 6201, courroie_id: 56, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
     ],
     matieres: [
       { id: 6201, courroie_id: 56, matiere: "CR+NR" },
@@ -1556,12 +1556,12 @@ const courroieData = [
     poids_g_m: "5,3",
     application: "industry",
     images: [
-      { id: 6301, courroie_id: 57, image_url: "/public/htd_std_rpp/std.jpg" },
-      { id: 6302, courroie_id: 57, image_url: "/public/htd_std_rpp/htd.jpg" },
-      { id: 6303, courroie_id: 57, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 6301, courroie_id: 57, image_url: "/public/Csynchrone/ouverte/std/s8m/1.jpg" },
+      { id: 6302, courroie_id: 57, image_url: "/public/Csynchrone/ouverte/std/s8m/2.jpg" },
+      { id: 6303, courroie_id: 57, image_url: "/public/Csynchrone/ouverte/std/s8m/3.jpg" }
     ],
     fiches: [
-      { id: 6301, courroie_id: 57, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 6301, courroie_id: 57, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
     ],
     matieres: [
       { id: 6301, courroie_id: 57, matiere: "CR+NR" },
@@ -1581,12 +1581,12 @@ const courroieData = [
     poids_g_m: "10,6",
     application: "industry",
     images: [
-      { id: 6401, courroie_id: 58, image_url: "/public/htd_std_rpp/htd.jpg" },
-      { id: 6402, courroie_id: 58, image_url: "/public/htd_std_rpp/std.jpg" },
-      { id: 6403, courroie_id: 58, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 6401, courroie_id: 58, image_url: "/public/Csynchrone/ouverte/std/s14m/1.jpg" },
+      { id: 6402, courroie_id: 58, image_url: "/public/Csynchrone/ouverte/std/s14m/2.jpg" },
+      { id: 6403, courroie_id: 58, image_url: "/public/Csynchrone/ouverte/std/s14m/3.jpg" }
     ],
     fiches: [
-      { id: 6401, courroie_id: 58, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 6401, courroie_id: 58, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
     ],
     matieres: [
       { id: 6401, courroie_id: 58, matiere: "CR+NR" },
@@ -1599,7 +1599,7 @@ const courroieData = [
     subcategory_id: 8,
     nom: "STD S2M",
     profil: "S2M",
-    description: "Courroie synchrone STD S2M ouverte pour systèmes compacts et précis.",
+    description: "Courroie synchrone STD S2M fermee pour systèmes compacts et précis.",
     fabricant: "AIS Group",
     largeur_mm: "1,36",
     hauteur_mm: "0,76",
@@ -1607,12 +1607,12 @@ const courroieData = [
     poids_g_m: "2,3",
     application: "industry",
     images: [
-      { id: 200, courroie_id: 59, image_url: "/public/htd_std_rpp/std.jpg" },
-      { id: 201, courroie_id: 59, image_url: "/public/htd_std_rpp/3.jpeg" },
-      { id: 202, courroie_id: 59, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 200, courroie_id: 59, image_url: "/public/Csynchrone/fermee/std/s2m/1.jpg" },
+      { id: 201, courroie_id: 59, image_url: "/public/Csynchrone/fermee/std/s2m/2.jpg" },
+      { id: 202, courroie_id: 59, image_url: "/public/Csynchrone/fermee/std/s2m/3.jpg" }
     ],
     fiches: [
-      { id: 203, courroie_id: 59, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 203, courroie_id: 59, fiche_technique_url: "/public/Csynchrone/fermee/std/fich_std.pdf" }
     ],
     matieres: [
       { id: 204, courroie_id: 59, matiere: "CR+NR" },
@@ -1632,12 +1632,12 @@ const courroieData = [
     poids_g_m: "2,9",
     application: "industry",
     images: [
-      { id: 204, courroie_id: 60, image_url: "/public/htd_std_rpp/std.jpg" },
-      { id: 205, courroie_id: 60, image_url: "/public/htd_std_rpp/htd.jpg" },
-      { id: 206, courroie_id: 60, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 204, courroie_id: 60, image_url: "/public/Csynchrone/fermee/std/s3m/1.jpg" },
+      { id: 205, courroie_id: 60, image_url: "/public/Csynchrone/fermee/std/s3m/2.jpg" },
+      { id: 206, courroie_id: 60, image_url: "/public/Csynchrone/fermee/std/s3m/3.jpg" }
     ],
     fiches: [
-      { id: 207, courroie_id: 60, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 207, courroie_id: 60, fiche_technique_url: "/public/Csynchrone/fermee/std/fich_std.pdf" }
     ],
     matieres: [
       { id: 208, courroie_id: 60, matiere: "CR+NR" },
@@ -1657,12 +1657,12 @@ const courroieData = [
     poids_g_m: "3,3",
     application: "industry",
     images: [
-      { id: 210, courroie_id: 61, image_url: "/public/htd_std_rpp/std.jpg" },
-      { id: 211, courroie_id: 61, image_url: "/public/htd_std_rpp/htd.jpg" },
-      { id: 212, courroie_id: 61, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 210, courroie_id: 61, image_url: "/public/Csynchrone/fermee/std/s4.5m/1.jpg" },
+      { id: 211, courroie_id: 61, image_url: "/public/Csynchrone/fermee/std/s4.5m/2.jpg" },
+      { id: 212, courroie_id: 61, image_url: "/public/Csynchrone/fermee/std/s4.5m/3.jpg" }
     ],
     fiches: [
-      { id: 213, courroie_id: 61, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 213, courroie_id: 61, fiche_technique_url: "/public/Csynchrone/fermee/std/fich_std.pdf" }
     ],
     matieres: [
       { id: 214, courroie_id: 61, matiere: "CR+NR" },
@@ -1682,12 +1682,12 @@ const courroieData = [
     poids_g_m: "3,7",
     application: "industry",
     images: [
-      { id: 216, courroie_id: 62, image_url: "/public/htd_std_rpp/std.jpg" },
-      { id: 217, courroie_id: 62, image_url: "/public/htd_std_rpp/htd.jpg" },
-      { id: 218, courroie_id: 62, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 216, courroie_id: 62, image_url: "/public/Csynchrone/ouverte/std/s5m/1.jpg" },
+      { id: 217, courroie_id: 62, image_url: "/public/Csynchrone/ouverte/std/s5m/2.jpg" },
+      { id: 218, courroie_id: 62, image_url: "/public/Csynchrone/ouverte/std/s5m/3.jpg" }
     ],
     fiches: [
-      { id: 219, courroie_id: 62, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 219, courroie_id: 62, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
     ],
     matieres: [
       { id: 220, courroie_id: 62, matiere: "CR+NR" },
@@ -1707,12 +1707,12 @@ const courroieData = [
     poids_g_m: "5,3",
     application: "industry",
     images: [
-      { id: 222, courroie_id: 63, image_url: "/public/htd_std_rpp/std.jpg" },
-      { id: 223, courroie_id: 63, image_url: "/public/htd_std_rpp/htd.jpg" },
-      { id: 224, courroie_id: 63, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 222, courroie_id: 63, image_url: "/public/Csynchrone/ouverte/std/s8m/1.jpg" },
+      { id: 223, courroie_id: 63, image_url: "/public/Csynchrone/ouverte/std/s8m/2.jpg" },
+      { id: 224, courroie_id: 63, image_url: "/public/Csynchrone/ouverte/std/s8m/3.jpg" }
     ],
     fiches: [
-      { id: 225, courroie_id: 63, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 225, courroie_id: 63, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
     ],
     matieres: [
       { id: 226, courroie_id: 63, matiere: "CR+NR" },
@@ -1732,12 +1732,12 @@ const courroieData = [
     poids_g_m: "10,6",
     application: "industry",
     images: [
-      { id: 228, courroie_id: 64, image_url: "/public/htd_std_rpp/htd.jpg" },
-      { id: 229, courroie_id: 64, image_url: "/public/htd_std_rpp/std.jpg" },
-      { id: 230, courroie_id: 64, image_url: "/public/htd_std_rpp/8m.png" }
+      { id: 228, courroie_id: 64, image_url: "/public/Csynchrone/ouverte/std/s14m/1.jpg" },
+      { id: 229, courroie_id: 64, image_url: "/public/Csynchrone/ouverte/std/s14m/2.jpg" },
+      { id: 230, courroie_id: 64, image_url: "/public/Csynchrone/ouverte/std/s14m/3.jpg" }
     ],
     fiches: [
-      { id: 231, courroie_id: 64, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 231, courroie_id: 64, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
     ],
     matieres: [
       { id: 232, courroie_id: 64, matiere: "CR+NR" },
@@ -1758,12 +1758,12 @@ const courroieData = [
     poids_g_m: "2,3",
     application: "industry",
     images: [
-      { id: 6501, courroie_id: 65, image_url: "/public/htd_std_rpp/rpp.jpeg" },
-      { id: 6502, courroie_id: 65, image_url: "/public/htd_std_rpp/rpp.jpg" },
-      { id: 6503, courroie_id: 65, image_url: "/public/htd_std_rpp/rpp.png" }
+      { id: 6501, courroie_id: 65, image_url: "/public/Csynchrone/ouverte/rpp/2m/rpp.jpeg" },
+      { id: 6502, courroie_id: 65, image_url: "/public/Csynchrone/ouverte/rpp/2m/rpp.jpg" },
+      { id: 6503, courroie_id: 65, image_url: "/public/Csynchrone/ouverte/rpp/2m/rpp.png" }
     ],
     fiches: [
-      { id: 6501, courroie_id: 65, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 6501, courroie_id: 65, fiche_technique_url: "/public/Csynchrone/ouverte/rpp/fich_rpp.pdf" }
     ],
     matieres: [
       { id: 6501, courroie_id: 65, matiere: "CR+NR" },
@@ -1783,12 +1783,12 @@ const courroieData = [
     poids_g_m: "2,9",
     application: "industry",
     images: [
-      { id: 6601, courroie_id: 66, image_url: "/public/htd_std_rpp/rpp.jpeg" },
-      { id: 6602, courroie_id: 66, image_url: "/public/htd_std_rpp/rpp.jpg" },
-      { id: 6603, courroie_id: 66, image_url: "/public/htd_std_rpp/rpp.png" }
+      { id: 6601, courroie_id: 66, image_url: "/public/Csynchrone/ouverte/rpp/3m/rpp.jpeg" },
+      { id: 6602, courroie_id: 66, image_url: "/public/Csynchrone/ouverte/rpp/3m/rpp.jpg" },
+      { id: 6603, courroie_id: 66, image_url: "/public/Csynchrone/ouverte/rpp/3m/rpp.png" }
     ],
     fiches: [
-      { id: 6601, courroie_id: 66, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 6601, courroie_id: 66, fiche_technique_url: "/public/Csynchrone/ouverte/rpp/fich_rpp.pdf" }
     ],
     matieres: [
       { id: 6601, courroie_id: 66, matiere: "CR+NR" },
@@ -1808,12 +1808,12 @@ const courroieData = [
     poids_g_m: "3,7",
     application: "industry",
     images: [
-      { id: 6701, courroie_id: 67, image_url: "/public/htd_std_rpp/rpp.jpeg" },
-      { id: 6702, courroie_id: 67, image_url: "/public/htd_std_rpp/rpp.jpg" },
-      { id: 6703, courroie_id: 67, image_url: "/public/htd_std_rpp/rpp.png" }
+      { id: 6701, courroie_id: 67, image_url: "/public/Csynchrone/ouverte/rpp/5m/rpp.jpeg" },
+      { id: 6702, courroie_id: 67, image_url: "/public/Csynchrone/ouverte/rpp/5m/rpp.jpg" },
+      { id: 6703, courroie_id: 67, image_url: "/public/Csynchrone/ouverte/rpp/5m/rpp.png" }
     ],
     fiches: [
-      { id: 6701, courroie_id: 67, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 6701, courroie_id: 67, fiche_technique_url: "/public/Csynchrone/ouverte/rpp/fich_rpp.pdf" }
     ],
     matieres: [
       { id: 6701, courroie_id: 67, matiere: "CR+NR" },
@@ -1833,12 +1833,12 @@ const courroieData = [
     poids_g_m: "5,7",
     application: "industry",
     images: [
-      { id: 6801, courroie_id: 68, image_url: "/public/htd_std_rpp/rpp.jpeg" },
-      { id: 6802, courroie_id: 68, image_url: "/public/htd_std_rpp/rpp.jpg" },
-      { id: 6803, courroie_id: 68, image_url: "/public/htd_std_rpp/rpp.png" }
+      { id: 6801, courroie_id: 68, image_url: "/public/Csynchrone/ouverte/rpp/8m/rpp.jpeg" },
+      { id: 6802, courroie_id: 68, image_url: "/public/Csynchrone/ouverte/rpp/8m/rpp.jpg" },
+      { id: 6803, courroie_id: 68, image_url: "/public/Csynchrone/ouverte/rpp/8m/rpp.png" }
     ],
     fiches: [
-      { id: 6801, courroie_id: 68, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 6801, courroie_id: 68, fiche_technique_url: "/public/Csynchrone/ouverte/rpp/fich_rpp.pdf" }
     ],
     matieres: [
       { id: 6801, courroie_id: 68, matiere: "CR+NR" },
@@ -1858,12 +1858,12 @@ const courroieData = [
     poids_g_m: "10,6",
     application: "industry",
     images: [
-      { id: 6901, courroie_id: 69, image_url: "/public/htd_std_rpp/rpp.jpeg" },
-      { id: 6902, courroie_id: 69, image_url: "/public/htd_std_rpp/rpp.jpg" },
-      { id: 6903, courroie_id: 69, image_url: "/public/htd_std_rpp/rpp.png" }
+      { id: 6901, courroie_id: 69, image_url: "/public/Csynchrone/ouverte/rpp/14m/rpp.jpeg" },
+      { id: 6902, courroie_id: 69, image_url: "/public/Csynchrone/ouverte/rpp/14m/rpp.jpg" },
+      { id: 6903, courroie_id: 69, image_url: "/public/Csynchrone/ouverte/rpp/14m/rpp.png" }
     ],
     fiches: [
-      { id: 6901, courroie_id: 69, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 6901, courroie_id: 69, fiche_technique_url: "/public/Csynchrone/ouverte/rpp/fich_rpp.pdf" }
     ],
     matieres: [
       { id: 6901, courroie_id: 69, matiere: "CR+NR" },
@@ -1876,7 +1876,7 @@ const courroieData = [
     subcategory_id: 8,
     nom: "RPP 2M",
     profil: "RP2M",
-    description: "Courroie synchrone RPP 2M ouverte pour systèmes compacts nécessitant une transmission précise et silencieuse.",
+    description: "Courroie synchrone RPP 2M fermee pour systèmes compacts nécessitant une transmission précise et silencieuse.",
     fabricant: "AIS Group",
     largeur_mm: "1,36",
     hauteur_mm: "0,76",
@@ -1884,12 +1884,12 @@ const courroieData = [
     poids_g_m: "2,3",
     application: "industry",
     images: [
-      { id: 7001, courroie_id: 70, image_url: "/public/htd_std_rpp/rpp.jpeg" },
-      { id: 7002, courroie_id: 70, image_url: "/public/htd_std_rpp/rpp.jpg" },
-      { id: 7003, courroie_id: 70, image_url: "/public/htd_std_rpp/rpp.png" }
+      { id: 7001, courroie_id: 70, image_url: "/public/Csynchrone/fermee/rpp/2m/rpp.jpeg" },
+      { id: 7002, courroie_id: 70, image_url: "/public/Csynchrone/fermee/rpp/2m/rpp.jpg" },
+      { id: 7003, courroie_id: 70, image_url: "/public/Csynchrone/fermee/rpp/2m/rpp.png" }
     ],
     fiches: [
-      { id: 7001, courroie_id: 70, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 7001, courroie_id: 70, fiche_technique_url: "/public/Csynchrone/fermee/rpp/fich_rpp.pdf" }
     ],
     matieres: [
       { id: 7001, courroie_id: 70, matiere: "CR+NR" },
@@ -1901,7 +1901,7 @@ const courroieData = [
     subcategory_id: 8,
     nom: "RPP 3M",
     profil: "RP3M",
-    description: "Courroie synchrone RPP 3M ouverte pour synchronisation précise et fonctionnement fiable.",
+    description: "Courroie synchrone RPP 3M fermée pour synchronisation précise et fonctionnement fiable.",
     fabricant: "AIS Group",
     largeur_mm: "1,9",
     hauteur_mm: "1,15",
@@ -1909,16 +1909,16 @@ const courroieData = [
     poids_g_m: "2,9",
     application: "industry",
     images: [
-      { id: 6605, courroie_id: 71, image_url: "/public/htd_std_rpp/rpp.jpeg" },
-      { id: 6606, courroie_id: 71, image_url: "/public/htd_std_rpp/rpp.jpg" },
-      { id: 6607, courroie_id: 71, image_url: "/public/htd_std_rpp/rpp.png" }
+      { id: 7101, courroie_id: 71, image_url: "/public/Csynchrone/fermee/rpp/3m/rpp.jpeg" },
+      { id: 7102, courroie_id: 71, image_url: "/public/Csynchrone/fermee/rpp/3m/rpp.jpg" },
+      { id: 7103, courroie_id: 71, image_url: "/public/Csynchrone/fermee/rpp/3m/rpp.png" }
     ],
     fiches: [
-      { id: 6608, courroie_id: 71, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 7101, courroie_id: 71, fiche_technique_url: "/public/Csynchrone/fermee/rpp/fich_rpp.pdf" }
     ],
     matieres: [
-      { id: 6608, courroie_id: 71, matiere: "CR+NR" },
-      { id: 6609, courroie_id: 71, matiere: "CR" }
+      { id: 7101, courroie_id: 71, matiere: "CR+NR" },
+      { id: 7102, courroie_id: 71, matiere: "CR" }
     ]
   },
   {
@@ -1926,7 +1926,7 @@ const courroieData = [
     subcategory_id: 8,
     nom: "RPP 5M",
     profil: "RP5M",
-    description: "Courroie synchrone RPP 5M ouverte pour applications industrielles légères à moyennes.",
+    description: "Courroie synchrone RPP 5M fermée pour applications industrielles légères à moyennes.",
     fabricant: "AIS Group",
     largeur_mm: "3,5",
     hauteur_mm: "1,95",
@@ -1934,12 +1934,12 @@ const courroieData = [
     poids_g_m: "3,7",
     application: "industry",
     images: [
-      { id: 6711, courroie_id: 72, image_url: "/public/htd_std_rpp/rpp.jpeg" },
-      { id: 6712, courroie_id: 72, image_url: "/public/htd_std_rpp/rpp.jpg" },
-      { id: 6713, courroie_id: 72, image_url: "/public/htd_std_rpp/rpp.png" }
+      { id: 6711, courroie_id: 72, image_url: "/public/Csynchrone/fermee/rpp/5m/rpp.jpeg" },
+      { id: 6712, courroie_id: 72, image_url: "/public/Csynchrone/fermee/rpp/5m/rpp.jpg" },
+      { id: 6713, courroie_id: 72, image_url: "/public/Csynchrone/fermee/rpp/5m/rpp.png" }
     ],
     fiches: [
-      { id: 6711, courroie_id: 72, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 6711, courroie_id: 72, fiche_technique_url: "/public/Csynchrone/fermee/rpp/fich_rpp.pdf" }
     ],
     matieres: [
       { id: 6711, courroie_id: 72, matiere: "CR+NR" },
@@ -1951,7 +1951,7 @@ const courroieData = [
     subcategory_id: 8,
     nom: "RPP 8M",
     profil: "RP8M",
-    description: "Courroie synchrone RPP 8M ouverte pour transmission de couples élevés avec précision.",
+    description: "Courroie synchrone RPP 8M fermée pour transmission de couples élevés avec précision.",
     fabricant: "AIS Group",
     largeur_mm: "5,5",
     hauteur_mm: "3,2",
@@ -1959,12 +1959,12 @@ const courroieData = [
     poids_g_m: "5,7",
     application: "industry",
     images: [
-      { id: 6811, courroie_id: 73, image_url: "/public/htd_std_rpp/rpp.jpeg" },
-      { id: 6812, courroie_id: 73, image_url: "/public/htd_std_rpp/rpp.jpg" },
-      { id: 6813, courroie_id: 73, image_url: "/public/htd_std_rpp/rpp.png" }
+      { id: 6811, courroie_id: 73, image_url: "/public/Csynchrone/fermee/rpp/8m/rpp.jpeg" },
+      { id: 6812, courroie_id: 73, image_url: "/public/Csynchrone/fermee/rpp/8m/rpp.jpg" },
+      { id: 6813, courroie_id: 73, image_url: "/public/Csynchrone/fermee/rpp/8m/rpp.png" }
     ],
     fiches: [
-      { id: 6811, courroie_id: 73, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 6811, courroie_id: 73, fiche_technique_url: "/public/Csynchrone/fermee/rpp/fich_rpp.pdf" }
     ],
     matieres: [
       { id: 6811, courroie_id: 73, matiere: "CR+NR" },
@@ -1984,12 +1984,12 @@ const courroieData = [
     poids_g_m: "10,6",
     application: "industry",
     images: [
-      { id: 6911, courroie_id: 74, image_url: "/public/htd_std_rpp/rpp.jpeg" },
-      { id: 6912, courroie_id: 74, image_url: "/public/htd_std_rpp/rpp.jpg" },
-      { id: 6913, courroie_id: 74, image_url: "/public/htd_std_rpp/rpp.png" }
+      { id: 6911, courroie_id: 74, image_url: "/public/Csynchrone/fermee/rpp/14m/rpp.jpeg" },
+      { id: 6912, courroie_id: 74, image_url: "/public/Csynchrone/fermee/rpp/14m/rpp.jpg" },
+      { id: 6913, courroie_id: 74, image_url: "/public/Csynchrone/fermee/rpp/14m/rpp.png" }
     ],
     fiches: [
-      { id: 6911, courroie_id: 74, fiche_technique_url: "/public/htd_std_rpp/fich_htd.pdf" }
+      { id: 6911, courroie_id: 74, fiche_technique_url: "/public/Csynchrone/fermee/rpp/fich_rpp.pdf" }
     ],
     matieres: [
       { id: 6911, courroie_id: 74, matiere: "CR+NR" },
@@ -2013,17 +2013,17 @@ const courroieData = [
     {
       id: 151,
       courroie_id: 75,
-      image_url: "/public/motocycle/motocycle.png"
+      image_url: "/public/motocycle/1.jpg"
     },
     {
       id: 152,
       courroie_id: 75,
-      image_url: "/public/motocycle/motocycle.png"
+      image_url: "/public/motocycle/2.jpg"
     },
     {
       id: 153,
       courroie_id: 75,
-      image_url: "/public/motocycle/motocycle.png"
+      image_url: "/public/motocycle/3.jpg"
     }
   ],
   fiches: [

@@ -73,18 +73,6 @@ const category = [
   materiauxAnglais: "Rubber reinforced with polyester or aramid tensile cords, providing good resistance to flexing and wear"
 },
 {
-  id: 7,
-  famille_id: 4,
-  nomFrancais: "Courroies étroites crantées",
-  nomAnglais: "Narrow Cogged Belts",
-  descriptionFrancais: "Les courroies étroites crantées sont des courroies trapézoïdales fines présentant des dents sur la face interne. Ces crans améliorent la flexibilité, réduisent la chaleur et permettent un meilleur contact avec la poulie, augmentant ainsi l’efficacité de la transmission et la durée de vie de la courroie. Elles sont particulièrement adaptées aux machines industrielles et équipements nécessitant des vitesses élevées et un espace limité.",
-  descriptionAnglais: "Narrow cogged belts are thin V-belts with notches on the inner surface. These notches improve flexibility, reduce heat, and allow better pulley contact, enhancing transmission efficiency and belt life. They are especially suitable for industrial machines and equipment requiring high speeds and limited space.",
-  usageFrancais: "Transmission de puissance dans les équipements industriels, compresseurs, ventilateurs, pompes et machines où l’espace est restreint mais la performance nécessaire.",
-  usageAnglais: "Power transmission in industrial equipment, compressors, fans, pumps, and machines where space is limited but high performance is required.",
-  materiauxFrancais: "Caoutchouc renforcé avec cordons de traction en polyester ou aramide pour une grande flexibilité et résistance à l’usure",
-  materiauxAnglais: "Rubber reinforced with polyester or aramid tensile cords for high flexibility and wear resistance"
-},
-{
   id: 8,
   famille_id: 4,
   nomFrancais: "Courroies Poly-V",
