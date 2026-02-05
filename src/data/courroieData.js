@@ -962,7 +962,7 @@ const courroieData = [
   poids_g_m: "150",
   application: "industry",
   images: [
-    { id: 100, courroie_id: 39, image_url: "/public/hexagonal/1.jpg" },
+    { id: 100, courroie_id: 39, image_url: "/public/hexagonal/2.jpg" },
     { id: 101, courroie_id: 39, image_url: "/public/hexagonal/hexagonal.png" },
     
   ],
@@ -988,7 +988,7 @@ const courroieData = [
   poids_g_m: "250",
   application: "industry",
   images: [
-    { id: 103, courroie_id: 40, image_url: "/public/hexagonal/2.jpg" },
+    { id: 103, courroie_id: 40, image_url: "/public/hexagonal/1.jpg" },
     { id: 104, courroie_id: 40, image_url: "/public/hexagonal/hexagonal.png" }
     
   ],
