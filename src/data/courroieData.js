@@ -17,24 +17,24 @@ const courroieData = [
     {
       id: 1,
       courroie_id: 1,
-      image_url: "/public/trapezoidale_standard/1.jpeg"
+      image_url: "/public/Ctrapez/classic/z/1.png"
     },
     {
       id: 2,
       courroie_id: 1,
-      image_url: "/public/trapezoidale_standard/2.jpeg"
+      image_url: "/public/Ctrapez/classic/z/2.png"
     },
     {
       id: 3,
       courroie_id: 1,
-      image_url: "/public/trapezoidale_standard/3.jpeg"
+      image_url: "/public/Ctrapez/classic/z/3.png"
     }
   ],
   fiches: [
     {
       id: 1,
       courroie_id: 1,
-      fiche_technique_url: "/public/trapezoidale_standard/classic.pdf"
+      fiche_technique_url: "/public/Ctrapez/classic/classic.pdf"
     }
   ],
   matieres: [
@@ -65,12 +65,12 @@ const courroieData = [
     source_catalogue: "Classic V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 1, courroie_id: 4, image_url: "/public/trapezoidale_standard/A.jpeg" },
-      { id: 2, courroie_id: 4, image_url: "/public/trapezoidale_standard/2.jpeg" },
-    { id: 3, courroie_id: 4, image_url: "/public/trapezoidale_standard/3.jpeg" }
+      { id: 1, courroie_id: 4, image_url: "/public/Ctrapez/classic/a/1.png" },
+      { id: 2, courroie_id: 4, image_url: "/public/Ctrapez/classic/a/2.png" },
+    { id: 3, courroie_id: 4, image_url: "/public/Ctrapez/classic/a/3.png" }
     ],
     fiches: [
-      { id: 1, courroie_id: 4, fiche_technique_url: "/public/trapezoidale_standard/classic.pdf" }
+      { id: 1, courroie_id: 4, fiche_technique_url: "/public/Ctrapez/classic/classic.pdf" }
     ],
     matieres: [
       { id: 1, courroie_id: 4, matiere: "CR" },
@@ -92,12 +92,12 @@ const courroieData = [
     source_catalogue: "Classic V Belt Catalogue",
     application: "industry",
     images: [
-         { id: 1, courroie_id: 5, image_url: "/public/trapezoidale_standard/B.jpeg" },
-      { id: 2, courroie_id: 5, image_url: "/public/trapezoidale_standard/2.jpeg" },
-    { id: 3, courroie_id: 5, image_url: "/public/trapezoidale_standard/3.jpeg" }
+         { id: 1, courroie_id: 5, image_url: "/public/Ctrapez/classic/b/1.png" },
+      { id: 2, courroie_id: 5, image_url: "/public/Ctrapez/classic/b/2.png" },
+    { id: 3, courroie_id: 5, image_url: "/public/Ctrapez/classic/b/3.png" }
     ],
     fiches: [
-      { id: 2, courroie_id: 5, fiche_technique_url: "/public/trapezoidale_standard/classic.pdf" }
+      { id: 2, courroie_id: 5, fiche_technique_url: "/public/Ctrapez/classic/classic.pdf" }
     ],
     matieres: [
       { id: 3, courroie_id: 5, matiere: "CR" },
@@ -119,12 +119,12 @@ const courroieData = [
     source_catalogue: "Classic V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 5, courroie_id: 6, image_url: "/public/trapezoidale_standard/1.jpeg" },
-      { id: 6, courroie_id: 6, image_url: "/public/trapezoidale_standard/standard.png" },
-        { id: 7, courroie_id: 6, image_url: "/public/trapezoidale_standard/standard.png" }
+      { id: 5, courroie_id: 6, image_url: "/public/Ctrapez/classic/c/1.png" },
+      { id: 6, courroie_id: 6, image_url: "/public/Ctrapez/classic/c/2.png" },
+        { id: 7, courroie_id: 6, image_url: "/public/Ctrapez/classic/c/3.png" }
     ],
     fiches: [
-      { id: 3, courroie_id: 6, fiche_technique_url: "/public/trapezoidale_standard/classic.pdf" }
+      { id: 3, courroie_id: 6, fiche_technique_url: "/public/Ctrapez/classic/classic.pdf" }
     ],
     matieres: [
       { id: 5, courroie_id: 6, matiere: "CR" },
@@ -146,12 +146,12 @@ const courroieData = [
     source_catalogue: "Classic V Belt Catalogue",
     application: "industry",
     images: [
-        { id: 1, courroie_id: 7, image_url: "/public/trapezoidale_standard/1.jpeg" },
-      { id: 2, courroie_id: 7, image_url: "/public/trapezoidale_standard/2.jpeg" },
-    { id: 3, courroie_id: 7, image_url: "/public/trapezoidale_standard/3.jpeg" }
+        { id: 1, courroie_id: 7, image_url: "/public/Ctrapez/classic/d/1.jpg" },
+      { id: 2, courroie_id: 7, image_url: "/public/Ctrapez/classic/d/2.jpg" },
+    { id: 3, courroie_id: 7, image_url: "/public/Ctrapez/classic/d/3.jpg" }
     ],
     fiches: [
-      { id: 4, courroie_id: 7, fiche_technique_url: "/public/trapezoidale_standard/classic.pdf" }
+      { id: 4, courroie_id: 7, fiche_technique_url: "/public/Ctrapez/classic/classic.pdf" }
     ],
     matieres: [
       { id: 7, courroie_id: 7, matiere: "CR" },
@@ -173,12 +173,12 @@ const courroieData = [
     source_catalogue: "Classic V Belt Catalogue",
     application: "industry",
     images: [
-        { id: 1, courroie_id: 8, image_url: "/public/trapezoidale_standard/1.jpeg" },
-      { id: 2, courroie_id: 8, image_url: "/public/trapezoidale_standard/2.jpeg" },
-    { id: 3, courroie_id: 8, image_url: "/public/trapezoidale_standard/3.jpeg" }
+        { id: 1, courroie_id: 8, image_url: "/public/Ctrapez/classic/e/1.jpg" },
+      { id: 2, courroie_id: 8, image_url: "/public/Ctrapez/classic/e/2.jpg" },
+    { id: 3, courroie_id: 8, image_url: "/public/Ctrapez/classic/e/3.jpg" }
     ],
     fiches: [
-      { id: 5, courroie_id: 8, fiche_technique_url: "/public/trapezoidale_standard/classic.pdf" }
+      { id: 5, courroie_id: 8, fiche_technique_url: "/public/Ctrapez/classic/classic.pdf" }
     ],
     matieres: [
       { id: 9, courroie_id: 8, matiere: "CR" },
@@ -201,12 +201,12 @@ const courroieData = [
   source_catalogue: "Classic V Belt Catalogue",
   application: "industry",
   images: [
-    { id: 1, courroie_id: 9, image_url: "/public/trapezoidale_standard/1.jpeg" },
-    { id: 2, courroie_id: 9, image_url: "/public/trapezoidale_standard/2.jpeg" },
-    { id: 3, courroie_id: 9, image_url: "/public/trapezoidale_standard/3.jpeg" }
+    { id: 1, courroie_id: 9, image_url: "/public/Ctrapez/classic/f/1.jpg" },
+    { id: 2, courroie_id: 9, image_url: "/public/Ctrapez/classic/f/2.jpg" },
+    { id: 3, courroie_id: 9, image_url: "/public/Ctrapez/classic/f/3.jpg" }
   ],
   fiches: [
-    { id: 1, courroie_id: 9, fiche_technique_url: "/public/trapezoidale_standard/classic.pdf" }
+    { id: 1, courroie_id: 9, fiche_technique_url: "/public/Ctrapez/classic/classic.pdf" }
   ],
   matieres: [
     { id: 1, courroie_id: 9, matiere: "CR" },
@@ -228,12 +228,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 88, courroie_id: 10, image_url: "/public/etroite/1.jpeg" },
-      { id: 89, courroie_id: 10, image_url: "/public/etroite/2.jpeg" },
-      { id: 90, courroie_id: 10, image_url: "/public/etroite/etroite.jpg" }
+      { id: 88, courroie_id: 10, image_url: "/public/Ctrapez/etroite/spa/1.jpg" },
+      { id: 89, courroie_id: 10, image_url: "/public/Ctrapez/etroite/spa/2.jpg" },
+      { id: 90, courroie_id: 10, image_url: "/public/Ctrapez/etroite/spa/3.jpg" }
     ],
     fiches: [
-      { id: 30, courroie_id: 10, fiche_technique_url: "/public/etroite/narrow.png" }
+      { id: 30, courroie_id: 10, fiche_technique_url: "/public/Ctrapez/etroite/narrow.png" }
     ],
     matieres: [
       { id: 64, courroie_id: 10, matiere: "CR" },
@@ -255,12 +255,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 2091, courroie_id: 211, image_url: "/public/etroite/1.jpeg" },
-      { id: 2092, courroie_id: 211, image_url: "/public/etroite/2.jpeg" },
-      { id: 2093, courroie_id: 211, image_url: "/public/etroite/etroite.jpg" }
+      { id: 2091, courroie_id: 211, image_url: "/public/Ctrapez/etroite/spz/1.jpg" },
+      { id: 2092, courroie_id: 211, image_url: "/public/Ctrapez/etroite/spz/2.jpg" },
+      { id: 2093, courroie_id: 211, image_url: "/public/Ctrapez/etroite/spz/3.jpg" }
     ],
     fiches: [
-      { id: 2031, courroie_id: 211, fiche_technique_url: "/public/etroite/narrow.png" }
+      { id: 2031, courroie_id: 211, fiche_technique_url: "/public/Ctrapez/etroite/narrow.png" }
     ],
     matieres: [
       { id: 2066, courroie_id: 211, matiere: "CR" },
@@ -282,12 +282,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 91, courroie_id: 11, image_url: "/public/etroite/1.jpeg" },
-      { id: 92, courroie_id: 11, image_url: "/public/etroite/2.jpeg" },
-      { id: 93, courroie_id: 11, image_url: "/public/etroite/etroite.jpg" }
+      { id: 91, courroie_id: 11, image_url: "/public/Ctrapez/etroite/spb/1.jpg" },
+      { id: 92, courroie_id: 11, image_url: "/public/Ctrapez/etroite/spb/2.jpg" },
+      { id: 93, courroie_id: 11, image_url: "/public/Ctrapez/etroite/spb/3.jpg" }
     ],
     fiches: [
-      { id: 31, courroie_id: 11, fiche_technique_url: "/public/etroite/narrow.png" }
+      { id: 31, courroie_id: 11, fiche_technique_url: "/public/Ctrapez/etroite/narrow.png" }
     ],
     matieres: [
       { id: 66, courroie_id: 11, matiere: "CR" },
@@ -309,12 +309,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 94, courroie_id: 12, image_url: "/public/etroite/1.jpeg" },
-      { id: 95, courroie_id: 12, image_url: "/public/etroite/2.jpeg" },
-      { id: 96, courroie_id: 12, image_url: "/public/etroite/etroite.jpg" }
+      { id: 94, courroie_id: 12, image_url: "/public/Ctrapez/etroite/spc/1.jpg" },
+      { id: 95, courroie_id: 12, image_url: "/public/Ctrapez/etroite/spc/2.jpg" },
+      { id: 96, courroie_id: 12, image_url: "/public/Ctrapez/etroite/spc/3.jpg" }
     ],
     fiches: [
-      { id: 32, courroie_id: 12, fiche_technique_url: "/public/etroite/narrow.png" }
+      { id: 32, courroie_id: 12, fiche_technique_url: "/public/Ctrapez/etroite/narrow.png" }
     ],
     matieres: [
       { id: 68, courroie_id: 12, matiere: "CR" },
@@ -417,12 +417,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Multiple Catalogue",
     application: "industry",
     images: [
-      { id: 118, courroie_id: 20, image_url: "/public/etroite_multiple/1.jpeg" },
-      { id: 119, courroie_id: 20, image_url: "/public/etroite_multiple/2.jpeg" },
-      { id: 120, courroie_id: 20, image_url: "/public/etroite_multiple/multiple.jpg" }
+      { id: 118, courroie_id: 20, image_url: "/public/Ctrapez/etroiteMultiple/hspa/1.jpg" },
+      { id: 119, courroie_id: 20, image_url: "/public/Ctrapez/etroiteMultiple/hspa/2.jpg" },
+      { id: 120, courroie_id: 20, image_url: "/public/Ctrapez/etroiteMultiple/hspa/3.jpg" }
     ],
     fiches: [
-      { id: 40, courroie_id: 20, fiche_technique_url: "/public/etroite_multiple/narrow_multiple.png" }
+      { id: 40, courroie_id: 20, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.png" }
     ],
     matieres: [
       { id: 84, courroie_id: 20, matiere: "CR" },
@@ -444,12 +444,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Multiple Catalogue",
     application: "industry",
     images: [
-      { id: 121, courroie_id: 21, image_url: "/public/etroite_multiple/1.jpeg" },
-      { id: 122, courroie_id: 21, image_url: "/public/etroite_multiple/2.jpeg" },
-      { id: 123, courroie_id: 21, image_url: "/public/etroite_multiple/multiple.jpg" }
+      { id: 121, courroie_id: 21, image_url: "/public/Ctrapez/etroiteMultiple/hspb/1.jpg" },
+      { id: 122, courroie_id: 21, image_url: "/public/Ctrapez/etroiteMultiple/hspb/2.jpg" },
+      { id: 123, courroie_id: 21, image_url: "/public/Ctrapez/etroiteMultiple/hspb/3.jpg" }
     ],
     fiches: [
-      { id: 41, courroie_id: 21, fiche_technique_url: "/public/etroite_multiple/narrow_multiple.png" }
+      { id: 41, courroie_id: 21, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.png" }
     ],
     matieres: [
       { id: 86, courroie_id: 21, matiere: "CR" },
@@ -471,12 +471,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Multiple Catalogue",
     application: "industry",
     images: [
-      { id: 124, courroie_id: 22, image_url: "/public/etroite_multiple/1.jpeg" },
-      { id: 125, courroie_id: 22, image_url: "/public/etroite_multiple/2.jpeg" },
-      { id: 126, courroie_id: 22, image_url: "/public/etroite_multiple/multiple.jpg" }
+      { id: 124, courroie_id: 22, image_url: "/public/Ctrapez/etroiteMultiple/hspc/1.jpg" },
+      { id: 125, courroie_id: 22, image_url: "/public/Ctrapez/etroiteMultiple/hspc/2.jpg" },
+      { id: 126, courroie_id: 22, image_url: "/public/Ctrapez/etroiteMultiple/hspc/3.jpg" }
     ],
     fiches: [
-      { id: 42, courroie_id: 22, fiche_technique_url: "/public/etroite_multiple/narrow_multiple.png" }
+      { id: 42, courroie_id: 22, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.png" }
     ],
     matieres: [
       { id: 88, courroie_id: 22, matiere: "CR" },
@@ -498,12 +498,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Multiple Catalogue",
     application: "industry",
     images: [
-      { id: 127, courroie_id: 23, image_url: "/public/etroite_multiple/1.jpeg" },
-      { id: 128, courroie_id: 23, image_url: "/public/etroite_multiple/2.jpeg" },
-      { id: 129, courroie_id: 23, image_url: "/public/etroite_multiple/multiple.jpg" }
+      { id: 127, courroie_id: 23, image_url: "/public/Ctrapez/etroiteMultiple/h3v/1.jpg" },
+      { id: 128, courroie_id: 23, image_url: "/public/Ctrapez/etroiteMultiple/h3v/2.jpg" },
+      { id: 129, courroie_id: 23, image_url: "/public/Ctrapez/etroiteMultiple/h3v/multiple.jpg" }
     ],
     fiches: [
-      { id: 43, courroie_id: 23, fiche_technique_url: "/public/etroite_multiple/narrow_multiple.png" }
+      { id: 43, courroie_id: 23, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.png" }
     ],
     matieres: [
       { id: 90, courroie_id: 23, matiere: "CR" },
@@ -525,12 +525,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Multiple Catalogue",
     application: "industry",
     images: [
-      { id: 130, courroie_id: 24, image_url: "/public/etroite_multiple/1.jpeg" },
-      { id: 131, courroie_id: 24, image_url: "/public/etroite_multiple/2.jpeg" },
-      { id: 132, courroie_id: 24, image_url: "/public/etroite_multiple/multiple.jpg" }
+      { id: 130, courroie_id: 24, image_url: "/public/Ctrapez/etroiteMultiple/h5v/1.jpg" },
+      { id: 131, courroie_id: 24, image_url: "/public/Ctrapez/etroiteMultiple/h5v/2.jpg" },
+      { id: 132, courroie_id: 24, image_url: "/public/Ctrapez/etroiteMultiple/h5v/3.jpg" }
     ],
     fiches: [
-      { id: 44, courroie_id: 24, fiche_technique_url: "/public/etroite_multiple/narrow_multiple.png" }
+      { id: 44, courroie_id: 24, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.png" }
     ],
     matieres: [
       { id: 92, courroie_id: 24, matiere: "CR" },
@@ -552,12 +552,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Multiple Catalogue",
     application: "industry",
     images: [
-      { id: 133, courroie_id: 25, image_url: "/public/etroite_multiple/1.jpeg" },
-      { id: 134, courroie_id: 25, image_url: "/public/etroite_multiple/2.jpeg" },
-      { id: 135, courroie_id: 25, image_url: "/public/etroite_multiple/multiple.jpg" }
+      { id: 133, courroie_id: 25, image_url: "/public/Ctrapez/etroiteMultiple/h8v/1.jpg" },
+      { id: 134, courroie_id: 25, image_url: "/public/Ctrapez/etroiteMultiple/h8v/2.jpg" },
+      { id: 135, courroie_id: 25, image_url: "/public/Ctrapez/etroiteMultiple/h8v/3.jpg" }
     ],
     fiches: [
-      { id: 45, courroie_id: 25, fiche_technique_url: "/public/etroite_multiple/narrow_multiple.png" }
+      { id: 45, courroie_id: 25, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.png" }
     ],
     matieres: [
       { id: 94, courroie_id: 25, matiere: "CR" },
@@ -582,12 +582,12 @@ const courroieData = [
     poids_g_m: "85",
     application: "industry",
     images: [
-      { id: 136, courroie_id: 26, image_url: "/public/bandedNarrow/1.jpeg" },
-      { id: 137, courroie_id: 26, image_url: "/public/bandedNarrow/2.jpeg" },
-      { id: 138, courroie_id: 26, image_url: "/public/bandedNarrow/3.jpeg" }
+      { id: 136, courroie_id: 26, image_url: "/public/Ctrapez/etroiteMultiple/xpz/1.jpg" },
+      { id: 137, courroie_id: 26, image_url: "/public/Ctrapez/etroiteMultiple/xpz/2.jpg" },
+      { id: 138, courroie_id: 26, image_url: "/public/Ctrapez/etroiteMultiple/xpz/3.jpg" }
     ],
     fiches: [
-      { id: 46, courroie_id: 26, fiche_technique_url: "/public/bandedNarrow/bandedNarrow.pdf" }
+      { id: 46, courroie_id: 26, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/xpz.pdf" }
     ],
     matieres: [
       { id: 96, courroie_id: 26, matiere: "CR" },
@@ -612,12 +612,12 @@ const courroieData = [
     poids_g_m: "55",
     application: "industry",
     images: [
-      { id: 139, courroie_id: 27, image_url: "/public/bandedNarrow/1.jpeg" },
-      { id: 140, courroie_id: 27, image_url: "/public/bandedNarrow/2.jpeg" },
-      { id: 141, courroie_id: 27, image_url: "/public/bandedNarrow/3.jpeg" }
+      { id: 139, courroie_id: 27, image_url: "/public/Ctrapez/etroiteMultiple/xpa/1.jpg" },
+      { id: 140, courroie_id: 27, image_url: "/public/Ctrapez/etroiteMultiple/xpa/2.jpg" },
+      { id: 141, courroie_id: 27, image_url: "/public/Ctrapez/etroiteMultiple/xpa/3.jpg" }
     ],
     fiches: [
-      { id: 47, courroie_id: 27, fiche_technique_url: "/public/bandedNarrow/bandedNarrow.pdf" }
+      { id: 47, courroie_id: 27, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/xpa.pdf" }
     ],
     matieres: [
       { id: 98, courroie_id: 27, matiere: "CR" },
@@ -642,12 +642,12 @@ const courroieData = [
     poids_g_m: "70",
     application: "industry",
     images: [
-      { id: 142, courroie_id: 28, image_url: "/public/bandedNarrow/1.jpeg" },
-      { id: 143, courroie_id: 28, image_url: "/public/bandedNarrow/2.jpeg" },
-      { id: 144, courroie_id: 28, image_url: "/public/bandedNarrow/3.jpeg" }
+      { id: 142, courroie_id: 28, image_url: "/public/Ctrapez/etroiteMultiple/xpb/1.jpg" },
+      { id: 143, courroie_id: 28, image_url: "/public/Ctrapez/etroiteMultiple/xpb/2.jpg" },
+      { id: 144, courroie_id: 28, image_url: "/public/Ctrapez/etroiteMultiple/xpb/3.jpg" }
     ],
     fiches: [
-      { id: 48, courroie_id: 28, fiche_technique_url: "/public/bandedNarrow/bandedNarrow.pdf" }
+      { id: 48, courroie_id: 28, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/xpb.pdf" }
     ],
     matieres: [
       { id: 100, courroie_id: 28, matiere: "CR" },
@@ -672,12 +672,12 @@ const courroieData = [
     poids_g_m: "100",
     application: "industry",
     images: [
-      { id: 145, courroie_id: 29, image_url: "/public/bandedNarrow/1.jpeg" },
-      { id: 146, courroie_id: 29, image_url: "/public/bandedNarrow/2.jpeg" },
-      { id: 147, courroie_id: 29, image_url: "/public/bandedNarrow/3.jpeg" }
+      { id: 145, courroie_id: 29, image_url: "/public/Ctrapez/etroiteMultiple/xpc/1.jpg" },
+      { id: 146, courroie_id: 29, image_url: "/public/Ctrapez/etroiteMultiple/xpc/2.jpg" },
+      { id: 147, courroie_id: 29, image_url: "/public/Ctrapez/etroiteMultiple/xpc/3.jpg" }
     ],
     fiches: [
-      { id: 49, courroie_id: 29, fiche_technique_url: "/public/bandedNarrow/bandedNarrow.pdf" }
+      { id: 49, courroie_id: 29, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/xpc.pdf" }
     ],
     matieres: [
       { id: 102, courroie_id: 29, matiere: "CR" },
@@ -699,12 +699,12 @@ const courroieData = [
   source_catalogue: "Banded Cogged Narrow V Belt Catalogue",
   application: "industry",
   images: [
-    { id: 124, courroie_id: 22, image_url: "/public/etroite_crantée_multiple/1.jpeg" },
-    { id: 125, courroie_id: 22, image_url: "/public/etroite_crantée_multiple/2.jpeg" },
-    { id: 126, courroie_id: 22, image_url: "/public/etroite_crantée_multiple/multiple.jpg" }
+    { id: 124, courroie_id: 22, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpz/1.jpg" },
+    { id: 125, courroie_id: 22, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpz/2.jpg" },
+    { id: 126, courroie_id: 22, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpz/3.jpg" }
   ],
   fiches: [
-    { id: 42, courroie_id: 22, fiche_technique_url: "/public/etroite_crantée_multiple/narrow_multiple.png" }
+    { id: 42, courroie_id: 22, fiche_technique_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpz.pdf" }
   ],
   matieres: [
     { id: 88, courroie_id: 22, matiere: "CR" },
@@ -726,16 +726,16 @@ const courroieData = [
   source_catalogue: "Banded Cogged Narrow V Belt Catalogue",
   application: "industry",
   images: [
-    { id: 124, courroie_id: 22, image_url: "/public/etroite_crantée_multiple/1.jpeg" },
-    { id: 125, courroie_id: 22, image_url: "/public/etroite_crantée_multiple/2.jpeg" },
-    { id: 126, courroie_id: 22, image_url: "/public/etroite_crantée_multiple/multiple.jpg" }
+    { id: 124, courroie_id: 24, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpa/1.jpg" },
+    { id: 125, courroie_id: 24, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpa/2.jpg" },
+    { id: 126, courroie_id: 24, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpa/3.jpg" }
   ],
   fiches: [
-    { id: 42, courroie_id: 22, fiche_technique_url: "/public/etroite_crantée_multiple/narrow_multiple.png" }
+    { id: 42, courroie_id: 24, fiche_technique_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpa.pdf" }
   ],
   matieres: [
-    { id: 88, courroie_id: 22, matiere: "CR" },
-    { id: 89, courroie_id: 22, matiere: "CR+NR" }
+    { id: 88, courroie_id: 24, matiere: "CR" },
+    { id: 89, courroie_id: 24, matiere: "CR+NR" }
   ]
 },
 {
@@ -753,16 +753,16 @@ const courroieData = [
   source_catalogue: "Banded Cogged Narrow V Belt Catalogue",
   application: "industry",
   images: [
-    { id: 124, courroie_id: 22, image_url: "/public/etroite_crantée_multiple/1.jpeg" },
-    { id: 125, courroie_id: 22, image_url: "/public/etroite_crantée_multiple/2.jpeg" },
-    { id: 126, courroie_id: 22, image_url: "/public/etroite_crantée_multiple/multiple.jpg" }
+    { id: 124, courroie_id: 25, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpb/1.jpg" },
+    { id: 125, courroie_id: 25, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpb/2.jpg" },
+    { id: 126, courroie_id: 25, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpb/3.jpg" }
   ],
   fiches: [
-    { id: 42, courroie_id: 22, fiche_technique_url: "/public/etroite_crantée_multiple/narrow_multiple.png" }
+    { id: 42, courroie_id: 25, fiche_technique_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpb.pdf" }
   ],
   matieres: [
-    { id: 88, courroie_id: 22, matiere: "CR" },
-    { id: 89, courroie_id: 22, matiere: "CR+NR" }
+    { id: 88, courroie_id: 25, matiere: "CR" },
+    { id: 89, courroie_id: 25, matiere: "CR+NR" }
   ]
 },
 {
@@ -780,16 +780,16 @@ const courroieData = [
   source_catalogue: "Banded Cogged Narrow V Belt Catalogue",
   application: "industry",
   images: [
-    { id: 124, courroie_id: 22, image_url: "/public/etroite_crantée_multiple/1.jpeg" },
-    { id: 125, courroie_id: 22, image_url: "/public/etroite_crantée_multiple/2.jpeg" },
-    { id: 126, courroie_id: 22, image_url: "/public/etroite_crantée_multiple/multiple.jpg" }
+    { id: 124, courroie_id: 26, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpc/1.jpg" },
+    { id: 125, courroie_id: 26, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpc/2.jpg" },
+    { id: 126, courroie_id: 26, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpc/3.jpg" }
   ],
   fiches: [
-    { id: 42, courroie_id: 22, fiche_technique_url: "/public/etroite_crantée_multiple/narrow_multiple.png" }
+    { id: 42, courroie_id: 26, fiche_technique_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpc.pdf" }
   ],
   matieres: [
-    { id: 88, courroie_id: 22, matiere: "CR" },
-    { id: 89, courroie_id: 22, matiere: "CR+NR" }
+    { id: 88, courroie_id: 26, matiere: "CR" },
+    { id: 89, courroie_id: 26, matiere: "CR+NR" }
   ]
 },
 {
@@ -806,108 +806,19 @@ const courroieData = [
   poids_g_m: "80",
   application: "industry",
   images: [
-    { id: 136, courroie_id: 27, image_url: "/public/bandedCoged/bandedCoged.jpg" },
-    { id: 137, courroie_id: 27, image_url: "/public/bandedCoged/bandedCoged.jpg" },
-    { id: 138, courroie_id: 27, image_url: "/public/bandedCoged/bandedCoged.jpg" }
+    { id: 136, courroie_id: 27, image_url: "/public/Ctrapez/cranteeClassicMultiple/rzx/1.jpg" },
+    { id: 137, courroie_id: 27, image_url: "/public/Ctrapez/cranteeClassicMultiple/rzx/2.jpg" },
+    { id: 138, courroie_id: 27, image_url: "/public/Ctrapez/cranteeClassicMultiple/rzx/3.jpg" }
   ],
   fiches: [
-    { id: 46, courroie_id: 27, fiche_technique_url: "/public/bandedCoged/bandedCoged.pdf" }
+    { id: 46, courroie_id: 27, fiche_technique_url: "/public/Ctrapez/cranteeClassicMultiple/rzx/bandedCoged.pdf" }
   ],
   matieres: [
     { id: 92, courroie_id: 27, matiere: "CR" },
     { id: 93, courroie_id: 27, matiere: "EPDM" }
   ]
 },
-{
-  id: 28,
-  nom: "Cogged Narrow V Belt XPZ",
-  subcategory_id: 6,
-  profil: "XPZ",
-  description: "Courroie étroite crantée XPZ offrant flexibilité et résistance pour transmissions industrielles à vitesse élevée.",
-  fabricant: "Gates",
-  reference_fabricant: "XPZ-1000",
-  largeur_mm: "10",
-  hauteur_mm: "8",
-  angle_trapeze_deg: 40,
-  nombre_nervures: "8",
-  temperature_min: "-30",
-  temperature_max: "90",
-  vitesse_max_m_s: "30",
-  poids_g_m: "85",
-  application: "industry",
-  images: [
-    { id: 342, courroie_id: 28, image_url: "/public/bandedNarrow/1.jpeg" },
-    { id: 343, courroie_id: 28, image_url: "/public/bandedNarrow/2.jpeg" },
-    { id: 344, courroie_id: 28, image_url: "/public/bandedNarrow/3.jpeg" }
-  ],
-  fiches: [
-    { id: 348, courroie_id: 28, fiche_technique_url: "/public/bandedNarrow/bandedNarrow.pdf" }
-  ],
-  matieres: [
-    { id: 196, courroie_id: 28, matiere: "CR" },
-    { id: 197, courroie_id: 28, matiere: "EPDM" }
-  ]
-},
-{
-  id: 29,
-  nom: "Cogged Narrow V Belt XPA",
-  subcategory_id: 6,
-  profil: "XPA",
-  description: "Courroie crantée XPA pour applications industrielles légères à moyennes avec bonne flexibilité.",
-  fabricant: "Gates",
-  reference_fabricant: "XPA-800",
-  largeur_mm: "7",
-  hauteur_mm: "6",
-  angle_trapeze_deg: 40,
-  nombre_nervures: "5",
-  temperature_min: "-25",
-  temperature_max: "80",
-  vitesse_max_m_s: "25",
-  poids_g_m: "55",
-  application: "industry",
-  images: [
-    { id: 345, courroie_id: 29, image_url: "/public/bandedNarrow/1.jpeg" },
-    { id: 346, courroie_id: 29, image_url: "/public/bandedNarrow/2.jpeg" },
-    { id: 347, courroie_id: 29, image_url: "/public/bandedNarrow/3.jpeg" }
-  ],
-  fiches: [
-    { id: 349, courroie_id: 29, fiche_technique_url: "/public/bandedNarrow/bandedNarrow.pdf" }
-  ],
-  matieres: [
-    { id: 198, courroie_id: 29, matiere: "CR" },
-    { id: 199, courroie_id: 29, matiere: "EPDM" }
-  ]
-},
-{
-  id: 30,
-  nom: "Cogged Narrow V Belt XPC",
-  subcategory_id: 6,
-  profil: "XPC",
-  description: "Courroie crantée XPC adaptée aux applications industrielles lourdes avec haute résistance et durabilité.",
-  fabricant: "Gates",
-  reference_fabricant: "XPC-1200",
-  largeur_mm: "12",
-  hauteur_mm: "10",
-  angle_trapeze_deg: 40,
-  nombre_nervures: "8",
-  temperature_min: "-35",
-  temperature_max: "95",
-  vitesse_max_m_s: "32",
-  poids_g_m: "100",
-  application: "industry",
-  images: [
-    { id: 351, courroie_id: 30, image_url: "/public/bandedNarrow/1.jpeg" },
-    { id: 352, courroie_id: 30, image_url: "/public/bandedNarrow/2.jpeg" },
-    { id: 353, courroie_id: 30, image_url: "/public/bandedNarrow/3.jpeg" }
-  ],
-  fiches: [
-    { id: 351, courroie_id: 30, fiche_technique_url: "/public/bandedNarrow/bandedNarrow.pdf" }
-  ],
-  matieres: [
-    { id: 202, courroie_id: 30, matiere: "CR" },
-    { id: 203, courroie_id: 30, matiere: "EPDM" }
-  ]
-},
+
 {
   id: 31,
   nom: "Banded Cogged V Belt RAX",
@@ -922,12 +833,12 @@ const courroieData = [
   poids_g_m: "140",
   application: "industry",
   images: [
-    { id: 139, courroie_id: 31, image_url: "/public/bandedCoged/bandedCoged.jpg" },
-    { id: 140, courroie_id: 31, image_url: "/public/bandedCoged/bandedCoged.jpg" },
-    { id: 141, courroie_id: 31, image_url: "/public/bandedCoged/bandedCoged.jpg" }
+    { id: 139, courroie_id: 31, image_url: "/public/Ctrapez/cranteeClassicMultiple/rax/1.jpg" },
+    { id: 140, courroie_id: 31, image_url: "/public/Ctrapez/cranteeClassicMultiple/rax/2.jpg" },
+    { id: 141, courroie_id: 31, image_url: "/public/Ctrapez/cranteeClassicMultiple/rax/3.jpg" }
   ],
   fiches: [
-    { id: 47, courroie_id: 31, fiche_technique_url: "/public/bandedCoged/bandedCoged.pdf" }
+    { id: 47, courroie_id: 31, fiche_technique_url: "/public/Ctrapez/cranteeClassicMultiple/rax/bandedCoged.pdf" }
   ],
   matieres: [
     { id: 94, courroie_id: 31, matiere: "CR" },
@@ -948,12 +859,12 @@ const courroieData = [
   poids_g_m: "240",
   application: "industry",
   images: [
-    { id: 142, courroie_id: 32, image_url: "/public/bandedCoged/bandedCoged.jpg" },
-    { id: 143, courroie_id: 32, image_url: "/public/bandedCoged/bandedCoged.jpg" },
-    { id: 144, courroie_id: 32, image_url: "/public/bandedCoged/bandedCoged.jpg" }
+    { id: 142, courroie_id: 32, image_url: "/public/Ctrapez/cranteeClassicMultiple/rbx/1.jpg" },
+    { id: 143, courroie_id: 32, image_url: "/public/Ctrapez/cranteeClassicMultiple/rbx/2.jpg" },
+    { id: 144, courroie_id: 32, image_url: "/public/Ctrapez/cranteeClassicMultiple/rbx/3.jpg" }
   ],
   fiches: [
-    { id: 48, courroie_id: 32, fiche_technique_url: "/public/bandedCoged/bandedCoged.pdf" }
+    { id: 48, courroie_id: 32, fiche_technique_url: "/public/Ctrapez/cranteeClassicMultiple/rbx/bandedCoged.pdf" }
   ],
   matieres: [
     { id: 96, courroie_id: 32, matiere: "CR" },
@@ -974,12 +885,12 @@ const courroieData = [
   poids_g_m: "420",
   application: "industry",
   images: [
-    { id: 145, courroie_id: 33, image_url: "/public/bandedCoged/bandedCoged.jpg" },
-    { id: 146, courroie_id: 33, image_url: "/public/bandedCoged/bandedCoged.jpg" },
-    { id: 147, courroie_id: 33, image_url: "/public/bandedCoged/bandedCoged.jpg" }
+    { id: 145, courroie_id: 33, image_url: "/public/Ctrapez/cranteeClassicMultiple/rcx/1.jpg" },
+    { id: 146, courroie_id: 33, image_url: "/public/Ctrapez/cranteeClassicMultiple/rcx/2.jpg" },
+    { id: 147, courroie_id: 33, image_url: "/public/Ctrapez/cranteeClassicMultiple/rcx/3.jpg" }
   ],
   fiches: [
-    { id: 49, courroie_id: 33, fiche_technique_url: "/public/bandedCoged/bandedCoged.pdf" }
+    { id: 49, courroie_id: 33, fiche_technique_url: "/public/Ctrapez/cranteeClassicMultiple/rcx/bandedCoged.pdf" }
   ],
   matieres: [
     { id: 98, courroie_id: 33, matiere: "CR" },
@@ -1000,12 +911,12 @@ const courroieData = [
   poids_g_m: "750",
   application: "industry",
   images: [
-    { id: 148, courroie_id: 34, image_url: "/public/bandedCoged/bandedCoged.jpg" },
-    { id: 149, courroie_id: 34, image_url: "/public/bandedCoged/bandedCoged.jpg" },
-    { id: 150, courroie_id: 34, image_url: "/public/bandedCoged/bandedCoged.jpg" }
+    { id: 148, courroie_id: 34, image_url: "/public/Ctrapez/cranteeClassicMultiple/rdx/1.jpg" },
+    { id: 149, courroie_id: 34, image_url: "/public/Ctrapez/cranteeClassicMultiple/rdx/2.jpg" },
+    { id: 150, courroie_id: 34, image_url: "/public/Ctrapez/cranteeClassicMultiple/rdx/3.jpg" }
   ],
   fiches: [
-    { id: 50, courroie_id: 34, fiche_technique_url: "/public/bandedCoged/bandedCoged.pdf" }
+    { id: 50, courroie_id: 34, fiche_technique_url: "/public/Ctrapez/cranteeClassicMultiple/rdx/bandedCoged.pdf" }
   ],
   matieres: [
     { id: 100, courroie_id: 34, matiere: "CR" },
