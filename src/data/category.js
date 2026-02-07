@@ -17,7 +17,7 @@ const category = [
   famille_id: 4,
   nomFrancais: "Courroies synchrones",
   nomAnglais: "Timing Belts",
-  imageUrl: "/public/Csynchrone/ouverte/htd/2m/1.jpg",
+  imageUrl: "/public/Csynchrone/ouverte/htd/5m/1.jpg",
   descriptionFrancais: "Les courroies synchrones regroupent l’ensemble des courroies dentées conçues pour assurer une transmission de mouvement parfaitement synchronisée, sans glissement. Grâce à l’engrènement précis de leurs dents avec les poulies, elles garantissent un positionnement exact, une grande précision et un rendement élevé. Cette famille inclut tous les profils standards et curvilignes tels que T, AT, HTD, STD, ainsi que les versions à simple ou double denture, adaptées aux applications de précision comme aux charges élevées.",
   descriptionAnglais: "Timing belts encompass all toothed belts designed to provide perfectly synchronized motion transmission without slippage. Thanks to the precise meshing of their teeth with pulleys, they ensure accurate positioning, high precision, and high efficiency. This family includes all standard and curvilinear profiles such as T, AT, HTD, and STD, as well as single- and double-sided versions, suitable for both precision and heavy-load applications.",
   usageFrancais: "Transmission synchrone dans les machines industrielles, systèmes d’automatisation, robots, convoyeurs, machines-outils, équipements d’emballage et applications nécessitant une synchronisation précise.",
