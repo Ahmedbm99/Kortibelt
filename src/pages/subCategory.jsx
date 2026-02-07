@@ -85,7 +85,6 @@ const SubCategory = () => {
                       className="group block"
                     >
                       <Card className="h-full overflow-hidden shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl">
-                        
                         {/* 🖼 IMAGE */}
                         <div className="aspect-video overflow-hidden">
                           <img

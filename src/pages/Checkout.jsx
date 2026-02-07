@@ -20,6 +20,10 @@ const Checkout = () => {
   const navigate = useNavigate();
   const { items, clearCart } = useCart();
   const { executeRecaptcha } = useGoogleReCaptcha();
+const [name, setName] = useState('');
+const [email, setEmail] = useState('');
+const [company, setCompany] = useState('');
+const [message, setMessage] = useState('');
 
   const [phone, setPhone] = useState('');
   const [otp, setOtp] = useState('');
@@ -86,10 +90,32 @@ const Checkout = () => {
           quantity: i.quantity
         }))
       });
+ const response = await CaptchaServices.addDevis({
+      name,
+      email,
+      company,
+      phone,
+      message,
+      products: items.map(i => ({
+        id: i.id,
+        name: i.nom,
+        quantity: i.quantity
+      })),
+    });
+    console.log("Devis response:", response);
+      if (response.status === 200) {
 
       toast.success(t('quoteSent'));
       clearCart();
-      navigate('/thank-you');
+        setTimeout(() => {
+    navigate('/thank-you');
+  }, 500); 
+      }else
+      {        toast.error(t('errorServer'));
+        return;
+      }
+
+
     } catch (err) {
       toast.error(t('errorServer'));
       console.error(err);
@@ -133,10 +159,24 @@ const Checkout = () => {
             <Card>
               <CardContent className="p-6 space-y-6">
 
-                <Input placeholder={t('yourName')} required />
-                <Input type="email" placeholder={t('yourEmail')} required />
-                <Input placeholder={t('company')} />
-
+            <Input
+              placeholder={t('yourName')}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />              
+          <Input
+            type="email"
+            placeholder={t('yourEmail')}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <Input
+            placeholder={t('company')}
+            value={company}
+            onChange={(e) => setCompany(e.target.value)}
+          />
                 {/* PHONE */}
                 <PhoneInput
                   international
@@ -166,10 +206,12 @@ const Checkout = () => {
                   />
                 )}
 
-                <Textarea
-                  placeholder={t('additionalMessage')}
-                  rows={4}
-                />
+                      <Textarea
+            placeholder={t('additionalMessage')}
+            rows={4}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
 
                 <Button
                   type="submit"

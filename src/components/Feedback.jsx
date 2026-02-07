@@ -39,6 +39,9 @@ export default function Feedback() {
   };
 
   const [form, setForm] = useState({
+    question1: questions.q1,
+    question2: questions.q2,
+    question3: questions.q3,
     reponse1: 0,
     reponse2: 0,
     reponse3: 0,
@@ -56,9 +59,12 @@ export default function Feedback() {
     }
 
     try {
-      await FeedbackService.addFeedback(form);
+      const response = await FeedbackService.addFeedback(form);
+      if(response.status === 200) {
       toast.success(questions.success);
       setForm({ reponse1: 0, reponse2: 0, reponse3: 0, avis: "" });
+    }
+
     } catch (err) {
       console.error(err);
       toast.error(questions.submitError);

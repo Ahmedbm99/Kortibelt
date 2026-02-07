@@ -8,6 +8,9 @@ const CaptchaServices = {
   verifyContact(data) {
     return Api().post("/auth/verify-contact", data);
   },
-};
 
+addDevis(data) {
+    return Api().post("/send-quote", data);
+  },
+};
 export default CaptchaServices;
