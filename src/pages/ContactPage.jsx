@@ -10,8 +10,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
 import CaptchaServices from "@/services/CaptchaServices";
-
-import { MapPin, Phone, Mail, Globe, MessageSquare } from "lucide-react";
+import ContactService from "@/services/ContactServices";
+import { MapPin, Phone, Mail, Globe, MessageSquare, Contact } from "lucide-react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 
@@ -21,7 +21,13 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 export default function ContactPage() {
   const { t } = useLanguage();
   const { executeRecaptcha } = useGoogleReCaptcha();
-  motion;
+
+  /* ===== STATES ===== */
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
   const [phone, setPhone] = useState("");
   const [otp, setOtp] = useState("");
   const [otpSent, setOtpSent] = useState(false);
@@ -52,7 +58,18 @@ export default function ContactPage() {
       });
 
       setOtpSent(true);
-      toast.success(t("otpSent"));
+            toast.success(t("otpSent"));
+
+      const response = await ContactService.sendMessage({
+        name,
+        email,
+        phone,
+        subject,
+        message
+      });
+      if( response.status === 200 ){
+        toast.success(t("Message sent successfully"));
+      }
     } catch (error) {
       toast.error(t("errorWhatsApp"));
       console.error(error);
@@ -83,6 +100,10 @@ export default function ContactPage() {
       const captchaToken = await executeRecaptcha("contact_submit");
 
       await CaptchaServices.verifyContact({
+        name,
+        email,
+        subject,
+        message,
         phone,
         otp,
         captchaToken,
@@ -90,12 +111,16 @@ export default function ContactPage() {
 
       toast.success(t("messageSent"));
 
-      // reset
+      /* RESET */
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
       setPhone("");
       setOtp("");
       setOtpSent(false);
     } catch (error) {
-      toast.error("errorServer");
+      toast.error("Erreur serveur");
       console.error(error);
     } finally {
       setLoading(false);
@@ -120,7 +145,7 @@ export default function ContactPage() {
 
           <div className="grid md:grid-cols-2 gap-10">
 
-            {/* ================= CONTACT INFO ================= */}
+            {/* ===== CONTACT INFO ===== */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -150,7 +175,7 @@ export default function ContactPage() {
               </Card>
             </motion.div>
 
-            {/* ================= FORM ================= */}
+            {/* ===== FORM ===== */}
             <motion.form
               onSubmit={handleSubmit}
               initial={{ opacity: 0, x: 30 }}
@@ -160,9 +185,27 @@ export default function ContactPage() {
               <Card>
                 <CardContent className="p-6 space-y-6">
 
-                  <Input placeholder={t("yourName")} required />
-                  <Input type="email" placeholder={t("yourEmail")} required />
-                  <Input placeholder={t("subject")} required />
+                  <Input
+                    placeholder={t("yourName")}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+
+                  <Input
+                    type="email"
+                    placeholder={t("yourEmail")}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+
+                  <Input
+                    placeholder={t("subject")}
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
+                    required
+                  />
 
                   {/* PHONE */}
                   <div>
@@ -180,7 +223,7 @@ export default function ContactPage() {
                     )}
                   </div>
 
-                  {/* SEND OTP */}
+                  {/* OTP BUTTON */}
                   <Button
                     type="button"
                     onClick={sendWhatsappOtp}
@@ -200,7 +243,12 @@ export default function ContactPage() {
                     />
                   )}
 
-                  <Textarea placeholder={t("yourMessage")} rows={4} />
+                  <Textarea
+                    placeholder={t("yourMessage")}
+                    rows={4}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
 
                   <Button
                     type="submit"
@@ -223,7 +271,7 @@ export default function ContactPage() {
   );
 }
 
-/* ================= INFO COMPONENT ================= */
+/* ===== INFO COMPONENT ===== */
 function Info({ icon, title, text }) {
   return (
     <div className="flex gap-4 items-start">
