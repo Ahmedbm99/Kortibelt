@@ -88,7 +88,7 @@ const SubCategory = () => {
                         {/* 🖼 IMAGE */}
                         <div className="aspect-video overflow-hidden">
                           <img
-                            src={item.image || item.imageUrl || defaultImage}
+                            src={`https://ahmedbm99.github.io/Kortibelt${item.imageUrl || defaultImage}`}
                             alt={
                               language === 'fr'
                                 ? item.nomFrancais
