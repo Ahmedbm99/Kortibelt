@@ -4,6 +4,7 @@ const category = [
   famille_id: 4,
   nomFrancais: "Courroies trapézoïdales",
   nomAnglais: "V-Belts",
+  imageUrl: "/public/Ctrapez/classic/z/1.png",
   descriptionFrancais: "Les courroies trapézoïdales regroupent l’ensemble des courroies de transmission à section trapézoïdale, incluant les modèles classiques, étroits, multiples, crantés et enveloppés. Leur forme spécifique permet un excellent contact avec les poulies, assurant une transmission de puissance fiable, une bonne résistance au glissement et une longue durée de vie. Elles sont adaptées aussi bien aux applications standards qu’aux applications industrielles lourdes.",
   descriptionAnglais: "V-belts encompass all power transmission belts with a trapezoidal cross-section, including classical, narrow, multiple, cogged, and wrapped types. Their specific shape ensures excellent pulley contact, providing reliable power transmission, reduced slippage, and long service life. They are suitable for both standard and heavy-duty industrial applications.",
   usageFrancais: "Transmission de puissance dans les systèmes industriels, machines agricoles, équipements automobiles, compresseurs, ventilateurs, pompes et installations mécaniques nécessitant robustesse et fiabilité.",
@@ -16,6 +17,7 @@ const category = [
   famille_id: 4,
   nomFrancais: "Courroies synchrones",
   nomAnglais: "Timing Belts",
+  imageUrl: "/public/Csynchrone/ouverte/htd/2m/1.jpg",
   descriptionFrancais: "Les courroies synchrones regroupent l’ensemble des courroies dentées conçues pour assurer une transmission de mouvement parfaitement synchronisée, sans glissement. Grâce à l’engrènement précis de leurs dents avec les poulies, elles garantissent un positionnement exact, une grande précision et un rendement élevé. Cette famille inclut tous les profils standards et curvilignes tels que T, AT, HTD, STD, ainsi que les versions à simple ou double denture, adaptées aux applications de précision comme aux charges élevées.",
   descriptionAnglais: "Timing belts encompass all toothed belts designed to provide perfectly synchronized motion transmission without slippage. Thanks to the precise meshing of their teeth with pulleys, they ensure accurate positioning, high precision, and high efficiency. This family includes all standard and curvilinear profiles such as T, AT, HTD, and STD, as well as single- and double-sided versions, suitable for both precision and heavy-load applications.",
   usageFrancais: "Transmission synchrone dans les machines industrielles, systèmes d’automatisation, robots, convoyeurs, machines-outils, équipements d’emballage et applications nécessitant une synchronisation précise.",
@@ -28,6 +30,7 @@ const category = [
   famille_id: 4,
   nomFrancais: "Courroies agricoles",
   nomAnglais: "Agricultural Belts",
+  imageUrl: "/public/agricole/Agricole.jpg",
   descriptionFrancais: "Les courroies agricoles regroupent l’ensemble des courroies de transmission spécialement conçues pour les machines et équipements agricoles. Elles sont adaptées aux conditions de travail sévères telles que la poussière, l’humidité, les variations de température et les fortes charges. Cette famille inclut les courroies trapézoïdales, synchrones et spéciales destinées aux moissonneuses-batteuses, tracteurs, presses à balles, semoirs et autres équipements agricoles.",
   descriptionAnglais: "Agricultural belts encompass all power transmission belts specifically designed for agricultural machinery and equipment. They are built to withstand harsh working conditions such as dust, moisture, temperature variations, and heavy loads. This family includes V-belts, timing belts, and special belts used in harvesters, tractors, balers, seeders, and other agricultural equipment.",
   usageFrancais: "Transmission de puissance dans les tracteurs, moissonneuses-batteuses, presses à balles, ensileuses, semoirs et autres machines agricoles soumises à des conditions intensives.",
@@ -40,6 +43,7 @@ const category = [
   famille_id: 4,
   nomFrancais: "Courroies moto",
   nomAnglais: "Motorcycle Belts",
+  imageUrl: "/public/motocycle/1.jpg",
   descriptionFrancais: "Les courroies moto regroupent les courroies de transmission spécialement conçues pour les deux-roues motorisés. Elles assurent une transmission de puissance fiable, silencieuse et efficace entre le moteur et la roue arrière ou les organes auxiliaires. Cette famille inclut les courroies de transmission finales, les courroies de variation (CVT) et les courroies synchrones utilisées sur les motos, scooters et maxi-scooters, offrant une excellente résistance à l’usure, aux vibrations et aux contraintes mécaniques.",
   descriptionAnglais: "Motorcycle belts encompass transmission belts specifically designed for two-wheeled motor vehicles. They provide reliable, quiet, and efficient power transmission between the engine and the rear wheel or auxiliary components. This family includes final drive belts, CVT belts, and timing belts used in motorcycles, scooters, and maxi-scooters, offering excellent resistance to wear, vibration, and mechanical stress.",
   usageFrancais: "Transmission finale et variation de vitesse sur motos, scooters et maxi-scooters, ainsi que l’entraînement d’organes auxiliaires selon les configurations.",
@@ -53,6 +57,7 @@ const category = [
   famille_id: 4,
   nomFrancais: "Courroies variateur",
   nomAnglais: "Variable Speed Belts",
+  imageUrl: "/public/Variateur/Variateur.jpg",
   descriptionFrancais: "Les courroies variables regroupent les courroies de transmission conçues pour les systèmes à variation continue de vitesse (CVT). Elles permettent une adaptation automatique du rapport de transmission en fonction de la charge et du régime moteur, assurant une conduite fluide et une performance optimale. Cette famille inclut les courroies utilisées dans les scooters, motos, machines industrielles et équipements agricoles équipés de variateurs.",
   descriptionAnglais: "Variable speed belts encompass transmission belts designed for continuously variable transmission (CVT) systems. They allow automatic adjustment of the transmission ratio according to load and engine speed, ensuring smooth operation and optimal performance. This family includes belts used in scooters, motorcycles, industrial machines, and agricultural equipment equipped with variators.",
   usageFrancais: "Systèmes de variation continue sur scooters, motos, machines industrielles, équipements agricoles, compresseurs et installations mécaniques à vitesse variable.",
@@ -65,6 +70,7 @@ const category = [
   famille_id: 4,
   nomFrancais: "Courroies hexagonales",
   nomAnglais: "Hexagonal Belts",
+  imageUrl: "/public/hexagonal/2.jpg",
   descriptionFrancais: "Les courroies hexagonales, également appelées courroies à double trapèze, sont conçues pour transmettre la puissance dans des systèmes où la courroie est sollicitée sur ses deux faces. Leur section hexagonale permet un entraînement bidirectionnel et une grande flexibilité d’installation, notamment dans les configurations à renvoi complexe. Elles sont utilisées dans des applications industrielles, agricoles et mécaniques nécessitant l’entraînement de plusieurs poulies avec une seule courroie.",
   descriptionAnglais: "Hexagonal belts, also known as double V-belts, are designed to transmit power in systems where the belt is driven on both sides. Their hexagonal cross-section allows bidirectional drive and high installation flexibility, especially in complex pulley layouts. They are used in industrial, agricultural, and mechanical applications requiring multiple pulleys to be driven by a single belt.",
   usageFrancais: "Entraînement de plusieurs organes avec une seule courroie dans les machines agricoles, industrielles, tondeuses, équipements mécaniques et systèmes à renvois multiples.",
@@ -77,6 +83,7 @@ const category = [
   famille_id: 4,
   nomFrancais: "Courroies Poly-V",
   nomAnglais: "Poly-V Belts",
+  imageUrl: "/public/polyv/pk/1.jpg",
   descriptionFrancais: "Les courroies Poly-V, également appelées courroies trapézoïdales multiples, sont constituées de plusieurs nervures longitudinales qui assurent une surface de contact plus grande avec les poulies. Cette conception améliore la transmission de puissance, réduit le glissement et permet une meilleure dissipation thermique. Elles sont idéales pour les applications où l’espace est limité mais où une performance élevée est requise.",
   descriptionAnglais: "Poly-V belts, also known as multiple V-belts, consist of multiple longitudinal ribs providing a larger contact area with pulleys. This design enhances power transmission, reduces slippage, and allows better heat dissipation. They are ideal for applications where space is limited but high performance is required.",
   usageFrancais: "Applications automobiles et industrielles légères ou moyennes, ventilateurs, compresseurs, pompes et équipements nécessitant une transmission efficace dans un espace restreint.",
@@ -89,6 +96,7 @@ const category = [
   famille_id: 5,
   nomFrancais: "Courroies PU double denture",
   nomAnglais: "Double-Sided PU Belts",
+  imageUrl: "/public/doubleDenture/t10/1.jpg",
   descriptionFrancais: "Les courroies PU à double denture sont des courroies en polyuréthane présentant des dents sur les deux faces, permettant l’entraînement simultané de poulies situées de part et d’autre de la courroie. Elles offrent une grande précision de transmission, une excellente flexibilité et une résistance élevée à l’usure et aux charges dynamiques. Elles sont utilisées dans les applications industrielles nécessitant une double transmission ou des configurations complexes de poulies.",
   descriptionAnglais: "Double-sided PU belts are polyurethane belts with teeth on both sides, allowing simultaneous driving of pulleys located on either side of the belt. They provide high transmission accuracy, excellent flexibility, and strong resistance to wear and dynamic loads. They are used in industrial applications requiring dual drives or complex pulley configurations.",
   usageFrancais: "Machines industrielles, convoyeurs, équipements d’automatisation et systèmes mécaniques où une double transmission ou une disposition complexe des poulies est nécessaire.",
@@ -101,6 +109,7 @@ const category = [
   famille_id: 5,
   nomFrancais: "Courroies synchrones",
   nomAnglais: "Timing Belts",
+  imageUrl: "/public/PUsynchrone/ouverte/htd/1.jpg",
   descriptionFrancais: "Les courroies synchrones sont des courroies dentées conçues pour assurer une transmission de mouvement précise et sans glissement. Elles garantissent un positionnement exact des organes entraînés et conviennent aux applications nécessitant précision, fiabilité et rendement élevé. Cette famille inclut les profils standards et curvilignes tels que T, AT, HTD, STD, ainsi que les versions à simple ou double denture adaptées aux machines industrielles, robots, équipements agricoles et systèmes automatisés.",
   descriptionAnglais: "Timing belts are toothed belts designed to provide precise, slip-free motion transmission. They ensure accurate positioning of driven components and are suitable for applications requiring precision, reliability, and high efficiency. This family includes standard and curvilinear profiles such as T, AT, HTD, STD, as well as single- and double-sided versions suitable for industrial machines, robots, agricultural equipment, and automated systems.",
   usageFrancais: "Machines industrielles, systèmes automatisés, robots, convoyeurs, équipements agricoles, machines-outils et applications nécessitant une synchronisation précise.",
@@ -113,6 +122,7 @@ const category = [
   famille_id: 5,
   nomFrancais: "Courroies PU spéciales",
   nomAnglais: "Special PU Belts",
+  imageUrl: "/public/PUspeciale/1.jpg",
   descriptionFrancais: "Les courroies PU spéciales sont des courroies en polyuréthane conçues pour des applications particulières nécessitant des caractéristiques spécifiques telles que résistance chimique, haute température, flexibilité extrême ou profils sur mesure. Elles permettent une transmission fiable dans des configurations atypiques et des environnements exigeants. Cette famille inclut les courroies à dents spéciales, les courroies profilées, les courroies avec revêtements particuliers et les versions sur mesure selon les besoins industriels.",
   descriptionAnglais: "Special PU belts are polyurethane belts designed for specific applications requiring features such as chemical resistance, high temperature tolerance, extreme flexibility, or custom profiles. They provide reliable transmission in atypical configurations and demanding environments. This family includes special-tooth belts, profiled belts, belts with special coatings, and custom versions for industrial needs.",
   usageFrancais: "Applications industrielles spécifiques, convoyeurs, machines-outils, équipements automatisés, secteurs alimentaire et pharmaceutique, ou environnements à contraintes particulières.",
@@ -125,6 +135,7 @@ const category = [
     famille_id: 16,
     nomFrancais: "Courroies rondes thermosoudables",
     nomAnglais: "Thermoweldable Round PU Belts",
+    imageUrl: "/public/ronde/2mm.jpg",
     descriptionFrancais: "Les courroies rondes en PU thermosoudables sont flexibles et peuvent être soudées à chaud pour obtenir la longueur désirée. Idéales pour les convoyeurs légers et systèmes de transport nécessitant rapidité et souplesse.",
     descriptionAnglais: "Thermoweldable round PU belts are flexible and can be hot-welded to the desired length. Ideal for light conveyors and transport systems requiring speed and flexibility.",
     usageFrancais: "Convoyeurs légers, étiquetage, emballage, petites lignes de production.",
@@ -137,6 +148,7 @@ const category = [
     famille_id: 16,
     nomFrancais: "Courroies trapézoïdales thermosoudables",
     nomAnglais: "Thermoweldable V PU Belts",
+    imageUrl: "/public/thermosodableTrapez/2.jpg",
     descriptionFrancais: "Les courroies trapézoïdales PU thermosoudables peuvent être soudées à chaud pour former des longueurs personnalisées. Elles offrent résistance, flexibilité et faible maintenance pour les convoyeurs industriels.",
     descriptionAnglais: "Thermoweldable PU V-belts can be hot-welded to create custom lengths. They provide durability, flexibility, and low maintenance for industrial conveyors.",
     usageFrancais: "Convoyeurs industriels, systèmes modulaires, transmission simple.",
@@ -144,29 +156,5 @@ const category = [
     materiauxFrancais: "Polyuréthane extrudé",
     materiauxAnglais: "Extruded polyurethane"
   },
-  {
-    id: 14,
-    famille_id: 16,
-    nomFrancais: "Courroies spéciales thermosoudables",
-    nomAnglais: "Specialty Thermoweldable PU Belts",
-    descriptionFrancais: "Courroies conçues pour des applications spécifiques nécessitant des caractéristiques particulières telles que résistance à la chaleur, flexibilité extrême ou fonctionnement dans des environnements difficiles. Souvent utilisées dans des machines spéciales et équipements industriels lourds.",
-    descriptionAnglais: "Belts designed for specific applications requiring characteristics such as heat resistance, extreme flexibility, or operation in harsh environments. Often used in special machinery and heavy industrial equipment.",
-    usageFrancais: "Machines spéciales, équipements industriels lourds, applications exigeant performance sous conditions extrêmes.",
-    usageAnglais: "Special machinery, heavy industrial equipment, applications requiring reliable performance under extreme conditions.",
-    materiauxFrancais: "Polyuréthane extrudé ou moulé selon besoins",
-    materiauxAnglais: "Extruded or molded polyurethane depending on requirements"
-  },
-
-
-
-
-
-
-
-
-
-
-
-
 ];
 export default category;

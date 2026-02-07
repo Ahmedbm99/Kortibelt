@@ -81,7 +81,7 @@ const Category = () => {
                     {/* Image */}
                     <div className="aspect-video overflow-hidden">
                       <img
-                        src={imageSrc}
+                        src={type.imageUrl || imageSrc}
                         alt={
                           language === 'fr'
                             ? type.nomFrancais

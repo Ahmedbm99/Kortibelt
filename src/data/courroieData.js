@@ -2262,17 +2262,17 @@ const courroieData = [
     {
       id: 268,
       courroie_id: 76,
-      image_url: "/public/agricole/agricole.jpg"
+      image_url: "/public/agricole/Agricole.jpg"
     },
     {
       id: 269,
       courroie_id: 76,
-      image_url: "/public/agricole/agricole.jpg"
+      image_url: "/public/agricole/Agricole.jpg"
     },
     {
       id: 270,
       courroie_id: 76,
-      image_url: "/public/agricole/agricole.jpg"
+      image_url: "/public/agricole/Agricole.jpg"
     }
   ],
   fiches: [
@@ -2385,7 +2385,7 @@ const courroieData = [
     poids_g_m: "1.4",
     application: "industry",
     images: [
-      { id :10088,courroie_id: 108, image_url: "/public/PUspeciale//1.jpg" },
+      { id :10088,courroie_id: 108, image_url: "/public/PUspeciale/1.jpg" },
       { id :10089,courroie_id: 108, image_url: "/public/PUspeciale/t5/1.jpg" },
       { id :10090,courroie_id: 108, image_url: "/public/PUspeciale/t10/1.jpg" }
     ],
@@ -2517,40 +2517,6 @@ const courroieData = [
     }
   ]
 },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ];
 export default courroieData;
