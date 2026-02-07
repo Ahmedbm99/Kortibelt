@@ -17,7 +17,7 @@ const subcategory = [
     category_id: 1,
     nomFrancais: "Étroite",
     nomAnglais: "Narrow",
-    imageUrl: "/courroie/courroie-trapezoidale-etroite.jpg",
+    imageUrl: "/public/courroie/courroie-trapezoidale-etroite.jpg",
     seoTitle: "Courroies trapézoïdales étroites - Performance compacte",
     seoDescription: "Nos courroies trapézoïdales étroites offrent une haute performance même dans les espaces restreints, parfaites pour moteurs et machines industrielles.",
     seoKeywords: "courroie trapézoïdale étroite, narrow V-belt, transmission compacte, courroies haute performance"
@@ -161,7 +161,7 @@ const subcategory = [
     category_id: 9, // famille Courroies PU double denture
     nomFrancais: "Courroie PU double denture",
     nomAnglais: "PU Double-Sided Belt",
-    imageUrl: "/courroie/courroie-pu-double-denture.jpg",
+    imageUrl: "/public/courroie/courroie-pu-double-denture.jpg",
     seoTitle: "Courroie PU double denture - Transmission haute performance",
     seoDescription: "Courroies PU à double denture offrant une transmission précise et fiable, idéales pour les applications industrielles nécessitant une puissance élevée et un engagement parfait des poulies.",
     seoKeywords: "courroie PU double denture, PU double-sided belt, transmission précise, courroie industrielle, puissance élevée"
