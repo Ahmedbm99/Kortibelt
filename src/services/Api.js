@@ -6,7 +6,7 @@ const Api = () => {
   return axios.create({
    // baseURL: `http://localhost:8080/apiv1`,
    
- baseURL: `https://courroie-back-n4o918h30-ahmedbm99s-projects.vercel.app/apiv1`,
+ baseURL: `https://courroie-back-3halhxpqr-ahmedbm99s-projects.vercel.app/apiv1`,
     headers: {
       "Content-Type": "application/json",
     },
