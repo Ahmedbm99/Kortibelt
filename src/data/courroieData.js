@@ -348,6 +348,33 @@ const courroieData = [
       { id: 71, courroie_id: 13, matiere: "CR+NR" }
     ]
   },
+    {
+    id: 14,
+    nom: "Courroie 5VX",
+    subcategory_id: 2,
+    profil: "3VX",
+    description: "Courroie étroite 3VX pour applications Poly V dans les machines compactes, transmission efficace et silencieuse.",
+    seo: "courroie-etroit-3vx-narrow-poly-v",
+    fabricant: "AIS Group",
+    largeur_mm: "9,5",
+    hauteur_mm: "6,35",
+    angle_trapeze_deg: 40,
+    poids_g_m: "65",
+    source_catalogue: "Narrow V Belt Catalogue",
+    application: "industry",
+    images: [
+      { id: 9997, courroie_id: 14, image_url: "/public/Ctrapez/etroite/5vx/1.jpeg" },
+      { id: 9998, courroie_id: 14, image_url: "/public/Ctrapez/etroite/5vx/2.jpeg" },
+      { id: 9999, courroie_id: 14, image_url: "/public/Ctrapez/etroite/5vx/3.jpeg" }
+    ],
+    fiches: [
+      { id: 99933, courroie_id: 14, fiche_technique_url: "/public/Ctrapez/etroite/narrow.png" }
+    ],
+    matieres: [
+      { id: 99970, courroie_id: 14, matiere: "CR" },
+      { id: 99971, courroie_id: 14, matiere: "CR+NR" }
+    ]
+  },
   {
     id: 15,
     nom: "Courroie 8VX",
@@ -2296,84 +2323,1021 @@ const courroieData = [
   ]
 },
   {
-    id: 77,
-    nom: "Courroie PU Double Denture",
-    profil: "Double Denture",
-    description: "Courroie synchrone polyuréthane pour petites transmissions précises.",
-    fabricant: "AIS Group",
-    subcategory_id: 16,
-    largeur_mm: "6",
-    hauteur_mm: "1.3",
-    renforcement: "Câbles acier ou Kevlar",
-    poids_g_m: "18",
-    application: "conveyors",
-    images: [
-      {id :10000,courroie_id: 77, image_url: "/public/doubleDenture/t10/1.jpg" },
-      {id :10001,courroie_id: 77, image_url: "/public/doubleDenture/t10/2.jpg" },
-      {id :10002,courroie_id: 77, image_url: "/public/doubleDenture/htd5m/2.jpg" }
-    ],
-    fiches: [
-      {id :10000,courroie_id: 77,  fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
-    ],
-    matieres: [
-      {id :10000,courroie_id: 77, matiere: "PU" }
-    ]
-  },
-  
-  {
-    id: 92,
-    nom: "Courroie PU Synchrone Ouverte",
-    profil: "ouverte",
-    description: "Courroie trapézoïdale Synchrone, pour la transmission de puissance.",
-    subcategory_id: 17,
-    hauteur_mm: "0.51",
-    pas_mm: "2.032",
-    angle_trapeze_deg: 40,
-    epaisseur_mm: "1.14",
-    poids_g_m: "1.4",
-    application: "industry",
-    images: [
-      { id :10043,courroie_id: 92, image_url: "/public/PUsynchrone/ouverte/at10/1.jpg" },
-      { id :10044,courroie_id: 92, image_url: "/public/PUsynchrone/ouverte/htd/4.jpg" },
-      { id :10045,courroie_id: 92, image_url: "/public/PUsynchrone/ouverte/htd/1.jpg" }
-    ],
-    fiches: [
-      { id :10015,courroie_id: 92, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
-    ],
-    matieres: [
-      { id :10015,courroie_id: 92, matiere: "CR" },
-      { id :10016,courroie_id: 92, matiere: "HNBR" }
-    ]
-  },
-  
-
+  id: 77,
+  nom: "Courroie PU AT5",
+  profil: "AT5",
+  description: "Courroie synchrone pour convoyeurs industriels.",
+  fabricant: "AIS Group",
+  subcategory_id: 16,
+  largeur_mm: "10",
+  hauteur_mm: "2.7",
+  renforcement: "Câbles acier ou Kevlar",
+  poids_g_m: "45",
+  application: "conveyors",
+  images: [
+    { id: 1000, courroie_id: 77, image_url: "/public/doubleDenture/at5/1.jpg" },
+    { id: 1001, courroie_id: 77, image_url: "/public/doubleDenture/at5/2.jpg" },
+    { id: 1002, courroie_id: 77, image_url: "/public/doubleDenture/at5/3.jpg" }
+  ],
+  fiches: [{ id: 2000, courroie_id: 77, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [{ id: 3000, courroie_id: 77, matiere: "PU" }]
+},
 {
-    id: 107,
-    nom: "Courroie PU Synchrone Fermée",
-    profil: "synchrone fermée",
-    description: "Courroie trapézoïdale Synchrone, pour la transmission de puissance.",
-    subcategory_id: 18,
-    hauteur_mm: "0.51",
-    pas_mm: "2.032",
-    angle_trapeze_deg: 40,
-    epaisseur_mm: "1.14",
-    poids_g_m: "1.4",
-    application: "industry",
-    images: [
-      { id :10088,courroie_id: 107, image_url: "/public/PUsynchrone/fermee/at5/1.jpg" },
-      { id :10089,courroie_id: 107, image_url: "/public/PUsynchrone/fermee/t5/1.jpg" },
-      { id :10090,courroie_id: 107, image_url: "/public/PUsynchrone/fermee/t10/1.jpg" }
-    ],
-    fiches: [
-      { id :10031,courroie_id: 107, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }
-    ],
-    matieres: [
-      { id :10033,courroie_id: 107, matiere: "CR" },
-      { id :10034,courroie_id: 107, matiere: "HNBR" }
-    ]
-  },
+  id: 78,
+  nom: "Courroie PU AT10",
+  profil: "AT10",
+  description: "Courroie synchrone pour convoyeurs industriels.",
+  fabricant: "AIS Group",
+  subcategory_id: 16,
+  largeur_mm: "16",
+  hauteur_mm: "4.5",
+  renforcement: "Câbles acier ou Kevlar",
+  poids_g_m: "95",
+  application: "conveyors",
+  images: [
+    { id: 1003, courroie_id: 78, image_url: "/public/doubleDenture/at10/1.jpg" },
+    { id: 1004, courroie_id: 78, image_url: "/public/doubleDenture/at10/2.jpg" },
+    { id: 1005, courroie_id: 78, image_url: "/public/doubleDenture/at10/3.jpg" }
+  ],
+  fiches: [{ id: 2001, courroie_id: 78, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [{ id: 3001, courroie_id: 78, matiere: "PU" }]
+},
+{
+  id: 79,
+  nom: "Courroie PU H",
+  profil: "H",
+  description: "Courroie dentée pour convoyeurs industriels.",
+  fabricant: "AIS Group",
+  subcategory_id: 16,
+  largeur_mm: "25",
+  hauteur_mm: "4.3",
+  renforcement: "Fibre de verre",
+  poids_g_m: "210",
+  application: "conveyors",
+  images: [
+    { id: 1006, courroie_id: 79, image_url: "/public/doubleDenture/h/1.jpg" },
+    { id: 1007, courroie_id: 79, image_url: "/public/doubleDenture/h/2.jpg" },
+    { id: 1008, courroie_id: 79, image_url: "/public/doubleDenture/h/3.jpg" }
+  ],
+  fiches: [{ id: 2002, courroie_id: 79, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [{ id: 3002, courroie_id: 79, matiere: "PU" }]
+},
+{
+  id: 80,
+  nom: "Courroie PU HTD 3M",
+  profil: "HTD 3M",
+  description: "Courroie synchrone pour convoyeurs industriels.",
+  fabricant: "AIS Group",
+  subcategory_id: 16,
+  largeur_mm: "9",
+  hauteur_mm: "2.4",
+  renforcement: "Fibre de verre",
+  poids_g_m: "35",
+  application: "conveyors",
+  images: [
+    { id: 1009, courroie_id: 80, image_url: "/public/doubleDenture/htd3m/1.jpg" },
+    { id: 1010, courroie_id: 80, image_url: "/public/doubleDenture/htd3m/2.jpg" },
+    { id: 1011, courroie_id: 80, image_url: "/public/doubleDenture/htd3m/3.jpg" }
+  ],
+  fiches: [{ id: 2003, courroie_id: 80, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [{ id: 3003, courroie_id: 80, matiere: "PU" }]
+},
+{
+  id: 81,
+  nom: "Courroie PU HTD 5M",
+  profil: "HTD 5M",
+  description: "Courroie synchrone pour convoyeurs industriels.",
+  fabricant: "AIS Group",
+  subcategory_id: 16,
+  largeur_mm: "15",
+  hauteur_mm: "3.8",
+  renforcement: "Fibre de verre",
+  poids_g_m: "75",
+  application: "conveyors",
+  images: [
+    { id: 1012, courroie_id: 81, image_url: "/public/doubleDenture/htd5m/1.jpg" },
+    { id: 1013, courroie_id: 81, image_url: "/public/doubleDenture/htd5m/2.jpg" },
+    { id: 1014, courroie_id: 81, image_url: "/public/doubleDenture/htd5m/3.jpg" }
+  ],
+  fiches: [{ id: 2004, courroie_id: 81, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [{ id: 3004, courroie_id: 81, matiere: "PU" }]
+},
+{
+  id: 82,
+  nom: "Courroie PU HTD 8M",
+  profil: "HTD 8M",
+  description: "Courroie synchrone pour convoyeurs industriels.",
+  fabricant: "AIS Group",
+  subcategory_id: 16,
+  largeur_mm: "20",
+  hauteur_mm: "5.6",
+  renforcement: "Fibre de verre",
+  poids_g_m: "140",
+  application: "conveyors",
+  images: [
+    { id: 1015, courroie_id: 82, image_url: "/public/doubleDenture/htd8m/1.jpg" },
+    { id: 1016, courroie_id: 82, image_url: "/public/doubleDenture/htd8m/2.jpg" },
+    { id: 1017, courroie_id: 82, image_url: "/public/doubleDenture/htd8m/3.jpg" }
+  ],
+  fiches: [{ id: 2005, courroie_id: 82, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [{ id: 3005, courroie_id: 82, matiere: "PU" }]
+},
+{
+  id: 83,
+  nom: "Courroie PU L",
+  profil: "L",
+  description: "Courroie synchrone pour convoyeurs industriels.",
+  fabricant: "AIS Group",
+  subcategory_id: 16,
+  largeur_mm: "19",
+  hauteur_mm: "3.6",
+  renforcement: "Fibre de verre",
+  poids_g_m: "120",
+  application: "conveyors",
+  images: [
+    { id: 1018, courroie_id: 83, image_url: "/public/doubleDenture/l/1.jpg" },
+    { id: 1019, courroie_id: 83, image_url: "/public/doubleDenture/l/2.jpg" },
+    { id: 1020, courroie_id: 83, image_url: "/public/doubleDenture/l/3.jpg" }
+  ],
+  fiches: [{ id: 2006, courroie_id: 83, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [{ id: 3006, courroie_id: 83, matiere: "PU" }]
+},
+{
+  id: 84,
+  nom: "Courroie PU RPP",
+  profil: "RPP",
+  description: "Courroie synchrone pour convoyeurs industriels.",
+  fabricant: "AIS Group",
+  subcategory_id: 16,
+  largeur_mm: "20",
+  hauteur_mm: "5.3",
+  renforcement: "Fibre de verre",
+  poids_g_m: "135",
+  application: "conveyors",
+  images: [
+    { id: 1021, courroie_id: 84, image_url: "/public/doubleDenture/rpp/1.jpg" },
+    { id: 1022, courroie_id: 84, image_url: "/public/doubleDenture/rpp/2.jpg" },
+    { id: 1023, courroie_id: 84, image_url: "/public/doubleDenture/rpp/3.jpg" }
+  ],
+  fiches: [{ id: 2007, courroie_id: 84, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [{ id: 3007, courroie_id: 84, matiere: "PU" }]
+},
+{
+  id: 85,
+  nom: "Courroie PU STD",
+  profil: "STD",
+  description: "Courroie synchrone pour convoyeurs industriels.",
+  fabricant: "AIS Group",
+  subcategory_id: 16,
+  largeur_mm: "20",
+  hauteur_mm: "5.3",
+  renforcement: "Fibre de verre",
+  poids_g_m: "130",
+  application: "conveyors",
+  images: [
+    { id: 1024, courroie_id: 85, image_url: "/public/doubleDenture/std/1.jpg" },
+    { id: 1025, courroie_id: 85, image_url: "/public/doubleDenture/std/2.jpg" },
+    { id: 1026, courroie_id: 85, image_url: "/public/doubleDenture/std/3.jpg" }
+  ],
+  fiches: [
+    { id: 2008, courroie_id: 85, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
+  ],
+  matieres: [
+    { id: 3008, courroie_id: 85, matiere: "PU" }
+  ]
+},
+{
+  id: 86,
+  nom: "Courroie PU T2.5",
+  profil: "T2.5",
+  description: "Courroie synchrone pour convoyeurs industriels.",
+  fabricant: "AIS Group",
+  subcategory_id: 16,
+  largeur_mm: "6",
+  hauteur_mm: "1.3",
+  renforcement: "Fibre de verre",
+  poids_g_m: "18",
+  application: "conveyors",
+  images: [
+    { id: 1027, courroie_id: 86, image_url: "/public/doubleDenture/t2.5/1.jpg" },
+    { id: 1028, courroie_id: 86, image_url: "/public/doubleDenture/t2.5/2.jpg" },
+    { id: 1029, courroie_id: 86, image_url: "/public/doubleDenture/t2.5/3.jpg" }
+  ],
+  fiches: [
+    { id: 2009, courroie_id: 86, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
+  ],
+  matieres: [
+    { id: 3009, courroie_id: 86, matiere: "PU" }
+  ]
+},
+{
+  id: 87,
+  nom: "Courroie PU T5",
+  profil: "T5",
+  description: "Courroie synchrone pour convoyeurs industriels.",
+  fabricant: "AIS Group",
+  subcategory_id: 16,
+  largeur_mm: "10",
+  hauteur_mm: "2.2",
+  renforcement: "Fibre de verre",
+  poids_g_m: "40",
+  application: "conveyors",
+  images: [
+    { id: 1030, courroie_id: 87, image_url: "/public/doubleDenture/t5/1.jpg" },
+    { id: 1031, courroie_id: 87, image_url: "/public/doubleDenture/t5/2.jpg" },
+    { id: 1032, courroie_id: 87, image_url: "/public/doubleDenture/t5/3.jpg" }
+  ],
+  fiches: [
+    { id: 2010, courroie_id: 87, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
+  ],
+  matieres: [
+    { id: 3010, courroie_id: 87, matiere: "PU" }
+  ]
+},
+{
+  id: 88,
+  nom: "Courroie PU T10",
+  profil: "T10",
+  description: "Courroie synchrone pour convoyeurs industriels.",
+  fabricant: "AIS Group",
+  subcategory_id: 16,
+  largeur_mm: "16",
+  hauteur_mm: "4.5",
+  renforcement: "Fibre de verre",
+  poids_g_m: "95",
+  application: "conveyors",
+  images: [
+    { id: 1033, courroie_id: 88, image_url: "/public/doubleDenture/t10/1.jpg" },
+    { id: 1034, courroie_id: 88, image_url: "/public/doubleDenture/t10/2.jpg" },
+    { id: 1035, courroie_id: 88, image_url: "/public/doubleDenture/t10/3.jpg" }
+  ],
+  fiches: [
+    { id: 2011, courroie_id: 88, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
+  ],
+  matieres: [
+    { id: 3011, courroie_id: 88, matiere: "PU" }
+  ]
+},
+{
+  id: 89,
+  nom: "Courroie PU XH",
+  profil: "XH",
+  description: "Courroie synchrone pour convoyeurs industriels.",
+  fabricant: "AIS Group",
+  subcategory_id: 16,
+  largeur_mm: "38",
+  hauteur_mm: "11.2",
+  renforcement: "Fibre de verre",
+  poids_g_m: "420",
+  application: "conveyors",
+  images: [
+    { id: 1036, courroie_id: 89, image_url: "/public/doubleDenture/xh/1.jpg" },
+    { id: 1037, courroie_id: 89, image_url: "/public/doubleDenture/xh/2.jpg" },
+    { id: 1038, courroie_id: 89, image_url: "/public/doubleDenture/xh/3.jpg" }
+  ],
+  fiches: [
+    { id: 2012, courroie_id: 89, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
+  ],
+  matieres: [
+    { id: 3012, courroie_id: 89, matiere: "PU" }
+  ]
+},
+{
+  id: 90,
+  nom: "Courroie PU XL",
+  profil: "XL",
+  description: "Courroie synchrone pour convoyeurs industriels.",
+  fabricant: "AIS Group",
+  subcategory_id: 16,
+  largeur_mm: "10",
+  hauteur_mm: "2.3",
+  renforcement: "Fibre de verre",
+  poids_g_m: "50",
+  application: "conveyors",
+  images: [
+    { id: 1039, courroie_id: 90, image_url: "/public/doubleDenture/xl/1.jpg" },
+    { id: 1040, courroie_id: 90, image_url: "/public/doubleDenture/xl/2.jpg" },
+    { id: 1041, courroie_id: 90, image_url: "/public/doubleDenture/xl/3.jpg" }
+  ],
+  fiches: [
+    { id: 2013, courroie_id: 90, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
+  ],
+  matieres: [
+    { id: 3013, courroie_id: 90, matiere: "PU" }
+  ]
+},
   {
-    id: 108,
+  id: 92,
+  nom: "Courroie PU Synchrone Ouverte AT5",
+  profil: "AT5",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "1.2",
+  pas_mm: "5",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "2.7",
+  poids_g_m: "20",
+  application: "industry",
+  images: [
+    { id: 1100, courroie_id: 92, image_url: "/public/PUsynchrone/ouverte/at5/1.jpg" },
+    { id: 1101, courroie_id: 92, image_url: "/public/PUsynchrone/ouverte/at5/2.jpg" },
+    { id: 1102, courroie_id: 92, image_url: "/public/PUsynchrone/ouverte/at5/3.jpg" }
+  ],
+  fiches: [
+    { id: 2100, courroie_id: 92, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
+  ],
+  matieres: [
+    { id: 3100, courroie_id: 92, matiere: "PU" },
+  ]
+},
+{
+  id: 93,
+  nom: "Courroie PU Synchrone Ouverte AT10",
+  profil: "AT10",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "2.5",
+  pas_mm: "10",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "4.5",
+  poids_g_m: "45",
+  application: "industry",
+  images: [
+    { id: 1103, courroie_id: 93, image_url: "/public/PUsynchrone/ouverte/at10/1.jpg" },
+    { id: 1104, courroie_id: 93, image_url: "/public/PUsynchrone/ouverte/at10/2.jpg" },
+    { id: 1105, courroie_id: 93, image_url: "/public/PUsynchrone/ouverte/at10/3.jpg" }
+  ],
+  fiches: [
+    { id: 2101, courroie_id: 93, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
+  ],
+  matieres: [
+    { id: 3102, courroie_id: 93, matiere: "PU" },
+  ]
+},
+{
+  id: 94,
+  nom: "Courroie PU Synchrone Ouverte AT15",
+  profil: "AT15",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "3.5",
+  pas_mm: "15",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "6",
+  poids_g_m: "70",
+  application: "industry",
+  images: [
+    { id: 1106, courroie_id: 94, image_url: "/public/PUsynchrone/ouverte/at15/1.jpg" },
+    { id: 1107, courroie_id: 94, image_url: "/public/PUsynchrone/ouverte/at15/2.jpg" },
+    { id: 1108, courroie_id: 94, image_url: "/public/PUsynchrone/ouverte/at15/3.jpg" }
+  ],
+  fiches: [
+    { id: 2102, courroie_id: 94, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
+  ],
+  matieres: [
+    { id: 3104, courroie_id: 94, matiere: "PU" },
+  ]
+},{
+  id: 95,
+  nom: "Courroie PU Synchrone Ouverte AT20",
+  profil: "AT20",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "4.5",
+  pas_mm: "20",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "8",
+  poids_g_m: "95",
+  application: "industry",
+  images: [
+    { id: 1109, courroie_id: 95, image_url: "/public/PUsynchrone/ouverte/at20/1.jpg" },
+    { id: 1110, courroie_id: 95, image_url: "/public/PUsynchrone/ouverte/at20/2.jpg" },
+    { id: 1111, courroie_id: 95, image_url: "/public/PUsynchrone/ouverte/at20/3.jpg" }
+  ],
+  fiches: [{ id: 2103, courroie_id: 95, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [
+    { id: 3106, courroie_id: 95, matiere: "PU" },
+  ]
+},
+{
+  id: 96,
+  nom: "Courroie PU Synchrone Ouverte H",
+  profil: "H",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "4.3",
+  pas_mm: "12.7",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "6",
+  poids_g_m: "85",
+  application: "industry",
+  images: [
+    { id: 1112, courroie_id: 96, image_url: "/public/PUsynchrone/ouverte/h/1.jpg" },
+    { id: 1113, courroie_id: 96, image_url: "/public/PUsynchrone/ouverte/h/2.jpg" },
+    { id: 1114, courroie_id: 96, image_url: "/public/PUsynchrone/ouverte/h/3.jpg" }
+  ],
+  fiches: [{ id: 2104, courroie_id: 96, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [
+    { id: 3108, courroie_id: 96, matiere: "PU" },
+  ]
+},
+{
+  id: 97,
+  nom: "Courroie PU Synchrone Ouverte HTD",
+  profil: "HTD",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "3.8",
+  pas_mm: "8",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "5.6",
+  poids_g_m: "75",
+  application: "industry",
+  images: [
+    { id: 1115, courroie_id: 97, image_url: "/public/PUsynchrone/ouverte/htd/1.jpg" },
+    { id: 1116, courroie_id: 97, image_url: "/public/PUsynchrone/ouverte/htd/2.jpg" },
+    { id: 1117, courroie_id: 97, image_url: "/public/PUsynchrone/ouverte/htd/3.jpg" }
+  ],
+  fiches: [{ id: 2105, courroie_id: 97, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [
+    { id: 3110, courroie_id: 97, matiere: "PU" },
+  ]
+},
+{
+  id: 98,
+  nom: "Courroie PU Synchrone Ouverte L",
+  profil: "L",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "3.6",
+  pas_mm: "9.525",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "5",
+  poids_g_m: "70",
+  application: "industry",
+  images: [
+    { id: 1118, courroie_id: 98, image_url: "/public/PUsynchrone/ouverte/l/1.jpg" },
+    { id: 1119, courroie_id: 98, image_url: "/public/PUsynchrone/ouverte/l/2.jpg" },
+    { id: 1120, courroie_id: 98, image_url: "/public/PUsynchrone/ouverte/l/3.jpg" }
+  ],
+  fiches: [{ id: 2106, courroie_id: 98, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [
+    { id: 3112, courroie_id: 98, matiere: "PU" },
+  ]
+},
+{
+  id: 99,
+  nom: "Courroie PU Synchrone Ouverte MXL",
+  profil: "MXL",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "1.14",
+  pas_mm: "2.032",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "2",
+  poids_g_m: "15",
+  application: "industry",
+  images: [
+    { id: 1121, courroie_id: 99, image_url: "/public/PUsynchrone/ouverte/mxl/1.jpg" },
+    { id: 1122, courroie_id: 99, image_url: "/public/PUsynchrone/ouverte/mxl/2.jpg" },
+    { id: 1123, courroie_id: 99, image_url: "/public/PUsynchrone/ouverte/mxl/3.jpg" }
+  ],
+  fiches: [{ id: 2107, courroie_id: 99, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [
+    { id: 3114, courroie_id: 99, matiere: "PU" },
+  ]
+},
+{
+  id: 100,
+  nom: "Courroie PU Synchrone Ouverte T2.5",
+  profil: "T2.5",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "1.3",
+  pas_mm: "2.5",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "2.2",
+  poids_g_m: "18",
+  application: "industry",
+  images: [
+    { id: 1124, courroie_id: 100, image_url: "/public/PUsynchrone/ouverte/t2.5/1.jpg" },
+    { id: 1125, courroie_id: 100, image_url: "/public/PUsynchrone/ouverte/t2.5/2.jpg" },
+    { id: 1126, courroie_id: 100, image_url: "/public/PUsynchrone/ouverte/t2.5/3.jpg" }
+  ],
+  fiches: [{ id: 2108, courroie_id: 100, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [
+    { id: 3116, courroie_id: 100, matiere: "PU" },
+  ]
+},
+{
+  id: 101,
+  nom: "Courroie PU Synchrone Ouverte T5",
+  profil: "T5",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "2.2",
+  pas_mm: "5",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "3.8",
+  poids_g_m: "40",
+  application: "industry",
+  images: [
+    { id: 1127, courroie_id: 101, image_url: "/public/PUsynchrone/ouverte/t5/1.jpg" },
+    { id: 1128, courroie_id: 101, image_url: "/public/PUsynchrone/ouverte/t5/2.jpg" },
+    { id: 1129, courroie_id: 101, image_url: "/public/PUsynchrone/ouverte/t5/3.jpg" }
+  ],
+  fiches: [{ id: 2109, courroie_id: 101, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [
+    { id: 3118, courroie_id: 101, matiere: "PU" },
+  ]
+},
+{
+  id: 102,
+  nom: "Courroie PU Synchrone Ouverte T10",
+  profil: "T10",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "4.5",
+  pas_mm: "10",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "6",
+  poids_g_m: "75",
+  application: "industry",
+  images: [
+    { id: 1130, courroie_id: 102, image_url: "/public/PUsynchrone/ouverte/t10/1.jpg" },
+    { id: 1131, courroie_id: 102, image_url: "/public/PUsynchrone/ouverte/t10/2.jpg" },
+    { id: 1132, courroie_id: 102, image_url: "/public/PUsynchrone/ouverte/t10/3.jpg" }
+  ],
+  fiches: [{ id: 2110, courroie_id: 102, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [
+    { id: 3120, courroie_id: 102, matiere: "PU" },
+  ]
+},
+{
+  id: 103,
+  nom: "Courroie PU Synchrone Ouverte T20",
+  profil: "T20",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "8",
+  pas_mm: "20",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "10",
+  poids_g_m: "120",
+  application: "industry",
+  images: [
+    { id: 1133, courroie_id: 103, image_url: "/public/PUsynchrone/ouverte/t20/1.jpg" },
+    { id: 1134, courroie_id: 103, image_url: "/public/PUsynchrone/ouverte/t20/2.jpg" },
+    { id: 1135, courroie_id: 103, image_url: "/public/PUsynchrone/ouverte/t20/3.jpg" }
+  ],
+  fiches: [{ id: 2111, courroie_id: 103, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [
+    { id: 3122, courroie_id: 103, matiere: "PU" },
+  ]
+},
+{
+  id: 104,
+  nom: "Courroie PU Synchrone Ouverte XH",
+  profil: "XH",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "11.2",
+  pas_mm: "22.225",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "12",
+  poids_g_m: "150",
+  application: "industry",
+  images: [
+    { id: 1136, courroie_id: 104, image_url: "/public/PUsynchrone/ouverte/xh/1.jpg" },
+    { id: 1137, courroie_id: 104, image_url: "/public/PUsynchrone/ouverte/xh/2.jpg" },
+    { id: 1138, courroie_id: 104, image_url: "/public/PUsynchrone/ouverte/xh/3.jpg" }
+  ],
+  fiches: [{ id: 2112, courroie_id: 104, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [
+    { id: 3124, courroie_id: 104, matiere: "PU" },
+  ]
+},
+{
+  id: 105,
+  nom: "Courroie PU Synchrone Ouverte XL",
+  profil: "XL",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "2.3",
+  pas_mm: "5.08",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "3",
+  poids_g_m: "30",
+  application: "industry",
+  images: [
+    { id: 1139, courroie_id: 105, image_url: "/public/PUsynchrone/ouverte/xl/1.jpg" },
+    { id: 1140, courroie_id: 105, image_url: "/public/PUsynchrone/ouverte/xl/2.jpg" },
+    { id: 1141, courroie_id: 105, image_url: "/public/PUsynchrone/ouverte/xl/3.jpg" }
+  ],
+  fiches: [{ id: 2113, courroie_id: 105, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [
+    { id: 3126, courroie_id: 105, matiere: "CR" },
+    { id: 3127, courroie_id: 105, matiere: "HNBR" }
+  ]
+},
+{
+  id: 106,
+  nom: "Courroie PU Synchrone Ouverte XXH",
+  profil: "XXH",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "15",
+  pas_mm: "31.75",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "14",
+  poids_g_m: "200",
+  application: "industry",
+  images: [
+    { id: 1142, courroie_id: 106, image_url: "/public/PUsynchrone/ouverte/xxh/1.jpg" },
+    { id: 1143, courroie_id: 106, image_url: "/public/PUsynchrone/ouverte/xxh/2.jpg" },
+    { id: 1144, courroie_id: 106, image_url: "/public/PUsynchrone/ouverte/xxh/3.jpg" }
+  ],
+  fiches: [{ id: 2114, courroie_id: 106, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [
+    { id: 3128, courroie_id: 106, matiere: "PU" },
+  ]
+},
+{
+  id: 107,
+  nom: "Courroie PU Synchrone Ouverte XXL",
+  profil: "XXL",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "3",
+  pas_mm: "6.35",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "4",
+  poids_g_m: "35",
+  application: "industry",
+  images: [
+    { id: 1145, courroie_id: 107, image_url: "/public/PUsynchrone/ouverte/xxl/1.jpg" },
+    { id: 1146, courroie_id: 107, image_url: "/public/PUsynchrone/ouverte/xxl/2.jpg" },
+    { id: 1147, courroie_id: 107, image_url: "/public/PUsynchrone/ouverte/xxl/3.jpg" }
+  ],
+  fiches: [{ id: 2115, courroie_id: 107, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [
+    { id: 3130, courroie_id: 107, matiere: "PU" },
+  ]
+},{
+  id: 108,
+  nom: "Courroie PU Synchrone Ouverte STD",
+  profil: "XXL",
+  description: "Courroie trapézoïdale Synchrone ouverte pour transmission de puissance.",
+  subcategory_id: 17,
+  hauteur_mm: "3",
+  pas_mm: "6.35",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "4",
+  poids_g_m: "35",
+  application: "industry",
+  images: [
+    { id: 11450, courroie_id: 108, image_url: "/public/PUsynchrone/ouverte/std/1.jpg" },
+    { id: 11460, courroie_id: 108, image_url: "/public/PUsynchrone/ouverte/std/2.jpg" },
+    { id: 11470, courroie_id: 108, image_url: "/public/PUsynchrone/ouverte/std/3.jpg" }
+  ],
+  fiches: [{ id: 21150, courroie_id: 108, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
+  matieres: [
+    { id: 31300, courroie_id: 108, matiere: "PU" },
+  ]
+},
+{
+  id: 109,
+  nom: "Courroie PU Synchrone Fermée AT5",
+  profil: "AT5",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "1.2",
+  pas_mm: "5",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "2.7",
+  poids_g_m: "20",
+  application: "industry",
+  images: [
+    { id: 10091, courroie_id: 109, image_url: "/public/PUsynchrone/fermee/at5/1.jpg" },
+    { id: 10092, courroie_id: 109, image_url: "/public/PUsynchrone/fermee/at5/2.jpg" },
+    { id: 10093, courroie_id: 109, image_url: "/public/PUsynchrone/fermee/at5/3.jpg" }
+  ],
+  fiches: [
+    { id: 10032, courroie_id: 109, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }
+  ],
+  matieres: [
+    { id: 10035, courroie_id: 109, matiere: "PU" }
+  ]
+},
+{
+  id: 110,
+  nom: "Courroie PU Synchrone Fermée AT10",
+  profil: "AT10",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "2.5",
+  pas_mm: "10",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "4.5",
+  poids_g_m: "45",
+  application: "industry",
+  images: [
+    { id: 10094, courroie_id: 110, image_url: "/public/PUsynchrone/fermee/at10/1.jpg" },
+    { id: 10095, courroie_id: 110, image_url: "/public/PUsynchrone/fermee/at10/2.jpg" },
+    { id: 10096, courroie_id: 110, image_url: "/public/PUsynchrone/fermee/at10/3.jpg" }
+  ],
+  fiches: [
+    { id: 10033, courroie_id: 110, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }
+  ],
+  matieres: [
+    { id: 10036, courroie_id: 110, matiere: "PU" }
+  ]
+},
+{
+  id: 111,
+  nom: "Courroie PU Synchrone Fermée AT15",
+  profil: "AT15",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "3.5",
+  pas_mm: "15",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "6",
+  poids_g_m: "70",
+  application: "industry",
+  images: [
+    { id: 10097, courroie_id: 111, image_url: "/public/PUsynchrone/fermee/at15/1.jpg" },
+    { id: 10098, courroie_id: 111, image_url: "/public/PUsynchrone/fermee/at15/2.jpg" },
+    { id: 10099, courroie_id: 111, image_url: "/public/PUsynchrone/fermee/at15/3.jpg" }
+  ],
+  fiches: [
+    { id: 10034, courroie_id: 111, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }
+  ],
+  matieres: [
+    { id: 10037, courroie_id: 111, matiere: "PU" }
+  ]
+},{
+  id: 112,
+  nom: "Courroie PU Synchrone Fermée AT20",
+  profil: "AT20",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "4.5",
+  pas_mm: "20",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "8",
+  poids_g_m: "95",
+  application: "industry",
+  images: [
+    { id: 10100, courroie_id: 112, image_url: "/public/PUsynchrone/fermee/at20/1.jpg" },
+    { id: 10101, courroie_id: 112, image_url: "/public/PUsynchrone/fermee/at20/2.jpg" },
+    { id: 10102, courroie_id: 112, image_url: "/public/PUsynchrone/fermee/at20/3.jpg" }
+  ],
+  fiches: [{ id: 10035, courroie_id: 112, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
+  matieres: [{ id: 10038, courroie_id: 112, matiere: "PU" }]
+},
+{
+  id: 113,
+  nom: "Courroie PU Synchrone Fermée H",
+  profil: "H",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "4.3",
+  pas_mm: "12.7",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "6",
+  poids_g_m: "85",
+  application: "industry",
+  images: [
+    { id: 10103, courroie_id: 113, image_url: "/public/PUsynchrone/fermee/h/1.jpg" },
+    { id: 10104, courroie_id: 113, image_url: "/public/PUsynchrone/fermee/h/2.jpg" },
+    { id: 10105, courroie_id: 113, image_url: "/public/PUsynchrone/fermee/h/3.jpg" }
+  ],
+  fiches: [{ id: 10036, courroie_id: 113, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
+  matieres: [{ id: 10039, courroie_id: 113, matiere: "PU" }]
+},
+{
+  id: 114,
+  nom: "Courroie PU Synchrone Fermée HTD",
+  profil: "HTD",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "3.8",
+  pas_mm: "8",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "5.6",
+  poids_g_m: "75",
+  application: "industry",
+  images: [
+    { id: 10106, courroie_id: 114, image_url: "/public/PUsynchrone/fermee/htd/1.jpg" },
+    { id: 10107, courroie_id: 114, image_url: "/public/PUsynchrone/fermee/htd/2.jpg" },
+    { id: 10108, courroie_id: 114, image_url: "/public/PUsynchrone/fermee/htd/3.jpg" }
+  ],
+  fiches: [{ id: 10037, courroie_id: 114, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
+  matieres: [{ id: 10040, courroie_id: 114, matiere: "PU" }]
+},
+{
+  id: 115,
+  nom: "Courroie PU Synchrone Fermée L",
+  profil: "L",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "3.6",
+  pas_mm: "9.525",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "5",
+  poids_g_m: "70",
+  application: "industry",
+  images: [
+    { id: 10109, courroie_id: 115, image_url: "/public/PUsynchrone/fermee/l/1.jpg" },
+    { id: 10110, courroie_id: 115, image_url: "/public/PUsynchrone/fermee/l/2.jpg" },
+    { id: 10111, courroie_id: 115, image_url: "/public/PUsynchrone/fermee/l/3.jpg" }
+  ],
+  fiches: [{ id: 10038, courroie_id: 115, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
+  matieres: [{ id: 10041, courroie_id: 115, matiere: "PU" }]
+},
+{
+  id: 116,
+  nom: "Courroie PU Synchrone Fermée MXL",
+  profil: "MXL",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "0.51",
+  pas_mm: "2.032",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "1.14",
+  poids_g_m: "1.4",
+  application: "industry",
+  images: [
+    { id: 10112, courroie_id: 116, image_url: "/public/PUsynchrone/fermee/mxl/1.jpg" },
+    { id: 10113, courroie_id: 116, image_url: "/public/PUsynchrone/fermee/mxl/2.jpg" },
+    { id: 10114, courroie_id: 116, image_url: "/public/PUsynchrone/fermee/mxl/3.jpg" }
+  ],
+  fiches: [{ id: 10039, courroie_id: 116, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
+  matieres: [{ id: 10042, courroie_id: 116, matiere: "PU" }]
+},
+{
+  id: 117,
+  nom: "Courroie PU Synchrone Fermée T2.5",
+  profil: "T2.5",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "0.7",
+  pas_mm: "2.5",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "1.3",
+  poids_g_m: "5",
+  application: "industry",
+  images: [
+    { id: 10115, courroie_id: 117, image_url: "/public/PUsynchrone/fermee/t2.5/1.jpg" },
+    { id: 10116, courroie_id: 117, image_url: "/public/PUsynchrone/fermee/t2.5/2.jpg" },
+    { id: 10117, courroie_id: 117, image_url: "/public/PUsynchrone/fermee/t2.5/3.jpg" }
+  ],
+  fiches: [{ id: 10040, courroie_id: 117, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
+  matieres: [{ id: 10043, courroie_id: 117, matiere: "PU" }]
+},
+{
+  id: 118,
+  nom: "Courroie PU Synchrone Fermée T5",
+  profil: "T5",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "1.2",
+  pas_mm: "5",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "2.2",
+  poids_g_m: "18",
+  application: "industry",
+  images: [
+    { id: 10118, courroie_id: 118, image_url: "/public/PUsynchrone/fermee/t5/1.jpg" },
+    { id: 10119, courroie_id: 118, image_url: "/public/PUsynchrone/fermee/t5/2.jpg" },
+    { id: 10120, courroie_id: 118, image_url: "/public/PUsynchrone/fermee/t5/3.jpg" }
+  ],
+  fiches: [{ id: 10041, courroie_id: 118, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
+  matieres: [{ id: 10044, courroie_id: 118, matiere: "PU" }]
+},
+{
+  id: 119,
+  nom: "Courroie PU Synchrone Fermée T10",
+  profil: "T10",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "2.5",
+  pas_mm: "10",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "4.5",
+  poids_g_m: "40",
+  application: "industry",
+  images: [
+    { id: 10121, courroie_id: 119, image_url: "/public/PUsynchrone/fermee/t10/1.jpg" },
+    { id: 10122, courroie_id: 119, image_url: "/public/PUsynchrone/fermee/t10/2.jpg" },
+    { id: 10123, courroie_id: 119, image_url: "/public/PUsynchrone/fermee/t10/3.jpg" }
+  ],
+  fiches: [{ id: 10042, courroie_id: 119, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
+  matieres: [{ id: 10045, courroie_id: 119, matiere: "PU" }]
+},
+{
+  id: 120,
+  nom: "Courroie PU Synchrone Fermée T20",
+  profil: "T20",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "4.5",
+  pas_mm: "20",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "8",
+  poids_g_m: "90",
+  application: "industry",
+  images: [
+    { id: 10124, courroie_id: 120, image_url: "/public/PUsynchrone/fermee/t20/1.jpg" },
+    { id: 10125, courroie_id: 120, image_url: "/public/PUsynchrone/fermee/t20/2.jpg" },
+    { id: 10126, courroie_id: 120, image_url: "/public/PUsynchrone/fermee/t20/3.jpg" }
+  ],
+  fiches: [{ id: 10043, courroie_id: 120, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
+  matieres: [{ id: 10046, courroie_id: 120, matiere: "PU" }]
+},
+{
+  id: 121,
+  nom: "Courroie PU Synchrone Fermée XH",
+  profil: "XH",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "6.8",
+  pas_mm: "22.225",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "11",
+  poids_g_m: "140",
+  application: "industry",
+  images: [
+    { id: 10127, courroie_id: 121, image_url: "/public/PUsynchrone/fermee/xh/1.jpg" },
+    { id: 10128, courroie_id: 121, image_url: "/public/PUsynchrone/fermee/xh/2.jpg" },
+    { id: 10129, courroie_id: 121, image_url: "/public/PUsynchrone/fermee/xh/3.jpg" }
+  ],
+  fiches: [{ id: 10044, courroie_id: 121, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
+  matieres: [{ id: 10047, courroie_id: 121, matiere: "PU" }]
+},
+{
+  id: 122,
+  nom: "Courroie PU Synchrone Fermée XL",
+  profil: "XL",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "1.3",
+  pas_mm: "5.08",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "2.3",
+  poids_g_m: "25",
+  application: "industry",
+  images: [
+    { id: 10130, courroie_id: 122, image_url: "/public/PUsynchrone/fermee/xl/1.jpg" },
+    { id: 10131, courroie_id: 122, image_url: "/public/PUsynchrone/fermee/xl/2.jpg" },
+    { id: 10132, courroie_id: 122, image_url: "/public/PUsynchrone/fermee/xl/3.jpg" }
+  ],
+  fiches: [{ id: 10045, courroie_id: 122, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
+  matieres: [{ id: 10048, courroie_id: 122, matiere: "PU" }]
+},
+{
+  id: 123,
+  nom: "Courroie PU Synchrone Fermée XXH",
+  profil: "XXH",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "9",
+  pas_mm: "31.75",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "15",
+  poids_g_m: "200",
+  application: "industry",
+  images: [
+    { id: 10133, courroie_id: 123, image_url: "/public/PUsynchrone/fermee/xxh/1.jpg" },
+    { id: 10134, courroie_id: 123, image_url: "/public/PUsynchrone/fermee/xxh/2.jpg" },
+    { id: 10135, courroie_id: 123, image_url: "/public/PUsynchrone/fermee/xxh/3.jpg" }
+  ],
+  fiches: [{ id: 10046, courroie_id: 123, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
+  matieres: [{ id: 10049, courroie_id: 123, matiere: "PU" }]
+},
+{
+  id: 124,
+  nom: "Courroie PU Synchrone Fermée XXL",
+  profil: "XXL",
+  description: "Courroie trapézoïdale Synchrone fermée pour transmission de puissance.",
+  subcategory_id: 18,
+  hauteur_mm: "2.3",
+  pas_mm: "7.62",
+  angle_trapeze_deg: 40,
+  epaisseur_mm: "3.8",
+  poids_g_m: "35",
+  application: "industry",
+  images: [
+    { id: 10136, courroie_id: 124, image_url: "/public/PUsynchrone/fermee/xxl/1.jpg" },
+    { id: 10137, courroie_id: 124, image_url: "/public/PUsynchrone/fermee/xxl/2.jpg" },
+    { id: 10138, courroie_id: 124, image_url: "/public/PUsynchrone/fermee/xxl/3.jpg" }
+  ],
+  fiches: [{ id: 10047, courroie_id: 124, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
+  matieres: [{ id: 10050, courroie_id: 124, matiere: "PU" }]
+},
+  {
+    id: 125,
     nom: "Courroie PU Speciale",
     profil: "special",
     description: "Courroie spéciale en polyuréthane personnalisée, pour la transmission de puissance.",
@@ -2385,21 +3349,21 @@ const courroieData = [
     poids_g_m: "1.4",
     application: "industry",
     images: [
-      { id :10088,courroie_id: 108, image_url: "/public/PUspeciale/1.jpg" },
-      { id :10089,courroie_id: 108, image_url: "/public/PUspeciale/t5/1.jpg" },
-      { id :10090,courroie_id: 108, image_url: "/public/PUspeciale/t10/1.jpg" }
+      { id :10088,courroie_id: 125, image_url: "/public/PUspeciale/1.jpg" },
+      { id :10089,courroie_id: 125, image_url: "/public/PUspeciale/t5/1.jpg" },
+      { id :10090,courroie_id: 125, image_url: "/public/PUspeciale/t10/1.jpg" }
     ],
     fiches: [
-      { id :10031,courroie_id: 108, fiche_technique_url: "/public/PUspeciale/timingBeltSpecial.pdf" }
+      { id :10031,courroie_id: 125, fiche_technique_url: "/public/PUspeciale/timingBeltSpecial.pdf" }
     ],
     matieres: [
-      { id :10033,courroie_id: 108, matiere: "CR" },
-      { id :10034,courroie_id: 108, matiere: "HNBR" }
+      { id :10033,courroie_id: 125, matiere: "CR" },
+      { id :10034,courroie_id: 125, matiere: "HNBR" }
     ]
   },
 
 {
-  id: 122,
+  id: 126,
   nom: "Courroie Thermosoudable Ronde",
   profil: "TRond",
   description: "Courroie ronde en polyuréthane extrudé, très flexible et thermosoudable, adaptée aux convoyeurs très légers.",
@@ -2411,37 +3375,37 @@ const courroieData = [
   images: [
     {
       id: 319,
-      courroie_id: 122,
+      courroie_id: 126,
       image_url: "/public/ronde/2mm.jpg"
     },
     {
       id: 320,
-      courroie_id: 122,
+      courroie_id: 126,
       image_url: "/public/ronde/2mm.jpg"
     },
     {
       id: 321,
-      courroie_id: 122,
+      courroie_id: 126,
       image_url: "/public/ronde/2mm.jpg"
     }
   ],
   fiches: [
     {
       id: 108,
-      courroie_id: 122,
+      courroie_id: 126,
       fiche_technique_url: "/public/ronde/2mm.pdf"
     }
   ],
   matieres: [
     {
       id: 199,
-      courroie_id: 122,
+      courroie_id: 126,
       matiere: "PU"
     }
   ]
 },
 {
-  id: 123,
+  id: 127,
   nom: "Courroie Thermosoudable Trapézoïdale",
   profil: "Trapézoïdal armé",
   description: "Courroie trapézoïdale thermosoudable renforcée, offrant une excellente stabilité dimensionnelle et un très faible allongement.",
@@ -2459,28 +3423,28 @@ const courroieData = [
   images: [
     {
       id: 322,
-      courroie_id: 123,
+      courroie_id: 127,
       image_url: "/public/thermosodableTrapez/2.jpg"
     }
   ],
   fiches: [
     {
       id: 109,
-      courroie_id: 123,
+      courroie_id: 127,
       fiche_technique_url: "/public/thermosodableTrapez/1.pdf"
     }
   ],
   matieres: [
     {
       id: 200,
-      courroie_id: 123,
+      courroie_id: 127,
       matiere: "PU"
     }
   ]
 },
 
 {
-  id: 124,
+  id: 128,
   nom: "Courroie Thermosoudable Trapézoïdale à Crête",
   profil: "Trapézoïdal à crête",
   description: "Courroie trapézoïdale thermosoudable avec crête supérieure améliorant l’adhérence et le guidage.",
@@ -2498,21 +3462,21 @@ const courroieData = [
   images: [
     {
       id: 323,
-      courroie_id: 124,
+      courroie_id: 128,
       image_url: "/public/thermosodableTrapez/1.jpg"
     }
   ],
   fiches: [
     {
       id: 110,
-      courroie_id: 124,
+      courroie_id: 128,
       fiche_technique_url: "/public/thermosodableTrapez/1.pdf"
     }
   ],
   matieres: [
     {
       id: 201,
-      courroie_id: 124,
+      courroie_id: 128,
       matiere: "PU"
     }
   ]
