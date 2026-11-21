@@ -1,132 +1,156 @@
-import { useNavigate } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Trash2, ShoppingBag } from 'lucide-react';
-
-import { useCart } from '@/contexts/CartContext';
+import { useId } from 'react';
+import { Link } from 'react-router-dom';
+import { ClipboardList, Minus, Plus, Trash2 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import { useCart } from '@/contexts/CartContext';
+import PageHeader from '@/components/PageHeader';
+import Seo from '@/components/Seo';
+import { imageSources, onImageError } from '@/lib/asset';
+import { getBelt } from '@/data/catalog';
 
-const Cart = () => {
-  const { t } = useLanguage();
-  const navigate = useNavigate();
-  const { items, removeFromCart, updateQuantity } = useCart();
-
-      const handleRequestQuote = () => {
-        navigate('/checkout');
-      };
-
+function CartLine({ item }) {
+  const { t, paths } = useLanguage();
+  const belt = getBelt(item.id);
+  const { removeFromCart, updateQuantity, updateNote } = useCart();
+  const qtyId = useId();
+  const noteId = useId();
 
   return (
-    <div className="min-h-screen bg-background">
-        <Navbar/>
-      <div className="pt-32 pb-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
-              {t('titleCart')}
-            </h1>
-            <div className="w-24 h-1  mx-auto bg-orange-600" />
-          </div>
-
-          {items.length === 0 ? (
-            <div className="text-center py-20 animate-fade-in-up ">
-              <ShoppingBag className="w-24 h-24 mx-auto mb-6 text-gray-400" />
-              <h2 className="text-2xl font-bold mb-4 text-primary">{t('empty')}</h2>
-              <Button
-                size="lg"
-                className=" hover:bg-accent/90 bg-orange-600  text-white cursor-pointer"
-                onClick={() => navigate('/category/4')}
-              >
-                {t('continueShopping')}
-              </Button>
-            </div>
-          ) : (
-            <div className="max-w-4xl mx-auto">
-              <div className="space-y-4 mb-8">
-                {items.map((item, index) => (
-                  <Card
-                    key={item.id}
-                    className="border-0 shadow-lg animate-fade-in-up"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-6">
-                        <img
-                          src={
-                            item.images?.length
-                              ? `https://ahmedbm99.github.io/Kortibelt${item.images[0].image_url}`
-                              : "/fallback-image.png"
-                          }
-                          alt={item.nom}
-                          className="w-24 h-24 object-cover rounded-lg"
-                        />
-                        <div className="flex-1">
-                          <h3 className="text-xl font-bold mb-2 text-primary">{item.nom}</h3>
-                          <p className="text-muted-foreground text-sm line-clamp-2">
-                            {item.description}
-                          </p>
-                        </div>
-                        <div className="flex items-center gap-4">
-                          <div className="flex items-center gap-2">
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              className={"hover:bg-orange-400 cursor-pointer"}
-                              onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                            >
-                              -
-                            </Button>
-                            <span className="w-12 text-center font-semibold">
-                              {item.quantity}
-                            </span>
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              className={"hover:bg-orange-400 cursor-pointer"}
-                              onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                            >
-                              +
-                            </Button>
-                          </div>
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            onClick={() => removeFromCart(item.id)}
-                            className="text-destructive hover:text-red-700 cursor-pointer"
-                          >
-                            <Trash2 size={20} />
-                          </Button>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-
-              <div className="flex justify-between items-center">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className={"text-orange-600 hover:bg-orange-600 hover:text-white cursor-pointer"}
-                  onClick={() => navigate('/products')}
-                >
-                  {t('continueShopping')}
-                </Button>
-                <Button
-                  size="lg"
-                  className="bg-accent hover:bg-orange-600 cursor-pointer"
-                  onClick={handleRequestQuote}
-                >
-                  {t('requestQuote')}
-                </Button>
-              </div>
-            </div>
-          )}
+    <li className="rounded-xl bg-white p-4 shadow-md sm:p-5">
+      <div className="flex flex-wrap items-start gap-4">
+        <Link to={belt ? paths.belt(belt) : paths.products()} className="shrink-0" tabIndex={-1} aria-hidden="true">
+          <img
+            src={imageSources(item.image).src}
+            alt=""
+            onError={onImageError}
+            width="96"
+            height="96"
+            className="h-20 w-20 rounded-lg object-cover sm:h-24 sm:w-24"
+          />
+        </Link>
+        <div className="min-w-0 flex-1">
+          <h2 className="text-lg font-bold text-primary">
+            <Link to={belt ? paths.belt(belt) : paths.products()} className="hover:underline">
+              {item.nom}
+            </Link>
+          </h2>
+          <p className="text-sm text-muted-foreground">
+            {[item.profil, item.material && `${t('material')} : ${item.material}`].filter(Boolean).join(' · ')}
+          </p>
+        </div>
+        <div className="flex items-center gap-2">
+          <label htmlFor={qtyId} className="sr-only">
+            {t('quantity')}
+          </label>
+          <button
+            type="button"
+            onClick={() => updateQuantity(item.key, item.quantity - 1)}
+            disabled={item.quantity <= 1}
+            aria-label={t('decrease')}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border hover:bg-secondary disabled:opacity-40"
+          >
+            <Minus size={16} aria-hidden="true" />
+          </button>
+          <input
+            id={qtyId}
+            type="number"
+            inputMode="numeric"
+            min="1"
+            max="100000"
+            value={item.quantity}
+            onChange={(e) => updateQuantity(item.key, e.target.value)}
+            className="h-10 w-20 rounded-md border border-input text-center font-semibold outline-none focus:border-accent focus:ring-2 focus:ring-accent/30"
+          />
+          <button
+            type="button"
+            onClick={() => updateQuantity(item.key, item.quantity + 1)}
+            aria-label={t('increase')}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border hover:bg-secondary"
+          >
+            <Plus size={16} aria-hidden="true" />
+          </button>
+          <button
+            type="button"
+            onClick={() => removeFromCart(item.key)}
+            aria-label={t('removeItem', { name: item.nom })}
+            className="ml-1 inline-flex h-10 w-10 items-center justify-center rounded-md text-destructive hover:bg-red-50"
+          >
+            <Trash2 size={18} aria-hidden="true" />
+          </button>
         </div>
       </div>
-          <Footer/>
+      <div className="mt-3">
+        <label htmlFor={noteId} className="mb-1 block text-sm font-medium text-primary">
+          {t('note')} <span className="font-normal text-muted-foreground">({t('optional')})</span>
+        </label>
+        <input
+          id={noteId}
+          type="text"
+          value={item.note}
+          maxLength={500}
+          onChange={(e) => updateNote(item.key, e.target.value)}
+          placeholder={t('notePlaceholder')}
+          className="h-10 w-full rounded-md border border-input px-3 text-sm outline-none focus:border-accent focus:ring-2 focus:ring-accent/30"
+        />
+      </div>
+    </li>
+  );
+}
+
+const Cart = () => {
+  const { t, paths } = useLanguage();
+  const { items, clearCart } = useCart();
+
+  return (
+    <div className="container mx-auto max-w-4xl px-4 py-10">
+      <Seo title={t('quoteListTitle')} noindex />
+      <PageHeader title={t('quoteListTitle')} intro={items.length > 0 ? t('quoteListIntro') : undefined} />
+
+      {items.length === 0 ? (
+        <div className="rounded-xl bg-white p-10 text-center shadow-sm">
+          <ClipboardList className="mx-auto mb-4 text-muted-foreground" size={56} aria-hidden="true" />
+          <h2 className="text-xl font-bold text-primary">{t('quoteListEmpty')}</h2>
+          <p className="mt-1 text-muted-foreground">{t('quoteListEmptyHint')}</p>
+          <Link
+            to={paths.products()}
+            className="mt-6 inline-flex h-11 items-center rounded-md bg-cta px-6 font-semibold text-white hover:bg-cta-hover"
+          >
+            {t('allProducts')}
+          </Link>
+        </div>
+      ) : (
+        <>
+          <ul className="mb-6 space-y-4">
+            {items.map((item) => (
+              <CartLine key={item.key} item={item} />
+            ))}
+          </ul>
+
+          <div className="flex flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-wrap gap-3">
+              <Link
+                to={paths.products()}
+                className="inline-flex h-11 items-center justify-center rounded-md border border-border bg-white px-5 font-semibold text-primary hover:bg-secondary"
+              >
+                {t('continueBrowsing')}
+              </Link>
+              <button
+                type="button"
+                onClick={clearCart}
+                className="inline-flex h-11 items-center justify-center rounded-md px-4 text-sm font-semibold text-muted-foreground hover:text-destructive"
+              >
+                {t('clearCart')}
+              </button>
+            </div>
+            <Link
+              to={paths.checkout()}
+              className="inline-flex h-12 items-center justify-center rounded-md bg-cta px-6 text-lg font-semibold text-white hover:bg-cta-hover"
+            >
+              {t('nextStep')}
+            </Link>
+          </div>
+        </>
+      )}
     </div>
   );
 };

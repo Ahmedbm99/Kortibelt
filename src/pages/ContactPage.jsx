@@ -1,284 +1,189 @@
-import React, { useState } from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useState } from 'react';
+import { CheckCircle, Globe, Mail, MapPin, MessageSquare, Phone } from 'lucide-react';
+import PhoneInput from 'react-phone-number-input';
+import { useLanguage } from '@/contexts/LanguageContext';
+import PageHeader from '@/components/PageHeader';
+import FormField, { inputClass, textareaClass } from '@/components/FormField';
+import ContactFallback from '@/components/ContactFallback';
+import { useSpamGuard } from '@/hooks/useSpamGuard';
+import Seo from '@/components/Seo';
+import ContactService from '@/services/ContactServices';
+import { apiErrorKey } from '@/services/Api';
+import { validateFields } from '@/lib/validation';
+import { config } from '@/lib/config';
+import ChannelPicker from '@/components/ChannelPicker';
+import WhatsAppPdfPanel from '@/components/WhatsAppPdfPanel';
+import { buildContactPdf } from '@/lib/documents';
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-
-import CaptchaServices from "@/services/CaptchaServices";
-import ContactService from "@/services/ContactServices";
-import { MapPin, Phone, Mail, Globe, MessageSquare, Contact } from "lucide-react";
-import { motion } from "framer-motion";
-import toast from "react-hot-toast";
-
-import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+// Par WhatsApp, l'email devient facultatif : le client est joignable sur WhatsApp.
+const rulesFor = (channel) => ({
+  name: { required: true },
+  email: { required: channel === 'email', email: true },
+  phone: { phone: true },
+  message: { required: true },
+});
+const EMPTY = { name: '', email: '', phone: '', subject: '', message: '' };
 
 export default function ContactPage() {
-  const { t } = useLanguage();
-  const { executeRecaptcha } = useGoogleReCaptcha();
+  const { t, language } = useLanguage();
+  const guard = useSpamGuard();
 
-  /* ===== STATES ===== */
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [form, setForm] = useState(EMPTY);
+  const [errors, setErrors] = useState({});
+  const [sending, setSending] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  const [sent, setSent] = useState(null); // 'email' | 'whatsapp' une fois envoyé
+  const [channel, setChannel] = useState('email');
+  const [pdf, setPdf] = useState(null);
 
-  const [phone, setPhone] = useState("");
-  const [otp, setOtp] = useState("");
-  const [otpSent, setOtpSent] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  /* =========================
-     SEND WHATSAPP OTP
-     ========================= */
-  const sendWhatsappOtp = async () => {
-    if (!isValidPhoneNumber(phone)) {
-      toast.error(t("invalidPhone"));
-      return;
-    }
-
-    if (!executeRecaptcha) {
-      toast.error("reCAPTCHA non prêt");
-      return;
-    }
-
-    setLoading(true);
-
-    try {
-      const captchaToken = await executeRecaptcha("whatsapp_otp");
-
-      await CaptchaServices.sendOTP({
-        phone,
-        captchaToken,
-      });
-
-      setOtpSent(true);
-            toast.success(t("otpSent"));
-
-      const response = await ContactService.sendMessage({
-        name,
-        email,
-        phone,
-        subject,
-        message
-      });
-      if( response.status === 200 ){
-        toast.success(t("Message sent successfully"));
-      }
-    } catch (error) {
-      toast.error(t("errorWhatsApp"));
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
+  const set = (field) => (value) => {
+    setForm((f) => ({ ...f, [field]: value }));
+    if (errors[field]) setErrors((e) => ({ ...e, [field]: undefined }));
   };
 
-  /* =========================
-     FORM SUBMIT
-     ========================= */
-  const handleSubmit = async (e) => {
+  const submit = async (e) => {
     e.preventDefault();
-
-    if (!otpSent || otp.length !== 6) {
-      toast.error(t("otpRequired"));
+    if (sending) return;
+    const found = validateFields(form, rulesFor(channel));
+    setErrors(found);
+    if (Object.keys(found).length) {
+      setSubmitError('errorForm');
+      document.querySelector('[aria-invalid="true"]')?.focus();
       return;
     }
-
-    if (!executeRecaptcha) {
-      toast.error("reCAPTCHA non prêt");
-      return;
-    }
-
-    setLoading(true);
-
+    setSending(true);
+    setSubmitError('');
     try {
-      const captchaToken = await executeRecaptcha("contact_submit");
-
-      await CaptchaServices.verifyContact({
-        name,
-        email,
-        subject,
-        message,
-        phone,
-        otp,
-        captchaToken,
-      });
-
-      toast.success(t("messageSent"));
-
-      /* RESET */
-      setName("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
-      setPhone("");
-      setOtp("");
-      setOtpSent(false);
-    } catch (error) {
-      toast.error("Erreur serveur");
-      console.error(error);
+      if (channel === 'whatsapp') {
+        setPdf(await buildContactPdf({ form, t, language }));
+        return;
+      }
+      const spam = await guard.fields('contact_submit');
+      await ContactService.sendMessage({ ...form, ...spam });
+      setSent('email');
+      setForm(EMPTY);
+    } catch (err) {
+      if (channel === 'whatsapp') setSubmitError('pdfError');
+      else setSubmitError(err?.message === 'captcha_unavailable' ? 'errorCaptcha' : apiErrorKey(err));
     } finally {
-      setLoading(false);
+      setSending(false);
     }
   };
 
   return (
-    <>
-      <Navbar />
+    <div className="container mx-auto max-w-6xl px-4 py-10">
+      <Seo title={t('seoContactTitle')} description={t('seoContactDescription', { phone: config.contactPhone })} />
+      <PageHeader title={t('contactDistribution')} intro={t('contactIntro')} />
 
-      <section id="contact" className="py-24">
-        <div className="container max-w-6xl mx-auto px-4">
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-4xl font-bold text-center mb-16"
-          >
-            {t("contactDistribution")}
-          </motion.h2>
-
-          <div className="grid md:grid-cols-2 gap-10">
-
-            {/* ===== CONTACT INFO ===== */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <Card>
-                <CardContent className="p-6 space-y-6">
-                  <Info icon={<MapPin />} title={t("address")} text={`${t("industrialZone")}\n${t("tunisia")}`} />
-                  <Info icon={<Phone />} title={t("phone")} text="+216 74 461 168" />
-                  <Info icon={<MessageSquare />} title="WeChat" text="medfakhfakh" />
-                  <Info icon={<Mail />} title={t("email")} text="commercial@aisgroup.tn" />
-                  <Info
-                    icon={<Globe />}
-                    title={t("website")}
-                    text={
-                      <a
-                        href="https://www.aisgroup.tn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#F97421] hover:underline"
-                      >
-                        aisgroup.tn
-                      </a>
-                    }
-                  />
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* ===== FORM ===== */}
-            <motion.form
-              onSubmit={handleSubmit}
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <Card>
-                <CardContent className="p-6 space-y-6">
-
-                  <Input
-                    placeholder={t("yourName")}
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                  />
-
-                  <Input
-                    type="email"
-                    placeholder={t("yourEmail")}
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-
-                  <Input
-                    placeholder={t("subject")}
-                    value={subject}
-                    onChange={(e) => setSubject(e.target.value)}
-                    required
-                  />
-
-                  {/* PHONE */}
-                  <div>
-                    <PhoneInput
-                      international
-                      defaultCountry="TN"
-                      value={phone}
-                      onChange={setPhone}
-                      className="border rounded-xl px-3 py-2"
-                    />
-                    {phone && !isValidPhoneNumber(phone) && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {t("invalidPhone")}
-                      </p>
-                    )}
-                  </div>
-
-                  {/* OTP BUTTON */}
-                  <Button
-                    type="button"
-                    onClick={sendWhatsappOtp}
-                    disabled={loading}
-                    className="w-full bg-green-600 hover:bg-green-700"
-                  >
-                    {t("verifyWhatsapp")}
-                  </Button>
-
-                  {/* OTP INPUT */}
-                  {otpSent && (
-                    <Input
-                      placeholder={t("enterOtp")}
-                      value={otp}
-                      onChange={(e) => setOtp(e.target.value)}
-                      maxLength={6}
-                    />
-                  )}
-
-                  <Textarea
-                    placeholder={t("yourMessage")}
-                    rows={4}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                  />
-
-                  <Button
-                    type="submit"
-                    disabled={loading}
-                    className="w-full h-12 bg-[#F97421] hover:bg-[#ff7f2d] text-white text-lg rounded-xl"
-                  >
-                    {t("sendMessage")}
-                  </Button>
-
-                </CardContent>
-              </Card>
-            </motion.form>
-
-          </div>
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]">
+        <div className="h-fit space-y-6 rounded-xl bg-white p-6 shadow-md">
+          <Info icon={MapPin} title={t('address')}>
+            {t('industrialZone')}
+            <br />
+            {t('tunisia')}
+          </Info>
+          <Info icon={Phone} title={t('phone')}>
+            <a href={`tel:${config.contactPhone.replace(/\s/g, '')}`} className="hover:underline">
+              {config.contactPhone}
+            </a>
+          </Info>
+          <Info icon={Mail} title={t('email')}>
+            <a href={`mailto:${config.contactEmail}`} className="hover:underline">
+              {config.contactEmail}
+            </a>
+          </Info>
+          <Info icon={MessageSquare} title="WeChat">
+            medfakhfakh
+          </Info>
+          <Info icon={Globe} title={t('website')}>
+            <a href="https://www.aisgroup.tn" target="_blank" rel="noopener noreferrer" className="font-semibold text-accent-text hover:underline">
+              aisgroup.tn
+            </a>
+          </Info>
         </div>
-      </section>
 
-      <Footer />
-    </>
+        {sent ? (
+          <div role="status" className="rounded-xl bg-white p-8 text-center shadow-md">
+            <CheckCircle className="mx-auto mb-4 h-14 w-14 text-green-600" aria-hidden="true" />
+            <p className="text-xl font-bold text-primary">{t('messageSent')}</p>
+            <p className="mt-2 text-muted-foreground">{t(sent === 'whatsapp' ? 'whatsappReply' : 'receiptSent')}</p>
+            <button
+              type="button"
+              onClick={() => setSent(null)}
+              className="mt-6 inline-flex h-11 items-center rounded-md border border-border px-5 font-semibold text-primary hover:bg-secondary"
+            >
+              {t('sendMessage')}
+            </button>
+          </div>
+        ) : pdf ? (
+          <WhatsAppPdfPanel
+            file={pdf.file}
+            message={pdf.message}
+            onBack={() => setPdf(null)}
+            onSent={() => {
+              setPdf(null);
+              setForm(EMPTY);
+              setSent('whatsapp');
+            }}
+          />
+        ) : (
+          <form onSubmit={submit} noValidate className="relative space-y-5 rounded-xl bg-white p-6 shadow-md">
+            {guard.honeypotInput}
+            <div className="grid gap-5 sm:grid-cols-2">
+              <FormField label={t('nameLabel')} required error={errors.name && t(errors.name)}>
+                <input type="text" autoComplete="name" value={form.name} onChange={(e) => set('name')(e.target.value)} className={inputClass} />
+              </FormField>
+              <FormField label={t('emailLabel')} required={channel === 'email'} error={errors.email && t(errors.email)}>
+                <input type="email" autoComplete="email" value={form.email} onChange={(e) => set('email')(e.target.value)} className={inputClass} />
+              </FormField>
+              <FormField label={t('phoneLabel')} error={errors.phone && t(errors.phone)}>
+                <PhoneInput international defaultCountry="TN" autoComplete="tel" value={form.phone} onChange={(v) => set('phone')(v || '')} />
+              </FormField>
+              <FormField label={t('subjectLabel')}>
+                <input type="text" value={form.subject} onChange={(e) => set('subject')(e.target.value)} className={inputClass} />
+              </FormField>
+            </div>
+            <FormField label={t('messageLabel')} required error={errors.message && t(errors.message)}>
+              <textarea rows={5} value={form.message} onChange={(e) => set('message')(e.target.value)} className={textareaClass} />
+            </FormField>
+
+            <ChannelPicker name="contact-channel" value={channel} onChange={setChannel} />
+
+            {submitError && (
+              <div role="alert" className="space-y-3">
+                <p className="rounded-md bg-red-50 px-4 py-3 text-sm font-medium text-destructive">{t(submitError)}</p>
+                {submitError !== 'errorForm' && (
+                  <ContactFallback subject={form.subject || t('contact')} body={`${form.message}\n\n${form.name}\n${form.phone}`} />
+                )}
+              </div>
+            )}
+
+            <button
+              type="submit"
+              disabled={sending}
+              aria-busy={sending}
+              className={`inline-flex h-12 w-full items-center justify-center rounded-md px-6 text-lg font-semibold text-white disabled:opacity-60 ${
+                channel === 'whatsapp' ? 'bg-[#25D366] hover:bg-[#1EBE57]' : 'bg-cta hover:bg-cta-hover'
+              }`}
+            >
+              {channel === 'whatsapp' ? (sending ? t('preparingPdf') : t('preparePdf')) : sending ? t('sending') : t('sendMessage')}
+            </button>
+            {channel === 'email' && <p className="text-xs text-muted-foreground">{t('captchaNotice')}</p>}
+          </form>
+        )}
+      </div>
+    </div>
   );
 }
 
-/* ===== INFO COMPONENT ===== */
-function Info({ icon, title, text }) {
+function Info({ icon, title, children }) {
+  const Icon = icon;
   return (
-    <div className="flex gap-4 items-start">
-      {React.cloneElement(icon, { className: "text-[#F97421]", size: 28 })}
+    <div className="flex items-start gap-4">
+      <Icon className="mt-0.5 shrink-0 text-accent" size={24} aria-hidden="true" />
       <div>
-        <h4 className="font-semibold">{title}</h4>
-        <p className="text-slate-600 whitespace-pre-line">{text}</p>
+        <h2 className="font-semibold text-primary">{title}</h2>
+        <p className="text-muted-foreground">{children}</p>
       </div>
     </div>
   );

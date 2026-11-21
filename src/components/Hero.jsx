@@ -1,143 +1,135 @@
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import heroFactory from '@/assets/heroFactory.png';
-import heroFactory1 from '@/assets/heroFactory1.jpg';
-import heroFactory2 from '@/assets/heroFactory2.png';
-import { NavLink } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { preload } from 'react-dom';
+import { Link } from 'react-router-dom';
+import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
+import heroFactory from '@/assets/heroFactory.webp';
+import heroFactory1 from '@/assets/heroFactory1.webp';
+import heroFactory2 from '@/assets/heroFactory2.webp';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-
-const Hero = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const {t, language} = useLanguage();
-const slides = [
+const SLIDES = [
   {
-    title: {
-      fr: "Solutions Industrielles de Courroies",
-      en: "Industrial Belt Solutions",
-    },
-    subtitle: {
-      fr: "Plus de 20 ans d'expertise dans la fabrication de courroies",
-      en: "Over 20 years of expertise in belt manufacturing",
-    },
+    title: { fr: 'Solutions industrielles de courroies', en: 'Industrial belt solutions' },
+    subtitle: { fr: "Plus de 20 ans d'expertise dans la transmission de puissance", en: 'Over 20 years of expertise in power transmission' },
     image: heroFactory,
   },
   {
-    title: {
-      fr: "Qualité et Performance",
-      en: "Quality & Performance",
-    },
-    subtitle: {
-      fr: "Des produits fiables pour vos applications industrielles",
-      en: "Reliable products for your industrial applications",
-    },
+    title: { fr: 'Qualité et performance', en: 'Quality & performance' },
+    subtitle: { fr: 'Des produits fiables pour vos applications industrielles', en: 'Reliable products for your industrial applications' },
     image: heroFactory1,
   },
   {
-    title: {
-      fr: "Précision et puissance",
-      en: "Precision & Power",
-    },
-    subtitle: {
-      fr: "Des produits avec grande précision et puissance",
-      en: "Products offering high precision and power",
-    },
+    title: { fr: 'Précision et puissance', en: 'Precision & power' },
+    subtitle: { fr: 'Courroies trapézoïdales, synchrones, Poly-V et PU', en: 'V-belts, timing belts, Poly-V and PU belts' },
     image: heroFactory2,
   },
 ];
 
+const reducedMotion = () => typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+
+const Hero = () => {
+  const { t, language, paths } = useLanguage();
+  const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
+  // Image principale de la page : téléchargée en priorité (meilleur LCP).
+  preload(heroFactory, { as: 'image', fetchPriority: 'high' });
+  const [hovered, setHovered] = useState(false);
+  // Seules les images déjà affichées sont chargées (la première tout de suite).
+  const [seen, setSeen] = useState(() => new Set([0]));
+
+  const show = (i) => {
+    const next = (i + SLIDES.length) % SLIDES.length;
+    setCurrent(next);
+    setSeen((s) => (s.has(next) ? s : new Set(s).add(next)));
+  };
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    if (paused || hovered || reducedMotion()) return undefined;
+    const timer = setInterval(() => show(current + 1), 6000);
     return () => clearInterval(timer);
-  }, []);
+  }, [paused, hovered, current]);
 
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  const slide = SLIDES[current];
 
   return (
-    <div className="relative h-[1024px] overflow-hidden ">
-      {slides.map((slide, index) => (
+    <section
+      className="relative min-h-[70vh] overflow-hidden bg-primary"
+      aria-roledescription="carousel"
+      aria-label="KORTIBELT"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      onFocus={() => setHovered(true)}
+      onBlur={() => setHovered(false)}
+    >
+      {SLIDES.map((s, i) => (
         <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <div
-            className="absolute inset-0 h-[1024px] bg-cover bg-center"
-            style={{ backgroundImage: `url(${slide.image})` }}
-          >
-            <div className="absolute inset-0  from-primary/90 to-primary/60" />
-          </div>
-          
-          <div className="relative h-full flex items-center">
-            <div className="container mx-auto px-4">
-              <div className="max-w-3xl text-primary-foreground animate-fade-in-up ">
-                <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight text-white">
-                  {language==="fr"? slide.title.fr : slide.title.en}
-                </h1>
-                <p className="text-xl md:text-2xl mb-8 text-white ">
-                  {language==="fr"? slide.subtitle.fr : slide.subtitle.en}
-               
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button
-                    size="lg"
-                    className=" border-primary-foreground relative z-50 hover:bg-orange-400 hover:text-white bg-blue-400 cursor-pointer  text-accent-foreground text-lg px-8"
-                    asChild
-                  >
-                    <NavLink to="/products"> {t("checkProduct")} </NavLink>
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-primary-foreground relative z-50 hover:bg-orange-400 hover:text-white bg-blue-400 text-primary-foreground cursor-pointer text-lg px-8"
-                    asChild
-                  >
-                   <NavLink to="/contact"> {t("contactUs")} </NavLink>
+          key={i}
+          aria-hidden={i !== current}
+          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${i === current ? 'opacity-100' : 'opacity-0'}`}
+          style={seen.has(i) ? { backgroundImage: `url(${s.image})` } : undefined}
+        />
+      ))}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30" />
 
-                  </Button>
-                </div>
-              </div>
+      <div className="relative flex min-h-[70vh] items-center">
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-3xl text-white" aria-live={paused ? 'polite' : 'off'}>
+            <h1 className="mb-4 text-4xl font-extrabold leading-tight md:text-6xl">{slide.title[language] || slide.title.fr}</h1>
+            <p className="mb-8 text-lg text-white/90 md:text-2xl">{slide.subtitle[language] || slide.subtitle.fr}</p>
+            <div className="flex flex-wrap gap-4">
+              <Link to={paths.products()} className="inline-flex h-12 items-center rounded-md bg-cta px-7 text-lg font-semibold text-white hover:bg-cta-hover">
+                {t('checkProduct')}
+              </Link>
+              <Link
+                to={paths.contact()}
+                className="inline-flex h-12 items-center rounded-md border-2 border-white px-7 text-lg font-semibold text-white hover:bg-white hover:text-primary"
+              >
+                {t('contactUs')}
+              </Link>
             </div>
           </div>
         </div>
-      ))}
-
-      {/* Navigation Arrows */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/20 hover:bg-background/40 backdrop-blur-sm p-3 rounded-full transition-all"
-        aria-label="Previous slide"
-      >
-        <ChevronLeft className="text-primary-foreground" size={32} />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/20 hover:bg-background/40 backdrop-blur-sm p-3 rounded-full transition-all"
-        aria-label="Next slide"
-      >
-        <ChevronRight className="text-primary-foreground" size={32} />
-      </button>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              index === currentSlide ? 'bg-accent w-8' : 'bg-primary-foreground/50'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
       </div>
-    </div>
+
+      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-1 sm:bottom-6 sm:gap-2">
+        <button
+          type="button"
+          onClick={() => show(current - 1)}
+          aria-label={t('previousSlide')}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm hover:bg-white/40"
+        >
+          <ChevronLeft size={22} aria-hidden="true" />
+        </button>
+        {SLIDES.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            onClick={() => show(i)}
+            aria-label={t('goToSlide', { n: i + 1 })}
+            aria-current={i === current}
+            className="flex h-10 w-10 items-center justify-center"
+          >
+            <span className={`block h-3 rounded-full transition-all ${i === current ? 'w-8 bg-accent' : 'w-3 bg-white/60'}`} />
+          </button>
+        ))}
+        <button
+          type="button"
+          onClick={() => show(current + 1)}
+          aria-label={t('nextSlide')}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm hover:bg-white/40"
+        >
+          <ChevronRight size={22} aria-hidden="true" />
+        </button>
+        <button
+          type="button"
+          onClick={() => setPaused((p) => !p)}
+          aria-label={paused ? t('heroPlay') : t('heroPause')}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm hover:bg-white/40"
+        >
+          {paused ? <Play size={18} aria-hidden="true" /> : <Pause size={18} aria-hidden="true" />}
+        </button>
+      </div>
+    </section>
   );
 };
 

@@ -1,202 +1,175 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { useEffect, useRef } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { SearchX, X } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, useOutletContext, useParams, useSearchParams } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
-import { useCart } from '@/contexts/CartContext';
-import { selectedSubCategory } from '@/store/subCategorySlice';
-import { ArrowLeft } from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import PageHeader from '@/components/PageHeader';
+import ProductCard from '@/components/ProductCard';
+import Seo from '@/components/Seo';
+import { APPLICATIONS, belts, getSubcategoriesOf, localName, pathOfSubcategory, searchBelts } from '@/data/catalog';
+import { itemList } from '@/lib/structuredData';
 
-const Products = () => {
-  const dispatch = useDispatch();
-  const { t } = useLanguage();
-  const { addToCart } = useCart();
-  const { id } = useParams();
-  const [searchParams] = useSearchParams();
-  const application = searchParams.get("application"); 
-  const { searchQuery, resetFilters } = useOutletContext();
+const PER_PAGE = 12;
 
-  const selectedsubCategory = useSelector((state) => state.subCategory.selectedSubCategory);
-  const products = useSelector((state) => state.belt.list);
+/** Liste de produits : toutes, ou d'une sous-catégorie ; filtres ?application=, recherche ?q=, page ?page=. */
+const Products = ({ subcategory: sub = null }) => {
+  const { t, language, paths } = useLanguage();
+  const [params, setParams] = useSearchParams();
+  const topRef = useRef(null);
 
-  const mainRef = useRef(null);
-  const prevCategory = useRef({ id, application });
+  const q = params.get('q') || '';
+  const application = APPLICATIONS.includes(params.get('application')) ? params.get('application') : '';
+  const { family, category } = sub ? pathOfSubcategory(sub.id) : {};
 
-  // Mettre à jour la catégorie sélectionnée uniquement si elle change
+  let list = belts;
+  if (sub) list = list.filter((b) => b.subcategory_id === sub.id);
+  if (application) list = list.filter((b) => b.application === application);
+  list = searchBelts(list, q);
+
+  const totalPages = Math.max(1, Math.ceil(list.length / PER_PAGE));
+  const page = Math.min(Math.max(1, Number(params.get('page')) || 1), totalPages);
+  const visible = list.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+
+  // Catégorie à sous-catégorie unique : on affiche le nom de la catégorie.
+  const title = sub ? localName(getSubcategoriesOf(category.id).length === 1 ? category : sub, language) : application ? t(`title${application}`) : t('allProducts');
+  const singleSub = sub && getSubcategoriesOf(category.id).length === 1;
+  const seoTitle = sub
+    ? language === 'fr' && sub.seoTitle
+      ? sub.seoTitle
+      : t('seoSubTitle', { name: localName(sub, language), category: localName(category, language) })
+    : application
+      ? t('seoApplicationTitle', { a: t(`title${application}`) })
+      : t('seoProductsTitle');
+  const seoDescription =
+    sub && language === 'fr' && sub.seoDescription
+      ? sub.seoDescription
+      : t('seoProductsDescription', { list: list.slice(0, 6).map((b) => b.profil || b.nom).join(', ') });
+
+  // Remonter en haut de la liste quand la page change.
   useEffect(() => {
-    if (id !== undefined && Number(selectedsubCategory) !== Number(id)) {
-      dispatch(selectedSubCategory(id));
-    }
-  }, [id, dispatch, selectedsubCategory]);
-
-  // Filtrer les produits
-  const filteredProducts = products.filter((product) => {
-    const matchesCategory = !id || product.subcategory_id === Number(id);
-    const matchesApplication = !application || product.application === application;
-
-    const normalize = (str) =>
-      str?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-
-    const matchesSearch =
-      !searchQuery ||
-      normalize(product.nom).includes(normalize(searchQuery)) ||
-      normalize(product.profil).includes(normalize(searchQuery)) ||
-      normalize(product.description).includes(normalize(searchQuery));
-
-    return matchesCategory && matchesApplication && matchesSearch;
-  });
-
-  // Pagination
-  const itemsPerPage = 9;
-  const [page, setPage] = useState(1);
-  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
-  const start = (page - 1) * itemsPerPage;
-  const paginatedProducts = filteredProducts.slice(start, start + itemsPerPage);
-
-  // Scroll en haut quand la page change
-  useEffect(() => {
-    if (mainRef.current) {
-      mainRef.current.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    if (params.get('page')) topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
-  // Scroll en haut quand la catégorie ou l'application change
-  useEffect(() => {
-    const categoryChanged =
-      prevCategory.current.id !== id ||
-      prevCategory.current.application !== application;
+  /** Modifie un paramètre d'URL ; tout changement de filtre revient à la page 1. */
+  const setParam = (key, value) => {
+    const next = new URLSearchParams(params);
+    if (value) next.set(key, value);
+    else next.delete(key);
+    if (key !== 'page') next.delete('page');
+    setParams(next);
+  };
 
-    if (categoryChanged && mainRef.current) {
-      mainRef.current.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    prevCategory.current = { id, application };
-  }, [id, application]);
+  const hasFilters = Boolean(q || application);
 
   return (
-    <div className="min-h-screen flex flex-col w-full bg-background">
-      <div className="flex flex-1 w-full pt-20">
-        <main ref={mainRef} className="flex-1 overflow-auto">
-          <div className="p-8">
-            <div className="flex items-center gap-4 mb-8 justify-between">
-                            <Button
-                variant="outline"
-                className="bg-gray-500 text-white hover:bg-gray-600"
-                onClick={() => window.history.back()} // ou utiliser navigate pour react-router
+    <>
+      <Seo
+        title={seoTitle}
+        description={seoDescription}
+        noindex={Boolean(q) || page > 1}
+        jsonLd={itemList(visible.map((b) => ({ url: paths.belt(b), name: b.nom })))}
+      />
+      <Breadcrumbs
+        items={
+          sub
+            ? [
+                { label: t('products'), to: paths.products() },
+                { label: localName(family, language), to: paths.family(family) },
+                singleSub
+                  ? { label: localName(category, language) }
+                  : { label: localName(category, language), to: paths.category(category) },
+                !singleSub && { label: localName(sub, language) },
+              ]
+            : [{ label: t('products') }]
+        }
+      />
+      <div ref={topRef} className="scroll-mt-28" />
+      <PageHeader title={title}>
+        <div className="mt-4 flex flex-wrap items-center gap-2" aria-live="polite">
+          <span className="text-sm font-medium text-muted-foreground">{t('resultsCount', { n: list.length })}</span>
+          {q && (
+            <FilterChip label={t('searchFor', { q })} onRemove={() => setParam('q', '')} removeLabel={t('removeFilter')} />
+          )}
+          {application && (
+            <FilterChip
+              label={t('applicationFilter', { a: t(`title${application}`) })}
+              onRemove={() => setParam('application', '')}
+              removeLabel={t('removeFilter')}
+            />
+          )}
+        </div>
+      </PageHeader>
+
+      {list.length === 0 ? (
+        <div className="rounded-xl bg-white p-10 text-center shadow-sm">
+          <SearchX className="mx-auto mb-4 text-muted-foreground" size={48} aria-hidden="true" />
+          <p className="text-lg font-semibold text-primary">{t('noResults')}</p>
+          <p className="mt-1 text-muted-foreground">{t('noResultsHint')}</p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            {hasFilters && (
+              <button
+                type="button"
+                onClick={() => setParams(new URLSearchParams())}
+                className="h-11 rounded-md bg-primary px-5 text-sm font-semibold text-white hover:bg-primary/90"
               >
-                          <ArrowLeft size={18} />
-
-                {t('back')}
-              </Button>
-              <div className="text-center flex-1 animate-fade-in-up">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
-                  {t('titleProduct')}
-                </h1>
-                <div className="w-24 h-1 bg-accent mx-auto" />
-              </div>
-          
-
-              {resetFilters && (
-                <Button
-                  variant="outline"
-                  className="bg-red-500 text-white hover:bg-red-600"
-                  onClick={resetFilters}
-                >
-                  {t('resetFilters')}
-                </Button>
-              )}
-            </div>
-
-            {filteredProducts.length === 0 ? (
-              <div className="text-center py-20">
-                <p className="text-xl text-muted-foreground">
-                  Aucun produit trouvé
-                </p>
-              </div>
-            ) : (
-              <>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {paginatedProducts.map((product, index) => (
-                    <Card
-                      key={product.id}
-                      className="overflow-hidden hover:-translate-y-1 transition-all duration-300 hover-lift border-0 shadow-lg animate-fade-in-up"
-                      style={{ animationDelay: `${index * 0.1}s` }}
-                    >
-                      <div className="aspect-video overflow-hidden">
-                        <img
-                          src={
-                            product.images?.length
-                              ? `https://ahmedbm99.github.io/Kortibelt${product.images[0].image_url}`
-                              : "/fallback-image.png"
-                          }
-                          alt={product.nom}
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                        />
-                      </div>
-
-                      <CardContent className="p-6">
-                        <h3 className="text-2xl font-bold mb-3 text-primary">
-                          {product.nom}
-                        </h3>
-                        <p className="text-muted-foreground mb-6 leading-relaxed line-clamp-3">
-                          {product.description}
-                        </p>
-
-                        <div className="flex flex-col gap-3">
-                          <Button
-                            variant="default"
-                            className="w-full bg-accent hover:bg-accent/80 hover:-translate-y-1 transition-all duration-300"
-                            asChild
-                          >
-                            <NavLink to={`/products/product/${product.id}`}>
-                              {t('viewDetails')}
-                            </NavLink>
-                          </Button>
-
-                          <Button
-                            variant="outline"
-                            className="w-full border-accent cursor-pointer bg-orange-500 text-white hover:bg-accent hover:text-white hover:-translate-y-1 transition-all duration-300"
-                            onClick={() => addToCart(product)}
-                          >
-                            {t('addToCart')}
-                          </Button>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-
-                <div className="flex justify-center items-center gap-4 mt-10">
-                  <Button
-                    variant="outline"
-                    disabled={page === 1}
-                    onClick={() => setPage((p) => p - 1)}
-                    className="px-6 cursor-pointer"
-                  >
-                    {t('back')}
-                  </Button>
-
-                  <span className="text-lg font-semibold">
-                    Page {page} / {totalPages}
-                  </span>
-
-                  <Button
-                    variant="outline"
-                    disabled={page === totalPages}
-                    onClick={() => setPage((p) => p + 1)}
-                    className="px-6 cursor-pointer"
-                  >
-                    {t('next')}
-                  </Button>
-                </div>
-              </>
+                {t('clearFilters')}
+              </button>
             )}
+            <Link to={paths.home()} className="inline-flex h-11 items-center rounded-md border border-border px-5 text-sm font-semibold text-primary hover:bg-secondary">
+              {t('browseFamilies')}
+            </Link>
           </div>
-        </main>
-      </div>
-    </div>
+        </div>
+      ) : (
+        <>
+          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            {visible.map((belt, index) => (
+              <ProductCard key={belt.id} belt={belt} headingLevel={2} priority={index < 2} />
+            ))}
+          </div>
+
+          {totalPages > 1 && (
+            <nav aria-label={t('pagination')} className="mt-10 flex items-center justify-center gap-4">
+              <button
+                type="button"
+                disabled={page === 1}
+                onClick={() => setParam('page', String(page - 1))}
+                className="h-11 rounded-md border border-border bg-white px-5 text-sm font-semibold text-primary hover:bg-secondary disabled:opacity-40"
+              >
+                {t('previous')}
+              </button>
+              <span className="text-sm font-semibold text-primary">{t('pageOf', { page, total: totalPages })}</span>
+              <button
+                type="button"
+                disabled={page === totalPages}
+                onClick={() => setParam('page', String(page + 1))}
+                className="h-11 rounded-md border border-border bg-white px-5 text-sm font-semibold text-primary hover:bg-secondary disabled:opacity-40"
+              >
+                {t('next')}
+              </button>
+            </nav>
+          )}
+        </>
+      )}
+    </>
   );
 };
+
+function FilterChip({ label, onRemove, removeLabel }) {
+  return (
+    <span className="inline-flex items-center gap-1 rounded-full bg-accent-soft py-1 pl-3 pr-1 text-sm font-medium text-primary">
+      {label}
+      <button
+        type="button"
+        onClick={onRemove}
+        aria-label={`${removeLabel} : ${label}`}
+        className="inline-flex h-9 w-9 items-center justify-center rounded-full hover:bg-cta hover:text-white"
+      >
+        <X size={14} aria-hidden="true" />
+      </button>
+    </span>
+  );
+}
 
 export default Products;

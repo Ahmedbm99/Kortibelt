@@ -1,25 +1,26 @@
-import React from "react";
-import AboutComponent from "../components/AboutComponent";
-import Navbar from "../components/Navbar";
-import Hero from "@/components/Hero";
-import FeaturedProducts from "@/components/FeaturedProducts";
-import Applications from "@/components/ApplicationComponent";
-import MaterialComponent from "@/components/MaterialComponent";
-import Footer from "@/components/Footer";
-import ProductFamilies from "@/components/FamilyComponent";
-import WelcomeSection from "@/components/WelcomeSection";
-export default function Home(){
-    return(
-        <>
-        <Navbar/>
-        <Hero/>
-        <WelcomeSection/>
-        <ProductFamilies/>
-        <Applications/>
-        <FeaturedProducts/>
-        <AboutComponent/>
-        <MaterialComponent />
-        <Footer/>
-        </>
-    );
+import Hero from '@/components/Hero';
+import WelcomeSection from '@/components/WelcomeSection';
+import ProductFamilies from '@/components/FamilyComponent';
+import Applications from '@/components/ApplicationComponent';
+import FeaturedProducts from '@/components/FeaturedProducts';
+import AboutComponent from '@/components/AboutComponent';
+import MaterialComponent from '@/components/MaterialComponent';
+import Seo from '@/components/Seo';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { organization, website } from '@/lib/structuredData';
+
+export default function Home() {
+  const { language } = useLanguage();
+  return (
+    <>
+      <Seo jsonLd={[organization(), website(language)]} />
+      <Hero />
+      <ProductFamilies />
+      <Applications />
+      <FeaturedProducts />
+      <WelcomeSection />
+      <AboutComponent />
+      <MaterialComponent />
+    </>
+  );
 }

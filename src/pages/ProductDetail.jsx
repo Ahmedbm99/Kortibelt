@@ -1,269 +1,308 @@
-import { useNavigate, useParams } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Download, ShoppingCart, ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { ChevronLeft, ChevronRight, Download, FileText, MessageCircle, Plus } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useEffect, useState } from 'react';
-import { useCart } from "@/contexts/CartContext";
+import { useCart } from '@/contexts/CartContext';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ProductCard from '@/components/ProductCard';
+import Seo from '@/components/Seo';
+import { product as productSchema } from '@/lib/structuredData';
+import {
+  beltDatasheets,
+  beltImages,
+  beltMaterials,
+  formatNumber,
+  getSubcategoriesOf,
+  localName,
+  pathOfSubcategory,
+  relatedBelts,
+} from '@/data/catalog';
+import { NO_IMAGE, imageSources, onImageError } from '@/lib/asset';
+import { whatsappLink } from '@/lib/config';
+import { slugify } from '@/lib/slug';
 
+import Power from '@/assets/badges/power.webp';
+import Premium from '@/assets/badges/premium.webp';
+import Standard from '@/assets/badges/standard.webp';
+import Titan from '@/assets/badges/titan.webp';
+import Ultra from '@/assets/badges/ultra.webp';
 
-import toast from 'react-hot-toast';
-import Power from "@/assets/badges/power.png";
-import Premium from "@/assets/badges/premium.png";
-import Standard from "@/assets/badges/standard.png";
-import Titan from "@/assets/badges/titan.png";
-import Ultra from "@/assets/badges/ultra.png"
-import courroies from "@/data/courroieData.js";
-const ProductDetail = () => {
+const MATERIAL_BADGES = { CR: Power, 'CR+NR': Standard, 'NR+CR': Standard, EPDM: Ultra, HNBR: Titan, PU: Premium };
+
+/** Lignes du tableau de spécifications : [clé de traduction, valeur formatée]. */
+function specRows(belt, t, language) {
+  const num = (v, unit) => (v === null || v === undefined || v === '' ? null : `${formatNumber(v, language)}${unit ? ` ${unit}` : ''}`);
+  const temp =
+    belt.temperature_min !== undefined || belt.temperature_max !== undefined
+      ? `${belt.temperature_min ?? '…'} °C → ${belt.temperature_max ?? '…'} °C`
+      : null;
+  return [
+    ['profile', belt.profil],
+    ['Largeur', num(belt.largeur_mm, 'mm')],
+    ['Hauteur', num(belt.hauteur_mm, 'mm')],
+    ['Pas', num(belt.pas_mm, 'mm')],
+    ['thicknessLabel', num(belt.epaisseur_mm, 'mm')],
+    ['angle', num(belt.angle_trapeze_deg, '°')],
+    ['ribs', num(belt.nombre_nervures)],
+    ['weight', num(belt.poids_g_m, 'g/m')],
+    ['reinforcement', belt.renforcement],
+    ['tempRange', temp],
+    ['maxSpeed', num(belt.vitesse_max_m_s, 'm/s')],
+    ['maxLoad', num(belt.charge_max_n, 'N')],
+    ['application', belt.application ? t(`title${belt.application}`) : null],
+    ['manufacturer', belt.fabricant],
+    ['manufacturerRef', belt.reference_fabricant],
+  ].filter(([, v]) => v !== null && v !== undefined && v !== '');
+}
+
+const ProductDetail = ({ belt }) => {
   const navigate = useNavigate();
-  const { id } = useParams();
-  const { t } = useLanguage();
+  const { t, language, paths } = useLanguage();
+  const { addToCart } = useCart();
 
-  const [product, setProduct] = useState(null);
-  const [Fiche, setFiche] = useState([]);
-  const [Images, setImages] = useState([]);
-  const [Matieres, setMatieres] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [zoomPosition, setZoomPosition] = useState(null);
-  const [currentMaterialIndex, setCurrentMaterialIndex] = useState(0);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-const [touchStartX, setTouchStartX] = useState(null);
-const { addToCart } = useCart();
+  const images = beltImages(belt);
+  const materials = beltMaterials(belt);
+  const datasheets = beltDatasheets(belt);
 
+  const [imageIndex, setImageIndex] = useState(0);
+  const [material, setMaterial] = useState(materials[0] || '');
+  const [zoom, setZoom] = useState(null);
+  const [touchX, setTouchX] = useState(null);
 
-  const materialImages = {
-    "CR": Power,
-    "CR+NR": Standard,
-    "NR+CR": Standard,
-    "EPDM": Ultra,
-    "HNBR": Titan,
-    "PU": Premium,
-  };
+  const { family, category, subcategory } = pathOfSubcategory(belt.subcategory_id);
+  const currentImage = images[imageIndex] || NO_IMAGE;
+  const datasheet = datasheets[Math.max(0, materials.indexOf(material))] || datasheets[0];
+  const specs = specRows(belt, t, language);
+  const related = relatedBelts(belt);
+  const label = material ? `${belt.nom} (${material})` : belt.nom;
 
-  useEffect(() => {
-    (async () => {
-      try {
-       // const res = await BeltsServices.getBeltById(id);
-        const res = courroies.find(c => c.id === Number(id));
-        
-       setProduct(res);
-        setFiche(res.fiches || []);
-        setImages(res.images || []);
-        setMatieres(res.matieres || []);
-      } catch (err) {
-        toast.error("Erreur lors du chargement du produit", err);
-      } finally {
-        setLoading(false);
-      }
-    })();
-  }, [id]);
-
-  if (loading) return <p className="pt-40 text-center">Loading...</p>;
-  if (!product) return <p className="pt-40 text-center">{t('productNotFound')}</p>;
-
-  const currentMaterial = Matieres[currentMaterialIndex]?.matiere || "-";
-  const currentImage = Images[currentImageIndex]?.image_url || null;
-  const currentFiche =
-    Fiche[currentMaterialIndex]?.fiche_technique_url ||
-    Fiche[0]?.fiche_technique_url ||
-    null;
-
-  // Changer de matériau
-  const handleNextMaterial = () =>
-    Matieres.length > 1 &&
-    setCurrentMaterialIndex(i => (i + 1) % Matieres.length);
-
-  // Navigation des images (indépendante du matériau)
-  const handlePrevImage = () => {
-    if (Images.length > 1) setCurrentImageIndex(i => (i - 1 + Images.length) % Images.length);
-  };
-
-  const handleNextImage = () => {
-    if (Images.length > 1) setCurrentImageIndex(i => (i + 1) % Images.length);
-  };
-
- const specifications = [
-  { key: 'profil', label: t('Profile') },
-  { key: 'nom', label: t('Reference') },
-  { key: 'largeur_mm', label: t('Largeur'), unit: 'mm' },
-  { key: 'hauteur_mm', label: t('Hauteur'), unit: 'mm' },
-  { key: 'pas_mm', label: t('Pas'), unit: 'mm' },
-  { key: 'reference_fabricant', label: t('Reference Fabricant') }
-]
-  .filter(attr => product[attr.key] !== null && product[attr.key] !== undefined && product[attr.key] !== "")
-  .map(attr => ({
-    label: attr.label,
-    value: attr.unit ? `${product[attr.key]} ${attr.unit}` : `${product[attr.key]}`
-  }));
-
+  const showImage = (i) => setImageIndex((i + images.length) % images.length);
+  const singleSub = getSubcategoriesOf(category.id).length === 1;
+  const categoryName = localName(singleSub ? category : subcategory, language);
+  const description = belt.description || t('defaultDescription');
+  // Titre Google : nom (+ profil) et catégorie, sans dépasser ~60 caractères ni répéter la catégorie.
+  const baseName = belt.profil && !slugify(belt.nom).includes(slugify(belt.profil)) ? `${belt.nom} ${belt.profil}` : belt.nom;
+  const sameAsCategory = slugify(belt.nom).length > 3 && (slugify(categoryName).includes(slugify(belt.nom)) || slugify(belt.nom).includes(slugify(categoryName)));
+  const withCategory = t('seoBeltTitle', { name: baseName, category: categoryName });
+  const seoTitle =
+    withCategory.length <= 50 && !sameAsCategory
+      ? withCategory
+      : baseName.length <= 30
+        ? t('seoBeltTitleShort', { name: baseName })
+        : baseName;
+  const seoDescription = `${belt.nom}${belt.profil ? ` (${belt.profil})` : ''} – ${description}`;
 
   return (
-    <div className="min-h-screen bg-[#F7F9FC] text-[#0A1A2F]">
+    <>
+      <Seo
+        title={seoTitle}
+        description={seoDescription}
+        image={images[0]}
+        type="product"
+        jsonLd={productSchema({
+          belt,
+          url: paths.belt(belt),
+          images,
+          category: `${localName(family, language)} > ${categoryName}`,
+          materials,
+          description,
+        })}
+      />
+      <Breadcrumbs
+        items={[
+          { label: t('products'), to: paths.products() },
+          { label: localName(family, language), to: paths.family(family) },
+          singleSub ? null : { label: localName(category, language), to: paths.category(category) },
+          { label: categoryName, to: paths.subcategory(subcategory) },
+          { label: belt.nom },
+        ]}
+      />
 
-      {/* BACK BUTTON */}
-      <div className="container mx-auto px-4 pt-32 ">
-        <Button
-          variant="outline"
-          onClick={() => navigate(-1)}
-          className="flex items-center gap-2 bg-gray-500 text-white hover:bg-gray-600"
-        >
-          <ArrowLeft size={18} />
-          {t('back')}
-        </Button>
-      </div>
-
-      {/* HEADER + IMAGE */}
-      <div className="container mx-auto px-4 mt-10 grid md:grid-cols-2 gap-12">
-
-        <div className="relative animate-fade-in-up space-y-6">
-
-          {/* Main Image */}
-          {currentImage ? (
-            <div className="relative group">
-             <div
-  className="relative overflow-hidden rounded-xl shadow-2xl bg-white touch-pan-x select-none"
-  onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
-  onTouchEnd={(e) => {
-    if (!touchStartX) return;
-    const diff = touchStartX - e.changedTouches[0].clientX;
-
-    if (diff > 50) handleNextImage();
-    else if (diff < -50) handlePrevImage();
-
-    setTouchStartX(null);
-  }}
-  onMouseMove={(e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    setZoomPosition({ x, y });
-  }}
-  onMouseLeave={() => setZoomPosition(null)}
->
-
-                {/* Material Badge */}
-                {currentMaterial && (
-                  <img
-                    src={materialImages[currentMaterial] || null}
-                    alt={currentMaterial}
-                    className="absolute top-4 left-4 w-[120px] z-20 rounded-lg p-1 shadow-md bg-white/70 backdrop-blur"
-                  />
-                )}
-
-                <img
-                  src={`https://ahmedbm99.github.io/Kortibelt${currentImage}`}
-                  alt={product.nom}
-                  className="w-full h-auto transition-transform duration-200"
-                  style={{
-                    transform: zoomPosition
-                      ? `scale(2) translate(${50 - zoomPosition.x}%, ${50 - zoomPosition.y}%)`
-                      : "scale(1)",
-                  }}
-                />
-              </div>
-
-              {/* Navigation Arrows */}
-              {Images.length > 1 && (
-                <>
-                  <button
-                    onClick={handlePrevImage}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#0A1A2F] p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"
-                  >
-                    <ChevronLeft size={24} />
-                  </button>
-                  <button
-                    onClick={handleNextImage}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#0A1A2F] p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"
-                  >
-                    <ChevronRight size={24} />
-                  </button>
-                </>
-              )}
-
-              {/* Image Counter */}
-              {Images.length > 1 && (
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-[#0A1A2F]/80 text-white px-4 py-2 rounded-full text-sm font-medium z-30">
-                  {currentImageIndex + 1} / {Images.length}
-                </div>
-              )}
-            </div>
-          ) : (
-            <p>{t('imageUnavailable')}</p>
-          )}
-        </div>
-
-        {/* DETAILS */}
-        <div className="flex flex-col justify-center space-y-6">
-          <h1 className="text-4xl font-extrabold text-[#0A1A2F]">{product.nom}</h1>
-          <div className="flex flex-col space-y-3">
-            <div className="flex items-center justify-between">
-              <p className="font-semibold text-lg">{t('Materials')}:</p>
-
-              {Matieres.length > 1 && (
-                <Button
-                  size="sm"
-                  variant="outline"
-                  onClick={handleNextMaterial}
-                  className="border-[#F97421] text-[#F97421] cursor-pointer hover:bg-[#FFF3E9]"
+      <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
+        {/* Galerie */}
+        <div>
+          <div
+            className="relative overflow-hidden rounded-xl bg-white shadow-lg"
+            onTouchStart={(e) => setTouchX(e.touches[0].clientX)}
+            onTouchEnd={(e) => {
+              if (touchX === null || images.length < 2) return;
+              const diff = touchX - e.changedTouches[0].clientX;
+              if (Math.abs(diff) > 50) showImage(imageIndex + (diff > 0 ? 1 : -1));
+              setTouchX(null);
+            }}
+            onMouseMove={(e) => {
+              const r = e.currentTarget.getBoundingClientRect();
+              setZoom({ x: ((e.clientX - r.left) / r.width) * 100, y: ((e.clientY - r.top) / r.height) * 100 });
+            }}
+            onMouseLeave={() => setZoom(null)}
+          >
+            <img
+              key={currentImage}
+              src={imageSources(currentImage).src}
+              srcSet={imageSources(currentImage).srcSet}
+              sizes="(min-width: 768px) 50vw, 100vw"
+              alt={belt.nom}
+              onError={onImageError}
+              fetchPriority={imageIndex === 0 ? 'high' : undefined}
+              width="800"
+              height="600"
+              className="aspect-[4/3] w-full object-contain transition-transform duration-200"
+              style={{ transform: zoom && images.length ? `scale(2)` : 'none', transformOrigin: zoom ? `${zoom.x}% ${zoom.y}%` : 'center' }}
+            />
+            {images.length > 1 && (
+              <>
+                <button
+                  type="button"
+                  onClick={() => showImage(imageIndex - 1)}
+                  aria-label={t('previousImage')}
+                  className="absolute left-3 top-1/2 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-primary shadow-md hover:bg-white"
                 >
-                  {t('changeMaterial')}
-                </Button>
-              )}
-            </div>
-
-            <p className="text-[#1F2A44] text-base font-medium">{currentMaterial}</p>
-          </div>
-          <p className="text-lg leading-relaxed text-[#1F2A44] opacity-80">
-            {product.description || "Courroie synchrone haute performance pour applications exigeantes."}
-          </p>
-
-          {/* BUTTONS */}
-          <div className="space-y-4">
-            <Button
-              className="w-full py-6 bg-[#F97421] text-white text-lg cursor-pointer font-semibold rounded-xl hover:bg-[#ff7f2d]"
-              onClick={() => addToCart(product)}
-            >
-                <ShoppingCart className="mr-3" size={20} />
-              {t('addToCart')}
-            </Button>
-
-            {currentFiche && (
-              <Button
-                variant="outline"
-                onClick={() =>
-                  window.open(`https://ahmedbm99.github.io/Kortibelt${currentFiche}`, '_blank')
-                }
-                className="w-full py-6 text-[#F97421] border-[#F97421] text-lg cursor-pointer font-semibold rounded-xl hover:bg-[#FFF5EF]"
-              >
-                <Download className="mr-3" size={22} />
-                {t('downloadDatasheet')}
-              </Button>
+                  <ChevronLeft size={24} aria-hidden="true" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => showImage(imageIndex + 1)}
+                  aria-label={t('nextImage')}
+                  className="absolute right-3 top-1/2 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-primary shadow-md hover:bg-white"
+                >
+                  <ChevronRight size={24} aria-hidden="true" />
+                </button>
+              </>
             )}
-
-            <Button className="w-full py-6 bg-[#0A1A2F] text-white text-lg cursor-pointer font-semibold rounded-xl hover:bg-[#102542]">
-              {t('requestQuote') || "Demander un devis"}
-            </Button>
           </div>
-        </div>
-      </div>
 
-      {/* SPECIFICATIONS */}
-      <div className="container mx-auto px-4 mt-20 grid md:grid-cols-2 gap-10 pb-24">
-        <Card className="shadow-xl rounded-2xl border-none">
-          <CardContent className="p-10">
-            <h2 className="text-2xl font-bold mb-6 text-[#0A1A2F]">{t('specifications')}</h2>
-            <ul className="space-y-4">
-              {specifications.map((spec, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <span className="text-[#F97421]">•</span>
-                  <span className="text-[#1F2A44]">{spec.label}: {spec.value}</span>
+          {images.length > 1 && (
+            <ul className="mt-3 flex gap-2 overflow-x-auto pb-1">
+              {images.map((src, i) => (
+                <li key={src}>
+                  <button
+                    type="button"
+                    onClick={() => setImageIndex(i)}
+                    aria-label={t('showImage', { n: i + 1 })}
+                    aria-current={i === imageIndex}
+                    className={`block h-20 w-20 overflow-hidden rounded-md border-2 bg-white ${i === imageIndex ? 'border-accent' : 'border-transparent'}`}
+                  >
+                    <img src={imageSources(src).src} alt="" loading="lazy" width="80" height="80" onError={onImageError} className="h-full w-full object-cover" />
+                  </button>
                 </li>
               ))}
             </ul>
-          </CardContent>
-        </Card>
+          )}
+        </div>
+
+        {/* Informations et actions */}
+        <div className="flex flex-col gap-6">
+          <div>
+            {belt.profil && <p className="text-sm font-semibold uppercase tracking-wide text-accent-text">{belt.profil}</p>}
+            <h1 className="mt-1 text-3xl font-extrabold text-primary md:text-4xl">{belt.nom}</h1>
+          </div>
+
+          <p className="leading-relaxed text-muted-foreground">{description}</p>
+
+          {materials.length > 0 && (
+            <fieldset>
+              <legend className="mb-2 font-semibold text-primary">{t('chooseMaterial')}</legend>
+              <div className="flex flex-wrap items-center gap-2">
+                {materials.map((m) => (
+                  <label
+                    key={m}
+                    className={`inline-flex cursor-pointer items-center gap-2 rounded-full border-2 px-4 py-2 text-sm font-semibold transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-accent/40 ${
+                      material === m ? 'border-accent bg-accent-soft text-primary' : 'border-border bg-white text-muted-foreground hover:border-accent'
+                    }`}
+                  >
+                    <input type="radio" name="material" value={m} checked={material === m} onChange={() => setMaterial(m)} className="sr-only" />
+                    {m}
+                  </label>
+                ))}
+                {MATERIAL_BADGES[material] && (
+                  <img src={MATERIAL_BADGES[material]} alt="" className="ml-2 h-12 w-auto" width="96" height="48" />
+                )}
+              </div>
+            </fieldset>
+          )}
+
+          <div className="flex flex-col gap-3 xl:flex-row">
+            <button
+              type="button"
+              onClick={() => addToCart(belt, material)}
+              className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-lg border-2 xl:w-auto xl:flex-1 border-accent bg-white px-4 font-semibold text-accent-text hover:bg-accent-soft"
+            >
+              <Plus size={20} aria-hidden="true" />
+              {t('addToQuote')}
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                addToCart(belt, material);
+                navigate(paths.cart());
+              }}
+              className="inline-flex h-12 w-full items-center justify-center rounded-lg bg-cta xl:w-auto xl:flex-1 px-4 font-semibold text-white hover:bg-cta-hover"
+            >
+              {t('requestQuoteNow')}
+            </button>
+          </div>
+
+          <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm">
+            {datasheet && (
+              <a href={datasheet} target="_blank" rel="noopener noreferrer" download className="inline-flex min-h-11 items-center gap-2 font-semibold text-primary underline-offset-2 hover:underline">
+                <Download size={18} aria-hidden="true" /> {t('datasheet')}
+              </a>
+            )}
+            <a
+              href={whatsappLink(t('whatsappProductMessage', { name: label }))}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center gap-2 font-semibold text-primary underline-offset-2 hover:underline"
+            >
+              <MessageCircle size={18} aria-hidden="true" /> WhatsApp
+            </a>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            {t('needHelpChoosing')}{' '}
+            <Link to={paths.contact()} className="font-semibold text-accent-text hover:underline">
+              {t('contactUs')}
+            </Link>
+          </p>
+        </div>
       </div>
-    </div>
+
+      {/* Spécifications */}
+      {specs.length > 0 && (
+        <section className="mt-12 max-w-3xl" aria-labelledby="specs-title">
+          <h2 id="specs-title" className="mb-4 flex items-center gap-2 text-2xl font-bold text-primary">
+            <FileText size={22} aria-hidden="true" /> {t('specifications')}
+          </h2>
+          <div className="overflow-hidden rounded-xl bg-white shadow-md">
+            <table className="w-full text-left text-sm">
+              <tbody>
+                {specs.map(([key, value], i) => (
+                  <tr key={key} className={i % 2 ? 'bg-secondary/50' : ''}>
+                    <th scope="row" className="w-1/2 px-4 py-3 font-medium text-muted-foreground">
+                      {t(key)}
+                    </th>
+                    <td className="px-4 py-3 font-semibold text-primary">{value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
+      {/* Produits associés */}
+      {related.length > 0 && (
+        <section className="mt-12" aria-labelledby="related-title">
+          <h2 id="related-title" className="mb-4 text-2xl font-bold text-primary">
+            {t('relatedProducts')}
+          </h2>
+          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+            {related.map((b) => (
+              <ProductCard key={b.id} belt={b} compact />
+            ))}
+          </div>
+        </section>
+      )}
+    </>
   );
 };
 

@@ -26,4 +26,15 @@ export default defineConfig([
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },
+  // Composants shadcn/ui générés : ils exportent aussi leurs variantes (buttonVariants…).
+  {
+    files: ['src/components/ui/**/*.jsx'],
+    rules: { 'react-refresh/only-export-components': 'off' },
+  },
+  // Scripts Node (npm run assets)
+  {
+    files: ['scripts/**/*.mjs', 'vite.config.js'],
+    extends: [js.configs.recommended],
+    languageOptions: { globals: globals.node, ecmaVersion: 'latest', sourceType: 'module' },
+  },
 ])

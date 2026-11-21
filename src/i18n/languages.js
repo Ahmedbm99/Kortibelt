@@ -1,3 +1,5 @@
+import { uxTranslations } from "./ux";
+
 export const translations = {
 fr: {
   description: "Kortibelt, vers une nouvelle dimension d’expertise",
@@ -427,7 +429,16 @@ savoirPlus:"Learn More",
 
 };
 
-export const getTranslation = (lang, key, fallback = key) => {
-  return translations[lang]?.[key] || translations.fr[key] || fallback;
+Object.assign(translations.fr, uxTranslations.fr);
+Object.assign(translations.en, uxTranslations.en);
+
+/**
+ * Traduit une clé. `vars` remplace les {variables} du texte.
+ * Repli : français, puis la clé elle-même.
+ */
+export const getTranslation = (lang, key, vars) => {
+  const text = translations[lang]?.[key] ?? translations.fr[key] ?? key;
+  if (!vars) return text;
+  return text.replace(/\{(\w+)\}/g, (m, name) => (name in vars ? String(vars[name]) : m));
 };
 

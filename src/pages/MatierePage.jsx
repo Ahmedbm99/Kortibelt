@@ -1,14 +1,13 @@
-import React from "react";
-import MatiereComponent from '@/components/MatiereComponent'
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-export default function MatierePage(){
+import MatiereComponent from '@/components/MatiereComponent';
+import Seo from '@/components/Seo';
+import { useLanguage } from '@/contexts/LanguageContext';
 
-    return(
-        <>
-        <Navbar/>
-        <MatiereComponent/>
-        <Footer/>
-        </>
-    );
+export default function MatierePage() {
+  const { t } = useLanguage();
+  return (
+    <>
+      <Seo title={t('seoMaterialsTitle')} description={t('seoMaterialsDescription')} />
+      <MatiereComponent />
+    </>
+  );
 }

@@ -1,65 +1,37 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { useLanguage } from '@/contexts/LanguageContext';
-//import FamilleServices from '@/services/FamilyServices';
-import { Cog, Zap, Settings } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { setFamily } from "@/store/familySlice";
-import toast from "react-hot-toast";
 import { Link } from 'react-router-dom';
-import family from "@/data/family";
+import { Cog, Layers, Zap } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
+import SectionTitle from '@/components/SectionTitle';
+import { families, getCategoriesOf, localDescription, localName } from '@/data/catalog';
+
+const ICONS = [Cog, Zap, Layers];
 
 const ProductFamilies = () => {
-  const dispatch = useDispatch();
-  const { language, t } = useLanguage(); // 'fr' or 'en'
-  const [families, setFamilies] = useState([]);
-  const Icon = [Cog, Zap, Settings];
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-      //  const familyData = await FamilleServices.getAllFamilies();
-        setFamilies(family);
-        dispatch(setFamily(family));
-      } catch (err) {
-        console.error(err);
-        toast.error(language === "en" ? "Error loading categories" : "Erreur lors du chargement des catégories");
-      } 
-    };
-
-    fetchData();
-  }, [dispatch, language]);
+  const { t, language, paths } = useLanguage();
 
   return (
-    <section id="famille" className="py-20 bg-secondary">
+    <section id="famille" className="bg-secondary py-16 md:py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">{t('family')}</h2>
-          <div className="w-24 h-1 bg-accent mx-auto" />
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
+        <SectionTitle>{t('categories')}</SectionTitle>
+        <div className="grid gap-6 md:grid-cols-3">
           {families.map((family, index) => {
-            const IconComponent = Icon[index % Icon.length];
+            const Icon = ICONS[index % ICONS.length];
+            const cats = getCategoriesOf(family.id);
             return (
               <Link
-                key={index}
-                to={`/category/${family.id}`}
-                className="transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
+                key={family.id}
+                to={paths.family(family)}
+                className="group flex flex-col rounded-xl bg-white p-8 text-center shadow-md transition-all hover:-translate-y-1 hover:shadow-xl"
               >
-                <Card className="border-0 shadow-lg">
-                  <CardContent className="p-8 text-center">
-                    <div className="w-20 h-20 mx-auto mb-6 bg-orange-200 rounded-full flex items-center justify-center">
-                      <IconComponent className="text-primary" size={40} />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 text-primary">
-                      {language === 'fr' ? family.nomFrancais : family.nomAnglais}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {language === 'fr' ? family.descriptionFrancais : family.descriptionAnglais}
-                    </p>
-                  </CardContent>
-                </Card>
+                <span className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-accent-soft">
+                  <Icon className="text-accent" size={32} aria-hidden="true" />
+                </span>
+                <h3 className="mb-3 text-xl font-bold text-primary">{localName(family, language)}</h3>
+                <p className="mb-4 text-muted-foreground">{localDescription(family, language)}</p>
+                <p className="mt-auto text-sm font-semibold text-accent-text">
+                  {cats.map((c) => localName(c, language)).slice(0, 3).join(' · ')}
+                  {cats.length > 3 ? ' …' : ''}
+                </p>
               </Link>
             );
           })}

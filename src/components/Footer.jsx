@@ -1,74 +1,100 @@
+import { Link } from 'react-router-dom';
+import { Mail, Phone, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Facebook, Linkedin, Mail, Phone, Globe,  } from 'lucide-react';
-import family from "@/data/family";
-import { NavLink } from 'react-router-dom';
+import { useFeedback } from '@/contexts/FeedbackContext';
+import { families, localName } from '@/data/catalog';
+import { config, whatsappLink } from '@/lib/config';
 
 const Footer = () => {
-  const { t, language } = useLanguage();
+  const { t, language, paths } = useLanguage();
+  const { openFeedback } = useFeedback();
 
-  console.log("Footer family:", family);  
+  const linkClass = 'inline-flex min-h-11 items-center text-white/85 transition-colors hover:text-accent md:min-h-9';
+
   return (
-    <footer className="bg-blue-950 py-12 z-50">
+    <footer className="bg-primary py-12 text-white">
       <div className="container mx-auto px-4">
-
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-
-          {/* LOGO + DESCRIPTION */}
+        <div className="mb-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-orange-600">KORTIBELT</h3>
-              
-            <p className="text-white text-sm leading-relaxed">
-              {t("description")}
-            </p>
+            <p className="mb-4 text-2xl font-bold text-accent">KORTIBELT</p>
+            <p className="text-sm leading-relaxed text-white/85">{t('description')}</p>
           </div>
 
-          {/* PRODUITS */}
           <div>
-            <h4 className="font-bold mb-4 text-orange-600">{t("products")}</h4>
-            <ul className="space-y-2 text-sm text-white ">
-              {family && ( family.map((fam) => (
-                <li className=' hover:text-orange-400' key={fam.id}>
-                  <NavLink to={`/category/${fam.id}`}>
-                    {language === 'fr' ? fam.nomFrancais : fam.nomAnglais}
-                            </NavLink>
+            <h2 className="mb-4 font-bold text-accent">{t('products')}</h2>
+            <ul className="text-sm">
+              {families.map((fam) => (
+                <li key={fam.id}>
+                  <Link to={paths.family(fam)} className={linkClass}>
+                    {localName(fam, language)}
+                  </Link>
                 </li>
-              )))}
+              ))}
+              <li>
+                <Link to={paths.products()} className={linkClass}>
+                  {t('allProducts')}
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* ENTREPRISE */}
           <div>
-            <h4 className="font-bold mb-4 text-orange-600">{t("company")}</h4>
-            <ul className="space-y-2 text-sm text-white">
-              <li className="transition-colors hover:text-orange-400" ><NavLink to="/about">{t("about")}</NavLink></li>
-              <li className="transition-colors hover:text-orange-400" >  <NavLink to="/contact">{t("contact")}</NavLink></li>
+            <h2 className="mb-4 font-bold text-accent">{t('company')}</h2>
+            <ul className="text-sm">
+              <li>
+                <Link to={paths.about()} className={linkClass}>
+                  {t('about')}
+                </Link>
+              </li>
+              <li>
+                <Link to={paths.contact()} className={linkClass}>
+                  {t('contact')}
+                </Link>
+              </li>
+              <li>
+                <Link to={paths.materials()} className={linkClass}>
+                  {t('materialsTechnology')}
+                </Link>
+              </li>
+              <li>
+                <button type="button" onClick={openFeedback} className={`${linkClass} underline-offset-2 hover:underline`}>
+                  {t('feedbackLink')}
+                </button>
+              </li>
             </ul>
           </div>
 
-          {/* CONTACT & SOCIAL */}
           <div>
-            <h4 className="font-bold mb-4 text-orange-600">{t("follow")}</h4>
-
-            <div className="flex flex-col gap-2 text-white text-sm">
-            </div>
-
-            <div className="flex gap-4 mt-4">
-              <a className="w-10 h-10 text-white hover:bg-orange-600 cursor-pointer rounded-full flex items-center justify-center transition-all hover:scale-110">
-                <Facebook size={20} />
-              </a>
-              <a className="w-10 h-10 text-white hover:bg-orange-600 cursor-pointer rounded-full flex items-center justify-center transition-all hover:scale-110">
-                <Linkedin size={20} />
-              </a>
-              <a className="w-10 h-10 text-white hover:bg-orange-600 cursor-pointer rounded-full flex items-center justify-center transition-all hover:scale-110">
-                <Mail size={20} />
-              </a>
-            </div>
+            <h2 className="mb-4 font-bold text-accent">{t('contact')}</h2>
+            <ul className="text-sm">
+              <li>
+                <a href={`tel:${config.contactPhone.replace(/\s/g, '')}`} className={`inline-flex items-center gap-2 ${linkClass}`}>
+                  <Phone size={16} aria-hidden="true" /> {config.contactPhone}
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:${config.contactEmail}`} className={`inline-flex items-center gap-2 ${linkClass}`}>
+                  <Mail size={16} className="shrink-0" aria-hidden="true" /> <span className="break-all">{config.contactEmail}</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={whatsappLink(t('whatsappDefaultMessage'))}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center gap-2 ${linkClass}`}
+                >
+                  <MessageCircle size={16} aria-hidden="true" /> WhatsApp
+                </a>
+              </li>
+            </ul>
           </div>
-
         </div>
 
-        <div className="pt-8 border-t border-white/20 text-center text-sm text-white">
-          <p>© {new Date().getFullYear()} KORTIBELT. {t("rights")}</p>
+        <div className="border-t border-white/20 pt-8 text-center text-sm text-white/85">
+          <p>
+            © {new Date().getFullYear()} KORTIBELT. {t('rights')}
+          </p>
         </div>
       </div>
     </footer>

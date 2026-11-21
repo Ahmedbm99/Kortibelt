@@ -13,17 +13,17 @@ const AboutComponent = () => {
   return (
     <>
       {/* ABOUT SECTION */}
-      <section id="about" className="py-20 bg-blue-950 text-white">
+      <section id="about" className="py-20 bg-primary text-white">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             
             {/* LEFT TEXT */}
             <div className="animate-fade-in-up">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 {t('aboutKortibelt')}
               </h2>
 
-              <div className="w-28 h-1 bg-orange-500 mb-8" />
+              <div className="w-28 h-1 bg-accent mb-8" />
 
               <p className="text-lg leading-relaxed mb-6 opacity-90">
                 {t('overviewKortibelt')}
@@ -35,7 +35,7 @@ const AboutComponent = () => {
             </div>
 
             {/* RIGHT STATS */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
 
@@ -45,8 +45,8 @@ const AboutComponent = () => {
                     className="bg-white/10 backdrop-blur-sm p-6 rounded-lg text-center animate-scale-in border border-white/10"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <Icon className="mx-auto mb-4 text-orange-500" size={40} />
-                    <div className="text-4xl font-bold mb-2 text-orange-500">
+                    <Icon className="mx-auto mb-4 text-accent" size={40} aria-hidden="true" />
+                    <div className="text-4xl font-bold mb-2 text-accent">
                       {stat.value}
                     </div>
                     <div className="text-sm opacity-80">
@@ -69,7 +69,7 @@ const AboutComponent = () => {
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
-          title="AIS Location"
+          title="AIS Group — Google Maps"
         />
       </div>
     </>

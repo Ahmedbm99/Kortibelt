@@ -49,10 +49,10 @@ const classificationData = {
           }
         ],
          images: [
-          "/images/cloth1.jpg",
-          "/images/cloth2.jpg",
-          "/images/cloth3.jpg",
-          "/images/cloth4.jpg"
+          "/images/cloth1.webp",
+          "/images/cloth2.webp",
+          "/images/cloth3.webp",
+          "/images/cloth4.webp"
         ]
       }
     ],
@@ -223,10 +223,10 @@ const classificationData = {
           }
         ],
            images: [
-          "/hnbr/1.jpg",
-          "/hnbr/2.jpg",
-          "/hnbr/3.jpg",
-          "/hnbr/4.png"
+          "/hnbr/1.webp",
+          "/hnbr/2.webp",
+          "/hnbr/3.webp",
+          "/hnbr/4.webp"
         ]
       },
       {

@@ -1,27 +1,22 @@
-import React from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import Feedback from "@/components/Feedback";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import Feedback from '@/components/Feedback';
+import RecaptchaProvider from '@/components/RecaptchaProvider';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function FeedbackModal({ visible, onClose }) {
   const { t } = useLanguage();
   return (
-    <Dialog open={visible} onOpenChange={onClose} className="bg-white">
-      <DialogContent className="max-w-md bg-white" >
+    <Dialog open={visible} onOpenChange={(open) => !open && onClose()}>
+      <DialogContent className="max-h-[90vh] max-w-md grid-cols-1 overflow-y-auto bg-white">
         <DialogHeader>
-          <DialogTitle>{t('feedback')}</DialogTitle>
+          <DialogTitle>{t('feedbackTitle')}</DialogTitle>
+          <DialogDescription className="sr-only">{t('feedbackTitle')}</DialogDescription>
         </DialogHeader>
-
-        <div className="py-2">
-          <Feedback />
-        </div>
-
-        <DialogFooter>
-          <Button variant="outline"  className={"cursor-pointer bg-orange-400 text-white hover:bg-white hover:text-orange-400"} onClick={onClose}>
-            {t('close')}
-          </Button>
-        </DialogFooter>
+        {visible && (
+          <RecaptchaProvider>
+            <Feedback onDone={onClose} />
+          </RecaptchaProvider>
+        )}
       </DialogContent>
     </Dialog>
   );

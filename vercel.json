@@ -1,0 +1,43 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/products", "destination": "/courroies", "permanent": true },
+    { "source": "/cart", "destination": "/devis", "permanent": true },
+    { "source": "/checkout", "destination": "/devis/coordonnees", "permanent": true },
+    { "source": "/thank-you", "destination": "/merci", "permanent": true },
+    { "source": "/about", "destination": "/a-propos", "permanent": true },
+    { "source": "/classement", "destination": "/matieres", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/devis", "destination": "/app.html" },
+    { "source": "/devis/coordonnees", "destination": "/app.html" },
+    { "source": "/merci", "destination": "/app.html" },
+    { "source": "/en/quote", "destination": "/app.html" },
+    { "source": "/en/quote/details", "destination": "/app.html" },
+    { "source": "/en/thank-you", "destination": "/app.html" },
+    { "source": "/products/:path*", "destination": "/app.html" },
+    { "source": "/category/:path*", "destination": "/app.html" },
+    { "source": "/subcategory/:path*", "destination": "/app.html" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/public/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}

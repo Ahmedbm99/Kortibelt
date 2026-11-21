@@ -17,17 +17,17 @@ const courroieData = [
     {
       id: 1,
       courroie_id: 1,
-      image_url: "/public/Ctrapez/classic/z/1.png"
+      image_url: "/public/Ctrapez/classic/z/1.webp"
     },
     {
       id: 2,
       courroie_id: 1,
-      image_url: "/public/Ctrapez/classic/z/2.png"
+      image_url: "/public/Ctrapez/classic/z/2.webp"
     },
     {
       id: 3,
       courroie_id: 1,
-      image_url: "/public/Ctrapez/classic/z/3.png"
+      image_url: "/public/Ctrapez/classic/z/3.webp"
     }
   ],
   fiches: [
@@ -65,9 +65,9 @@ const courroieData = [
     source_catalogue: "Classic V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 1, courroie_id: 4, image_url: "/public/Ctrapez/classic/a/1.png" },
-      { id: 2, courroie_id: 4, image_url: "/public/Ctrapez/classic/a/2.png" },
-    { id: 3, courroie_id: 4, image_url: "/public/Ctrapez/classic/a/3.png" }
+      { id: 1, courroie_id: 4, image_url: "/public/Ctrapez/classic/a/1.webp" },
+      { id: 2, courroie_id: 4, image_url: "/public/Ctrapez/classic/a/2.webp" },
+    { id: 3, courroie_id: 4, image_url: "/public/Ctrapez/classic/a/3.webp" }
     ],
     fiches: [
       { id: 1, courroie_id: 4, fiche_technique_url: "/public/Ctrapez/classic/classic.pdf" }
@@ -92,9 +92,9 @@ const courroieData = [
     source_catalogue: "Classic V Belt Catalogue",
     application: "industry",
     images: [
-         { id: 1, courroie_id: 5, image_url: "/public/Ctrapez/classic/b/1.jpeg" },
-      { id: 2, courroie_id: 5, image_url: "/public/Ctrapez/classic/b/2.jpeg" },
-    { id: 3, courroie_id: 5, image_url: "/public/Ctrapez/classic/b/3.jpeg" }
+         { id: 1, courroie_id: 5, image_url: "/public/Ctrapez/classic/b/1.webp" },
+      { id: 2, courroie_id: 5, image_url: "/public/Ctrapez/classic/b/2.webp" },
+    { id: 3, courroie_id: 5, image_url: "/public/Ctrapez/classic/b/3.webp" }
     ],
     fiches: [
       { id: 2, courroie_id: 5, fiche_technique_url: "/public/Ctrapez/classic/classic.pdf" }
@@ -119,9 +119,9 @@ const courroieData = [
     source_catalogue: "Classic V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 5, courroie_id: 6, image_url: "/public/Ctrapez/classic/c/1.png" },
-      { id: 6, courroie_id: 6, image_url: "/public/Ctrapez/classic/c/2.png" },
-        { id: 7, courroie_id: 6, image_url: "/public/Ctrapez/classic/c/3.png" }
+      { id: 5, courroie_id: 6, image_url: "/public/Ctrapez/classic/c/1.webp" },
+      { id: 6, courroie_id: 6, image_url: "/public/Ctrapez/classic/c/2.webp" },
+        { id: 7, courroie_id: 6, image_url: "/public/Ctrapez/classic/c/3.webp" }
     ],
     fiches: [
       { id: 3, courroie_id: 6, fiche_technique_url: "/public/Ctrapez/classic/classic.pdf" }
@@ -146,9 +146,9 @@ const courroieData = [
     source_catalogue: "Classic V Belt Catalogue",
     application: "industry",
     images: [
-        { id: 1, courroie_id: 7, image_url: "/public/Ctrapez/classic/d/1.jpg" },
-      { id: 2, courroie_id: 7, image_url: "/public/Ctrapez/classic/d/2.jpg" },
-    { id: 3, courroie_id: 7, image_url: "/public/Ctrapez/classic/d/3.jpg" }
+        { id: 1, courroie_id: 7, image_url: "/public/Ctrapez/classic/d/1.webp" },
+      { id: 2, courroie_id: 7, image_url: "/public/Ctrapez/classic/d/2.webp" },
+    { id: 3, courroie_id: 7, image_url: "/public/Ctrapez/classic/d/3.webp" }
     ],
     fiches: [
       { id: 4, courroie_id: 7, fiche_technique_url: "/public/Ctrapez/classic/classic.pdf" }
@@ -173,9 +173,9 @@ const courroieData = [
     source_catalogue: "Classic V Belt Catalogue",
     application: "industry",
     images: [
-        { id: 1, courroie_id: 8, image_url: "/public/Ctrapez/classic/e/1.jpg" },
-      { id: 2, courroie_id: 8, image_url: "/public/Ctrapez/classic/e/2.jpg" },
-    { id: 3, courroie_id: 8, image_url: "/public/Ctrapez/classic/e/3.jpg" }
+        { id: 1, courroie_id: 8, image_url: "/public/Ctrapez/classic/e/1.webp" },
+      { id: 2, courroie_id: 8, image_url: "/public/Ctrapez/classic/e/2.webp" },
+    { id: 3, courroie_id: 8, image_url: "/public/Ctrapez/classic/e/3.webp" }
     ],
     fiches: [
       { id: 5, courroie_id: 8, fiche_technique_url: "/public/Ctrapez/classic/classic.pdf" }
@@ -201,9 +201,9 @@ const courroieData = [
   source_catalogue: "Classic V Belt Catalogue",
   application: "industry",
   images: [
-    { id: 1, courroie_id: 9, image_url: "/public/Ctrapez/classic/f/1.jpg" },
-    { id: 2, courroie_id: 9, image_url: "/public/Ctrapez/classic/f/2.jpg" },
-    { id: 3, courroie_id: 9, image_url: "/public/Ctrapez/classic/f/3.jpg" }
+    { id: 1, courroie_id: 9, image_url: "/public/Ctrapez/classic/f/1.webp" },
+    { id: 2, courroie_id: 9, image_url: "/public/Ctrapez/classic/f/2.webp" },
+    { id: 3, courroie_id: 9, image_url: "/public/Ctrapez/classic/f/3.webp" }
   ],
   fiches: [
     { id: 1, courroie_id: 9, fiche_technique_url: "/public/Ctrapez/classic/classic.pdf" }
@@ -228,12 +228,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 88, courroie_id: 10, image_url: "/public/Ctrapez/etroite/spa/1.jpg" },
-      { id: 89, courroie_id: 10, image_url: "/public/Ctrapez/etroite/spa/2.jpg" },
-      { id: 90, courroie_id: 10, image_url: "/public/Ctrapez/etroite/spa/3.jpg" }
+      { id: 88, courroie_id: 10, image_url: "/public/Ctrapez/etroite/spa/1.webp" },
+      { id: 89, courroie_id: 10, image_url: "/public/Ctrapez/etroite/spa/2.webp" },
+      { id: 90, courroie_id: 10, image_url: "/public/Ctrapez/etroite/spa/3.webp" }
     ],
     fiches: [
-      { id: 30, courroie_id: 10, fiche_technique_url: "/public/Ctrapez/etroite/narrow.png" }
+      { id: 30, courroie_id: 10, fiche_technique_url: "/public/Ctrapez/etroite/narrow.webp" }
     ],
     matieres: [
       { id: 64, courroie_id: 10, matiere: "CR" },
@@ -255,12 +255,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 2091, courroie_id: 211, image_url: "/public/Ctrapez/etroite/spz/1.jpg" },
-      { id: 2092, courroie_id: 211, image_url: "/public/Ctrapez/etroite/spz/2.jpg" },
-      { id: 2093, courroie_id: 211, image_url: "/public/Ctrapez/etroite/spz/3.jpg" }
+      { id: 2091, courroie_id: 211, image_url: "/public/Ctrapez/etroite/spz/1.webp" },
+      { id: 2092, courroie_id: 211, image_url: "/public/Ctrapez/etroite/spz/2.webp" },
+      { id: 2093, courroie_id: 211, image_url: "/public/Ctrapez/etroite/spz/3.webp" }
     ],
     fiches: [
-      { id: 2031, courroie_id: 211, fiche_technique_url: "/public/Ctrapez/etroite/narrow.png" }
+      { id: 2031, courroie_id: 211, fiche_technique_url: "/public/Ctrapez/etroite/narrow.webp" }
     ],
     matieres: [
       { id: 2066, courroie_id: 211, matiere: "CR" },
@@ -282,12 +282,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 91, courroie_id: 11, image_url: "/public/Ctrapez/etroite/spb/1.jpg" },
-      { id: 92, courroie_id: 11, image_url: "/public/Ctrapez/etroite/spb/2.jpg" },
-      { id: 93, courroie_id: 11, image_url: "/public/Ctrapez/etroite/spb/3.jpg" }
+      { id: 91, courroie_id: 11, image_url: "/public/Ctrapez/etroite/spb/1.webp" },
+      { id: 92, courroie_id: 11, image_url: "/public/Ctrapez/etroite/spb/2.webp" },
+      { id: 93, courroie_id: 11, image_url: "/public/Ctrapez/etroite/spb/3.webp" }
     ],
     fiches: [
-      { id: 31, courroie_id: 11, fiche_technique_url: "/public/Ctrapez/etroite/narrow.png" }
+      { id: 31, courroie_id: 11, fiche_technique_url: "/public/Ctrapez/etroite/narrow.webp" }
     ],
     matieres: [
       { id: 66, courroie_id: 11, matiere: "CR" },
@@ -309,12 +309,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 94, courroie_id: 12, image_url: "/public/Ctrapez/etroite/spc/1.jpg" },
-      { id: 95, courroie_id: 12, image_url: "/public/Ctrapez/etroite/spc/2.jpg" },
-      { id: 96, courroie_id: 12, image_url: "/public/Ctrapez/etroite/spc/3.jpg" }
+      { id: 94, courroie_id: 12, image_url: "/public/Ctrapez/etroite/spc/1.webp" },
+      { id: 95, courroie_id: 12, image_url: "/public/Ctrapez/etroite/spc/2.webp" },
+      { id: 96, courroie_id: 12, image_url: "/public/Ctrapez/etroite/spc/3.webp" }
     ],
     fiches: [
-      { id: 32, courroie_id: 12, fiche_technique_url: "/public/Ctrapez/etroite/narrow.png" }
+      { id: 32, courroie_id: 12, fiche_technique_url: "/public/Ctrapez/etroite/narrow.webp" }
     ],
     matieres: [
       { id: 68, courroie_id: 12, matiere: "CR" },
@@ -336,12 +336,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 97, courroie_id: 13, image_url: "/public/Ctrapez/etroite/3vx/1.jpeg" },
-      { id: 98, courroie_id: 13, image_url: "/public/Ctrapez/etroite/3vx/2.jpeg" },
-      { id: 99, courroie_id: 13, image_url: "/public/Ctrapez/etroite/3vx/3.jpeg" }
+      { id: 97, courroie_id: 13, image_url: "/public/Ctrapez/etroite/3vx/1.webp" },
+      { id: 98, courroie_id: 13, image_url: "/public/Ctrapez/etroite/3vx/2.webp" },
+      { id: 99, courroie_id: 13, image_url: "/public/Ctrapez/etroite/3vx/3.webp" }
     ],
     fiches: [
-      { id: 33, courroie_id: 13, fiche_technique_url: "/public/Ctrapez/etroite/narrow.png" }
+      { id: 33, courroie_id: 13, fiche_technique_url: "/public/Ctrapez/etroite/narrow.webp" }
     ],
     matieres: [
       { id: 70, courroie_id: 13, matiere: "CR" },
@@ -363,12 +363,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 9997, courroie_id: 14, image_url: "/public/Ctrapez/etroite/5vx/1.jpeg" },
-      { id: 9998, courroie_id: 14, image_url: "/public/Ctrapez/etroite/5vx/2.jpeg" },
-      { id: 9999, courroie_id: 14, image_url: "/public/Ctrapez/etroite/5vx/3.jpeg" }
+      { id: 9997, courroie_id: 14, image_url: "/public/Ctrapez/etroite/5vx/1.webp" },
+      { id: 9998, courroie_id: 14, image_url: "/public/Ctrapez/etroite/5vx/2.webp" },
+      { id: 9999, courroie_id: 14, image_url: "/public/Ctrapez/etroite/5vx/3.webp" }
     ],
     fiches: [
-      { id: 99933, courroie_id: 14, fiche_technique_url: "/public/Ctrapez/etroite/narrow.png" }
+      { id: 99933, courroie_id: 14, fiche_technique_url: "/public/Ctrapez/etroite/narrow.webp" }
     ],
     matieres: [
       { id: 99970, courroie_id: 14, matiere: "CR" },
@@ -390,12 +390,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Catalogue",
     application: "industry",
     images: [
-      { id: 103, courroie_id: 15, image_url: "/public/Ctrapez/etroite/8vx/1.jpeg" },
-      { id: 104, courroie_id: 15, image_url: "/public/Ctrapez/etroite/8vx/2.jpeg" },
-      { id: 105, courroie_id: 15, image_url: "/public/Ctrapez/etroite/8vx/3.jpeg" }
+      { id: 103, courroie_id: 15, image_url: "/public/Ctrapez/etroite/8vx/1.webp" },
+      { id: 104, courroie_id: 15, image_url: "/public/Ctrapez/etroite/8vx/2.webp" },
+      { id: 105, courroie_id: 15, image_url: "/public/Ctrapez/etroite/8vx/3.webp" }
     ],
     fiches: [
-      { id: 35, courroie_id: 15, fiche_technique_url: "/public/Ctrapez/etroite/narrow.png" }
+      { id: 35, courroie_id: 15, fiche_technique_url: "/public/Ctrapez/etroite/narrow.webp" }
     ],
     matieres: [
       { id: 74, courroie_id: 15, matiere: "CR" },
@@ -417,12 +417,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Multiple Catalogue",
     application: "industry",
     images: [
-      { id: 115, courroie_id: 19, image_url: "/public/Ctrapez/etroiteMultiple/1.jpg" },
-      { id: 116, courroie_id: 19, image_url: "/public/Ctrapez/etroiteMultiple/2.jpg" },
-      { id: 117, courroie_id: 19, image_url: "/public/Ctrapez/etroiteMultiple/3.jpg" }
+      { id: 115, courroie_id: 19, image_url: "/public/Ctrapez/etroiteMultiple/1.webp" },
+      { id: 116, courroie_id: 19, image_url: "/public/Ctrapez/etroiteMultiple/2.webp" },
+      { id: 117, courroie_id: 19, image_url: "/public/Ctrapez/etroiteMultiple/3.webp" }
     ],
     fiches: [
-      { id: 39, courroie_id: 19, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.png" }
+      { id: 39, courroie_id: 19, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.webp" }
     ],
     matieres: [
       { id: 82, courroie_id: 19, matiere: "CR" },
@@ -444,12 +444,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Multiple Catalogue",
     application: "industry",
     images: [
-      { id: 118, courroie_id: 20, image_url: "/public/Ctrapez/etroiteMultiple/hspa/1.jpg" },
-      { id: 119, courroie_id: 20, image_url: "/public/Ctrapez/etroiteMultiple/hspa/2.jpg" },
-      { id: 120, courroie_id: 20, image_url: "/public/Ctrapez/etroiteMultiple/hspa/3.jpg" }
+      { id: 118, courroie_id: 20, image_url: "/public/Ctrapez/etroiteMultiple/hspa/1.webp" },
+      { id: 119, courroie_id: 20, image_url: "/public/Ctrapez/etroiteMultiple/hspa/2.webp" },
+      { id: 120, courroie_id: 20, image_url: "/public/Ctrapez/etroiteMultiple/hspa/3.webp" }
     ],
     fiches: [
-      { id: 40, courroie_id: 20, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.png" }
+      { id: 40, courroie_id: 20, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.webp" }
     ],
     matieres: [
       { id: 84, courroie_id: 20, matiere: "CR" },
@@ -471,12 +471,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Multiple Catalogue",
     application: "industry",
     images: [
-      { id: 121, courroie_id: 21, image_url: "/public/Ctrapez/etroiteMultiple/hspb/1.jpg" },
-      { id: 122, courroie_id: 21, image_url: "/public/Ctrapez/etroiteMultiple/hspb/2.jpg" },
-      { id: 123, courroie_id: 21, image_url: "/public/Ctrapez/etroiteMultiple/hspb/3.jpg" }
+      { id: 121, courroie_id: 21, image_url: "/public/Ctrapez/etroiteMultiple/hspb/1.webp" },
+      { id: 122, courroie_id: 21, image_url: "/public/Ctrapez/etroiteMultiple/hspb/2.webp" },
+      { id: 123, courroie_id: 21, image_url: "/public/Ctrapez/etroiteMultiple/hspb/3.webp" }
     ],
     fiches: [
-      { id: 41, courroie_id: 21, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.png" }
+      { id: 41, courroie_id: 21, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.webp" }
     ],
     matieres: [
       { id: 86, courroie_id: 21, matiere: "CR" },
@@ -498,12 +498,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Multiple Catalogue",
     application: "industry",
     images: [
-      { id: 124, courroie_id: 22, image_url: "/public/Ctrapez/etroiteMultiple/hspc/1.jpg" },
-      { id: 125, courroie_id: 22, image_url: "/public/Ctrapez/etroiteMultiple/hspc/2.jpg" },
-      { id: 126, courroie_id: 22, image_url: "/public/Ctrapez/etroiteMultiple/hspc/3.jpg" }
+      { id: 124, courroie_id: 22, image_url: "/public/Ctrapez/etroiteMultiple/hspc/1.webp" },
+      { id: 125, courroie_id: 22, image_url: "/public/Ctrapez/etroiteMultiple/hspc/2.webp" },
+      { id: 126, courroie_id: 22, image_url: "/public/Ctrapez/etroiteMultiple/hspc/3.webp" }
     ],
     fiches: [
-      { id: 42, courroie_id: 22, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.png" }
+      { id: 42, courroie_id: 22, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.webp" }
     ],
     matieres: [
       { id: 88, courroie_id: 22, matiere: "CR" },
@@ -525,12 +525,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Multiple Catalogue",
     application: "industry",
     images: [
-      { id: 127, courroie_id: 23, image_url: "/public/Ctrapez/etroiteMultiple/h3v/1.jpg" },
-      { id: 128, courroie_id: 23, image_url: "/public/Ctrapez/etroiteMultiple/h3v/2.jpg" },
-      { id: 129, courroie_id: 23, image_url: "/public/Ctrapez/etroiteMultiple/h3v/multiple.jpg" }
+      { id: 127, courroie_id: 23, image_url: "/public/Ctrapez/etroiteMultiple/h3v/1.webp" },
+      { id: 128, courroie_id: 23, image_url: "/public/Ctrapez/etroiteMultiple/h3v/2.webp" },
+      { id: 129, courroie_id: 23, image_url: "/public/Ctrapez/etroiteMultiple/h3v/multiple.webp" }
     ],
     fiches: [
-      { id: 43, courroie_id: 23, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.png" }
+      { id: 43, courroie_id: 23, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.webp" }
     ],
     matieres: [
       { id: 90, courroie_id: 23, matiere: "CR" },
@@ -552,12 +552,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Multiple Catalogue",
     application: "industry",
     images: [
-      { id: 130, courroie_id: 24, image_url: "/public/Ctrapez/etroiteMultiple/h5v/1.jpg" },
-      { id: 131, courroie_id: 24, image_url: "/public/Ctrapez/etroiteMultiple/h5v/2.jpg" },
-      { id: 132, courroie_id: 24, image_url: "/public/Ctrapez/etroiteMultiple/h5v/3.jpg" }
+      { id: 130, courroie_id: 24, image_url: "/public/Ctrapez/etroiteMultiple/h5v/1.webp" },
+      { id: 131, courroie_id: 24, image_url: "/public/Ctrapez/etroiteMultiple/h5v/2.webp" },
+      { id: 132, courroie_id: 24, image_url: "/public/Ctrapez/etroiteMultiple/h5v/3.webp" }
     ],
     fiches: [
-      { id: 44, courroie_id: 24, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.png" }
+      { id: 44, courroie_id: 24, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.webp" }
     ],
     matieres: [
       { id: 92, courroie_id: 24, matiere: "CR" },
@@ -579,12 +579,12 @@ const courroieData = [
     source_catalogue: "Narrow V Belt Multiple Catalogue",
     application: "industry",
     images: [
-      { id: 133, courroie_id: 25, image_url: "/public/Ctrapez/etroiteMultiple/h8v/1.jpg" },
-      { id: 134, courroie_id: 25, image_url: "/public/Ctrapez/etroiteMultiple/h8v/2.jpg" },
-      { id: 135, courroie_id: 25, image_url: "/public/Ctrapez/etroiteMultiple/h8v/3.jpg" }
+      { id: 133, courroie_id: 25, image_url: "/public/Ctrapez/etroiteMultiple/h8v/1.webp" },
+      { id: 134, courroie_id: 25, image_url: "/public/Ctrapez/etroiteMultiple/h8v/2.webp" },
+      { id: 135, courroie_id: 25, image_url: "/public/Ctrapez/etroiteMultiple/h8v/3.webp" }
     ],
     fiches: [
-      { id: 45, courroie_id: 25, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.png" }
+      { id: 45, courroie_id: 25, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/narrow_multiple.webp" }
     ],
     matieres: [
       { id: 94, courroie_id: 25, matiere: "CR" },
@@ -609,9 +609,9 @@ const courroieData = [
     poids_g_m: "85",
     application: "industry",
     images: [
-      { id: 136, courroie_id: 26, image_url: "/public/Ctrapez/etroiteMultiple/xpz/1.jpg" },
-      { id: 137, courroie_id: 26, image_url: "/public/Ctrapez/etroiteMultiple/xpz/2.jpg" },
-      { id: 138, courroie_id: 26, image_url: "/public/Ctrapez/etroiteMultiple/xpz/3.jpg" }
+      { id: 136, courroie_id: 26, image_url: "/public/Ctrapez/etroiteMultiple/xpz/1.webp" },
+      { id: 137, courroie_id: 26, image_url: "/public/Ctrapez/etroiteMultiple/xpz/2.webp" },
+      { id: 138, courroie_id: 26, image_url: "/public/Ctrapez/etroiteMultiple/xpz/3.webp" }
     ],
     fiches: [
       { id: 46, courroie_id: 26, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/xpz.pdf" }
@@ -639,9 +639,9 @@ const courroieData = [
     poids_g_m: "55",
     application: "industry",
     images: [
-      { id: 139, courroie_id: 27, image_url: "/public/Ctrapez/etroiteMultiple/xpa/1.jpg" },
-      { id: 140, courroie_id: 27, image_url: "/public/Ctrapez/etroiteMultiple/xpa/2.jpg" },
-      { id: 141, courroie_id: 27, image_url: "/public/Ctrapez/etroiteMultiple/xpa/3.jpg" }
+      { id: 139, courroie_id: 27, image_url: "/public/Ctrapez/etroiteMultiple/xpa/1.webp" },
+      { id: 140, courroie_id: 27, image_url: "/public/Ctrapez/etroiteMultiple/xpa/2.webp" },
+      { id: 141, courroie_id: 27, image_url: "/public/Ctrapez/etroiteMultiple/xpa/3.webp" }
     ],
     fiches: [
       { id: 47, courroie_id: 27, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/xpa.pdf" }
@@ -669,9 +669,9 @@ const courroieData = [
     poids_g_m: "70",
     application: "industry",
     images: [
-      { id: 142, courroie_id: 28, image_url: "/public/Ctrapez/etroiteMultiple/xpb/1.jpg" },
-      { id: 143, courroie_id: 28, image_url: "/public/Ctrapez/etroiteMultiple/xpb/2.jpg" },
-      { id: 144, courroie_id: 28, image_url: "/public/Ctrapez/etroiteMultiple/xpb/3.jpg" }
+      { id: 142, courroie_id: 28, image_url: "/public/Ctrapez/etroiteMultiple/xpb/1.webp" },
+      { id: 143, courroie_id: 28, image_url: "/public/Ctrapez/etroiteMultiple/xpb/2.webp" },
+      { id: 144, courroie_id: 28, image_url: "/public/Ctrapez/etroiteMultiple/xpb/3.webp" }
     ],
     fiches: [
       { id: 48, courroie_id: 28, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/xpb.pdf" }
@@ -699,9 +699,9 @@ const courroieData = [
     poids_g_m: "100",
     application: "industry",
     images: [
-      { id: 145, courroie_id: 29, image_url: "/public/Ctrapez/etroiteMultiple/xpc/1.jpg" },
-      { id: 146, courroie_id: 29, image_url: "/public/Ctrapez/etroiteMultiple/xpc/2.jpg" },
-      { id: 147, courroie_id: 29, image_url: "/public/Ctrapez/etroiteMultiple/xpc/3.jpg" }
+      { id: 145, courroie_id: 29, image_url: "/public/Ctrapez/etroiteMultiple/xpc/1.webp" },
+      { id: 146, courroie_id: 29, image_url: "/public/Ctrapez/etroiteMultiple/xpc/2.webp" },
+      { id: 147, courroie_id: 29, image_url: "/public/Ctrapez/etroiteMultiple/xpc/3.webp" }
     ],
     fiches: [
       { id: 49, courroie_id: 29, fiche_technique_url: "/public/Ctrapez/etroiteMultiple/xpc.pdf" }
@@ -712,7 +712,7 @@ const courroieData = [
     ]
   },
   {
-  id: 23,
+  id: 279,
   nom: "Banded Cogged Narrow V-Belt RXPZ",
   subcategory_id: 5,
   profil: "RXPZ",
@@ -726,9 +726,9 @@ const courroieData = [
   source_catalogue: "Banded Cogged Narrow V Belt Catalogue",
   application: "industry",
   images: [
-    { id: 124, courroie_id: 22, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpz/1.jpg" },
-    { id: 125, courroie_id: 22, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpz/2.jpg" },
-    { id: 126, courroie_id: 22, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpz/3.jpg" }
+    { id: 124, courroie_id: 22, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpz/1.webp" },
+    { id: 125, courroie_id: 22, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpz/2.webp" },
+    { id: 126, courroie_id: 22, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpz/3.webp" }
   ],
   fiches: [
     { id: 42, courroie_id: 22, fiche_technique_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpz.pdf" }
@@ -739,7 +739,7 @@ const courroieData = [
   ]
 },
 {
-  id: 24,
+  id: 280,
   nom: "Banded Cogged Narrow V-Belt RXPA",
   subcategory_id: 5,
   profil: "RXPA",
@@ -753,9 +753,9 @@ const courroieData = [
   source_catalogue: "Banded Cogged Narrow V Belt Catalogue",
   application: "industry",
   images: [
-    { id: 124, courroie_id: 24, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpa/1.jpg" },
-    { id: 125, courroie_id: 24, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpa/2.jpg" },
-    { id: 126, courroie_id: 24, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpa/3.jpg" }
+    { id: 124, courroie_id: 24, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpa/1.webp" },
+    { id: 125, courroie_id: 24, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpa/2.webp" },
+    { id: 126, courroie_id: 24, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpa/3.webp" }
   ],
   fiches: [
     { id: 42, courroie_id: 24, fiche_technique_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpa.pdf" }
@@ -766,7 +766,7 @@ const courroieData = [
   ]
 },
 {
-  id: 25,
+  id: 281,
   nom: "Banded Cogged Narrow V-Belt RXPB",
   subcategory_id: 5,
   profil: "RXPB",
@@ -780,9 +780,9 @@ const courroieData = [
   source_catalogue: "Banded Cogged Narrow V Belt Catalogue",
   application: "industry",
   images: [
-    { id: 124, courroie_id: 25, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpb/1.jpg" },
-    { id: 125, courroie_id: 25, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpb/2.jpg" },
-    { id: 126, courroie_id: 25, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpb/3.jpg" }
+    { id: 124, courroie_id: 25, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpb/1.webp" },
+    { id: 125, courroie_id: 25, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpb/2.webp" },
+    { id: 126, courroie_id: 25, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpb/3.webp" }
   ],
   fiches: [
     { id: 42, courroie_id: 25, fiche_technique_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpb.pdf" }
@@ -793,7 +793,7 @@ const courroieData = [
   ]
 },
 {
-  id: 26,
+  id: 282,
   nom: "Banded Cogged Narrow V-Belt RXPC",
   subcategory_id: 5,
   profil: "RXPC",
@@ -807,9 +807,9 @@ const courroieData = [
   source_catalogue: "Banded Cogged Narrow V Belt Catalogue",
   application: "industry",
   images: [
-    { id: 124, courroie_id: 26, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpc/1.jpg" },
-    { id: 125, courroie_id: 26, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpc/2.jpg" },
-    { id: 126, courroie_id: 26, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpc/3.jpg" }
+    { id: 124, courroie_id: 26, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpc/1.webp" },
+    { id: 125, courroie_id: 26, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpc/2.webp" },
+    { id: 126, courroie_id: 26, image_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpc/3.webp" }
   ],
   fiches: [
     { id: 42, courroie_id: 26, fiche_technique_url: "/public/Ctrapez/etroiteCranteeMultiple/rxpc.pdf" }
@@ -820,7 +820,7 @@ const courroieData = [
   ]
 },
 {
-  id: 27,
+  id: 283,
   nom: "Banded Cogged V Belt RZX",
   subcategory_id: 6,
   profil: "RZX",
@@ -833,9 +833,9 @@ const courroieData = [
   poids_g_m: "80",
   application: "industry",
   images: [
-    { id: 136, courroie_id: 27, image_url: "/public/Ctrapez/cranteeClassicMultiple/rzx/1.jpg" },
-    { id: 137, courroie_id: 27, image_url: "/public/Ctrapez/cranteeClassicMultiple/rzx/2.jpg" },
-    { id: 138, courroie_id: 27, image_url: "/public/Ctrapez/cranteeClassicMultiple/rzx/3.jpg" }
+    { id: 136, courroie_id: 27, image_url: "/public/Ctrapez/cranteeClassicMultiple/rzx/1.webp" },
+    { id: 137, courroie_id: 27, image_url: "/public/Ctrapez/cranteeClassicMultiple/rzx/2.webp" },
+    { id: 138, courroie_id: 27, image_url: "/public/Ctrapez/cranteeClassicMultiple/rzx/3.webp" }
   ],
   fiches: [
     { id: 46, courroie_id: 27, fiche_technique_url: "/public/Ctrapez/cranteeClassicMultiple/rzx/bandedCoged.pdf" }
@@ -860,9 +860,9 @@ const courroieData = [
   poids_g_m: "140",
   application: "industry",
   images: [
-    { id: 139, courroie_id: 31, image_url: "/public/Ctrapez/cranteeClassicMultiple/rax/1.jpg" },
-    { id: 140, courroie_id: 31, image_url: "/public/Ctrapez/cranteeClassicMultiple/rax/2.jpg" },
-    { id: 141, courroie_id: 31, image_url: "/public/Ctrapez/cranteeClassicMultiple/rax/3.jpg" }
+    { id: 139, courroie_id: 31, image_url: "/public/Ctrapez/cranteeClassicMultiple/rax/1.webp" },
+    { id: 140, courroie_id: 31, image_url: "/public/Ctrapez/cranteeClassicMultiple/rax/2.webp" },
+    { id: 141, courroie_id: 31, image_url: "/public/Ctrapez/cranteeClassicMultiple/rax/3.webp" }
   ],
   fiches: [
     { id: 47, courroie_id: 31, fiche_technique_url: "/public/Ctrapez/cranteeClassicMultiple/rax/bandedCoged.pdf" }
@@ -886,9 +886,9 @@ const courroieData = [
   poids_g_m: "240",
   application: "industry",
   images: [
-    { id: 142, courroie_id: 32, image_url: "/public/Ctrapez/cranteeClassicMultiple/rbx/1.jpg" },
-    { id: 143, courroie_id: 32, image_url: "/public/Ctrapez/cranteeClassicMultiple/rbx/2.jpg" },
-    { id: 144, courroie_id: 32, image_url: "/public/Ctrapez/cranteeClassicMultiple/rbx/3.jpg" }
+    { id: 142, courroie_id: 32, image_url: "/public/Ctrapez/cranteeClassicMultiple/rbx/1.webp" },
+    { id: 143, courroie_id: 32, image_url: "/public/Ctrapez/cranteeClassicMultiple/rbx/2.webp" },
+    { id: 144, courroie_id: 32, image_url: "/public/Ctrapez/cranteeClassicMultiple/rbx/3.webp" }
   ],
   fiches: [
     { id: 48, courroie_id: 32, fiche_technique_url: "/public/Ctrapez/cranteeClassicMultiple/rbx/bandedCoged.pdf" }
@@ -912,9 +912,9 @@ const courroieData = [
   poids_g_m: "420",
   application: "industry",
   images: [
-    { id: 145, courroie_id: 33, image_url: "/public/Ctrapez/cranteeClassicMultiple/rcx/1.jpg" },
-    { id: 146, courroie_id: 33, image_url: "/public/Ctrapez/cranteeClassicMultiple/rcx/2.jpg" },
-    { id: 147, courroie_id: 33, image_url: "/public/Ctrapez/cranteeClassicMultiple/rcx/3.jpg" }
+    { id: 145, courroie_id: 33, image_url: "/public/Ctrapez/cranteeClassicMultiple/rcx/1.webp" },
+    { id: 146, courroie_id: 33, image_url: "/public/Ctrapez/cranteeClassicMultiple/rcx/2.webp" },
+    { id: 147, courroie_id: 33, image_url: "/public/Ctrapez/cranteeClassicMultiple/rcx/3.webp" }
   ],
   fiches: [
     { id: 49, courroie_id: 33, fiche_technique_url: "/public/Ctrapez/cranteeClassicMultiple/rcx/bandedCoged.pdf" }
@@ -938,9 +938,9 @@ const courroieData = [
   poids_g_m: "750",
   application: "industry",
   images: [
-    { id: 148, courroie_id: 34, image_url: "/public/Ctrapez/cranteeClassicMultiple/rdx/1.jpg" },
-    { id: 149, courroie_id: 34, image_url: "/public/Ctrapez/cranteeClassicMultiple/rdx/2.jpg" },
-    { id: 150, courroie_id: 34, image_url: "/public/Ctrapez/cranteeClassicMultiple/rdx/3.jpg" }
+    { id: 148, courroie_id: 34, image_url: "/public/Ctrapez/cranteeClassicMultiple/rdx/1.webp" },
+    { id: 149, courroie_id: 34, image_url: "/public/Ctrapez/cranteeClassicMultiple/rdx/2.webp" },
+    { id: 150, courroie_id: 34, image_url: "/public/Ctrapez/cranteeClassicMultiple/rdx/3.webp" }
   ],
   fiches: [
     { id: 50, courroie_id: 34, fiche_technique_url: "/public/Ctrapez/cranteeClassicMultiple/rdx/bandedCoged.pdf" }
@@ -963,9 +963,9 @@ const courroieData = [
   poids_g_m: "100",
   application: "industry",
   images: [
-    { id: 175, courroie_id: 35, image_url: "/public/Variateur/Variateur.jpg" },
-    { id: 176, courroie_id: 35, image_url: "/public/Variateur/Variateur.jpg" },
-    { id: 177, courroie_id: 35, image_url: "/public/Variateur/Variateur.jpg" }
+    { id: 175, courroie_id: 35, image_url: "/public/Variateur/Variateur.webp" },
+    { id: 176, courroie_id: 35, image_url: "/public/Variateur/Variateur.webp" },
+    { id: 177, courroie_id: 35, image_url: "/public/Variateur/Variateur.webp" }
   ],
   fiches: [
     { id: 59, courroie_id: 35, fiche_technique_url: "/public/Variateur/Variateur.pdf" }
@@ -989,8 +989,8 @@ const courroieData = [
   poids_g_m: "150",
   application: "industry",
   images: [
-    { id: 100, courroie_id: 39, image_url: "/public/hexagonal/2.jpg" },
-    { id: 101, courroie_id: 39, image_url: "/public/hexagonal/hexagonal.png" },
+    { id: 100, courroie_id: 39, image_url: "/public/hexagonal/2.webp" },
+    { id: 101, courroie_id: 39, image_url: "/public/hexagonal/hexagonal.webp" },
     
   ],
   fiches: [
@@ -1015,8 +1015,8 @@ const courroieData = [
   poids_g_m: "250",
   application: "industry",
   images: [
-    { id: 103, courroie_id: 40, image_url: "/public/hexagonal/1.jpg" },
-    { id: 104, courroie_id: 40, image_url: "/public/hexagonal/hexagonal.png" }
+    { id: 103, courroie_id: 40, image_url: "/public/hexagonal/1.webp" },
+    { id: 104, courroie_id: 40, image_url: "/public/hexagonal/hexagonal.webp" }
     
   ],
   fiches: [
@@ -1041,8 +1041,8 @@ const courroieData = [
   poids_g_m: "440",
   application: "industry",
   images: [
-    { id: 106, courroie_id: 41, image_url: "/public/hexagonal/3.jpg" },
-    { id: 107, courroie_id: 41, image_url: "/public/hexagonal/hexagonal.png" }
+    { id: 106, courroie_id: 41, image_url: "/public/hexagonal/3.webp" },
+    { id: 107, courroie_id: 41, image_url: "/public/hexagonal/hexagonal.webp" }
     
   ],
   fiches: [
@@ -1066,9 +1066,9 @@ const courroieData = [
   poids_g_m: "8",
   application: "industry",
   images: [
-    { id: 22, courroie_id: 42, image_url: "/public/polyv/ph/1.jpg" },
-    { id: 23, courroie_id: 42, image_url: "/public/polyv/ph/2.jpg" },
-    { id: 24, courroie_id: 42, image_url: "/public/polyv/ph/3.jpg" }
+    { id: 22, courroie_id: 42, image_url: "/public/polyv/ph/1.webp" },
+    { id: 23, courroie_id: 42, image_url: "/public/polyv/ph/2.webp" },
+    { id: 24, courroie_id: 42, image_url: "/public/polyv/ph/3.webp" }
   ],
   fiches: [
     { id: 8, courroie_id: 42, fiche_technique_url: "/public/polyv/polyv.pdf" }
@@ -1091,9 +1091,9 @@ const courroieData = [
   poids_g_m: "10",
   application: "industry",
   images: [
-    { id: 25, courroie_id: 43, image_url: "/public/polyv/pj/1.jpg" },
-    { id: 26, courroie_id: 43, image_url: "/public/polyv/pj/2.png" },
-    { id: 27, courroie_id: 43, image_url: "/public/polyv/pj/3.jpeg" }
+    { id: 25, courroie_id: 43, image_url: "/public/polyv/pj/1.webp" },
+    { id: 26, courroie_id: 43, image_url: "/public/polyv/pj/2.webp" },
+    { id: 27, courroie_id: 43, image_url: "/public/polyv/pj/3.webp" }
   ],
   fiches: [
     { id: 9, courroie_id: 43, fiche_technique_url: "/public/polyv/polyv.pdf" }
@@ -1116,9 +1116,9 @@ const courroieData = [
   poids_g_m: "20",
   application: "automotive",
   images: [
-    { id: 28, courroie_id: 44, image_url: "/public/polyv/pk/1.jpg" },
-    { id: 29, courroie_id: 44, image_url: "/public/polyv/pk/2.jpg" },
-    { id: 329, courroie_id: 44, image_url: "/public/polyv/pk/3.jpeg" }
+    { id: 28, courroie_id: 44, image_url: "/public/polyv/pk/1.webp" },
+    { id: 29, courroie_id: 44, image_url: "/public/polyv/pk/2.webp" },
+    { id: 329, courroie_id: 44, image_url: "/public/polyv/pk/3.webp" }
   ],
   fiches: [
     { id: 10, courroie_id: 44, fiche_technique_url: "/public/polyv/polyv.pdf" }
@@ -1141,9 +1141,9 @@ const courroieData = [
   poids_g_m: "36",
   application: "industry",
   images: [
-    { id: 31, courroie_id: 45, image_url: "/public/polyv/pl/1.jpg" },
-    { id: 32, courroie_id: 45, image_url: "/public/polyv/pl/2.jpg" },
-    { id: 532, courroie_id: 45, image_url: "/public/polyv/pl/3.jpg" }
+    { id: 31, courroie_id: 45, image_url: "/public/polyv/pl/1.webp" },
+    { id: 32, courroie_id: 45, image_url: "/public/polyv/pl/2.webp" },
+    { id: 532, courroie_id: 45, image_url: "/public/polyv/pl/3.webp" }
   ],
   fiches: [
     { id: 11, courroie_id: 45, fiche_technique_url: "/public/polyv/polyv.pdf" }
@@ -1166,9 +1166,9 @@ const courroieData = [
   poids_g_m: "124",
   application: "industry",
   images: [
-    { id: 34, courroie_id: 46, image_url: "/public/polyv/pm/1.jpg" },
-    { id: 35, courroie_id: 46, image_url: "/public/polyv/pm/2.jpg" },
-    { id: 535, courroie_id: 46, image_url: "/public/polyv/pm/3.jpg" }
+    { id: 34, courroie_id: 46, image_url: "/public/polyv/pm/1.webp" },
+    { id: 35, courroie_id: 46, image_url: "/public/polyv/pm/2.webp" },
+    { id: 535, courroie_id: 46, image_url: "/public/polyv/pm/3.webp" }
   ],
   fiches: [
     { id: 12, courroie_id: 46, fiche_technique_url: "/public/polyv/polyv.pdf" }
@@ -1192,9 +1192,9 @@ const courroieData = [
     poids_g_m: "2,3",
     application: "industry",
     images: [
-      { id: 4701, courroie_id: 47, image_url: "/public/Csynchrone/ouverte/htd/2m/1.jpg" },
-      { id: 4702, courroie_id: 47, image_url: "/public/Csynchrone/ouverte/htd/2m/2.jpg" },
-      { id: 4703, courroie_id: 47, image_url: "/public/Csynchrone/ouverte/htd/2m/3.jpg" }
+      { id: 4701, courroie_id: 47, image_url: "/public/Csynchrone/ouverte/htd/2m/1.webp" },
+      { id: 4702, courroie_id: 47, image_url: "/public/Csynchrone/ouverte/htd/2m/2.webp" },
+      { id: 4703, courroie_id: 47, image_url: "/public/Csynchrone/ouverte/htd/2m/3.webp" }
     ],
     fiches: [
       { id: 4701, courroie_id: 47, fiche_technique_url: "/public/Csynchrone/ouverte/htd/fich_htd.pdf" }
@@ -1217,9 +1217,9 @@ const courroieData = [
     poids_g_m: "2,9",
     application: "industry",
     images: [
-      { id: 4801, courroie_id: 48, image_url: "/public/Csynchrone/ouverte/htd/3m/1.jpg" },
-      { id: 4802, courroie_id: 48, image_url: "/public/Csynchrone/ouverte/htd/3m/2.jpg" },
-      { id: 4803, courroie_id: 48, image_url: "/public/Csynchrone/ouverte/htd/3m/3.jpg" }
+      { id: 4801, courroie_id: 48, image_url: "/public/Csynchrone/ouverte/htd/3m/1.webp" },
+      { id: 4802, courroie_id: 48, image_url: "/public/Csynchrone/ouverte/htd/3m/2.webp" },
+      { id: 4803, courroie_id: 48, image_url: "/public/Csynchrone/ouverte/htd/3m/3.webp" }
     ],
     fiches: [
       { id: 4801, courroie_id: 48, fiche_technique_url: "/public/Csynchrone/ouverte/htd/fich_htd.pdf" }
@@ -1242,8 +1242,8 @@ const courroieData = [
     poids_g_m: "3,8",
     application: "industry",
     images: [
-      { id: 4901, courroie_id: 49, image_url: "/public/Csynchrone/ouverte/htd/5m/1.jpg" },
-      { id: 4902, courroie_id: 49, image_url: "/public/Csynchrone/ouverte/htd/5m/2.jpg" }
+      { id: 4901, courroie_id: 49, image_url: "/public/Csynchrone/ouverte/htd/5m/1.webp" },
+      { id: 4902, courroie_id: 49, image_url: "/public/Csynchrone/ouverte/htd/5m/2.webp" }
     ],
     fiches: [
       { id: 4901, courroie_id: 49, fiche_technique_url: "/public/Csynchrone/ouverte/htd/fich_htd.pdf" }
@@ -1266,8 +1266,8 @@ const courroieData = [
     poids_g_m: "6,6",
     application: "industry",
     images: [
-      { id: 5001, courroie_id: 50, image_url: "/public/Csynchrone/ouverte/htd/8m/1.jpg" },
-      { id: 5002, courroie_id: 50, image_url: "/public/Csynchrone/ouverte/htd/8m/2.jpg" }
+      { id: 5001, courroie_id: 50, image_url: "/public/Csynchrone/ouverte/htd/8m/1.webp" },
+      { id: 5002, courroie_id: 50, image_url: "/public/Csynchrone/ouverte/htd/8m/2.webp" }
     ],
     fiches: [
       { id: 5001, courroie_id: 50, fiche_technique_url: "/public/Csynchrone/ouverte/htd/fich_htd.pdf" }
@@ -1290,8 +1290,8 @@ const courroieData = [
     poids_g_m: "11,1",
     application: "industry",
     images: [
-      { id: 5101, courroie_id: 51, image_url: "/public/Csynchrone/ouverte/htd/14m/1.jpg" },
-      { id: 5102, courroie_id: 51, image_url: "/public/Csynchrone/ouverte/htd/14m/2.jpg" }
+      { id: 5101, courroie_id: 51, image_url: "/public/Csynchrone/ouverte/htd/14m/1.webp" },
+      { id: 5102, courroie_id: 51, image_url: "/public/Csynchrone/ouverte/htd/14m/2.webp" }
     ],
     fiches: [
       { id: 5101, courroie_id: 51, fiche_technique_url: "/public/Csynchrone/ouverte/htd/fich_htd.pdf" }
@@ -1314,7 +1314,7 @@ const courroieData = [
     poids_g_m: "17,7",
     application: "industry",
     images: [
-      { id: 5201, courroie_id: 52, image_url: "/public/Csynchrone/ouverte/htd/20m/1.jpg" }
+      { id: 5201, courroie_id: 52, image_url: "/public/Csynchrone/ouverte/htd/20m/1.webp" }
     ],
     fiches: [
       { id: 5201, courroie_id: 52, fiche_technique_url: "/public/Csynchrone/ouverte/htd/fich_htd.pdf" }
@@ -1337,9 +1337,9 @@ const courroieData = [
     poids_g_m: "2,3",
     application: "industry",
     images: [
-      { id: 5301, courroie_id: 53, image_url: "/public/Csynchrone/fermee/htd/2m/1.jpg" },
-            { id: 5302, courroie_id: 53, image_url: "/public/Csynchrone/fermee/htd/2m/2.jpg" },
-      { id: 5303, courroie_id: 53, image_url: "/public/Csynchrone/fermee/htd/2m/3.jpg" }
+      { id: 5301, courroie_id: 53, image_url: "/public/Csynchrone/fermee/htd/2m/1.webp" },
+            { id: 5302, courroie_id: 53, image_url: "/public/Csynchrone/fermee/htd/2m/2.webp" },
+      { id: 5303, courroie_id: 53, image_url: "/public/Csynchrone/fermee/htd/2m/3.webp" }
     ],
     fiches: [
       { id: 5301, courroie_id: 53, fiche_technique_url: "/public/Csynchrone/fermee/htd/fich_htd.pdf" }
@@ -1362,9 +1362,9 @@ const courroieData = [
     poids_g_m: "2,9",
     application: "industry",
     images: [
-      { id: 5401, courroie_id: 54, image_url: "/public/Csynchrone/fermee/htd/3m/1.jpg" },
-      { id: 5402, courroie_id: 54, image_url: "/public/Csynchrone/fermee/htd/3m/2.jpg" },
-      { id: 5403, courroie_id: 54, image_url: "/public/Csynchrone/fermee/htd/3m/3.jpg" }
+      { id: 5401, courroie_id: 54, image_url: "/public/Csynchrone/fermee/htd/3m/1.webp" },
+      { id: 5402, courroie_id: 54, image_url: "/public/Csynchrone/fermee/htd/3m/2.webp" },
+      { id: 5403, courroie_id: 54, image_url: "/public/Csynchrone/fermee/htd/3m/3.webp" }
     ],
     fiches: [
       { id: 5401, courroie_id: 54 , fiche_technique_url: "/public/Csynchrone/fermee/htd/fich_htd.pdf" }
@@ -1387,8 +1387,8 @@ const courroieData = [
     poids_g_m: "3,8",
     application: "industry",
     images: [
-      { id: 5501, courroie_id: 55, image_url: "/public/Csynchrone/fermee/htd/5m/1.jpg" },
-      { id: 5502, courroie_id: 55, image_url: "/public/Csynchrone/fermee/htd/5m/2.jpg" }
+      { id: 5501, courroie_id: 55, image_url: "/public/Csynchrone/fermee/htd/5m/1.webp" },
+      { id: 5502, courroie_id: 55, image_url: "/public/Csynchrone/fermee/htd/5m/2.webp" }
     ],
     fiches: [
       { id: 5501, courroie_id: 55, fiche_technique_url: "/public/Csynchrone/fermee/htd/fich_htd.pdf" }
@@ -1399,7 +1399,7 @@ const courroieData = [
     ]
   },
   {
-    id: 50,
+    id: 284,
     subcategory_id: 8,
     nom: "HTD 8M",
     profil: "8M",
@@ -1411,8 +1411,8 @@ const courroieData = [
     poids_g_m: "6,6",
     application: "industry",
     images: [
-      { id: 61, courroie_id: 50, image_url: "/public/Csynchrone/fermee/htd/8m/1.jpg" },
-      { id: 62, courroie_id: 50, image_url: "/public/Csynchrone/fermee/htd/8m/2.jpg" }
+      { id: 61, courroie_id: 50, image_url: "/public/Csynchrone/fermee/htd/8m/1.webp" },
+      { id: 62, courroie_id: 50, image_url: "/public/Csynchrone/fermee/htd/8m/2.webp" }
     ],
     fiches: [
       { id: 61, courroie_id: 50, fiche_technique_url: "/public/Csynchrone/fermee/htd/fich_htd.pdf" }
@@ -1423,7 +1423,7 @@ const courroieData = [
     ]
   },
   {
-    id: 51,
+    id: 285,
     subcategory_id: 8,
     nom: "HTD 14M",
     profil: "14M",
@@ -1435,8 +1435,8 @@ const courroieData = [
     poids_g_m: "11,1",
     application: "industry",
     images: [
-      { id: 71, courroie_id: 51, image_url: "/public/Csynchrone/fermee/htd/14m/1.jpg" },
-      { id: 72, courroie_id: 51, image_url: "/public/Csynchrone/fermee/htd/14m/2.jpg" }
+      { id: 71, courroie_id: 51, image_url: "/public/Csynchrone/fermee/htd/14m/1.webp" },
+      { id: 72, courroie_id: 51, image_url: "/public/Csynchrone/fermee/htd/14m/2.webp" }
     ],
     fiches: [
       { id: 71, courroie_id: 51, fiche_technique_url: "/public/Csynchrone/fermee/htd/fich_htd.pdf" }
@@ -1447,7 +1447,7 @@ const courroieData = [
     ]
   },
   {
-    id: 52,
+    id: 286,
     subcategory_id: 8,
     nom: "HTD 20M",
     profil: "20M",
@@ -1459,7 +1459,7 @@ const courroieData = [
     poids_g_m: "17,7",
     application: "industry",
     images: [
-      { id: 81, courroie_id: 52, image_url: "/public/Csynchrone/fermee/htd/20m/1.jpg" }
+      { id: 81, courroie_id: 52, image_url: "/public/Csynchrone/fermee/htd/20m/1.webp" }
     ],
     fiches: [
       { id: 81, courroie_id: 52, fiche_technique_url: "/public/Csynchrone/fermee/htd/fich_htd.pdf" }
@@ -1471,7 +1471,7 @@ const courroieData = [
   },
   
   {
-    id: 53,
+    id: 287,
     subcategory_id: 7,
     nom: "STD S2M",
     profil: "S2M",
@@ -1483,9 +1483,9 @@ const courroieData = [
     poids_g_m: "2,3",
     application: "industry",
     images: [
-      { id: 5901, courroie_id: 53, image_url: "/public/Csynchrone/ouverte/std/s2m/1.jpg" },
-      { id: 5902, courroie_id: 53, image_url: "/public/Csynchrone/ouverte/std/s2m/2.jpg" },
-      { id: 5903, courroie_id: 53, image_url: "/public/Csynchrone/ouverte/std/s2m/3.jpg" }
+      { id: 5901, courroie_id: 53, image_url: "/public/Csynchrone/ouverte/std/s2m/1.webp" },
+      { id: 5902, courroie_id: 53, image_url: "/public/Csynchrone/ouverte/std/s2m/2.webp" },
+      { id: 5903, courroie_id: 53, image_url: "/public/Csynchrone/ouverte/std/s2m/3.webp" }
     ],
     fiches: [
       { id: 5901, courroie_id: 53, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
@@ -1496,7 +1496,7 @@ const courroieData = [
     ]
   },
   {
-    id: 54,
+    id: 288,
     subcategory_id: 7,
     nom: "STD S3M",
     profil: "S3M",
@@ -1508,9 +1508,9 @@ const courroieData = [
     poids_g_m: "2,9",
     application: "industry",
     images: [
-      { id: 6001, courroie_id: 54, image_url: "/public/Csynchrone/ouverte/std/s3m/1.jpg" },
-      { id: 6002, courroie_id: 54, image_url: "/public/Csynchrone/ouverte/std/s3m/2.jpg" },
-      { id: 6003, courroie_id: 54, image_url: "/public/Csynchrone/ouverte/std/s3m/3.jpg" }
+      { id: 6001, courroie_id: 54, image_url: "/public/Csynchrone/ouverte/std/s3m/1.webp" },
+      { id: 6002, courroie_id: 54, image_url: "/public/Csynchrone/ouverte/std/s3m/2.webp" },
+      { id: 6003, courroie_id: 54, image_url: "/public/Csynchrone/ouverte/std/s3m/3.webp" }
     ],
     fiches: [
       { id: 6001, courroie_id: 54, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
@@ -1521,7 +1521,7 @@ const courroieData = [
     ]
   },
   {
-    id: 55,
+    id: 289,
     subcategory_id: 7,
     nom: "STD S4.5M",
     profil: "S4.5M",
@@ -1533,9 +1533,9 @@ const courroieData = [
     poids_g_m: "3,3",
     application: "industry",
     images: [
-      { id: 6101, courroie_id: 55, image_url: "/public/Csynchrone/ouverte/std/s4.5m/1.jpg" },
-      { id: 6102, courroie_id: 55, image_url: "/public/Csynchrone/ouverte/std/s4.5m/2.jpg" },
-      { id: 6103, courroie_id: 55, image_url: "/public/Csynchrone/ouverte/std/s4.5m/3.jpg" }
+      { id: 6101, courroie_id: 55, image_url: "/public/Csynchrone/ouverte/std/s4.5m/1.webp" },
+      { id: 6102, courroie_id: 55, image_url: "/public/Csynchrone/ouverte/std/s4.5m/2.webp" },
+      { id: 6103, courroie_id: 55, image_url: "/public/Csynchrone/ouverte/std/s4.5m/3.webp" }
     ],
     fiches: [
       { id: 6101, courroie_id: 55, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
@@ -1558,9 +1558,9 @@ const courroieData = [
     poids_g_m: "3,7",
     application: "industry",
     images: [
-      { id: 6201, courroie_id: 56, image_url: "/public/Csynchrone/ouverte/std/s5m/1.jpg" },
-      { id: 6202, courroie_id: 56, image_url: "/public/Csynchrone/ouverte/std/s5m/2.jpg" },
-      { id: 6203, courroie_id: 56, image_url: "/public/Csynchrone/ouverte/std/s5m/3.jpg" }
+      { id: 6201, courroie_id: 56, image_url: "/public/Csynchrone/ouverte/std/s5m/1.webp" },
+      { id: 6202, courroie_id: 56, image_url: "/public/Csynchrone/ouverte/std/s5m/2.webp" },
+      { id: 6203, courroie_id: 56, image_url: "/public/Csynchrone/ouverte/std/s5m/3.webp" }
     ],
     fiches: [
       { id: 6201, courroie_id: 56, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
@@ -1583,9 +1583,9 @@ const courroieData = [
     poids_g_m: "5,3",
     application: "industry",
     images: [
-      { id: 6301, courroie_id: 57, image_url: "/public/Csynchrone/ouverte/std/s8m/1.jpg" },
-      { id: 6302, courroie_id: 57, image_url: "/public/Csynchrone/ouverte/std/s8m/2.jpg" },
-      { id: 6303, courroie_id: 57, image_url: "/public/Csynchrone/ouverte/std/s8m/3.jpg" }
+      { id: 6301, courroie_id: 57, image_url: "/public/Csynchrone/ouverte/std/s8m/1.webp" },
+      { id: 6302, courroie_id: 57, image_url: "/public/Csynchrone/ouverte/std/s8m/2.webp" },
+      { id: 6303, courroie_id: 57, image_url: "/public/Csynchrone/ouverte/std/s8m/3.webp" }
     ],
     fiches: [
       { id: 6301, courroie_id: 57, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
@@ -1608,9 +1608,9 @@ const courroieData = [
     poids_g_m: "10,6",
     application: "industry",
     images: [
-      { id: 6401, courroie_id: 58, image_url: "/public/Csynchrone/ouverte/std/s14m/1.jpg" },
-      { id: 6402, courroie_id: 58, image_url: "/public/Csynchrone/ouverte/std/s14m/2.jpg" },
-      { id: 6403, courroie_id: 58, image_url: "/public/Csynchrone/ouverte/std/s14m/3.jpg" }
+      { id: 6401, courroie_id: 58, image_url: "/public/Csynchrone/ouverte/std/s14m/1.webp" },
+      { id: 6402, courroie_id: 58, image_url: "/public/Csynchrone/ouverte/std/s14m/2.webp" },
+      { id: 6403, courroie_id: 58, image_url: "/public/Csynchrone/ouverte/std/s14m/3.webp" }
     ],
     fiches: [
       { id: 6401, courroie_id: 58, fiche_technique_url: "/public/Csynchrone/ouverte/std/fich_std.pdf" }
@@ -1634,9 +1634,9 @@ const courroieData = [
     poids_g_m: "2,3",
     application: "industry",
     images: [
-      { id: 200, courroie_id: 59, image_url: "/public/Csynchrone/fermee/std/2m/1.jpg" },
-      { id: 201, courroie_id: 59, image_url: "/public/Csynchrone/fermee/std/2m/2.jpg" },
-      { id: 202, courroie_id: 59, image_url: "/public/Csynchrone/fermee/std/2m/3.jpg" }
+      { id: 200, courroie_id: 59, image_url: "/public/Csynchrone/fermee/std/2m/1.webp" },
+      { id: 201, courroie_id: 59, image_url: "/public/Csynchrone/fermee/std/2m/2.webp" },
+      { id: 202, courroie_id: 59, image_url: "/public/Csynchrone/fermee/std/2m/3.webp" }
     ],
     fiches: [
       { id: 203, courroie_id: 59, fiche_technique_url: "/public/Csynchrone/fermee/std/fich_std.pdf" }
@@ -1659,9 +1659,9 @@ const courroieData = [
     poids_g_m: "2,9",
     application: "industry",
     images: [
-      { id: 204, courroie_id: 60, image_url: "/public/Csynchrone/fermee/std/3m/1.jpg" },
-      { id: 205, courroie_id: 60, image_url: "/public/Csynchrone/fermee/std/3m/2.jpg" },
-      { id: 206, courroie_id: 60, image_url: "/public/Csynchrone/fermee/std/3m/3.jpg" }
+      { id: 204, courroie_id: 60, image_url: "/public/Csynchrone/fermee/std/3m/1.webp" },
+      { id: 205, courroie_id: 60, image_url: "/public/Csynchrone/fermee/std/3m/2.webp" },
+      { id: 206, courroie_id: 60, image_url: "/public/Csynchrone/fermee/std/3m/3.webp" }
     ],
     fiches: [
       { id: 207, courroie_id: 60, fiche_technique_url: "/public/Csynchrone/fermee/std/fich_std.pdf" }
@@ -1684,9 +1684,9 @@ const courroieData = [
     poids_g_m: "3,3",
     application: "industry",
     images: [
-      { id: 210, courroie_id: 61, image_url: "/public/Csynchrone/fermee/std/4.5m/1.jpg" },
-      { id: 211, courroie_id: 61, image_url: "/public/Csynchrone/fermee/std/4.5m/2.jpg" },
-      { id: 212, courroie_id: 61, image_url: "/public/Csynchrone/fermee/std/4.5m/3.jpg" }
+      { id: 210, courroie_id: 61, image_url: "/public/Csynchrone/fermee/std/4.5m/1.webp" },
+      { id: 211, courroie_id: 61, image_url: "/public/Csynchrone/fermee/std/4.5m/2.webp" },
+      { id: 212, courroie_id: 61, image_url: "/public/Csynchrone/fermee/std/4.5m/3.webp" }
     ],
     fiches: [
       { id: 213, courroie_id: 61, fiche_technique_url: "/public/Csynchrone/fermee/std/fich_std.pdf" }
@@ -1709,9 +1709,9 @@ const courroieData = [
     poids_g_m: "3,7",
     application: "industry",
     images: [
-      { id: 216, courroie_id: 62, image_url: "/public/Csynchrone/fermee/std/5m/1.jpg" },
-      { id: 217, courroie_id: 62, image_url: "/public/Csynchrone/fermee/std/5m/2.jpg" },
-      { id: 218, courroie_id: 62, image_url: "/public/Csynchrone/fermee/std/5m/3.jpg" }
+      { id: 216, courroie_id: 62, image_url: "/public/Csynchrone/fermee/std/5m/1.webp" },
+      { id: 217, courroie_id: 62, image_url: "/public/Csynchrone/fermee/std/5m/2.webp" },
+      { id: 218, courroie_id: 62, image_url: "/public/Csynchrone/fermee/std/5m/3.webp" }
     ],
     fiches: [
       { id: 219, courroie_id: 62, fiche_technique_url: "/public/Csynchrone/fermee/std/fich_std.pdf" }
@@ -1734,9 +1734,9 @@ const courroieData = [
     poids_g_m: "5,3",
     application: "industry",
     images: [
-      { id: 222, courroie_id: 63, image_url: "/public/Csynchrone/fermee/std/8m/1.jpg" },
-      { id: 223, courroie_id: 63, image_url: "/public/Csynchrone/fermee/std/8m/2.jpg" },
-      { id: 224, courroie_id: 63, image_url: "/public/Csynchrone/fermee/std/8m/3.jpg" }
+      { id: 222, courroie_id: 63, image_url: "/public/Csynchrone/fermee/std/8m/1.webp" },
+      { id: 223, courroie_id: 63, image_url: "/public/Csynchrone/fermee/std/8m/2.webp" },
+      { id: 224, courroie_id: 63, image_url: "/public/Csynchrone/fermee/std/8m/3.webp" }
     ],
     fiches: [
       { id: 225, courroie_id: 63, fiche_technique_url: "/public/Csynchrone/fermee/std/fich_std.pdf" }
@@ -1759,9 +1759,9 @@ const courroieData = [
     poids_g_m: "10,6",
     application: "industry",
     images: [
-      { id: 228, courroie_id: 64, image_url: "/public/Csynchrone/fermee/std/14m/1.jpg" },
-      { id: 229, courroie_id: 64, image_url: "/public/Csynchrone/fermee/std/14m/2.jpg" },
-      { id: 230, courroie_id: 64, image_url: "/public/Csynchrone/fermee/std/14m/3.jpg" }
+      { id: 228, courroie_id: 64, image_url: "/public/Csynchrone/fermee/std/14m/1.webp" },
+      { id: 229, courroie_id: 64, image_url: "/public/Csynchrone/fermee/std/14m/2.webp" },
+      { id: 230, courroie_id: 64, image_url: "/public/Csynchrone/fermee/std/14m/3.webp" }
     ],
     fiches: [
       { id: 231, courroie_id: 64, fiche_technique_url: "/public/Csynchrone/fermee/std/fich_std.pdf" }
@@ -1785,9 +1785,9 @@ const courroieData = [
     poids_g_m: "2,3",
     application: "industry",
     images: [
-      { id: 6501, courroie_id: 65, image_url: "/public/Csynchrone/ouverte/rpp/2m/rpp.jpeg" },
-      { id: 6502, courroie_id: 65, image_url: "/public/Csynchrone/ouverte/rpp/2m/rpp.jpg" },
-      { id: 6503, courroie_id: 65, image_url: "/public/Csynchrone/ouverte/rpp/2m/rpp.png" }
+      { id: 6501, courroie_id: 65, image_url: "/public/Csynchrone/ouverte/rpp/2m/rpp.webp" },
+      { id: 6502, courroie_id: 65, image_url: "/public/Csynchrone/ouverte/rpp/2m/rpp.webp" },
+      { id: 6503, courroie_id: 65, image_url: "/public/Csynchrone/ouverte/rpp/2m/rpp.webp" }
     ],
     fiches: [
       { id: 6501, courroie_id: 65, fiche_technique_url: "/public/Csynchrone/ouverte/rpp/fich_rpp.pdf" }
@@ -1810,9 +1810,9 @@ const courroieData = [
     poids_g_m: "2,9",
     application: "industry",
     images: [
-      { id: 6601, courroie_id: 66, image_url: "/public/Csynchrone/ouverte/rpp/3m/rpp.jpeg" },
-      { id: 6602, courroie_id: 66, image_url: "/public/Csynchrone/ouverte/rpp/3m/rpp.jpg" },
-      { id: 6603, courroie_id: 66, image_url: "/public/Csynchrone/ouverte/rpp/3m/rpp.png" }
+      { id: 6601, courroie_id: 66, image_url: "/public/Csynchrone/ouverte/rpp/3m/rpp.webp" },
+      { id: 6602, courroie_id: 66, image_url: "/public/Csynchrone/ouverte/rpp/3m/rpp.webp" },
+      { id: 6603, courroie_id: 66, image_url: "/public/Csynchrone/ouverte/rpp/3m/rpp.webp" }
     ],
     fiches: [
       { id: 6601, courroie_id: 66, fiche_technique_url: "/public/Csynchrone/ouverte/rpp/fich_rpp.pdf" }
@@ -1835,9 +1835,9 @@ const courroieData = [
     poids_g_m: "3,7",
     application: "industry",
     images: [
-      { id: 6701, courroie_id: 67, image_url: "/public/Csynchrone/ouverte/rpp/5m/rpp.jpeg" },
-      { id: 6702, courroie_id: 67, image_url: "/public/Csynchrone/ouverte/rpp/5m/rpp.jpg" },
-      { id: 6703, courroie_id: 67, image_url: "/public/Csynchrone/ouverte/rpp/5m/rpp.png" }
+      { id: 6701, courroie_id: 67, image_url: "/public/Csynchrone/ouverte/rpp/5m/rpp.webp" },
+      { id: 6702, courroie_id: 67, image_url: "/public/Csynchrone/ouverte/rpp/5m/rpp.webp" },
+      { id: 6703, courroie_id: 67, image_url: "/public/Csynchrone/ouverte/rpp/5m/rpp.webp" }
     ],
     fiches: [
       { id: 6701, courroie_id: 67, fiche_technique_url: "/public/Csynchrone/ouverte/rpp/fich_rpp.pdf" }
@@ -1860,9 +1860,9 @@ const courroieData = [
     poids_g_m: "5,7",
     application: "industry",
     images: [
-      { id: 6801, courroie_id: 68, image_url: "/public/Csynchrone/ouverte/rpp/8m/rpp.jpeg" },
-      { id: 6802, courroie_id: 68, image_url: "/public/Csynchrone/ouverte/rpp/8m/rpp.jpg" },
-      { id: 6803, courroie_id: 68, image_url: "/public/Csynchrone/ouverte/rpp/8m/rpp.png" }
+      { id: 6801, courroie_id: 68, image_url: "/public/Csynchrone/ouverte/rpp/8m/rpp.webp" },
+      { id: 6802, courroie_id: 68, image_url: "/public/Csynchrone/ouverte/rpp/8m/rpp.webp" },
+      { id: 6803, courroie_id: 68, image_url: "/public/Csynchrone/ouverte/rpp/8m/rpp.webp" }
     ],
     fiches: [
       { id: 6801, courroie_id: 68, fiche_technique_url: "/public/Csynchrone/ouverte/rpp/fich_rpp.pdf" }
@@ -1885,9 +1885,9 @@ const courroieData = [
     poids_g_m: "10,6",
     application: "industry",
     images: [
-      { id: 6901, courroie_id: 69, image_url: "/public/Csynchrone/ouverte/rpp/14m/rpp.jpeg" },
-      { id: 6902, courroie_id: 69, image_url: "/public/Csynchrone/ouverte/rpp/14m/rpp.jpg" },
-      { id: 6903, courroie_id: 69, image_url: "/public/Csynchrone/ouverte/rpp/14m/rpp.png" }
+      { id: 6901, courroie_id: 69, image_url: "/public/Csynchrone/ouverte/rpp/14m/rpp.webp" },
+      { id: 6902, courroie_id: 69, image_url: "/public/Csynchrone/ouverte/rpp/14m/rpp.webp" },
+      { id: 6903, courroie_id: 69, image_url: "/public/Csynchrone/ouverte/rpp/14m/rpp.webp" }
     ],
     fiches: [
       { id: 6901, courroie_id: 69, fiche_technique_url: "/public/Csynchrone/ouverte/rpp/fich_rpp.pdf" }
@@ -1911,9 +1911,9 @@ const courroieData = [
     poids_g_m: "2,3",
     application: "industry",
     images: [
-      { id: 7001, courroie_id: 70, image_url: "/public/Csynchrone/fermee/rpp/2m/1.jpg" },
-      { id: 7002, courroie_id: 70, image_url: "/public/Csynchrone/fermee/rpp/2m/2.jpg" },
-      { id: 7003, courroie_id: 70, image_url: "/public/Csynchrone/fermee/rpp/2m/3.jpg" }
+      { id: 7001, courroie_id: 70, image_url: "/public/Csynchrone/fermee/rpp/2m/1.webp" },
+      { id: 7002, courroie_id: 70, image_url: "/public/Csynchrone/fermee/rpp/2m/2.webp" },
+      { id: 7003, courroie_id: 70, image_url: "/public/Csynchrone/fermee/rpp/2m/3.webp" }
     ],
     fiches: [
       { id: 7001, courroie_id: 70, fiche_technique_url: "/public/Csynchrone/fermee/rpp/fich_rpp.pdf" }
@@ -1936,9 +1936,9 @@ const courroieData = [
   poids_g_m: "8",
   application: "industry",
   images: [
-    { id: 10101, courroie_id: 271, image_url: "/public/Csynchrone/ouverte/l/1.jpg" },
-    { id: 10102, courroie_id: 271, image_url: "/public/Csynchrone/ouverte/l/2.jpg" },
-    { id: 10103, courroie_id: 271, image_url: "/public/Csynchrone/ouverte/l/3.jpg" }
+    { id: 10101, courroie_id: 271, image_url: "/public/Csynchrone/ouverte/l/1.webp" },
+    { id: 10102, courroie_id: 271, image_url: "/public/Csynchrone/ouverte/l/2.webp" },
+    { id: 10103, courroie_id: 271, image_url: "/public/Csynchrone/ouverte/l/3.webp" }
   ],
    fiches: [
       { id: 207101, courroie_id: 271, fiche_technique_url: "/public/Csynchrone/ouverte/l/fich_l.pdf" }
@@ -1961,9 +1961,9 @@ const courroieData = [
   poids_g_m: "8",
   application: "industry",
   images: [
-    { id: 117201, courroie_id: 272, image_url: "/public/Csynchrone/fermee/l/1.jpg" },
-    { id: 117202, courroie_id: 272, image_url: "/public/Csynchrone/fermee/l/2.jpg" },
-    { id: 117203, courroie_id: 272, image_url: "/public/Csynchrone/fermee/l/3.jpg" }
+    { id: 117201, courroie_id: 272, image_url: "/public/Csynchrone/fermee/l/1.webp" },
+    { id: 117202, courroie_id: 272, image_url: "/public/Csynchrone/fermee/l/2.webp" },
+    { id: 117203, courroie_id: 272, image_url: "/public/Csynchrone/fermee/l/3.webp" }
   ],
      fiches: [
       { id: 217201, courroie_id: 272, fiche_technique_url: "/public/Csynchrone/fermee/l/fich_l.pdf" }
@@ -1986,9 +1986,9 @@ const courroieData = [
   poids_g_m: "12",
   application: "industry",
   images: [
-    { id: 127301, courroie_id: 273, image_url: "/public/Csynchrone/ouverte/h/1.jpg" },
-    { id: 127302, courroie_id: 273, image_url: "/public/Csynchrone/ouverte/h/2.jpg" },
-    { id: 127303, courroie_id: 273, image_url: "/public/Csynchrone/ouverte/h/3.jpg" }
+    { id: 127301, courroie_id: 273, image_url: "/public/Csynchrone/ouverte/h/1.webp" },
+    { id: 127302, courroie_id: 273, image_url: "/public/Csynchrone/ouverte/h/2.webp" },
+    { id: 127303, courroie_id: 273, image_url: "/public/Csynchrone/ouverte/h/3.webp" }
   ],
    fiches: [
       { id: 207301, courroie_id: 273, fiche_technique_url: "/public/Csynchrone/ouverte/h/fich_h.pdf" }
@@ -2011,9 +2011,9 @@ const courroieData = [
   poids_g_m: "12",
   application: "industry",
   images: [
-    { id: 127401, courroie_id: 274, image_url: "/public/Csynchrone/fermee/h/1.jpg" },
-    { id: 127402, courroie_id: 274, image_url: "/public/Csynchrone/fermee/h/2.jpg" },
-    { id: 127403, courroie_id: 274, image_url: "/public/Csynchrone/fermee/h/3.jpg" }
+    { id: 127401, courroie_id: 274, image_url: "/public/Csynchrone/fermee/h/1.webp" },
+    { id: 127402, courroie_id: 274, image_url: "/public/Csynchrone/fermee/h/2.webp" },
+    { id: 127403, courroie_id: 274, image_url: "/public/Csynchrone/fermee/h/3.webp" }
   ],
    fiches: [
       { id: 207401, courroie_id: 274, fiche_technique_url: "/public/Csynchrone/fermee/h/fich_h.pdf" }
@@ -2036,9 +2036,9 @@ const courroieData = [
   poids_g_m: "4",
   application: "industry",
   images: [
-    { id: 127501, courroie_id: 275, image_url: "/public/Csynchrone/ouverte/mxl/1.jpg" },
-    { id: 127502, courroie_id: 275, image_url: "/public/Csynchrone/ouverte/mxl/2.jpg" },
-    { id: 127503, courroie_id: 275, image_url: "/public/Csynchrone/ouverte/mxl/3.jpg" }
+    { id: 127501, courroie_id: 275, image_url: "/public/Csynchrone/ouverte/mxl/1.webp" },
+    { id: 127502, courroie_id: 275, image_url: "/public/Csynchrone/ouverte/mxl/2.webp" },
+    { id: 127503, courroie_id: 275, image_url: "/public/Csynchrone/ouverte/mxl/3.webp" }
   ],
    fiches: [
       { id: 207501, courroie_id: 275, fiche_technique_url: "/public/Csynchrone/ouverte/mxl/fich_mxl.pdf" }
@@ -2061,9 +2061,9 @@ const courroieData = [
   poids_g_m: "4",
   application: "industry",
   images: [
-    { id: 127601, courroie_id: 276, image_url: "/public/Csynchrone/fermee/mxl/1.jpg" },
-    { id: 127602, courroie_id: 276, image_url: "/public/Csynchrone/fermee/mxl/2.jpg" },
-    { id: 127603, courroie_id: 276, image_url: "/public/Csynchrone/fermee/mxl/3.jpg" }
+    { id: 127601, courroie_id: 276, image_url: "/public/Csynchrone/fermee/mxl/1.webp" },
+    { id: 127602, courroie_id: 276, image_url: "/public/Csynchrone/fermee/mxl/2.webp" },
+    { id: 127603, courroie_id: 276, image_url: "/public/Csynchrone/fermee/mxl/3.webp" }
   ],
    fiches: [
       { id: 207601, courroie_id: 276, fiche_technique_url: "/public/Csynchrone/fermee/mxl/fich_mxl.pdf" }
@@ -2086,9 +2086,9 @@ const courroieData = [
   poids_g_m: "6",
   application: "industry",
   images: [
-    { id: 127701, courroie_id: 277, image_url: "/public/Csynchrone/ouverte/xl/1.jpg" },
-    { id: 127702, courroie_id: 277, image_url: "/public/Csynchrone/ouverte/xl/2.jpg" },
-    { id: 127703, courroie_id: 277, image_url: "/public/Csynchrone/ouverte/xl/3.jpg" }
+    { id: 127701, courroie_id: 277, image_url: "/public/Csynchrone/ouverte/xl/1.webp" },
+    { id: 127702, courroie_id: 277, image_url: "/public/Csynchrone/ouverte/xl/2.webp" },
+    { id: 127703, courroie_id: 277, image_url: "/public/Csynchrone/ouverte/xl/3.webp" }
   ],
    fiches: [
       { id: 207701, courroie_id: 277, fiche_technique_url: "/public/Csynchrone/ouverte/xl/fich_xl.pdf" }
@@ -2111,9 +2111,9 @@ const courroieData = [
   poids_g_m: "6",
   application: "industry",
   images: [
-    { id: 127801, courroie_id: 278, image_url: "/public/Csynchrone/fermee/xl/1.jpg" },
-    { id: 127802, courroie_id: 278, image_url: "/public/Csynchrone/fermee/xl/2.jpg" },
-    { id: 127803, courroie_id: 278, image_url: "/public/Csynchrone/fermee/xl/3.jpg" }
+    { id: 127801, courroie_id: 278, image_url: "/public/Csynchrone/fermee/xl/1.webp" },
+    { id: 127802, courroie_id: 278, image_url: "/public/Csynchrone/fermee/xl/2.webp" },
+    { id: 127803, courroie_id: 278, image_url: "/public/Csynchrone/fermee/xl/3.webp" }
   ],
    fiches: [
       { id: 207801, courroie_id: 278, fiche_technique_url: "/public/Csynchrone/fermee/xl/fich_xl.pdf" }
@@ -2137,9 +2137,9 @@ const courroieData = [
     poids_g_m: "2,9",
     application: "industry",
     images: [
-      { id: 7101, courroie_id: 71, image_url: "/public/Csynchrone/fermee/rpp/3m/1.jpg" },
-      { id: 7102, courroie_id: 71, image_url: "/public/Csynchrone/fermee/rpp/3m/2.jpg" },
-      { id: 7103, courroie_id: 71, image_url: "/public/Csynchrone/fermee/rpp/3m/3.jpg" }
+      { id: 7101, courroie_id: 71, image_url: "/public/Csynchrone/fermee/rpp/3m/1.webp" },
+      { id: 7102, courroie_id: 71, image_url: "/public/Csynchrone/fermee/rpp/3m/2.webp" },
+      { id: 7103, courroie_id: 71, image_url: "/public/Csynchrone/fermee/rpp/3m/3.webp" }
     ],
     fiches: [
       { id: 7101, courroie_id: 71, fiche_technique_url: "/public/Csynchrone/fermee/rpp/fich_rpp.pdf" }
@@ -2162,9 +2162,9 @@ const courroieData = [
     poids_g_m: "3,7",
     application: "industry",
     images: [
-      { id: 6711, courroie_id: 72, image_url: "/public/Csynchrone/fermee/rpp/5m/1.jpg" },
-      { id: 6712, courroie_id: 72, image_url: "/public/Csynchrone/fermee/rpp/5m/2.jpg" },
-      { id: 6713, courroie_id: 72, image_url: "/public/Csynchrone/fermee/rpp/5m/3.jpg" }
+      { id: 6711, courroie_id: 72, image_url: "/public/Csynchrone/fermee/rpp/5m/1.webp" },
+      { id: 6712, courroie_id: 72, image_url: "/public/Csynchrone/fermee/rpp/5m/2.webp" },
+      { id: 6713, courroie_id: 72, image_url: "/public/Csynchrone/fermee/rpp/5m/3.webp" }
     ],
     fiches: [
       { id: 6711, courroie_id: 72, fiche_technique_url: "/public/Csynchrone/fermee/rpp/fich_rpp.pdf" }
@@ -2187,9 +2187,9 @@ const courroieData = [
     poids_g_m: "5,7",
     application: "industry",
     images: [
-      { id: 6811, courroie_id: 73, image_url: "/public/Csynchrone/fermee/rpp/8m/1.jpg" },
-      { id: 6812, courroie_id: 73, image_url: "/public/Csynchrone/fermee/rpp/8m/2.jpg" },
-      { id: 6813, courroie_id: 73, image_url: "/public/Csynchrone/fermee/rpp/8m/3.jpg" }
+      { id: 6811, courroie_id: 73, image_url: "/public/Csynchrone/fermee/rpp/8m/1.webp" },
+      { id: 6812, courroie_id: 73, image_url: "/public/Csynchrone/fermee/rpp/8m/2.webp" },
+      { id: 6813, courroie_id: 73, image_url: "/public/Csynchrone/fermee/rpp/8m/3.webp" }
     ],
     fiches: [
       { id: 6811, courroie_id: 73, fiche_technique_url: "/public/Csynchrone/fermee/rpp/fich_rpp.pdf" }
@@ -2212,9 +2212,9 @@ const courroieData = [
     poids_g_m: "10,6",
     application: "industry",
     images: [
-      { id: 6911, courroie_id: 74, image_url: "/public/Csynchrone/fermee/rpp/14m/1.jpg" },
-      { id: 6912, courroie_id: 74, image_url: "/public/Csynchrone/fermee/rpp/14m/2.jpg" },
-      { id: 6913, courroie_id: 74, image_url: "/public/Csynchrone/fermee/rpp/14m/3.jpg" }
+      { id: 6911, courroie_id: 74, image_url: "/public/Csynchrone/fermee/rpp/14m/1.webp" },
+      { id: 6912, courroie_id: 74, image_url: "/public/Csynchrone/fermee/rpp/14m/2.webp" },
+      { id: 6913, courroie_id: 74, image_url: "/public/Csynchrone/fermee/rpp/14m/3.webp" }
     ],
     fiches: [
       { id: 6911, courroie_id: 74, fiche_technique_url: "/public/Csynchrone/fermee/rpp/fich_rpp.pdf" }
@@ -2241,17 +2241,17 @@ const courroieData = [
     {
       id: 151,
       courroie_id: 75,
-      image_url: "/public/motocycle/1.jpg"
+      image_url: "/public/motocycle/1.webp"
     },
     {
       id: 152,
       courroie_id: 75,
-      image_url: "/public/motocycle/2.jpg"
+      image_url: "/public/motocycle/2.webp"
     },
     {
       id: 153,
       courroie_id: 75,
-      image_url: "/public/motocycle/3.jpg"
+      image_url: "/public/motocycle/3.webp"
     }
   ],
   fiches: [
@@ -2289,17 +2289,17 @@ const courroieData = [
     {
       id: 268,
       courroie_id: 76,
-      image_url: "/public/agricole/Agricole.jpg"
+      image_url: "/public/agricole/Agricole.webp"
     },
     {
       id: 269,
       courroie_id: 76,
-      image_url: "/public/agricole/Agricole.jpg"
+      image_url: "/public/agricole/Agricole.webp"
     },
     {
       id: 270,
       courroie_id: 76,
-      image_url: "/public/agricole/Agricole.jpg"
+      image_url: "/public/agricole/Agricole.webp"
     }
   ],
   fiches: [
@@ -2335,9 +2335,9 @@ const courroieData = [
   poids_g_m: "45",
   application: "conveyors",
   images: [
-    { id: 1000, courroie_id: 77, image_url: "/public/doubleDenture/at5/1.jpg" },
-    { id: 1001, courroie_id: 77, image_url: "/public/doubleDenture/at5/2.jpg" },
-    { id: 1002, courroie_id: 77, image_url: "/public/doubleDenture/at5/3.jpg" }
+    { id: 1000, courroie_id: 77, image_url: "/public/doubleDenture/at5/1.webp" },
+    { id: 1001, courroie_id: 77, image_url: "/public/doubleDenture/at5/2.webp" },
+    { id: 1002, courroie_id: 77, image_url: "/public/doubleDenture/at5/3.webp" }
   ],
   fiches: [{ id: 2000, courroie_id: 77, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [{ id: 3000, courroie_id: 77, matiere: "PU" }]
@@ -2355,9 +2355,9 @@ const courroieData = [
   poids_g_m: "95",
   application: "conveyors",
   images: [
-    { id: 1003, courroie_id: 78, image_url: "/public/doubleDenture/at10/1.jpg" },
-    { id: 1004, courroie_id: 78, image_url: "/public/doubleDenture/at10/2.jpg" },
-    { id: 1005, courroie_id: 78, image_url: "/public/doubleDenture/at10/3.jpg" }
+    { id: 1003, courroie_id: 78, image_url: "/public/doubleDenture/at10/1.webp" },
+    { id: 1004, courroie_id: 78, image_url: "/public/doubleDenture/at10/2.webp" },
+    { id: 1005, courroie_id: 78, image_url: "/public/doubleDenture/at10/3.webp" }
   ],
   fiches: [{ id: 2001, courroie_id: 78, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [{ id: 3001, courroie_id: 78, matiere: "PU" }]
@@ -2375,9 +2375,9 @@ const courroieData = [
   poids_g_m: "210",
   application: "conveyors",
   images: [
-    { id: 1006, courroie_id: 79, image_url: "/public/doubleDenture/h/1.jpg" },
-    { id: 1007, courroie_id: 79, image_url: "/public/doubleDenture/h/2.jpg" },
-    { id: 1008, courroie_id: 79, image_url: "/public/doubleDenture/h/3.jpg" }
+    { id: 1006, courroie_id: 79, image_url: "/public/doubleDenture/h/1.webp" },
+    { id: 1007, courroie_id: 79, image_url: "/public/doubleDenture/h/2.webp" },
+    { id: 1008, courroie_id: 79, image_url: "/public/doubleDenture/h/3.webp" }
   ],
   fiches: [{ id: 2002, courroie_id: 79, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [{ id: 3002, courroie_id: 79, matiere: "PU" }]
@@ -2395,9 +2395,9 @@ const courroieData = [
   poids_g_m: "35",
   application: "conveyors",
   images: [
-    { id: 1009, courroie_id: 80, image_url: "/public/doubleDenture/htd3m/1.jpg" },
-    { id: 1010, courroie_id: 80, image_url: "/public/doubleDenture/htd3m/2.jpg" },
-    { id: 1011, courroie_id: 80, image_url: "/public/doubleDenture/htd3m/3.jpg" }
+    { id: 1009, courroie_id: 80, image_url: "/public/doubleDenture/htd3m/1.webp" },
+    { id: 1010, courroie_id: 80, image_url: "/public/doubleDenture/htd3m/2.webp" },
+    { id: 1011, courroie_id: 80, image_url: "/public/doubleDenture/htd3m/3.webp" }
   ],
   fiches: [{ id: 2003, courroie_id: 80, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [{ id: 3003, courroie_id: 80, matiere: "PU" }]
@@ -2415,9 +2415,9 @@ const courroieData = [
   poids_g_m: "75",
   application: "conveyors",
   images: [
-    { id: 1012, courroie_id: 81, image_url: "/public/doubleDenture/htd5m/1.jpg" },
-    { id: 1013, courroie_id: 81, image_url: "/public/doubleDenture/htd5m/2.jpg" },
-    { id: 1014, courroie_id: 81, image_url: "/public/doubleDenture/htd5m/3.jpg" }
+    { id: 1012, courroie_id: 81, image_url: "/public/doubleDenture/htd5m/1.webp" },
+    { id: 1013, courroie_id: 81, image_url: "/public/doubleDenture/htd5m/2.webp" },
+    { id: 1014, courroie_id: 81, image_url: "/public/doubleDenture/htd5m/3.webp" }
   ],
   fiches: [{ id: 2004, courroie_id: 81, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [{ id: 3004, courroie_id: 81, matiere: "PU" }]
@@ -2435,9 +2435,9 @@ const courroieData = [
   poids_g_m: "140",
   application: "conveyors",
   images: [
-    { id: 1015, courroie_id: 82, image_url: "/public/doubleDenture/htd8m/1.jpg" },
-    { id: 1016, courroie_id: 82, image_url: "/public/doubleDenture/htd8m/2.jpg" },
-    { id: 1017, courroie_id: 82, image_url: "/public/doubleDenture/htd8m/3.jpg" }
+    { id: 1015, courroie_id: 82, image_url: "/public/doubleDenture/htd8m/1.webp" },
+    { id: 1016, courroie_id: 82, image_url: "/public/doubleDenture/htd8m/2.webp" },
+    { id: 1017, courroie_id: 82, image_url: "/public/doubleDenture/htd8m/3.webp" }
   ],
   fiches: [{ id: 2005, courroie_id: 82, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [{ id: 3005, courroie_id: 82, matiere: "PU" }]
@@ -2455,9 +2455,9 @@ const courroieData = [
   poids_g_m: "120",
   application: "conveyors",
   images: [
-    { id: 1018, courroie_id: 83, image_url: "/public/doubleDenture/l/1.jpg" },
-    { id: 1019, courroie_id: 83, image_url: "/public/doubleDenture/l/2.jpg" },
-    { id: 1020, courroie_id: 83, image_url: "/public/doubleDenture/l/3.jpg" }
+    { id: 1018, courroie_id: 83, image_url: "/public/doubleDenture/l/1.webp" },
+    { id: 1019, courroie_id: 83, image_url: "/public/doubleDenture/l/2.webp" },
+    { id: 1020, courroie_id: 83, image_url: "/public/doubleDenture/l/3.webp" }
   ],
   fiches: [{ id: 2006, courroie_id: 83, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [{ id: 3006, courroie_id: 83, matiere: "PU" }]
@@ -2475,9 +2475,9 @@ const courroieData = [
   poids_g_m: "135",
   application: "conveyors",
   images: [
-    { id: 1021, courroie_id: 84, image_url: "/public/doubleDenture/rpp/1.jpg" },
-    { id: 1022, courroie_id: 84, image_url: "/public/doubleDenture/rpp/2.jpg" },
-    { id: 1023, courroie_id: 84, image_url: "/public/doubleDenture/rpp/3.jpg" }
+    { id: 1021, courroie_id: 84, image_url: "/public/doubleDenture/rpp/1.webp" },
+    { id: 1022, courroie_id: 84, image_url: "/public/doubleDenture/rpp/2.webp" },
+    { id: 1023, courroie_id: 84, image_url: "/public/doubleDenture/rpp/3.webp" }
   ],
   fiches: [{ id: 2007, courroie_id: 84, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [{ id: 3007, courroie_id: 84, matiere: "PU" }]
@@ -2495,9 +2495,9 @@ const courroieData = [
   poids_g_m: "130",
   application: "conveyors",
   images: [
-    { id: 1024, courroie_id: 85, image_url: "/public/doubleDenture/std/1.jpg" },
-    { id: 1025, courroie_id: 85, image_url: "/public/doubleDenture/std/2.jpg" },
-    { id: 1026, courroie_id: 85, image_url: "/public/doubleDenture/std/3.jpg" }
+    { id: 1024, courroie_id: 85, image_url: "/public/doubleDenture/std/1.webp" },
+    { id: 1025, courroie_id: 85, image_url: "/public/doubleDenture/std/2.webp" },
+    { id: 1026, courroie_id: 85, image_url: "/public/doubleDenture/std/3.webp" }
   ],
   fiches: [
     { id: 2008, courroie_id: 85, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
@@ -2519,9 +2519,9 @@ const courroieData = [
   poids_g_m: "18",
   application: "conveyors",
   images: [
-    { id: 1027, courroie_id: 86, image_url: "/public/doubleDenture/t2.5/1.jpg" },
-    { id: 1028, courroie_id: 86, image_url: "/public/doubleDenture/t2.5/2.jpg" },
-    { id: 1029, courroie_id: 86, image_url: "/public/doubleDenture/t2.5/3.jpg" }
+    { id: 1027, courroie_id: 86, image_url: "/public/doubleDenture/t2.5/1.webp" },
+    { id: 1028, courroie_id: 86, image_url: "/public/doubleDenture/t2.5/2.webp" },
+    { id: 1029, courroie_id: 86, image_url: "/public/doubleDenture/t2.5/3.webp" }
   ],
   fiches: [
     { id: 2009, courroie_id: 86, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
@@ -2543,9 +2543,9 @@ const courroieData = [
   poids_g_m: "40",
   application: "conveyors",
   images: [
-    { id: 1030, courroie_id: 87, image_url: "/public/doubleDenture/t5/1.jpg" },
-    { id: 1031, courroie_id: 87, image_url: "/public/doubleDenture/t5/2.jpg" },
-    { id: 1032, courroie_id: 87, image_url: "/public/doubleDenture/t5/3.jpg" }
+    { id: 1030, courroie_id: 87, image_url: "/public/doubleDenture/t5/1.webp" },
+    { id: 1031, courroie_id: 87, image_url: "/public/doubleDenture/t5/2.webp" },
+    { id: 1032, courroie_id: 87, image_url: "/public/doubleDenture/t5/3.webp" }
   ],
   fiches: [
     { id: 2010, courroie_id: 87, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
@@ -2567,9 +2567,9 @@ const courroieData = [
   poids_g_m: "95",
   application: "conveyors",
   images: [
-    { id: 1033, courroie_id: 88, image_url: "/public/doubleDenture/t10/1.jpg" },
-    { id: 1034, courroie_id: 88, image_url: "/public/doubleDenture/t10/2.jpg" },
-    { id: 1035, courroie_id: 88, image_url: "/public/doubleDenture/t10/3.jpg" }
+    { id: 1033, courroie_id: 88, image_url: "/public/doubleDenture/t10/1.webp" },
+    { id: 1034, courroie_id: 88, image_url: "/public/doubleDenture/t10/2.webp" },
+    { id: 1035, courroie_id: 88, image_url: "/public/doubleDenture/t10/3.webp" }
   ],
   fiches: [
     { id: 2011, courroie_id: 88, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
@@ -2591,9 +2591,9 @@ const courroieData = [
   poids_g_m: "420",
   application: "conveyors",
   images: [
-    { id: 1036, courroie_id: 89, image_url: "/public/doubleDenture/xh/1.jpg" },
-    { id: 1037, courroie_id: 89, image_url: "/public/doubleDenture/xh/2.jpg" },
-    { id: 1038, courroie_id: 89, image_url: "/public/doubleDenture/xh/3.jpg" }
+    { id: 1036, courroie_id: 89, image_url: "/public/doubleDenture/xh/1.webp" },
+    { id: 1037, courroie_id: 89, image_url: "/public/doubleDenture/xh/2.webp" },
+    { id: 1038, courroie_id: 89, image_url: "/public/doubleDenture/xh/3.webp" }
   ],
   fiches: [
     { id: 2012, courroie_id: 89, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
@@ -2615,9 +2615,9 @@ const courroieData = [
   poids_g_m: "50",
   application: "conveyors",
   images: [
-    { id: 1039, courroie_id: 90, image_url: "/public/doubleDenture/xl/1.jpg" },
-    { id: 1040, courroie_id: 90, image_url: "/public/doubleDenture/xl/2.jpg" },
-    { id: 1041, courroie_id: 90, image_url: "/public/doubleDenture/xl/3.jpg" }
+    { id: 1039, courroie_id: 90, image_url: "/public/doubleDenture/xl/1.webp" },
+    { id: 1040, courroie_id: 90, image_url: "/public/doubleDenture/xl/2.webp" },
+    { id: 1041, courroie_id: 90, image_url: "/public/doubleDenture/xl/3.webp" }
   ],
   fiches: [
     { id: 2013, courroie_id: 90, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
@@ -2639,9 +2639,9 @@ const courroieData = [
   poids_g_m: "20",
   application: "industry",
   images: [
-    { id: 1100, courroie_id: 92, image_url: "/public/PUsynchrone/ouverte/at5/1.jpg" },
-    { id: 1101, courroie_id: 92, image_url: "/public/PUsynchrone/ouverte/at5/2.jpg" },
-    { id: 1102, courroie_id: 92, image_url: "/public/PUsynchrone/ouverte/at5/3.jpg" }
+    { id: 1100, courroie_id: 92, image_url: "/public/PUsynchrone/ouverte/at5/1.webp" },
+    { id: 1101, courroie_id: 92, image_url: "/public/PUsynchrone/ouverte/at5/2.webp" },
+    { id: 1102, courroie_id: 92, image_url: "/public/PUsynchrone/ouverte/at5/3.webp" }
   ],
   fiches: [
     { id: 2100, courroie_id: 92, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
@@ -2663,9 +2663,9 @@ const courroieData = [
   poids_g_m: "45",
   application: "industry",
   images: [
-    { id: 1103, courroie_id: 93, image_url: "/public/PUsynchrone/ouverte/at10/1.jpg" },
-    { id: 1104, courroie_id: 93, image_url: "/public/PUsynchrone/ouverte/at10/2.jpg" },
-    { id: 1105, courroie_id: 93, image_url: "/public/PUsynchrone/ouverte/at10/3.jpg" }
+    { id: 1103, courroie_id: 93, image_url: "/public/PUsynchrone/ouverte/at10/1.webp" },
+    { id: 1104, courroie_id: 93, image_url: "/public/PUsynchrone/ouverte/at10/2.webp" },
+    { id: 1105, courroie_id: 93, image_url: "/public/PUsynchrone/ouverte/at10/3.webp" }
   ],
   fiches: [
     { id: 2101, courroie_id: 93, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
@@ -2687,9 +2687,9 @@ const courroieData = [
   poids_g_m: "70",
   application: "industry",
   images: [
-    { id: 1106, courroie_id: 94, image_url: "/public/PUsynchrone/ouverte/at15/1.jpg" },
-    { id: 1107, courroie_id: 94, image_url: "/public/PUsynchrone/ouverte/at15/2.jpg" },
-    { id: 1108, courroie_id: 94, image_url: "/public/PUsynchrone/ouverte/at15/3.jpg" }
+    { id: 1106, courroie_id: 94, image_url: "/public/PUsynchrone/ouverte/at15/1.webp" },
+    { id: 1107, courroie_id: 94, image_url: "/public/PUsynchrone/ouverte/at15/2.webp" },
+    { id: 1108, courroie_id: 94, image_url: "/public/PUsynchrone/ouverte/at15/3.webp" }
   ],
   fiches: [
     { id: 2102, courroie_id: 94, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }
@@ -2710,9 +2710,9 @@ const courroieData = [
   poids_g_m: "95",
   application: "industry",
   images: [
-    { id: 1109, courroie_id: 95, image_url: "/public/PUsynchrone/ouverte/at20/1.jpg" },
-    { id: 1110, courroie_id: 95, image_url: "/public/PUsynchrone/ouverte/at20/2.jpg" },
-    { id: 1111, courroie_id: 95, image_url: "/public/PUsynchrone/ouverte/at20/3.jpg" }
+    { id: 1109, courroie_id: 95, image_url: "/public/PUsynchrone/ouverte/at20/1.webp" },
+    { id: 1110, courroie_id: 95, image_url: "/public/PUsynchrone/ouverte/at20/2.webp" },
+    { id: 1111, courroie_id: 95, image_url: "/public/PUsynchrone/ouverte/at20/3.webp" }
   ],
   fiches: [{ id: 2103, courroie_id: 95, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [
@@ -2732,9 +2732,9 @@ const courroieData = [
   poids_g_m: "85",
   application: "industry",
   images: [
-    { id: 1112, courroie_id: 96, image_url: "/public/PUsynchrone/ouverte/h/1.jpg" },
-    { id: 1113, courroie_id: 96, image_url: "/public/PUsynchrone/ouverte/h/2.jpg" },
-    { id: 1114, courroie_id: 96, image_url: "/public/PUsynchrone/ouverte/h/3.jpg" }
+    { id: 1112, courroie_id: 96, image_url: "/public/PUsynchrone/ouverte/h/1.webp" },
+    { id: 1113, courroie_id: 96, image_url: "/public/PUsynchrone/ouverte/h/2.webp" },
+    { id: 1114, courroie_id: 96, image_url: "/public/PUsynchrone/ouverte/h/3.webp" }
   ],
   fiches: [{ id: 2104, courroie_id: 96, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [
@@ -2754,9 +2754,9 @@ const courroieData = [
   poids_g_m: "75",
   application: "industry",
   images: [
-    { id: 1115, courroie_id: 97, image_url: "/public/PUsynchrone/ouverte/htd/1.jpg" },
-    { id: 1116, courroie_id: 97, image_url: "/public/PUsynchrone/ouverte/htd/2.jpg" },
-    { id: 1117, courroie_id: 97, image_url: "/public/PUsynchrone/ouverte/htd/3.jpg" }
+    { id: 1115, courroie_id: 97, image_url: "/public/PUsynchrone/ouverte/htd/1.webp" },
+    { id: 1116, courroie_id: 97, image_url: "/public/PUsynchrone/ouverte/htd/2.webp" },
+    { id: 1117, courroie_id: 97, image_url: "/public/PUsynchrone/ouverte/htd/3.webp" }
   ],
   fiches: [{ id: 2105, courroie_id: 97, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [
@@ -2776,9 +2776,9 @@ const courroieData = [
   poids_g_m: "70",
   application: "industry",
   images: [
-    { id: 1118, courroie_id: 98, image_url: "/public/PUsynchrone/ouverte/l/1.jpg" },
-    { id: 1119, courroie_id: 98, image_url: "/public/PUsynchrone/ouverte/l/2.jpg" },
-    { id: 1120, courroie_id: 98, image_url: "/public/PUsynchrone/ouverte/l/3.jpg" }
+    { id: 1118, courroie_id: 98, image_url: "/public/PUsynchrone/ouverte/l/1.webp" },
+    { id: 1119, courroie_id: 98, image_url: "/public/PUsynchrone/ouverte/l/2.webp" },
+    { id: 1120, courroie_id: 98, image_url: "/public/PUsynchrone/ouverte/l/3.webp" }
   ],
   fiches: [{ id: 2106, courroie_id: 98, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [
@@ -2798,9 +2798,9 @@ const courroieData = [
   poids_g_m: "15",
   application: "industry",
   images: [
-    { id: 1121, courroie_id: 99, image_url: "/public/PUsynchrone/ouverte/mxl/1.jpg" },
-    { id: 1122, courroie_id: 99, image_url: "/public/PUsynchrone/ouverte/mxl/2.jpg" },
-    { id: 1123, courroie_id: 99, image_url: "/public/PUsynchrone/ouverte/mxl/3.jpg" }
+    { id: 1121, courroie_id: 99, image_url: "/public/PUsynchrone/ouverte/mxl/1.webp" },
+    { id: 1122, courroie_id: 99, image_url: "/public/PUsynchrone/ouverte/mxl/2.webp" },
+    { id: 1123, courroie_id: 99, image_url: "/public/PUsynchrone/ouverte/mxl/3.webp" }
   ],
   fiches: [{ id: 2107, courroie_id: 99, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [
@@ -2820,9 +2820,9 @@ const courroieData = [
   poids_g_m: "18",
   application: "industry",
   images: [
-    { id: 1124, courroie_id: 100, image_url: "/public/PUsynchrone/ouverte/t2.5/1.jpg" },
-    { id: 1125, courroie_id: 100, image_url: "/public/PUsynchrone/ouverte/t2.5/2.jpg" },
-    { id: 1126, courroie_id: 100, image_url: "/public/PUsynchrone/ouverte/t2.5/3.jpg" }
+    { id: 1124, courroie_id: 100, image_url: "/public/PUsynchrone/ouverte/t2.5/1.webp" },
+    { id: 1125, courroie_id: 100, image_url: "/public/PUsynchrone/ouverte/t2.5/2.webp" },
+    { id: 1126, courroie_id: 100, image_url: "/public/PUsynchrone/ouverte/t2.5/3.webp" }
   ],
   fiches: [{ id: 2108, courroie_id: 100, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [
@@ -2842,9 +2842,9 @@ const courroieData = [
   poids_g_m: "40",
   application: "industry",
   images: [
-    { id: 1127, courroie_id: 101, image_url: "/public/PUsynchrone/ouverte/t5/1.jpg" },
-    { id: 1128, courroie_id: 101, image_url: "/public/PUsynchrone/ouverte/t5/2.jpg" },
-    { id: 1129, courroie_id: 101, image_url: "/public/PUsynchrone/ouverte/t5/3.jpg" }
+    { id: 1127, courroie_id: 101, image_url: "/public/PUsynchrone/ouverte/t5/1.webp" },
+    { id: 1128, courroie_id: 101, image_url: "/public/PUsynchrone/ouverte/t5/2.webp" },
+    { id: 1129, courroie_id: 101, image_url: "/public/PUsynchrone/ouverte/t5/3.webp" }
   ],
   fiches: [{ id: 2109, courroie_id: 101, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [
@@ -2864,9 +2864,9 @@ const courroieData = [
   poids_g_m: "75",
   application: "industry",
   images: [
-    { id: 1130, courroie_id: 102, image_url: "/public/PUsynchrone/ouverte/t10/1.jpg" },
-    { id: 1131, courroie_id: 102, image_url: "/public/PUsynchrone/ouverte/t10/2.jpg" },
-    { id: 1132, courroie_id: 102, image_url: "/public/PUsynchrone/ouverte/t10/3.jpg" }
+    { id: 1130, courroie_id: 102, image_url: "/public/PUsynchrone/ouverte/t10/1.webp" },
+    { id: 1131, courroie_id: 102, image_url: "/public/PUsynchrone/ouverte/t10/2.webp" },
+    { id: 1132, courroie_id: 102, image_url: "/public/PUsynchrone/ouverte/t10/3.webp" }
   ],
   fiches: [{ id: 2110, courroie_id: 102, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [
@@ -2886,9 +2886,9 @@ const courroieData = [
   poids_g_m: "120",
   application: "industry",
   images: [
-    { id: 1133, courroie_id: 103, image_url: "/public/PUsynchrone/ouverte/t20/1.jpg" },
-    { id: 1134, courroie_id: 103, image_url: "/public/PUsynchrone/ouverte/t20/2.jpg" },
-    { id: 1135, courroie_id: 103, image_url: "/public/PUsynchrone/ouverte/t20/3.jpg" }
+    { id: 1133, courroie_id: 103, image_url: "/public/PUsynchrone/ouverte/t20/1.webp" },
+    { id: 1134, courroie_id: 103, image_url: "/public/PUsynchrone/ouverte/t20/2.webp" },
+    { id: 1135, courroie_id: 103, image_url: "/public/PUsynchrone/ouverte/t20/3.webp" }
   ],
   fiches: [{ id: 2111, courroie_id: 103, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [
@@ -2908,9 +2908,9 @@ const courroieData = [
   poids_g_m: "150",
   application: "industry",
   images: [
-    { id: 1136, courroie_id: 104, image_url: "/public/PUsynchrone/ouverte/xh/1.jpg" },
-    { id: 1137, courroie_id: 104, image_url: "/public/PUsynchrone/ouverte/xh/2.jpg" },
-    { id: 1138, courroie_id: 104, image_url: "/public/PUsynchrone/ouverte/xh/3.jpg" }
+    { id: 1136, courroie_id: 104, image_url: "/public/PUsynchrone/ouverte/xh/1.webp" },
+    { id: 1137, courroie_id: 104, image_url: "/public/PUsynchrone/ouverte/xh/2.webp" },
+    { id: 1138, courroie_id: 104, image_url: "/public/PUsynchrone/ouverte/xh/3.webp" }
   ],
   fiches: [{ id: 2112, courroie_id: 104, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [
@@ -2930,9 +2930,9 @@ const courroieData = [
   poids_g_m: "30",
   application: "industry",
   images: [
-    { id: 1139, courroie_id: 105, image_url: "/public/PUsynchrone/ouverte/xl/1.jpg" },
-    { id: 1140, courroie_id: 105, image_url: "/public/PUsynchrone/ouverte/xl/2.jpg" },
-    { id: 1141, courroie_id: 105, image_url: "/public/PUsynchrone/ouverte/xl/3.jpg" }
+    { id: 1139, courroie_id: 105, image_url: "/public/PUsynchrone/ouverte/xl/1.webp" },
+    { id: 1140, courroie_id: 105, image_url: "/public/PUsynchrone/ouverte/xl/2.webp" },
+    { id: 1141, courroie_id: 105, image_url: "/public/PUsynchrone/ouverte/xl/3.webp" }
   ],
   fiches: [{ id: 2113, courroie_id: 105, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [
@@ -2953,9 +2953,9 @@ const courroieData = [
   poids_g_m: "200",
   application: "industry",
   images: [
-    { id: 1142, courroie_id: 106, image_url: "/public/PUsynchrone/ouverte/xxh/1.jpg" },
-    { id: 1143, courroie_id: 106, image_url: "/public/PUsynchrone/ouverte/xxh/2.jpg" },
-    { id: 1144, courroie_id: 106, image_url: "/public/PUsynchrone/ouverte/xxh/3.jpg" }
+    { id: 1142, courroie_id: 106, image_url: "/public/PUsynchrone/ouverte/xxh/1.webp" },
+    { id: 1143, courroie_id: 106, image_url: "/public/PUsynchrone/ouverte/xxh/2.webp" },
+    { id: 1144, courroie_id: 106, image_url: "/public/PUsynchrone/ouverte/xxh/3.webp" }
   ],
   fiches: [{ id: 2114, courroie_id: 106, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [
@@ -2975,9 +2975,9 @@ const courroieData = [
   poids_g_m: "35",
   application: "industry",
   images: [
-    { id: 1145, courroie_id: 107, image_url: "/public/PUsynchrone/ouverte/xxl/1.jpg" },
-    { id: 1146, courroie_id: 107, image_url: "/public/PUsynchrone/ouverte/xxl/2.jpg" },
-    { id: 1147, courroie_id: 107, image_url: "/public/PUsynchrone/ouverte/xxl/3.jpg" }
+    { id: 1145, courroie_id: 107, image_url: "/public/PUsynchrone/ouverte/xxl/1.webp" },
+    { id: 1146, courroie_id: 107, image_url: "/public/PUsynchrone/ouverte/xxl/2.webp" },
+    { id: 1147, courroie_id: 107, image_url: "/public/PUsynchrone/ouverte/xxl/3.webp" }
   ],
   fiches: [{ id: 2115, courroie_id: 107, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [
@@ -2996,9 +2996,9 @@ const courroieData = [
   poids_g_m: "35",
   application: "industry",
   images: [
-    { id: 11450, courroie_id: 108, image_url: "/public/PUsynchrone/ouverte/std/1.jpg" },
-    { id: 11460, courroie_id: 108, image_url: "/public/PUsynchrone/ouverte/std/2.jpg" },
-    { id: 11470, courroie_id: 108, image_url: "/public/PUsynchrone/ouverte/std/3.jpg" }
+    { id: 11450, courroie_id: 108, image_url: "/public/PUsynchrone/ouverte/std/1.webp" },
+    { id: 11460, courroie_id: 108, image_url: "/public/PUsynchrone/ouverte/std/2.webp" },
+    { id: 11470, courroie_id: 108, image_url: "/public/PUsynchrone/ouverte/std/3.webp" }
   ],
   fiches: [{ id: 21150, courroie_id: 108, fiche_technique_url: "/public/PUsynchrone/ouverte/timingBeltOpen.pdf" }],
   matieres: [
@@ -3018,9 +3018,9 @@ const courroieData = [
   poids_g_m: "20",
   application: "industry",
   images: [
-    { id: 10091, courroie_id: 109, image_url: "/public/PUsynchrone/fermee/at5/1.jpg" },
-    { id: 10092, courroie_id: 109, image_url: "/public/PUsynchrone/fermee/at5/2.jpg" },
-    { id: 10093, courroie_id: 109, image_url: "/public/PUsynchrone/fermee/at5/3.jpg" }
+    { id: 10091, courroie_id: 109, image_url: "/public/PUsynchrone/fermee/at5/1.webp" },
+    { id: 10092, courroie_id: 109, image_url: "/public/PUsynchrone/fermee/at5/2.webp" },
+    { id: 10093, courroie_id: 109, image_url: "/public/PUsynchrone/fermee/at5/3.webp" }
   ],
   fiches: [
     { id: 10032, courroie_id: 109, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }
@@ -3042,9 +3042,9 @@ const courroieData = [
   poids_g_m: "45",
   application: "industry",
   images: [
-    { id: 10094, courroie_id: 110, image_url: "/public/PUsynchrone/fermee/at10/1.jpg" },
-    { id: 10095, courroie_id: 110, image_url: "/public/PUsynchrone/fermee/at10/2.jpg" },
-    { id: 10096, courroie_id: 110, image_url: "/public/PUsynchrone/fermee/at10/3.jpg" }
+    { id: 10094, courroie_id: 110, image_url: "/public/PUsynchrone/fermee/at10/1.webp" },
+    { id: 10095, courroie_id: 110, image_url: "/public/PUsynchrone/fermee/at10/2.webp" },
+    { id: 10096, courroie_id: 110, image_url: "/public/PUsynchrone/fermee/at10/3.webp" }
   ],
   fiches: [
     { id: 10033, courroie_id: 110, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }
@@ -3066,9 +3066,9 @@ const courroieData = [
   poids_g_m: "70",
   application: "industry",
   images: [
-    { id: 10097, courroie_id: 111, image_url: "/public/PUsynchrone/fermee/at15/1.jpg" },
-    { id: 10098, courroie_id: 111, image_url: "/public/PUsynchrone/fermee/at15/2.jpg" },
-    { id: 10099, courroie_id: 111, image_url: "/public/PUsynchrone/fermee/at15/3.jpg" }
+    { id: 10097, courroie_id: 111, image_url: "/public/PUsynchrone/fermee/at15/1.webp" },
+    { id: 10098, courroie_id: 111, image_url: "/public/PUsynchrone/fermee/at15/2.webp" },
+    { id: 10099, courroie_id: 111, image_url: "/public/PUsynchrone/fermee/at15/3.webp" }
   ],
   fiches: [
     { id: 10034, courroie_id: 111, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }
@@ -3089,9 +3089,9 @@ const courroieData = [
   poids_g_m: "95",
   application: "industry",
   images: [
-    { id: 10100, courroie_id: 112, image_url: "/public/PUsynchrone/fermee/at20/1.jpg" },
-    { id: 10101, courroie_id: 112, image_url: "/public/PUsynchrone/fermee/at20/2.jpg" },
-    { id: 10102, courroie_id: 112, image_url: "/public/PUsynchrone/fermee/at20/3.jpg" }
+    { id: 10100, courroie_id: 112, image_url: "/public/PUsynchrone/fermee/at20/1.webp" },
+    { id: 10101, courroie_id: 112, image_url: "/public/PUsynchrone/fermee/at20/2.webp" },
+    { id: 10102, courroie_id: 112, image_url: "/public/PUsynchrone/fermee/at20/3.webp" }
   ],
   fiches: [{ id: 10035, courroie_id: 112, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
   matieres: [{ id: 10038, courroie_id: 112, matiere: "PU" }]
@@ -3109,9 +3109,9 @@ const courroieData = [
   poids_g_m: "85",
   application: "industry",
   images: [
-    { id: 10103, courroie_id: 113, image_url: "/public/PUsynchrone/fermee/h/1.jpg" },
-    { id: 10104, courroie_id: 113, image_url: "/public/PUsynchrone/fermee/h/2.jpg" },
-    { id: 10105, courroie_id: 113, image_url: "/public/PUsynchrone/fermee/h/3.jpg" }
+    { id: 10103, courroie_id: 113, image_url: "/public/PUsynchrone/fermee/h/1.webp" },
+    { id: 10104, courroie_id: 113, image_url: "/public/PUsynchrone/fermee/h/2.webp" },
+    { id: 10105, courroie_id: 113, image_url: "/public/PUsynchrone/fermee/h/3.webp" }
   ],
   fiches: [{ id: 10036, courroie_id: 113, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
   matieres: [{ id: 10039, courroie_id: 113, matiere: "PU" }]
@@ -3129,9 +3129,9 @@ const courroieData = [
   poids_g_m: "75",
   application: "industry",
   images: [
-    { id: 10106, courroie_id: 114, image_url: "/public/PUsynchrone/fermee/htd/1.jpg" },
-    { id: 10107, courroie_id: 114, image_url: "/public/PUsynchrone/fermee/htd/2.jpg" },
-    { id: 10108, courroie_id: 114, image_url: "/public/PUsynchrone/fermee/htd/3.jpg" }
+    { id: 10106, courroie_id: 114, image_url: "/public/PUsynchrone/fermee/htd/1.webp" },
+    { id: 10107, courroie_id: 114, image_url: "/public/PUsynchrone/fermee/htd/2.webp" },
+    { id: 10108, courroie_id: 114, image_url: "/public/PUsynchrone/fermee/htd/3.webp" }
   ],
   fiches: [{ id: 10037, courroie_id: 114, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
   matieres: [{ id: 10040, courroie_id: 114, matiere: "PU" }]
@@ -3149,9 +3149,9 @@ const courroieData = [
   poids_g_m: "70",
   application: "industry",
   images: [
-    { id: 10109, courroie_id: 115, image_url: "/public/PUsynchrone/fermee/l/1.jpg" },
-    { id: 10110, courroie_id: 115, image_url: "/public/PUsynchrone/fermee/l/2.jpg" },
-    { id: 10111, courroie_id: 115, image_url: "/public/PUsynchrone/fermee/l/3.jpg" }
+    { id: 10109, courroie_id: 115, image_url: "/public/PUsynchrone/fermee/l/1.webp" },
+    { id: 10110, courroie_id: 115, image_url: "/public/PUsynchrone/fermee/l/2.webp" },
+    { id: 10111, courroie_id: 115, image_url: "/public/PUsynchrone/fermee/l/3.webp" }
   ],
   fiches: [{ id: 10038, courroie_id: 115, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
   matieres: [{ id: 10041, courroie_id: 115, matiere: "PU" }]
@@ -3169,9 +3169,9 @@ const courroieData = [
   poids_g_m: "1.4",
   application: "industry",
   images: [
-    { id: 10112, courroie_id: 116, image_url: "/public/PUsynchrone/fermee/mxl/1.jpg" },
-    { id: 10113, courroie_id: 116, image_url: "/public/PUsynchrone/fermee/mxl/2.jpg" },
-    { id: 10114, courroie_id: 116, image_url: "/public/PUsynchrone/fermee/mxl/3.jpg" }
+    { id: 10112, courroie_id: 116, image_url: "/public/PUsynchrone/fermee/mxl/1.webp" },
+    { id: 10113, courroie_id: 116, image_url: "/public/PUsynchrone/fermee/mxl/2.webp" },
+    { id: 10114, courroie_id: 116, image_url: "/public/PUsynchrone/fermee/mxl/3.webp" }
   ],
   fiches: [{ id: 10039, courroie_id: 116, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
   matieres: [{ id: 10042, courroie_id: 116, matiere: "PU" }]
@@ -3189,9 +3189,9 @@ const courroieData = [
   poids_g_m: "5",
   application: "industry",
   images: [
-    { id: 10115, courroie_id: 117, image_url: "/public/PUsynchrone/fermee/t2.5/1.jpg" },
-    { id: 10116, courroie_id: 117, image_url: "/public/PUsynchrone/fermee/t2.5/2.jpg" },
-    { id: 10117, courroie_id: 117, image_url: "/public/PUsynchrone/fermee/t2.5/3.jpg" }
+    { id: 10115, courroie_id: 117, image_url: "/public/PUsynchrone/fermee/t2.5/1.webp" },
+    { id: 10116, courroie_id: 117, image_url: "/public/PUsynchrone/fermee/t2.5/2.webp" },
+    { id: 10117, courroie_id: 117, image_url: "/public/PUsynchrone/fermee/t2.5/3.webp" }
   ],
   fiches: [{ id: 10040, courroie_id: 117, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
   matieres: [{ id: 10043, courroie_id: 117, matiere: "PU" }]
@@ -3209,9 +3209,9 @@ const courroieData = [
   poids_g_m: "18",
   application: "industry",
   images: [
-    { id: 10118, courroie_id: 118, image_url: "/public/PUsynchrone/fermee/t5/1.jpg" },
-    { id: 10119, courroie_id: 118, image_url: "/public/PUsynchrone/fermee/t5/2.jpg" },
-    { id: 10120, courroie_id: 118, image_url: "/public/PUsynchrone/fermee/t5/3.jpg" }
+    { id: 10118, courroie_id: 118, image_url: "/public/PUsynchrone/fermee/t5/1.webp" },
+    { id: 10119, courroie_id: 118, image_url: "/public/PUsynchrone/fermee/t5/2.webp" },
+    { id: 10120, courroie_id: 118, image_url: "/public/PUsynchrone/fermee/t5/3.webp" }
   ],
   fiches: [{ id: 10041, courroie_id: 118, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
   matieres: [{ id: 10044, courroie_id: 118, matiere: "PU" }]
@@ -3229,9 +3229,9 @@ const courroieData = [
   poids_g_m: "40",
   application: "industry",
   images: [
-    { id: 10121, courroie_id: 119, image_url: "/public/PUsynchrone/fermee/t10/1.jpg" },
-    { id: 10122, courroie_id: 119, image_url: "/public/PUsynchrone/fermee/t10/2.jpg" },
-    { id: 10123, courroie_id: 119, image_url: "/public/PUsynchrone/fermee/t10/3.jpg" }
+    { id: 10121, courroie_id: 119, image_url: "/public/PUsynchrone/fermee/t10/1.webp" },
+    { id: 10122, courroie_id: 119, image_url: "/public/PUsynchrone/fermee/t10/2.webp" },
+    { id: 10123, courroie_id: 119, image_url: "/public/PUsynchrone/fermee/t10/3.webp" }
   ],
   fiches: [{ id: 10042, courroie_id: 119, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
   matieres: [{ id: 10045, courroie_id: 119, matiere: "PU" }]
@@ -3249,9 +3249,9 @@ const courroieData = [
   poids_g_m: "90",
   application: "industry",
   images: [
-    { id: 10124, courroie_id: 120, image_url: "/public/PUsynchrone/fermee/t20/1.jpg" },
-    { id: 10125, courroie_id: 120, image_url: "/public/PUsynchrone/fermee/t20/2.jpg" },
-    { id: 10126, courroie_id: 120, image_url: "/public/PUsynchrone/fermee/t20/3.jpg" }
+    { id: 10124, courroie_id: 120, image_url: "/public/PUsynchrone/fermee/t20/1.webp" },
+    { id: 10125, courroie_id: 120, image_url: "/public/PUsynchrone/fermee/t20/2.webp" },
+    { id: 10126, courroie_id: 120, image_url: "/public/PUsynchrone/fermee/t20/3.webp" }
   ],
   fiches: [{ id: 10043, courroie_id: 120, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
   matieres: [{ id: 10046, courroie_id: 120, matiere: "PU" }]
@@ -3269,9 +3269,9 @@ const courroieData = [
   poids_g_m: "140",
   application: "industry",
   images: [
-    { id: 10127, courroie_id: 121, image_url: "/public/PUsynchrone/fermee/xh/1.jpg" },
-    { id: 10128, courroie_id: 121, image_url: "/public/PUsynchrone/fermee/xh/2.jpg" },
-    { id: 10129, courroie_id: 121, image_url: "/public/PUsynchrone/fermee/xh/3.jpg" }
+    { id: 10127, courroie_id: 121, image_url: "/public/PUsynchrone/fermee/xh/1.webp" },
+    { id: 10128, courroie_id: 121, image_url: "/public/PUsynchrone/fermee/xh/2.webp" },
+    { id: 10129, courroie_id: 121, image_url: "/public/PUsynchrone/fermee/xh/3.webp" }
   ],
   fiches: [{ id: 10044, courroie_id: 121, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
   matieres: [{ id: 10047, courroie_id: 121, matiere: "PU" }]
@@ -3289,9 +3289,9 @@ const courroieData = [
   poids_g_m: "25",
   application: "industry",
   images: [
-    { id: 10130, courroie_id: 122, image_url: "/public/PUsynchrone/fermee/xl/1.jpg" },
-    { id: 10131, courroie_id: 122, image_url: "/public/PUsynchrone/fermee/xl/2.jpg" },
-    { id: 10132, courroie_id: 122, image_url: "/public/PUsynchrone/fermee/xl/3.jpg" }
+    { id: 10130, courroie_id: 122, image_url: "/public/PUsynchrone/fermee/xl/1.webp" },
+    { id: 10131, courroie_id: 122, image_url: "/public/PUsynchrone/fermee/xl/2.webp" },
+    { id: 10132, courroie_id: 122, image_url: "/public/PUsynchrone/fermee/xl/3.webp" }
   ],
   fiches: [{ id: 10045, courroie_id: 122, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
   matieres: [{ id: 10048, courroie_id: 122, matiere: "PU" }]
@@ -3309,9 +3309,9 @@ const courroieData = [
   poids_g_m: "200",
   application: "industry",
   images: [
-    { id: 10133, courroie_id: 123, image_url: "/public/PUsynchrone/fermee/xxh/1.jpg" },
-    { id: 10134, courroie_id: 123, image_url: "/public/PUsynchrone/fermee/xxh/2.jpg" },
-    { id: 10135, courroie_id: 123, image_url: "/public/PUsynchrone/fermee/xxh/3.jpg" }
+    { id: 10133, courroie_id: 123, image_url: "/public/PUsynchrone/fermee/xxh/1.webp" },
+    { id: 10134, courroie_id: 123, image_url: "/public/PUsynchrone/fermee/xxh/2.webp" },
+    { id: 10135, courroie_id: 123, image_url: "/public/PUsynchrone/fermee/xxh/3.webp" }
   ],
   fiches: [{ id: 10046, courroie_id: 123, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
   matieres: [{ id: 10049, courroie_id: 123, matiere: "PU" }]
@@ -3329,9 +3329,9 @@ const courroieData = [
   poids_g_m: "35",
   application: "industry",
   images: [
-    { id: 10136, courroie_id: 124, image_url: "/public/PUsynchrone/fermee/xxl/1.jpg" },
-    { id: 10137, courroie_id: 124, image_url: "/public/PUsynchrone/fermee/xxl/2.jpg" },
-    { id: 10138, courroie_id: 124, image_url: "/public/PUsynchrone/fermee/xxl/3.jpg" }
+    { id: 10136, courroie_id: 124, image_url: "/public/PUsynchrone/fermee/xxl/1.webp" },
+    { id: 10137, courroie_id: 124, image_url: "/public/PUsynchrone/fermee/xxl/2.webp" },
+    { id: 10138, courroie_id: 124, image_url: "/public/PUsynchrone/fermee/xxl/3.webp" }
   ],
   fiches: [{ id: 10047, courroie_id: 124, fiche_technique_url: "/public/PUsynchrone/fermee/timingBeltClosed.pdf" }],
   matieres: [{ id: 10050, courroie_id: 124, matiere: "PU" }]
@@ -3349,12 +3349,12 @@ const courroieData = [
     poids_g_m: "1.4",
     application: "industry",
     images: [
-      { id :10088,courroie_id: 125, image_url: "/public/PUspeciale/1.jpg" },
-      { id :10089,courroie_id: 125, image_url: "/public/PUspeciale/t5/1.jpg" },
-      { id :10090,courroie_id: 125, image_url: "/public/PUspeciale/t10/1.jpg" }
+      { id :10088,courroie_id: 125, image_url: "/public/PUSpeciale/1.webp" },
+      { id :10089,courroie_id: 125, image_url: "/public/PUSpeciale/t5/1.webp" },
+      { id :10090,courroie_id: 125, image_url: "/public/PUSpeciale/t10/1.webp" }
     ],
     fiches: [
-      { id :10031,courroie_id: 125, fiche_technique_url: "/public/PUspeciale/timingBeltSpecial.pdf" }
+      { id :10031,courroie_id: 125, fiche_technique_url: "/public/PUSpeciale/timingBeltSpecial.pdf" }
     ],
     matieres: [
       { id :10033,courroie_id: 125, matiere: "CR" },
@@ -3376,17 +3376,17 @@ const courroieData = [
     {
       id: 319,
       courroie_id: 126,
-      image_url: "/public/ronde/2mm.jpg"
+      image_url: "/public/ronde/2mm.webp"
     },
     {
       id: 320,
       courroie_id: 126,
-      image_url: "/public/ronde/2mm.jpg"
+      image_url: "/public/ronde/2mm.webp"
     },
     {
       id: 321,
       courroie_id: 126,
-      image_url: "/public/ronde/2mm.jpg"
+      image_url: "/public/ronde/2mm.webp"
     }
   ],
   fiches: [
@@ -3424,7 +3424,7 @@ const courroieData = [
     {
       id: 322,
       courroie_id: 127,
-      image_url: "/public/thermosodableTrapez/2.jpg"
+      image_url: "/public/thermosodableTrapez/2.webp"
     }
   ],
   fiches: [
@@ -3458,12 +3458,12 @@ const courroieData = [
   temperature_max: 80,
   charge_max_n: 1200,
   poids_g_m: 230,
-  application: "convoyeurs inclinés",
+  application: "conveyors",
   images: [
     {
       id: 323,
       courroie_id: 128,
-      image_url: "/public/thermosodableTrapez/1.jpg"
+      image_url: "/public/thermosodableTrapez/1.webp"
     }
   ],
   fiches: [

@@ -1,16 +1,23 @@
 import axios from "axios";
+import { config } from "@/lib/config";
 
-const Api = () => {
+const Api = axios.create({
+  baseURL: config.apiUrl,
+  headers: { "Content-Type": "application/json" },
+  timeout: 20000,
+});
 
-
-  return axios.create({
-   // baseURL: `http://localhost:8080/apiv1`,
-   
- baseURL: `https://courroie-back-3halhxpqr-ahmedbm99s-projects.vercel.app/apiv1`,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-}; 
+/**
+ * Traduit une erreur d'appel API en clé de traduction affichable.
+ * Codes renvoyés par le backend : captcha_failed, spam_detected, invalid_input, email_failed.
+ */
+export const apiErrorKey = (error) => {
+  if (!error?.response) return "errorNetwork";
+  const code = error.response.data?.error;
+  if (code === "captcha_failed" || code === "spam_detected") return "errorCaptcha";
+  if (code === "email_failed") return "errorEmailFailed";
+  if (code === "invalid_input") return "errorForm";
+  return "errorGeneric";
+};
 
 export default Api;

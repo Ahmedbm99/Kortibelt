@@ -1,111 +1,93 @@
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import FamilleServices from "@/services/FamilyServices";
-import TypesServices from "@/services/TypesServices";
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setFamily } from "@/store/familySlice";
-import { setTypes } from "@/store/typeSlice";
-import toast from "react-hot-toast";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { useNavigate } from "react-router-dom";
-import family from "@/data/family.js";
-import category from "@/data/category.js";
-import {selectedType } from "@/store/typeSlice";
-export default function SidebarClassification({  selectedFamilly, onFamilySelect }) {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+import { NavLink, useLocation } from 'react-router-dom';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { families, getCategoriesOf, getSubcategoriesOf, localName, pathOfSubcategory } from '@/data/catalog';
+import { parsePath } from '@/lib/paths';
 
-  const { language } = useLanguage(); // 'fr' or 'en'
-  const [families, setFamilies] = useState([]);
-  const [typesState, setTypesState] = useState([]);
-  const [loading, setLoading] = useState(true);
-    const selectedCategory = useSelector((state) => state.type.selectedCategory);
-  // Fetch families and types
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-       // const familyData = await FamilleServices.getAllFamilies();
-       // const typesData = await TypesServices.getAllTypes();
-
-        setFamilies(family);
-        setTypesState(category);
-
-        dispatch(setFamily(family));
-        dispatch(setTypes(category));
-      } catch (err) {
-        console.error(err);
-        toast.error(
-          language === "en"
-            ? "Error loading categories"
-            : "Erreur lors du chargement des catégories"
-        );
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [dispatch, language]);
-
-  const categories = families.map((f) => ({
-    name: language === "en" ? f.nomAnglais : f.nomFrancais,
-    family_id: f.id,
-    sub: typesState
-      .filter((t) => t.famille_id === f.id)
-      .map((t) => ({
-        name: language === "en" ? t.nomAnglais : t.nomFrancais,
-        type_id: t.id,
-      })),
-  }));
-
-  if (loading) {
-    return <div className="p-4 text-gray-500">Loading...</div>;
+/** Famille / catégorie / sous-catégorie actives, déduites de l'adresse. */
+function useActivePath() {
+  const { pathname } = useLocation();
+  const info = parsePath(pathname);
+  if (info.page === 'belt') {
+    const p = pathOfSubcategory(info.belt.subcategory_id);
+    return { familyId: p.family?.id, categoryId: p.category?.id, subcategoryId: p.subcategory?.id };
   }
+  if (info.page === 'category' && getSubcategoriesOf(info.category.id).length === 1) {
+    return { familyId: info.family.id, categoryId: info.category.id, subcategoryId: getSubcategoriesOf(info.category.id)[0].id };
+  }
+  return { familyId: info.family?.id, categoryId: info.category?.id, subcategoryId: info.subcategory?.id };
+}
+
+const itemClass = (active) =>
+  `block rounded-md px-2 py-1.5 text-sm transition-colors ${
+    active ? 'bg-accent-soft font-semibold text-accent-text' : 'text-muted-foreground hover:bg-secondary hover:text-primary'
+  }`;
+
+export default function Sidebar() {
+  const { t, language, paths } = useLanguage();
+  const active = useActivePath();
 
   return (
-    <aside className="w-96 p-1 mt-24 ">
-      <h2 className="text-3xl font-bold">
-        {language === "en" ? "Product Category" : "Catégorie de produit"}
-      </h2>
-      <div className="h-1 bg-orange-500 w-28 mt-2 mb-6"></div>
+    <nav aria-label={t('productCategory')} className="sticky top-24 max-h-[calc(100vh-7rem)] w-72 overflow-y-auto p-4">
+      <h2 className="text-xl font-bold text-primary">{t('productCategory')}</h2>
+      <div className="mb-4 mt-2 h-1 w-16 bg-accent" />
 
-      <Accordion type="single" collapsible className="w-full space-y-4">
-        {categories.map((cat, i) => (
-          <AccordionItem
-            key={i}
-            value={(cat.name || "unnamed").replace(/ /g, "-").toLowerCase()}
-          >
+      <NavLink to={paths.products()} end className={({ isActive }) => itemClass(isActive)}>
+        {t('allProducts')}
+      </NavLink>
+
+      <Accordion
+        key={active.familyId ?? 'none'}
+        type="single"
+        collapsible
+        defaultValue={active.familyId ? `fam-${active.familyId}` : undefined}
+        className="mt-2 w-full"
+      >
+        {families.map((f) => (
+          <AccordionItem key={f.id} value={`fam-${f.id}`}>
             <AccordionTrigger
-              className={`text-gray-800 font-medium cursor-pointer ${
-                selectedFamilly === cat.family_id ? "text-accent" : ""
-              }`}
-              onClick={() => {onFamilySelect && onFamilySelect(cat.family_id ); navigate('/category/' + cat.family_id);}}
-              
+              className={`px-2 text-left font-medium ${active.familyId === f.id ? 'text-accent-text' : 'text-primary'}`}
             >
-              {cat.name || (language === "en" ? "Unnamed" : "Sans nom")}
+              {localName(f, language)}
             </AccordionTrigger>
-
-            {cat.sub.length > 0 && (
-              <AccordionContent>
-                <ul className="ml-4 mt-2 space-y-2 border-l pl-4 border-gray-300">
-                  {cat.sub.map((sub, j) => (
-                    <li
-                      key={j}
-                      className={`text-gray-600 hover:text-gray-900 cursor-pointer py-1 ${
-                        selectedCategory === sub.type_id ? "text-accent font-semibold" : ""
-                      }`}
-                      onClick={() => {dispatch(selectedType(sub.type_id));  navigate('/subcategory/' + sub.type_id);}}
-                    >
-                      {sub.name || (language === "en" ? "Unnamed" : "Sans nom")}
+            <AccordionContent>
+              <ul className="ml-2 space-y-1 border-l border-border pl-3">
+                <li>
+                  <NavLink to={paths.family(f)} className={({ isActive }) => itemClass(isActive)}>
+                    {t('seeCategories')}
+                  </NavLink>
+                </li>
+                {getCategoriesOf(f.id).map((c) => {
+                  const subs = getSubcategoriesOf(c.id);
+                  const catActive = active.categoryId === c.id;
+                  return (
+                    <li key={c.id}>
+                      {/* Une seule sous-catégorie : lien direct vers les produits */}
+                      <NavLink
+                        to={paths.category(c)}
+                        className={() => itemClass(catActive && (subs.length === 1 || !active.subcategoryId))}
+                      >
+                        {localName(c, language)}
+                      </NavLink>
+                      {catActive && subs.length > 1 && (
+                        <ul className="ml-3 mt-1 space-y-1 border-l border-border pl-3">
+                          {subs.map((s) => (
+                            <li key={s.id}>
+                              <NavLink to={paths.subcategory(s)} className={() => itemClass(active.subcategoryId === s.id)}>
+                                {localName(s, language)}
+                              </NavLink>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </li>
-                  ))}
-                </ul>
-              </AccordionContent>
-            )}
+                  );
+                })}
+              </ul>
+            </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
-    </aside>
+    </nav>
   );
 }

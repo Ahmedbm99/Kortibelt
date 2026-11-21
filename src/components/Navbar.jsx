@@ -1,199 +1,171 @@
-import { useState, useEffect } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
-import {Accordion,AccordionItem,AccordionTrigger,AccordionContent} from "@/components/ui/accordion";
-import { Button } from '@/components/ui/button';
+import { useEffect, useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X, ShoppingCart } from 'lucide-react';
-import logo from "@/assets/logo.png";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
+import logo from '@/assets/logo.png';
 import LanguageSelector from './LanguageSelector';
-import { useLanguage } from '@/contexts/LanguageContext';
 import SearchBar from './SearchBar';
-import {useCart} from '@/contexts/CartContext';
-//import FamilleServices from "@/services/FamilyServices";
-//import TypesServices from "@/services/TypesServices";
-import family from "@/data/family.js";
-import category from "@/data/category.js";
-import { useDispatch } from 'react-redux';
-import { setTypes } from '@/store/typeSlice';
-import subcategory from '@/data/subcategory';
-import { setSubCategory } from '@/store/subCategorySlice';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { useCart } from '@/contexts/CartContext';
+import { families, getCategoriesOf, localName } from '@/data/catalog';
+import { parsePath } from '@/lib/paths';
 
-const Navbar = ({ onSearch, showSearch = true, onFamilySelect , onCategorySelect}) => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
+const linkClass = ({ isActive }) =>
+  `rounded-md px-2 py-1 font-medium transition-colors ${
+    isActive ? 'text-accent-text' : 'text-primary hover:text-accent-text'
+  }`;
 
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { t, language } = useLanguage();
+// "Produits" est actif sur toutes les pages du catalogue.
+const CATALOG_PAGES = ['products', 'family', 'category', 'subcategory', 'belt'];
+
+function CartLink({ className = '' }) {
+  const { t, paths } = useLanguage();
   const { totalItems } = useCart();
-const [families, setFamilies] = useState([]);
+  return (
+    <NavLink
+      to={paths.cart()}
+      aria-label={t('quoteCartCount', { n: totalItems })}
+      className={({ isActive }) =>
+        `relative inline-flex h-11 w-11 items-center justify-center rounded-full transition-colors ${
+          isActive ? 'bg-cta text-white' : 'bg-accent-soft text-primary hover:bg-cta hover:text-white'
+        } ${className}`
+      }
+    >
+      <ShoppingCart size={22} aria-hidden="true" />
+      {totalItems > 0 && (
+        <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-xs font-bold text-white">
+          {totalItems}
+        </span>
+      )}
+    </NavLink>
+  );
+}
 
-useEffect(() => {
-  const loadData = async () => {
-    try {
-     // const fam = await FamilleServices.getAllFamilies();
-     // const typ = await TypesServices.getAllTypes();
-      setFamilies(family);
-      dispatch(setTypes(category));
-      dispatch(setSubCategory(subcategory));
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  loadData();
-}, []);
+const Navbar = () => {
+  const { t, language, paths } = useLanguage();
+  const { pathname } = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
+  // Le menu mobile se referme tout seul quand la page change.
+  const [menuOpenAt, setMenuOpenAt] = useState(null);
+  const menuOpen = menuOpenAt === pathname;
+  const inCatalog = CATALOG_PAGES.includes(parsePath(pathname).page);
+
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setIsScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const navLinkClass = ({ isActive }) =>
-    isActive
-      ? "text-orange-600 font-semibold transition-colors"
-      : "text-foreground hover:text-orange-400 transition-colors";
+  const close = () => setMenuOpenAt(null);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-lg shadow-md' : 'bg-white'
-      }`}
+    <header
+      className={`fixed inset-x-0 top-0 z-50 bg-white transition-shadow ${isScrolled ? 'shadow-md' : 'shadow-sm'}`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-2 focus:z-50 focus:rounded focus:bg-primary focus:px-3 focus:py-2 focus:text-white"
+      >
+        {t('skipToContent')}
+      </a>
+      <nav className="container mx-auto flex h-20 items-center gap-3 px-4" aria-label="Navigation principale">
+        <Link to={paths.home()} className="flex shrink-0 items-center gap-2" aria-label="KORTIBELT — Accueil">
+          <img src={logo} alt="KORTIBELT" className="h-24 w-auto" width="160" height="56" />
+          <span className="hidden text-xs font-semibold text-accent-text xl:block">{t('Kortibeltcitation')}</span>
+        </Link>
 
-          {/* Logo */}
-          <NavLink to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <img src={logo} alt="Logo" className="h-36 w-auto" />
-            <h4 className='text-orange-500 text-xs font-medium'>{t("Kortibeltcitation")}</h4>
-          </NavLink>
-
-          {/* Search Bar */}
-          {showSearch && onSearch && (
-            <div className="flex-1 max-w-md mx-4">
-              <SearchBar onSearch={onSearch} placeholder={t('products')} />
-            </div>
-          )}
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-6">
-            <NavLink to="/" className={navLinkClass}>
-              {t("Home")}
-            </NavLink>
-
-            <NavLink to={`/category/${families[0]?.id}`} className={navLinkClass}>
-              {t("products")}
-            </NavLink>
-      
-            <Button>
-            <NavLink to="/about" className={navLinkClass}> {t("about")}
-            </NavLink>
-            </Button>
-            <Button  >
-              <NavLink to="/contact" className={navLinkClass}>{t("contact")}</NavLink>
-            </Button>
-            <Button variant="default" asChild className="bg-accent hover:bg-accent/90">
-             <NavLink to="/cart" className={navLinkClass}>
-              <div className="relative inline-block">
-                <ShoppingCart size={22} />
-                {totalItems > 0 && (
-                  <span className="absolute -top-4 -right-3 bg-orange-400 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
-                    {totalItems}
-                  </span>
-                )}
-              </div>
-
-            </NavLink>
-            </Button>
-            <LanguageSelector />
-          </div>
-
-          <button
-            className="md:hidden text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+        <div className="hidden flex-1 justify-center md:flex">
+          <SearchBar />
         </div>
 
-        {isMobileMenuOpen && (
-          <div className="md:hidden pb-6 animate-fade-in-up">
-            <div className="flex flex-col gap-4 mt-4">
-              <NavLink to="/" className={navLinkClass} onClick={() => setIsMobileMenuOpen(false)}>
-                {t("Home")}
-              </NavLink>
+        <div className="ml-auto hidden items-center gap-4 lg:flex">
+          <NavLink to={paths.home()} end className={linkClass}>
+            {t('home')}
+          </NavLink>
+          <NavLink to={paths.products()} className={() => linkClass({ isActive: inCatalog })}>
+            {t('products')}
+          </NavLink>
+          <NavLink to={paths.about()} className={linkClass}>
+            {t('about')}
+          </NavLink>
+          <NavLink to={paths.contact()} className={linkClass}>
+            {t('contact')}
+          </NavLink>
+          <LanguageSelector />
+          <CartLink />
+        </div>
 
-          <div className="max-h-[60vh] overflow-y-auto pr-2 mt-4" >
+        {/* Mobile et tablette : panier et menu toujours visibles */}
+        <div className="ml-auto flex items-center gap-2 lg:hidden">
+          <CartLink />
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-md text-primary hover:bg-secondary"
+            onClick={() => setMenuOpenAt(menuOpen ? null : pathname)}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            aria-label={menuOpen ? t('closeMenu') : t('openMenu')}
+          >
+            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+      </nav>
 
-            <Accordion type="single" collapsible className="w-full space-y-2">
-
-              {families.map((f) => (
-                <AccordionItem
-                  key={f.id}
-                  value={`fam-${f.id}`}
-                  className="border-b pb-1"
-                >
-                  {/* FAMILY NAME */}
-                  <AccordionTrigger
-                    onClick={() => {
-                      onFamilySelect(f.id);
-                      navigate("/category/" + f.id);
-                    }}
-                    className="text-left font-medium text-foreground hover:text-orange-500"
-                  >
-                    {language === "en" ? f.nomAnglais : f.nomFrancais}
-                  </AccordionTrigger>
-
-                  {/* TYPES */}
-                  <AccordionContent>
-                    <div className="ml-4 mt-1 space-y-1 border-l border-gray-300 pl-3">
-                      {category
-                        .filter((t) => t.famille_id === f.id)
-                        .map((t) => (
-                          <button
-                            key={t.id}
-                            onClick={() => {
-                              onCategorySelect(t.id);
-                              setIsMobileMenuOpen(false);
-                              navigate("/subcategory/" + t.id);
-                            }}
-                            className="block w-full text-left text-sm text-gray-600 hover:text-gray-900 py-1"
-                          >
-                            {language === "en" ? t.nomAnglais : t.nomFrancais}
-                          </button>
-                        ))}
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-
-            </Accordion>
+      {menuOpen && (
+        <div id="mobile-menu" className="max-h-[calc(100vh-5rem)] overflow-y-auto border-t bg-white px-4 pb-6 lg:hidden">
+          <div className="py-4 md:hidden">
+            <SearchBar onSubmitted={close} />
           </div>
-
-
-              <NavLink to="/about" className={navLinkClass} onClick={() => setIsMobileMenuOpen(false)}>
-                {t("about")}
-              </NavLink>
-
-              <Button variant="default" asChild className="bg-accent hover:bg-accent/90 w-full mt-2">
-                <NavLink to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                  {t("contact")}
-                </NavLink>
-              </Button>
-                            <Button variant="default" asChild className="bg-accent hover:bg-accent/90 w-full mt-2">
-             <NavLink to="/cart" className="relative text-foreground hover:text-accent transition-colors">
-              <ShoppingCart size={22} />
-              {totalItems > 0 && (
-                <span className="absolute -top-2 -right-2 bg-accent text-accent-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
-                  {totalItems}
-                </span>
-              )}
+          <div className="flex flex-col gap-1">
+            <NavLink to={paths.home()} end className={linkClass} onClick={close}>
+              {t('home')}
             </NavLink>
-              </Button>
-            </div>
+            <NavLink to={paths.products()} className={linkClass} onClick={close}>
+              {t('allProducts')}
+            </NavLink>
           </div>
-        )}
-      </div>
-    </nav>
+
+          <Accordion type="single" collapsible className="mt-2 w-full">
+            {families.map((f) => (
+              <AccordionItem key={f.id} value={`fam-${f.id}`}>
+                <AccordionTrigger className="px-2 text-left text-base font-medium text-primary">
+                  {localName(f, language)}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ul className="ml-2 space-y-1 border-l border-border pl-3">
+                    <li>
+                      <Link to={paths.family(f)} onClick={close} className="block py-2 text-sm font-semibold text-accent-text">
+                        {t('seeCategories')}
+                      </Link>
+                    </li>
+                    {getCategoriesOf(f.id).map((c) => (
+                      <li key={c.id}>
+                        <Link to={paths.category(c)} onClick={close} className="block py-2 text-sm text-muted-foreground hover:text-primary">
+                          {localName(c, language)}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+
+          <div className="mt-2 flex flex-col gap-1">
+            <NavLink to={paths.about()} className={linkClass} onClick={close}>
+              {t('about')}
+            </NavLink>
+            <NavLink to={paths.contact()} className={linkClass} onClick={close}>
+              {t('contact')}
+            </NavLink>
+          </div>
+          <div className="mt-4">
+            <LanguageSelector />
+          </div>
+        </div>
+      )}
+    </header>
   );
 };
 

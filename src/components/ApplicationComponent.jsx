@@ -1,80 +1,40 @@
-import React from 'react';
-import { Factory, Car, Tractor, Bot, Package } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import { Car, Factory, Package, Tractor } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import SectionTitle from '@/components/SectionTitle';
+import { applicationCount } from '@/data/catalog';
+
+// Les clés correspondent au champ `application` des courroies ; les tuiles sans produit sont masquées.
+const APPLICATIONS = [
+  { key: 'industry', icon: Factory },
+  { key: 'automotive', icon: Car },
+  { key: 'agriculture', icon: Tractor },
+  { key: 'conveyors', icon: Package },
+];
 
 const Applications = () => {
-  const { t } = useLanguage();
-
-  const applications = [
-    {
-      key: 'industry',
-      icon: Factory,
-      link: '/products?application=industry',
-    },
-    {
-      key: 'automobile',
-      icon: Car,
-      link: '/products?application=automobile',
-    },
-    {
-      key: 'agriculture',
-      icon: Tractor,
-      link: '/products?application=agriculture',
-    },
-    {
-      key: 'automation',
-      icon: Bot,
-      link: '/products?application=automation',
-    },
-    {
-      key: 'conveyors',
-      icon: Package,
-      link: '/products?application=conveyors',
-    },
-  ];
+  const { t, paths } = useLanguage();
+  const items = APPLICATIONS.filter((a) => applicationCount(a.key) > 0);
 
   return (
-    <section id="applications" className="py-20  from-secondary to-background">
+    <section id="applications" className="py-16 md:py-20">
       <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">{t('titleapplications')}</h2>
-          <div className="w-24 h-1 bg-accent mx-auto" />
-        </div>
-
-        {/* Grid */}
-        <div className="grid md:grid-cols-5 gap-6">
-          {applications.map((app, index) => {
-            const Icon = app.icon;
+        <SectionTitle>{t('titleapplications')}</SectionTitle>
+        <div className="grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
+          {items.map(({ key, icon }) => {
+            const Icon = icon;
             return (
-              <Link to={app.link} key={index} className="group">
-                <Card
-                  className="
-                    border-0 shadow-md transform transition-transform duration-300
-                    hover:-translate-y-2 hover:shadow-xl
-                    animate-fade-in-up
-                  "
-                  style={{ animationDelay: `${index * 0.05}s` }}
-                >
-                  <CardContent className="p-6 text-center">
-                    {/* Icon */}
-                    <div className="
-                      w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-full 
-                      flex items-center justify-center transition-all duration-300
-                      group-hover:scale-110 group-hover:bg-accent/20
-                    ">
-                      <Icon className="text-accent " size={32} />
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="text-lg font-bold mb-2 text-primary">{t(`title${app.key}`)}</h3>
-
-                    {/* Description */}
-                    <p className="text-sm text-muted-foreground">{t(`description${app.key}`)}</p>
-                  </CardContent>
-                </Card>
+              <Link
+                key={key}
+                to={paths.products({ application: key })}
+                className="group rounded-xl bg-white p-6 text-center shadow-md transition-all hover:-translate-y-1 hover:shadow-xl"
+              >
+                <span className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-accent-soft transition-transform group-hover:scale-110">
+                  <Icon className="text-accent" size={28} aria-hidden="true" />
+                </span>
+                <h3 className="mb-1 text-lg font-bold text-primary">{t(`title${key}`)}</h3>
+                <p className="text-sm text-muted-foreground">{t(`description${key}`)}</p>
+                <p className="mt-2 text-xs font-semibold text-accent-text">{t('productsCount', { n: applicationCount(key) })}</p>
               </Link>
             );
           })}

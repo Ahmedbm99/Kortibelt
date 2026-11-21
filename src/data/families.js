@@ -70,10 +70,26 @@ export const families = {
 };
 
 export const materialsTable = [
-  { element: 'Corps', matter: 'CR Rubber / EPDM / PU', function: 'Résistance à la chaleur et flexibilité' },
-  { element: 'Cordon', matter: 'Kevlar / Polyester / Fibre de verre', function: 'Traction et stabilité' },
-  { element: 'Tissu', matter: 'Nylon / Coton / Linatex', function: 'Protection et adhérence' },
-  { element: 'Revêtement', matter: 'PU / PVC / Linatex', function: 'Adapté à chaque application' }
+  {
+    element: { fr: 'Corps', en: 'Body' },
+    matter: { fr: 'Caoutchouc CR / EPDM / PU', en: 'CR rubber / EPDM / PU' },
+    function: { fr: 'Résistance à la chaleur et flexibilité', en: 'Heat resistance and flexibility' },
+  },
+  {
+    element: { fr: 'Cordon', en: 'Tensile cord' },
+    matter: { fr: 'Kevlar / Polyester / Fibre de verre', en: 'Kevlar / Polyester / Fiberglass' },
+    function: { fr: 'Traction et stabilité', en: 'Tensile strength and stability' },
+  },
+  {
+    element: { fr: 'Tissu', en: 'Fabric' },
+    matter: { fr: 'Nylon / Coton / Linatex', en: 'Nylon / Cotton / Linatex' },
+    function: { fr: 'Protection et adhérence', en: 'Protection and grip' },
+  },
+  {
+    element: { fr: 'Revêtement', en: 'Coating' },
+    matter: { fr: 'PU / PVC / Linatex', en: 'PU / PVC / Linatex' },
+    function: { fr: 'Adapté à chaque application', en: 'Suited to each application' },
+  },
 ];
 
 export const applicationsList = [

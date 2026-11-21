@@ -1,36 +1,27 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { Theme  } from "@radix-ui/themes";
-import "@radix-ui/themes/styles.css";
-import { BrowserRouter } from "react-router-dom";
-import { LanguageProvider } from '@/contexts/LanguageContext';
-import { Provider } from 'react-redux';
-import { CartProvider } from "@/contexts/CartContext";
-import "react-phone-number-input/style.css";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import { StrictMode } from 'react';
+import { createRoot, hydrateRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import '@fontsource-variable/inter/wght.css';
+import 'react-phone-number-input/style.css';
+import '@/index.css';
 
-import App from '@/App.jsx'
-import store from '@/store';
+import Root from '@/Root';
 
-createRoot(document.getElementById('root')).render(
+const app = (
   <StrictMode>
-    <GoogleReCaptchaProvider
-  reCaptchaKey="6Lev8TEsAAAAANCfz2s5Ms7F8YuTCmIwCuxdXY3b"
-  language="fr"
->
-        <Provider store={store}>
-<CartProvider>
-         <LanguageProvider>
+    <BrowserRouter>
+      <Root />
+    </BrowserRouter>
+  </StrictMode>
+);
 
-      <BrowserRouter basename="/Kortibelt/">
-
-    <Theme >
-    <App />
-    </Theme>
-  </BrowserRouter>
-  </LanguageProvider>
-  </CartProvider>
-        </Provider>
-</GoogleReCaptchaProvider>
-  </StrictMode>,
-)
+// Pages pré-rendues (HTML déjà présent) : React reprend la main sans tout redessiner.
+// Pages client uniquement (devis, merci…) : rendu classique.
+const container = document.getElementById('root');
+// React gère lui-même <title>, <meta> et <link> : on retire ceux du pré-rendu pour éviter les doublons.
+document.head.querySelectorAll('[data-seo]').forEach((el) => el.remove());
+if (container.firstElementChild && !('clientOnly' in container.dataset)) hydrateRoot(container, app);
+else {
+  container.textContent = '';
+  createRoot(container).render(app);
+}
